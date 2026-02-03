@@ -53,10 +53,10 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <Link href={`/${locale}/actividades`} className="btn-primary text-lg px-8 py-4">
-              {t("heroCta")}
+              {t("heroCta_activities")}
             </Link>
             <Link href={`/${locale}/contacto`} className="btn-secondary text-lg px-8 py-4">
-              {t.raw("common.contactUs") || "Contáctanos"}
+              {t("heroCta_contactus")}
             </Link>
           </div>
 
