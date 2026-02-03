@@ -1,18 +1,10 @@
-import Stripe from 'stripe';
-
-let stripeInstance: Stripe | null = null;
+// Stripe integration disabled for initial launch
+// Will be enabled when payment processing is needed
 
 export const getStripe = () => {
-  if (!stripeInstance) {
-    stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-      apiVersion: '2025-12-15.clover',
-      typescript: true,
-    });
-  }
-  return stripeInstance;
+  throw new Error('Stripe not configured');
 };
 
 export const getStripeJs = async () => {
-  const { loadStripe } = await import('@stripe/stripe-js');
-  return loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+  throw new Error('Stripe not configured');
 };
