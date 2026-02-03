@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0E0E0E;
+  --color-primary-alt: #121212;
+  --color-accent: #C9A24D;
+  --color-accent-alt: #D4AF37;
+  --color-accent-hover: #B8923D;
+  --color-support: #2A2A2A;
+  --color-text: #FFFFFF;
+  --color-text-muted: #9CA3AF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-primary font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent-hover hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-accent text-accent font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent hover:text-primary;
+  }
+
+  .btn-outline {
+    @apply border border-white/30 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:border-accent hover:text-accent;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl text-white uppercase tracking-wide mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-muted text-lg md:text-xl mb-8;
+  }
+
+  .card {
+    @apply bg-support/50 rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10;
+  }
+
+  .gold-text {
+    @apply text-accent;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-accent via-accent-alt to-accent bg-clip-text text-transparent;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-support);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+img[data-loading="true"] {
+  opacity: 0;
+}
