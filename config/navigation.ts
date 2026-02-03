@@ -6,10 +6,6 @@ export interface NavItem {
 
 export const mainNavigation: NavItem[] = [
   {
-    titleKey: "nav.home",
-    href: "/",
-  },
-  {
     titleKey: "nav.about",
     href: "/sobre-nosotros",
     children: [
