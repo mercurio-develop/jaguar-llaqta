@@ -18,7 +18,10 @@ export default function Header() {
   const locale = pathname.split("/")[1];
 
   const isActive = (href: string) => {
-    const fullPath = `/${locale}${href === "/" ? "" : href}`;
+    if (href === "/") {
+      return pathname === `/${locale}`;
+    }
+    const fullPath = `/${locale}${href}`;
     return pathname === fullPath || pathname.startsWith(fullPath + "/");
   };
 
@@ -89,7 +92,7 @@ export default function Header() {
 
             <Link
               href={`/${locale}/reservas`}
-              className="hidden md:block btn-primary text-sm"
+              className="hidden md:block btn-primary text-sm !px-3 !py-1.5"
             >
               {t("common.bookNow")}
             </Link>
