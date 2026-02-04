@@ -44,7 +44,6 @@ export const footerNavigation = {
   main: [
     { titleKey: "nav.about", href: "/sobre-nosotros" },
     { titleKey: "nav.activities", href: "/actividades" },
-    { titleKey: "nav.calendar", href: "/calendario" },
     { titleKey: "nav.contact", href: "/contacto" },
   ],
   legal: [
