@@ -6,17 +6,6 @@ export interface NavItem {
 
 export const mainNavigation: NavItem[] = [
   {
-    titleKey: "nav.about",
-    href: "/sobre-nosotros",
-    children: [
-      { titleKey: "nav.aboutHistory", href: "/sobre-nosotros#historia" },
-      { titleKey: "nav.aboutVision", href: "/sobre-nosotros#vision-mision" },
-      { titleKey: "nav.aboutTeam", href: "/sobre-nosotros#asociados" },
-      { titleKey: "nav.faq", href: "/sobre-nosotros#faq" },
-      { titleKey: "nav.aboutOrganizations", href: "/sobre-nosotros#organizaciones" },
-    ],
-  },
-  {
     titleKey: "nav.activities",
     href: "/actividades",
     children: [
@@ -27,12 +16,15 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
-    titleKey: "nav.gallery",
-    href: "/galeria",
-  },
-  {
-    titleKey: "nav.calendar",
-    href: "/calendario",
+    titleKey: "nav.about",
+    href: "/sobre-nosotros",
+    children: [
+      { titleKey: "nav.aboutHistory", href: "/sobre-nosotros#historia" },
+      { titleKey: "nav.aboutVision", href: "/sobre-nosotros#vision-mision" },
+      { titleKey: "nav.aboutTeam", href: "/sobre-nosotros#asociados" },
+      { titleKey: "nav.faq", href: "/sobre-nosotros#faq" },
+      { titleKey: "nav.aboutOrganizations", href: "/sobre-nosotros#organizaciones" },
+    ],
   },
   {
     titleKey: "nav.contact",
