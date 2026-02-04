@@ -10,25 +10,25 @@ import { cn } from "@/lib/utils";
 import { activityCategories, type ActivityCategory } from "@/config/navigation";
 
 const categoryIcons = {
-  cuerpo: Mountain,
-  mente: Users,
-  espiritu: Sparkles,
+  rutas: Mountain,
+  comunidad: Users,
+  ceremonias: Sparkles,
 };
 
 // Gallery items with category
 const galleryItems = [
-  { id: 1, category: "cuerpo", type: "image", title: "Salkantay al amanecer", location: "Salkantay" },
-  { id: 2, category: "cuerpo", type: "image", title: "Laguna Humantay", location: "Cusco" },
-  { id: 3, category: "cuerpo", type: "image", title: "Montaña de Colores", location: "Ausangate" },
-  { id: 4, category: "cuerpo", type: "video", title: "Trekking Ausangate", location: "Ausangate" },
-  { id: 5, category: "mente", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero" },
-  { id: 6, category: "mente", type: "image", title: "Mercado de Pisac", location: "Pisac" },
-  { id: 7, category: "mente", type: "image", title: "Familia andina", location: "Valle Sagrado" },
-  { id: 8, category: "mente", type: "image", title: "Preparando pachamanca", location: "Cusco" },
-  { id: 9, category: "espiritu", type: "image", title: "Ofrenda a la Pachamama", location: "Cusco" },
-  { id: 10, category: "espiritu", type: "image", title: "Ceremonia de coca", location: "Ollantaytambo" },
-  { id: 11, category: "espiritu", type: "video", title: "Ritual del amanecer", location: "Sacsayhuamán" },
-  { id: 12, category: "espiritu", type: "image", title: "Templo del Sol", location: "Machu Picchu" },
+  { id: 1, category: "rutas", type: "image", title: "Salkantay al amanecer", location: "Salkantay" },
+  { id: 2, category: "rutas", type: "image", title: "Laguna Humantay", location: "Cusco" },
+  { id: 3, category: "rutas", type: "image", title: "Montaña de Colores", location: "Ausangate" },
+  { id: 4, category: "rutas", type: "video", title: "Trekking Ausangate", location: "Ausangate" },
+  { id: 5, category: "comunidad", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero" },
+  { id: 6, category: "comunidad", type: "image", title: "Mercado de Pisac", location: "Pisac" },
+  { id: 7, category: "comunidad", type: "image", title: "Familia andina", location: "Valle Sagrado" },
+  { id: 8, category: "comunidad", type: "image", title: "Preparando pachamanca", location: "Cusco" },
+  { id: 9, category: "ceremonias", type: "image", title: "Ofrenda a la Pachamama", location: "Cusco" },
+  { id: 10, category: "ceremonias", type: "image", title: "Ceremonia de coca", location: "Ollantaytambo" },
+  { id: 11, category: "ceremonias", type: "video", title: "Ritual del amanecer", location: "Sacsayhuamán" },
+  { id: 12, category: "ceremonias", type: "image", title: "Templo del Sol", location: "Machu Picchu" },
 ];
 
 export default function GalleryPage() {

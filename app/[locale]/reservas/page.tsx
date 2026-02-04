@@ -14,9 +14,9 @@ import { cn } from "@/lib/utils";
 import { packages, getPackageById, type Package } from "@/config/packages";
 
 const categoryIcons = {
-  cuerpo: Mountain,
-  mente: Users,
-  espiritu: Users,
+  rutas: Mountain,
+  comunidad: Users,
+  ceremonias: Users,
 };
 
 const reservationSchema = z.object({

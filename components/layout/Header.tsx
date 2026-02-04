@@ -59,27 +59,32 @@ export default function Header() {
                 >
                   {t(item.titleKey)}
                   {item.children && (
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className={cn(
+                      "w-4 h-4 transition-transform",
+                      openDropdown === item.href && "rotate-180"
+                    )} />
                   )}
                 </Link>
 
                 {/* Dropdown */}
                 {item.children && openDropdown === item.href && (
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-support rounded-lg shadow-xl border border-white/10 py-2 animate-slide-down">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={`/${locale}${child.href}`}
-                        className={cn(
-                          "block px-4 py-2 text-sm transition-colors",
-                          isActive(child.href)
-                            ? "text-accent bg-white/5"
-                            : "text-white/80 hover:text-white hover:bg-white/5"
-                        )}
-                      >
-                        {t(child.titleKey)}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-0 pt-2 w-56">
+                    <div className="bg-support rounded shadow-xl border border-white/10 py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={`/${locale}${child.href}`}
+                          className={cn(
+                            "block px-4 py-2 text-sm transition-colors",
+                            isActive(child.href)
+                              ? "text-accent bg-white/5"
+                              : "text-white/80 hover:text-white hover:bg-white/5"
+                          )}
+                        >
+                          {t(child.titleKey)}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

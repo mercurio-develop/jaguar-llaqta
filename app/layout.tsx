@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: "Jaguar Llaqta - Turismo Ancestral en Cusco",
     template: "%s | Jaguar Llaqta",
   },
-  description: "Descubre el Cusco auténtico a través de experiencias que conectan cuerpo, mente y espíritu con la sabiduría ancestral andina.",
+  description: "Descubre el Cusco auténtico a través de experiencias que conectan con la sabiduría ancestral andina.",
   keywords: ["turismo", "cusco", "peru", "ancestral", "espiritual", "trekking", "comunidades"],
   authors: [{ name: "Jaguar Llaqta" }],
   openGraph: {
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     url: "https://jaguarllaqta.com",
     siteName: "Jaguar Llaqta",
     title: "Jaguar Llaqta - Turismo Ancestral en Cusco",
-    description: "Descubre el Cusco auténtico a través de experiencias que conectan cuerpo, mente y espíritu con la sabiduría ancestral andina.",
+    description: "Descubre el Cusco auténtico a través de experiencias que conectan con la sabiduría ancestral andina.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jaguar Llaqta - Turismo Ancestral en Cusco",
-    description: "Descubre el Cusco auténtico a través de experiencias que conectan cuerpo, mente y espíritu",
+    description: "Descubre el Cusco auténtico a través de experiencias que conectan con la sabiduría ancestral andina",
   },
   robots: {
     index: true,
@@ -33,5 +33,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html lang="es" className="dark">
+      <body className="bg-primary min-h-screen flex flex-col">
+        {children}
+      </body>
+    </html>
+  );
 }

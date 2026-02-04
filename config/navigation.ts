@@ -9,37 +9,26 @@ export const mainNavigation: NavItem[] = [
     titleKey: "nav.about",
     href: "/sobre-nosotros",
     children: [
-      { titleKey: "nav.aboutHistory", href: "/sobre-nosotros" },
-      { titleKey: "nav.aboutVision", href: "/sobre-nosotros/vision-mision" },
-      { titleKey: "nav.aboutPartners", href: "/sobre-nosotros/asociados" },
-      { titleKey: "nav.faq", href: "/sobre-nosotros/faq" },
+      { titleKey: "nav.aboutHistory", href: "/sobre-nosotros#historia" },
+      { titleKey: "nav.aboutVision", href: "/sobre-nosotros#vision-mision" },
+      { titleKey: "nav.aboutTeam", href: "/sobre-nosotros#asociados" },
+      { titleKey: "nav.faq", href: "/sobre-nosotros#faq" },
+      { titleKey: "nav.aboutOrganizations", href: "/sobre-nosotros#organizaciones" },
     ],
   },
   {
     titleKey: "nav.activities",
     href: "/actividades",
     children: [
-      { titleKey: "nav.activitiesBody", href: "/actividades/cuerpo" },
-      { titleKey: "nav.activitiesMind", href: "/actividades/mente" },
-      { titleKey: "nav.activitiesSpirit", href: "/actividades/espiritu" },
-    ],
-  },
-  {
-    titleKey: "nav.packages",
-    href: "/paquetes",
-    children: [
-      { titleKey: "nav.packagesPrivate", href: "/paquetes/privados" },
-      { titleKey: "nav.packagesGroup", href: "/paquetes/grupales" },
-      { titleKey: "nav.packagesCustom", href: "/paquetes/personalizados" },
+      { titleKey: "nav.allActivities", href: "/actividades" },
+      { titleKey: "nav.routes", href: "/actividades/rutas" },
+      { titleKey: "nav.community", href: "/actividades/comunidad" },
+      { titleKey: "nav.ceremonies", href: "/actividades/ceremonias" },
     ],
   },
   {
     titleKey: "nav.gallery",
     href: "/galeria",
-    children: [
-      { titleKey: "nav.galleryPhotos", href: "/galeria/fotos-videos" },
-      { titleKey: "nav.galleryMaps", href: "/galeria/mapas" },
-    ],
   },
   {
     titleKey: "nav.calendar",
@@ -51,11 +40,10 @@ export const mainNavigation: NavItem[] = [
   },
 ];
 
-// Categories for filtering packages, gallery, etc.
 export const activityCategories = [
-  { id: "cuerpo", labelKey: "categories.body", color: "emerald" },
-  { id: "mente", labelKey: "categories.mind", color: "blue" },
-  { id: "espiritu", labelKey: "categories.spirit", color: "purple" },
+  { id: "rutas", labelKey: "categories.routes" },
+  { id: "comunidad", labelKey: "categories.community" },
+  { id: "ceremonias", labelKey: "categories.ceremonies" },
 ] as const;
 
 export type ActivityCategory = (typeof activityCategories)[number]["id"];
@@ -64,7 +52,6 @@ export const footerNavigation = {
   main: [
     { titleKey: "nav.about", href: "/sobre-nosotros" },
     { titleKey: "nav.activities", href: "/actividades" },
-    { titleKey: "nav.packages", href: "/paquetes" },
     { titleKey: "nav.calendar", href: "/calendario" },
     { titleKey: "nav.contact", href: "/contacto" },
   ],

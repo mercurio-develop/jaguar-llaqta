@@ -26,7 +26,6 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-gold": "linear-gradient(135deg, #C9A24D 0%, #D4AF37 50%, #C9A24D 100%)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",

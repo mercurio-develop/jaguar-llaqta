@@ -8,28 +8,25 @@ import Card, { CardContent, CardDescription, CardTitle } from "@/components/ui/C
 
 const services = [
   {
-    id: "body",
+    id: "routes",
     icon: Mountain,
-    titleKey: "serviceBody",
-    descKey: "serviceBodyDesc",
-    href: "/actividades/rutas",
-    color: "from-emerald-500 to-teal-600",
+    titleKey: "serviceRoutes",
+    descKey: "serviceRoutesDesc",
+    href: "/actividades#rutas",
   },
   {
-    id: "mind",
+    id: "community",
     icon: Users,
-    titleKey: "serviceMind",
-    descKey: "serviceMindDesc",
-    href: "/actividades/comunidad",
-    color: "from-blue-500 to-indigo-600",
+    titleKey: "serviceCommunity",
+    descKey: "serviceCommunityDesc",
+    href: "/actividades#comunidad",
   },
   {
-    id: "spirit",
+    id: "ceremonies",
     icon: Sparkles,
-    titleKey: "serviceSpirit",
-    descKey: "serviceSpiritDesc",
-    href: "/actividades/espiritual",
-    color: "from-purple-500 to-pink-600",
+    titleKey: "serviceCeremonies",
+    descKey: "serviceCeremoniesDesc",
+    href: "/actividades#ceremonias",
   },
 ];
 
@@ -56,10 +53,8 @@ export default function Services() {
                 <Card variant="hover" className="h-full group cursor-pointer">
                   <CardContent>
                     {/* Icon */}
-                    <div
-                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <Icon className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                      <Icon className="w-8 h-8 text-accent" />
                     </div>
 
                     {/* Title */}
@@ -74,7 +69,9 @@ export default function Services() {
 
                     {/* Link indicator */}
                     <div className="mt-6 flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-sm font-medium">Explorar</span>
+                      <span className="text-sm font-medium uppercase tracking-wider">
+                        {locale === "es" ? "Explorar" : "Explore"}
+                      </span>
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </CardContent>

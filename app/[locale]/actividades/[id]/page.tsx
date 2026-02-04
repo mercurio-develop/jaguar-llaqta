@@ -18,7 +18,7 @@ import {
   Play,
   ArrowLeft,
 } from "lucide-react";
-import { packages, DayItinerary } from "@/config/packages";
+import { packages, DayItinerary, ActivityCategory } from "@/config/packages";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 
@@ -33,7 +33,7 @@ function ItineraryDay({ day, isOpen, onToggle, locale }: ItineraryDayProps) {
   const isSpanish = locale === "es";
 
   return (
-    <div className="border border-support rounded-lg overflow-hidden">
+    <div className="border border-support rounded overflow-hidden">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between p-4 bg-support/30 hover:bg-support/50 transition-colors"
@@ -102,7 +102,7 @@ function ItineraryDay({ day, isOpen, onToggle, locale }: ItineraryDayProps) {
   );
 }
 
-export default function PackageDetailPage({ params }: { params: { id: string } }) {
+export default function ActivityDetailPage({ params }: { params: { id: string } }) {
   const pathname = usePathname();
   const locale = pathname.split("/")[1];
   const isSpanish = locale === "es";
@@ -141,16 +141,10 @@ export default function PackageDetailPage({ params }: { params: { id: string } }
     }
   };
 
-  const categoryLabels = {
-    cuerpo: isSpanish ? "Cuerpo" : "Body",
-    mente: isSpanish ? "Mente" : "Mind",
-    espiritu: isSpanish ? "Espíritu" : "Spirit",
-  };
-
-  const typeLabels = {
-    privado: isSpanish ? "Privado" : "Private",
-    grupal: isSpanish ? "Grupal" : "Group",
-    personalizado: isSpanish ? "Personalizado" : "Custom",
+  const categoryLabels: Record<ActivityCategory, string> = {
+    rutas: isSpanish ? "Rutas" : "Routes",
+    comunidad: isSpanish ? "Comunidad" : "Community",
+    ceremonias: isSpanish ? "Ceremonias" : "Ceremonies",
   };
 
   return (
@@ -164,19 +158,16 @@ export default function PackageDetailPage({ params }: { params: { id: string } }
 
         <div className="container-custom relative z-10 pb-12">
           <Link
-            href={`/${locale}/paquetes?categoria=${pkg.category}`}
+            href={`/${locale}/actividades#${pkg.category}`}
             className="inline-flex items-center gap-2 text-accent hover:text-accent-alt transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>{isSpanish ? "Volver a paquetes" : "Back to packages"}</span>
+            <span>{isSpanish ? "Volver a actividades" : "Back to activities"}</span>
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="px-3 py-1 border border-accent/30 text-accent text-sm uppercase tracking-widest">
               {categoryLabels[pkg.category]}
-            </span>
-            <span className="px-3 py-1 border border-white/20 text-white/70 text-sm uppercase tracking-widest">
-              {typeLabels[pkg.type]}
             </span>
           </div>
 
@@ -218,7 +209,7 @@ export default function PackageDetailPage({ params }: { params: { id: string } }
       {/* Sticky Navigation */}
       <nav className="sticky top-20 z-40 bg-primary border-b border-support">
         <div className="container-custom">
-          <div className="flex gap-1 overflow-x-auto py-3">
+          <div className="flex justify-center gap-1 overflow-x-auto py-3">
             {[
               { id: "overview", label: isSpanish ? "Resumen" : "Overview" },
               { id: "itinerary", label: isSpanish ? "Itinerario" : "Itinerary" },
@@ -431,22 +422,13 @@ export default function PackageDetailPage({ params }: { params: { id: string } }
                         <span className="text-white">{pkg.difficulty}</span>
                       </div>
                     )}
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted uppercase tracking-wider">{isSpanish ? "Tipo" : "Type"}</span>
-                      <span className="text-white">{typeLabels[pkg.type]}</span>
-                    </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <Button className="w-full" disabled>
-                      {isSpanish ? "Reservar Ahora" : "Book Now"}
+                  <Link href={`/${locale}/reservas?paquete=${pkg.id}`}>
+                    <Button className="w-full">
+                      {isSpanish ? "Pre-Reservar" : "Pre-Book"}
                     </Button>
-                    <p className="text-center text-muted text-xs">
-                      {isSpanish
-                        ? "Sistema de reservas próximamente"
-                        : "Booking system coming soon"}
-                    </p>
-                  </div>
+                  </Link>
 
                   <div className="mt-8 pt-8 border-t border-support">
                     <p className="text-muted text-sm mb-4">

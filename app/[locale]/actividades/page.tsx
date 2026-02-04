@@ -1,101 +1,257 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { Mountain, Users, Sparkles, ArrowRight } from "lucide-react";
+import { Mountain, Users, Sparkles, Clock, ArrowRight, Filter, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import Calendar from "@/components/Calendar";
+import Gallery from "@/components/Gallery";
+import { packages, type ActivityCategory } from "@/config/packages";
 
-const categories = [
-  {
-    id: "cuerpo",
-    icon: Mountain,
-    titleKey: "categoryBody",
-    subtitleKey: "categoryBodySubtitle",
-    descKey: "categoryBodyDesc",
-    href: "/actividades/cuerpo",
-  },
-  {
-    id: "mente",
-    icon: Users,
-    titleKey: "categoryMind",
-    subtitleKey: "categoryMindSubtitle",
-    descKey: "categoryMindDesc",
-    href: "/actividades/mente",
-  },
-  {
-    id: "espiritu",
-    icon: Sparkles,
-    titleKey: "categorySpirit",
-    subtitleKey: "categorySpiritSubtitle",
-    descKey: "categorySpiritDesc",
-    href: "/actividades/espiritu",
-  },
+const categoryConfig: Record<ActivityCategory, { icon: typeof Mountain; label: { es: string; en: string } }> = {
+  rutas: { icon: Mountain, label: { es: "Rutas", en: "Routes" } },
+  comunidad: { icon: Users, label: { es: "Comunidad", en: "Community" } },
+  ceremonias: { icon: Sparkles, label: { es: "Ceremonias", en: "Ceremonies" } },
+};
+
+const durationFilters = [
+  { id: "half-day", label: { es: "Medio día", en: "Half day" }, check: (d: string) => d.toLowerCase().includes("medio") || d.toLowerCase().includes("half") },
+  { id: "full-day", label: { es: "Día completo", en: "Full day" }, check: (d: string) => d.toLowerCase().includes("día completo") || d.toLowerCase().includes("full day") || d.includes("8 horas") },
+  { id: "multi-day", label: { es: "Varios días", en: "Multi-day" }, check: (d: string) => d.includes("días") || d.includes("days") || d.includes("noches") || d.includes("nights") },
 ];
 
-export default function ActivitiesPage() {
+export default function AllActivitiesPage() {
   const t = useTranslations("activities");
+  const tNav = useTranslations("nav");
   const pathname = usePathname();
-  const locale = pathname.split("/")[1];
-  const isSpanish = locale === "es";
+  const locale = pathname.split("/")[1] as "es" | "en";
+
+  const [selectedCategory, setSelectedCategory] = useState<ActivityCategory | "all">("all");
+  const [selectedDuration, setSelectedDuration] = useState<string | "all">("all");
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
+
+  const filteredPackages = packages.filter((pkg) => {
+    const matchCategory = selectedCategory === "all" || pkg.category === selectedCategory;
+    const matchDuration = selectedDuration === "all" || durationFilters.find(f => f.id === selectedDuration)?.check(pkg.duration);
+    const matchPrice = pkg.price >= priceRange[0] && pkg.price <= priceRange[1];
+    return matchCategory && matchDuration && matchPrice;
+  });
+
+  const clearFilters = () => {
+    setSelectedCategory("all");
+    setSelectedDuration("all");
+    setPriceRange([0, 1000]);
+  };
+
+  const hasActiveFilters = selectedCategory !== "all" || selectedDuration !== "all" || priceRange[0] > 0 || priceRange[1] < 1000;
 
   return (
     <div className="pt-20">
-      <section className="py-24 bg-primary-alt">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="font-display text-4xl md:text-5xl text-white uppercase tracking-wider mb-4">
-              {t("title")}
-            </h1>
-            <p className="text-muted text-lg">{t("subtitle")}</p>
-            <div className="w-24 h-0.5 bg-accent mx-auto mt-6" />
-          </div>
+      {/* Hero section */}
+      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/activities-hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-primary/70" />
+        <div className="relative z-10 container-custom text-center">
+          <h1 className="section-title mb-4">{tNav("allActivities")}</h1>
+          <p className="text-muted text-lg max-w-2xl mx-auto">{t("subtitle")}</p>
+        </div>
+      </section>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {categories.map((category) => {
-              const Icon = category.icon;
+      {/* Category Cards */}
+      <section className="py-12 bg-primary-alt border-b border-white/10">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-6">
+            {(Object.keys(categoryConfig) as ActivityCategory[]).map((cat) => {
+              const config = categoryConfig[cat];
+              const Icon = config.icon;
+              const count = packages.filter(p => p.category === cat).length;
               return (
-                <Link key={category.id} href={`/${locale}${category.href}`}>
-                  <Card variant="hover" className="h-full group overflow-hidden p-0 border border-support">
-                    <div className="aspect-[3/2] bg-support/30 relative overflow-hidden flex items-center justify-center">
-                      <Icon className="w-20 h-20 text-accent/20 group-hover:text-accent/40 transition-colors" />
+                <Link key={cat} href={`/${locale}/actividades/${cat}`}>
+                  <Card variant="hover" className="p-6 flex items-center gap-4 group">
+                    <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                      <Icon className="w-7 h-7 text-accent" />
                     </div>
-                    <div className="p-6">
-                      <p className="text-accent text-sm uppercase tracking-widest mb-2">
-                        {t(category.subtitleKey)}
-                      </p>
-                      <h3 className="font-display text-xl text-white uppercase tracking-wider mb-3 group-hover:text-accent transition-colors">
-                        {t(category.titleKey)}
+                    <div className="flex-1">
+                      <h3 className="font-display text-lg text-white uppercase tracking-wider group-hover:text-accent transition-colors">
+                        {config.label[locale]}
                       </h3>
-                      <p className="text-muted leading-relaxed mb-4 text-sm">
-                        {t(category.descKey)}
-                      </p>
-                      <div className="flex items-center gap-2 text-accent">
-                        <span className="text-sm font-medium uppercase tracking-wider">
-                          {isSpanish ? "Explorar" : "Explore"}
-                        </span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
+                      <p className="text-muted text-sm">{count} {locale === "es" ? "experiencias" : "experiences"}</p>
                     </div>
+                    <ArrowRight className="w-5 h-5 text-muted group-hover:text-accent transition-colors" />
                   </Card>
                 </Link>
               );
             })}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 text-center">
-            <p className="text-muted mb-6">
-              {isSpanish ? "¿Ya sabes lo que buscas?" : "Already know what you're looking for?"}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href={`/${locale}/paquetes`} className="px-6 py-3 bg-accent text-primary font-medium uppercase tracking-wider text-sm hover:bg-accent-alt transition-colors">
-                {isSpanish ? "Ver todos los paquetes" : "View all packages"}
-              </Link>
-              <Link href={`/${locale}/calendario`} className="px-6 py-3 border border-accent text-accent font-medium uppercase tracking-wider text-sm hover:bg-accent/10 transition-colors">
-                {isSpanish ? "Ver calendario" : "View calendar"}
-              </Link>
+      {/* Filters & Packages */}
+      <section className="py-12 bg-primary">
+        <div className="container-custom">
+          {/* Filters */}
+          <div className="mb-8 p-6 bg-support/30 border border-white/10 rounded">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2 text-white">
+                <Filter className="w-5 h-5 text-accent" />
+                <span className="font-medium uppercase tracking-wider text-sm">
+                  {locale === "es" ? "Filtros" : "Filters"}
+                </span>
+              </div>
+              {hasActiveFilters && (
+                <button
+                  onClick={clearFilters}
+                  className="flex items-center gap-1 text-sm text-muted hover:text-accent transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                  {locale === "es" ? "Limpiar filtros" : "Clear filters"}
+                </button>
+              )}
+            </div>
+
+            <div className="flex flex-wrap gap-6">
+              {/* Category filter */}
+              <div>
+                <p className="text-muted text-xs uppercase tracking-wider mb-2">
+                  {locale === "es" ? "Categoría" : "Category"}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => setSelectedCategory("all")}
+                    className={cn(
+                      "px-3 py-1.5 text-sm transition-all border rounded",
+                      selectedCategory === "all"
+                        ? "bg-accent text-primary border-accent"
+                        : "border-white/20 text-muted hover:text-white hover:border-white/40"
+                    )}
+                  >
+                    {locale === "es" ? "Todos" : "All"}
+                  </button>
+                  {(Object.keys(categoryConfig) as ActivityCategory[]).map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={cn(
+                        "px-3 py-1.5 text-sm transition-all border rounded flex items-center gap-1.5",
+                        selectedCategory === cat
+                          ? "bg-accent/10 text-accent border-accent/30"
+                          : "border-white/20 text-muted hover:text-white hover:border-white/40"
+                      )}
+                    >
+                      {categoryConfig[cat].label[locale]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Duration filter */}
+              <div>
+                <p className="text-muted text-xs uppercase tracking-wider mb-2">
+                  {locale === "es" ? "Duración" : "Duration"}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => setSelectedDuration("all")}
+                    className={cn(
+                      "px-3 py-1.5 text-sm transition-all border rounded",
+                      selectedDuration === "all"
+                        ? "bg-accent text-primary border-accent"
+                        : "border-white/20 text-muted hover:text-white hover:border-white/40"
+                    )}
+                  >
+                    {locale === "es" ? "Todos" : "All"}
+                  </button>
+                  {durationFilters.map((filter) => (
+                    <button
+                      key={filter.id}
+                      onClick={() => setSelectedDuration(filter.id)}
+                      className={cn(
+                        "px-3 py-1.5 text-sm transition-all border rounded",
+                        selectedDuration === filter.id
+                          ? "bg-accent/10 text-accent border-accent/30"
+                          : "border-white/20 text-muted hover:text-white hover:border-white/40"
+                      )}
+                    >
+                      {filter.label[locale]}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
+
+          {/* Results count */}
+          <p className="text-muted text-sm mb-6">
+            {filteredPackages.length} {locale === "es" ? "experiencias encontradas" : "experiences found"}
+          </p>
+
+          {/* Packages Grid */}
+          {filteredPackages.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-muted">
+                {locale === "es"
+                  ? "No se encontraron experiencias con los filtros seleccionados."
+                  : "No experiences found with the selected filters."}
+              </p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredPackages.map((pkg) => {
+                const Icon = categoryConfig[pkg.category].icon;
+                return (
+                  <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support">
+                    {/* Image placeholder */}
+                    <div className="aspect-[16/10] bg-support/50 relative flex items-center justify-center">
+                      <Icon className="w-16 h-16 text-accent/20" />
+                      <div className="absolute top-3 left-3">
+                        <span className="px-2 py-1 bg-primary/80 text-accent text-xs uppercase tracking-wider rounded">
+                          {categoryConfig[pkg.category].label[locale]}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="font-display text-lg text-white uppercase tracking-wider mb-2">
+                        {locale === "es" ? pkg.name : pkg.nameEn}
+                      </h3>
+
+                      <div className="flex items-center gap-2 text-muted text-sm mb-3">
+                        <Clock className="w-4 h-4 text-accent" />
+                        <span>{pkg.duration}</span>
+                      </div>
+
+                      <p className="text-muted text-sm leading-relaxed mb-4 flex-1 line-clamp-2">
+                        {locale === "es" ? pkg.tagline : pkg.taglineEn}
+                      </p>
+
+                      {/* Price and CTA */}
+                      <div className="flex items-center justify-between pt-4 border-t border-support">
+                        <div>
+                          <span className="text-muted text-xs uppercase tracking-wider">
+                            {locale === "es" ? "Desde" : "From"}
+                          </span>
+                          <p className="font-display text-xl text-accent">${pkg.price}</p>
+                        </div>
+                        <Link href={`/${locale}/actividades/${pkg.id}`}>
+                          <Button size="sm">
+                            {locale === "es" ? "Ver más" : "View more"}
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
     </div>

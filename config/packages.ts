@@ -1,4 +1,4 @@
-import { ActivityCategory } from "./navigation";
+export type ActivityCategory = "rutas" | "comunidad" | "ceremonias";
 
 export interface DayItinerary {
   day: number;
@@ -21,7 +21,6 @@ export interface GalleryItem {
 export interface Package {
   id: string;
   category: ActivityCategory;
-  type: "privado" | "grupal" | "personalizado";
   name: string;
   nameEn: string;
   tagline: string;
@@ -47,11 +46,10 @@ export interface Package {
 }
 
 export const packages: Package[] = [
-  // CUERPO - Salkantay Trek
+  // RUTAS - Salkantay Trek
   {
     id: "salkantay",
-    category: "cuerpo",
-    type: "grupal",
+    category: "rutas",
     name: "Salkantay Trek",
     nameEn: "Salkantay Trek",
     tagline: "La ruta alternativa más espectacular hacia Machu Picchu",
@@ -183,11 +181,10 @@ export const packages: Package[] = [
     ]
   },
 
-  // CUERPO - Ausangate
+  // RUTAS - Ausangate
   {
     id: "ausangate",
-    category: "cuerpo",
-    type: "grupal",
+    category: "rutas",
     name: "Ausangate y Montaña de Colores",
     nameEn: "Ausangate and Rainbow Mountain",
     tagline: "Trek circular alrededor del Apu más sagrado del Cusco",
@@ -221,11 +218,10 @@ export const packages: Package[] = [
     ]
   },
 
-  // MENTE - Textiles
+  // COMUNIDAD - Textiles
   {
     id: "textiles",
-    category: "mente",
-    type: "grupal",
+    category: "comunidad",
     name: "Taller de Textiles en Chinchero",
     nameEn: "Textile Workshop in Chinchero",
     tagline: "Aprende el arte milenario del tejido andino",
@@ -253,11 +249,10 @@ export const packages: Package[] = [
     ]
   },
 
-  // MENTE - Gastronomía
+  // COMUNIDAD - Gastronomía
   {
     id: "gastronomia",
-    category: "mente",
-    type: "grupal",
+    category: "comunidad",
     name: "Experiencia Gastronómica Andina",
     nameEn: "Andean Gastronomic Experience",
     tagline: "Cocina, sabores y tradición de los Andes",
@@ -285,11 +280,10 @@ export const packages: Package[] = [
     ]
   },
 
-  // ESPÍRITU - Pachamama
+  // CEREMONIAS - Pachamama
   {
     id: "pachamama",
-    category: "espiritu",
-    type: "grupal",
+    category: "ceremonias",
     name: "Ceremonia a la Pachamama",
     nameEn: "Pachamama Ceremony",
     tagline: "Ofrenda sagrada a la Madre Tierra",
@@ -317,11 +311,10 @@ export const packages: Package[] = [
     ]
   },
 
-  // ESPÍRITU - Retiro
+  // CEREMONIAS - Retiro
   {
     id: "retiro-espiritual",
-    category: "espiritu",
-    type: "privado",
+    category: "ceremonias",
     name: "Retiro Espiritual Completo",
     nameEn: "Complete Spiritual Retreat",
     tagline: "Inmersión profunda en la espiritualidad andina",
@@ -356,9 +349,6 @@ export const packages: Package[] = [
 
 export const getPackagesByCategory = (category: ActivityCategory) =>
   packages.filter((p) => p.category === category);
-
-export const getPackagesByType = (type: Package["type"]) =>
-  packages.filter((p) => p.type === type);
 
 export const getPackageById = (id: string) =>
   packages.find((p) => p.id === id);
