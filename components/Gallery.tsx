@@ -19,19 +19,20 @@ const defaultGalleryItems: Array<{
   type: "image" | "video";
   title: string;
   location: string;
+  url: string;
 }> = [
-  { id: 1, category: "rutas", type: "image", title: "Salkantay al amanecer", location: "Salkantay" },
-  { id: 2, category: "rutas", type: "image", title: "Laguna Humantay", location: "Cusco" },
-  { id: 3, category: "rutas", type: "image", title: "Montaña de Colores", location: "Ausangate" },
-  { id: 4, category: "rutas", type: "video", title: "Trekking Ausangate", location: "Ausangate" },
-  { id: 5, category: "comunidad", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero" },
-  { id: 6, category: "comunidad", type: "image", title: "Mercado de Pisac", location: "Pisac" },
-  { id: 7, category: "comunidad", type: "image", title: "Familia andina", location: "Valle Sagrado" },
-  { id: 8, category: "comunidad", type: "image", title: "Preparando pachamanca", location: "Cusco" },
-  { id: 9, category: "ceremonias", type: "image", title: "Ofrenda a la Pachamama", location: "Cusco" },
-  { id: 10, category: "ceremonias", type: "image", title: "Ceremonia de coca", location: "Ollantaytambo" },
-  { id: 11, category: "ceremonias", type: "video", title: "Ritual del amanecer", location: "Sacsayhuamán" },
-  { id: 12, category: "ceremonias", type: "image", title: "Templo del Sol", location: "Machu Picchu" },
+  { id: 1, category: "rutas", type: "image", title: "Ausangate", location: "Cusco", url: "/images/ausangate-1.jpg" },
+  { id: 2, category: "rutas", type: "image", title: "Laguna", location: "Cusco", url: "/images/laguna.jpg" },
+  { id: 3, category: "rutas", type: "image", title: "Montañas", location: "Ausangate", url: "/images/montanias.jpg" },
+  { id: 4, category: "rutas", type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
+  { id: 5, category: "comunidad", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
+  { id: 6, category: "comunidad", type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
+  { id: 7, category: "comunidad", type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
+  { id: 8, category: "comunidad", type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
+  { id: 9, category: "ceremonias", type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
+  { id: 10, category: "ceremonias", type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
+  { id: 11, category: "ceremonias", type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
+  { id: 12, category: "ceremonias", type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
 ];
 
 interface GalleryProps {
@@ -55,12 +56,13 @@ export default function Gallery({
 
   // Use provided items or default gallery items
   const galleryItems = items
-    ? items.map((item, index) => ({
+    ? items.map((item) => ({
         id: item.id,
         category: "rutas" as ActivityCategory, // Package gallery items don't have category
         type: item.type,
         title: item.title,
         location: "",
+        url: item.url || "",
       }))
     : defaultGalleryItems;
 
@@ -166,10 +168,18 @@ export default function Gallery({
                 {item.location && <p className="text-white/60 text-xs">{item.location}</p>}
               </div>
 
-              {/* Placeholder */}
-              <div className="w-full h-full bg-support flex items-center justify-center">
-                <ImageIcon className="w-8 h-8 text-white/20" />
-              </div>
+              {/* Image */}
+              {item.url ? (
+                <img
+                  src={item.url}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              ) : (
+                <div className="w-full h-full bg-support flex items-center justify-center">
+                  <ImageIcon className="w-8 h-8 text-white/20" />
+                </div>
+              )}
             </button>
           );
         })}
@@ -204,8 +214,16 @@ export default function Gallery({
           )}
 
           <div className="max-w-4xl w-full">
-            <div className="aspect-video bg-support rounded-lg flex items-center justify-center">
-              <p className="text-muted">{filteredItems[currentIndex]?.title}</p>
+            <div className="aspect-video bg-support rounded-lg flex items-center justify-center overflow-hidden">
+              {filteredItems[currentIndex]?.url ? (
+                <img
+                  src={filteredItems[currentIndex]?.url}
+                  alt={filteredItems[currentIndex]?.title}
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                <p className="text-muted">{filteredItems[currentIndex]?.title}</p>
+              )}
             </div>
             <div className="text-center mt-4">
               <p className="text-white font-medium">{filteredItems[currentIndex]?.title}</p>

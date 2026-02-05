@@ -7,8 +7,11 @@ export interface DayItinerary {
   description: string;
   descriptionEn: string;
   highlights?: string[];
+  highlightsEn?: string[];
   meals?: string;
+  mealsEn?: string;
   accommodation?: string;
+  accommodationEn?: string;
 }
 
 export interface GalleryItem {
@@ -26,10 +29,13 @@ export interface Package {
   tagline: string;
   taglineEn: string;
   duration: string;
+  durationEn?: string;
   difficulty?: string;
+  difficultyEn?: string;
   maxPeople?: string;
   elevation?: string;
   bestSeason?: string;
+  bestSeasonEn?: string;
   price: number;
   description: string;
   descriptionEn: string;
@@ -72,10 +78,10 @@ export const packages: Package[] = [
       { day: 1, title: "Experiencia completa de textiles", titleEn: "Complete textile experience", description: "8:00 AM recojo del hotel. Viaje a Chinchero. Demostración de teñido natural. Práctica en telar. Almuerzo con la comunidad. Visita al mercado. Regreso a Cusco 1:00 PM.", descriptionEn: "8:00 AM hotel pickup. Travel to Chinchero. Natural dyeing demonstration. Loom practice. Lunch with community. Market visit. Return to Cusco 1:00 PM.", meals: "Almuerzo", accommodation: "N/A" }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Tejedoras de Chinchero" },
-      { id: 2, type: "image", title: "Teñido natural" },
-      { id: 3, type: "image", title: "Tejido en telar" },
-      { id: 4, type: "video", title: "Proceso de tejido" }
+      { id: 1, type: "image", title: "Tejedoras de Chinchero", url: "/images/chincheros.jpg" },
+      { id: 2, type: "image", title: "Textiles tradicionales", url: "/images/textiles.jpg" },
+      { id: 3, type: "image", title: "Tejido en telar", url: "/images/textiles-2.jpg" },
+      { id: 4, type: "image", title: "Colores naturales", url: "/images/textiles-3.jpg" }
     ]
   },
 
@@ -103,10 +109,10 @@ export const packages: Package[] = [
       { day: 1, title: "Del mercado a la mesa", titleEn: "From market to table", description: "7:30 AM Mercado San Pedro. 9:30 AM viaje a comunidad. 10:30 AM cosecha. 12:00 PM preparación pachamanca. 2:00 PM almuerzo. 4:00 PM regreso.", descriptionEn: "7:30 AM San Pedro Market. 9:30 AM travel to community. 10:30 AM harvest. 12:00 PM pachamanca preparation. 2:00 PM lunch. 4:00 PM return.", meals: "Almuerzo completo", accommodation: "N/A" }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Mercado San Pedro" },
-      { id: 2, type: "image", title: "Pachamanca" },
-      { id: 3, type: "image", title: "Ingredientes andinos" },
-      { id: 4, type: "image", title: "Chicha de jora" }
+      { id: 1, type: "image", title: "Cocina rústica", url: "/images/cocina-rustica.jpg" },
+      { id: 2, type: "image", title: "Comunidad local", url: "/images/comunidad.jpg" },
+      { id: 3, type: "image", title: "Tradiciones andinas", url: "/images/comunidad-1.jpg" },
+      { id: 4, type: "image", title: "Paisaje andino", url: "/images/comunidad-2.jpg" }
     ]
   },
 
@@ -134,10 +140,10 @@ export const packages: Package[] = [
       { day: 1, title: "Ceremonia de ofrenda", titleEn: "Offering ceremony", description: "8:00 AM recojo. Viaje a sitio sagrado. Introducción a cosmovisión andina. Preparación del despacho. Ceremonia de ofrenda. Meditación. Regreso 12:00 PM.", descriptionEn: "8:00 AM pickup. Travel to sacred site. Introduction to Andean worldview. Despacho preparation. Offering ceremony. Meditation. Return 12:00 PM.", meals: "Mate de coca", accommodation: "N/A" }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Despacho andino" },
-      { id: 2, type: "image", title: "Maestro pampamesayoq" },
-      { id: 3, type: "image", title: "Coca kintu" },
-      { id: 4, type: "image", title: "Lugar sagrado" }
+      { id: 1, type: "image", title: "Hoja de coca", url: "/images/coca-leaf.jpg" },
+      { id: 2, type: "image", title: "Sacsayhuaman", url: "/images/sacsayhuaman.jpg" },
+      { id: 3, type: "image", title: "Ruinas sagradas", url: "/images/ruins.jpg" },
+      { id: 4, type: "image", title: "Moray", url: "/images/moray.jpg" }
     ]
   },
 
@@ -167,12 +173,12 @@ export const packages: Package[] = [
       { day: 3, title: "Cierre e integración", titleEn: "Closing and integration", description: "Meditación matutina. Desayuno. Ceremonia de cierre y gratitud. Círculo de compartir. Almuerzo de despedida. Regreso a Cusco.", descriptionEn: "Morning meditation. Breakfast. Closing and gratitude ceremony. Sharing circle. Farewell lunch. Return to Cusco.", meals: "D, A", accommodation: "Fin" }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Ceremonia de amanecer" },
-      { id: 2, type: "image", title: "Meditación grupal" },
-      { id: 3, type: "image", title: "Lugar de retiro" },
-      { id: 4, type: "video", title: "Experiencia del retiro" },
-      { id: 5, type: "image", title: "Ofrenda nocturna" },
-      { id: 6, type: "image", title: "Cielo estrellado" }
+      { id: 1, type: "image", title: "Sacsayhuaman", url: "/images/sacsayhuaman.jpg" },
+      { id: 2, type: "image", title: "Inti Punku", url: "/images/inti-punku.jpg" },
+      { id: 3, type: "image", title: "Moray", url: "/images/moray.jpg" },
+      { id: 4, type: "image", title: "Hoja de coca", url: "/images/coca-leaf.jpg" },
+      { id: 5, type: "image", title: "Montañas sagradas", url: "/images/montanias.jpg" },
+      { id: 6, type: "image", title: "Ruinas", url: "/images/ruins.jpg" }
     ]
   },
 
@@ -185,9 +191,12 @@ export const packages: Package[] = [
     tagline: "Descubre el Apu más sagrado y sus lagunas glaciares",
     taglineEn: "Discover the most sacred Apu and its glacial lagoons",
     duration: "3 días / 2 noches",
+    durationEn: "3 days / 2 nights",
     difficulty: "Moderada",
+    difficultyEn: "Moderate",
     elevation: "4,800m máx.",
     bestSeason: "Abril - Noviembre",
+    bestSeasonEn: "April - November",
     price: 450,
     description: "El Ausangate es la montaña más alta de la región Cusco y la quinta más alta del Perú, con una altitud de 6,385 metros sobre el nivel del mar. Se encuentra aproximadamente a 84 kilómetros al sureste de la ciudad del Cusco. Esta montaña sagrada es una de las más importantes dentro de la cosmovisión andina. El Apu Ausangate es considerado el padre de todas las montañas circundantes y un poderoso espíritu protector de la región. La zona también es reconocida por sus tradicionales textiles andinos, un conocimiento ancestral que se mantiene vivo y se transmite de generación en generación.",
     descriptionEn: "Ausangate is the highest mountain in the Cusco region and the fifth highest in Peru, reaching 6,385 meters above sea level. It is located approximately 84 kilometers southeast of Cusco. This sacred mountain is one of the most important in Andean culture. Apu Ausangate is considered the father of all surrounding mountains and a powerful protector spirit of the region. The area is also renowned for its traditional Andean textiles—ancestral knowledge that remains alive and is passed down through local families.",
@@ -243,8 +252,11 @@ export const packages: Package[] = [
         description: "12:00 PM – Recojo desde el Valle Sagrado y traslado al pueblo de Pacchanta (4,200 m s. n. m.). Tiempo aproximado de viaje: 4 horas en vehículo privado. 4:00 PM – Llegada a Pacchanta. Alojamiento en casa de una familia local, con alimentación incluida. La tarde está dedicada a la aclimatación, con una caminata suave por la zona y tiempo para relajarse en las aguas termales naturales. Cena y pernocte.",
         descriptionEn: "12:00 PM – Pick-up from the Sacred Valley and transfer to the village of Pacchanta (4,200 m a.s.l.). Approximate travel time: 4 hours by private vehicle. 4:00 PM – Arrival in Pacchanta. Overnight stay with a local family, including meals and basic accommodation. The afternoon is dedicated to acclimatization, including a gentle walk and time to relax in the natural hot springs. Dinner and overnight stay.",
         highlights: ["Pacchanta", "Aguas termales naturales"],
+        highlightsEn: ["Pacchanta", "Natural hot springs"],
         meals: "Almuerzo, Cena",
-        accommodation: "Casa de familia local"
+        mealsEn: "Lunch, Dinner",
+        accommodation: "Casa de familia local",
+        accommodationEn: "Local family home"
       },
       {
         day: 2,
@@ -253,8 +265,11 @@ export const packages: Package[] = [
         description: "7:00 AM – Caminata de día completo para visitar las Siete Lagunas del Ausangate (ida y vuelta: 4 a 6 horas). Altitud máxima: 4,800 m s. n. m. Si las condiciones climáticas son favorables, existe la posibilidad de pasar la noche en la montaña en campamento. Si el clima no es favorable, retorno a Pacchanta para el almuerzo y tiempo adicional en las aguas termales. Cena y última noche en Pacchanta.",
         descriptionEn: "7:00 AM – Full-day hike to visit the Seven Lakes of Ausangate (round trip: 4–6 hours). Highest altitude: 4,800 m a.s.l. If weather conditions are favorable, there is the possibility of camping overnight in the mountains. If weather conditions are unfavorable, return to Pacchanta for lunch and additional time at the hot springs. Dinner and overnight stay in Pacchanta.",
         highlights: ["Siete Lagunas", "4,800 m s.n.m.", "Vistas del Ausangate"],
+        highlightsEn: ["Seven Lakes", "4,800 m a.s.l.", "Ausangate views"],
         meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Casa de familia local o Campamento"
+        mealsEn: "Breakfast, Lunch, Dinner",
+        accommodation: "Casa de familia local o Campamento",
+        accommodationEn: "Local family home or Camping"
       },
       {
         day: 3,
@@ -263,17 +278,20 @@ export const packages: Package[] = [
         description: "7:00 AM – Retorno en vehículo privado al Valle Sagrado de los Incas. Tiempo aproximado de viaje: 4 horas.",
         descriptionEn: "7:00 AM – Departure by private vehicle back to the Sacred Valley of the Incas. Approximate travel time: 4 hours.",
         highlights: ["Paisajes andinos"],
+        highlightsEn: ["Andean landscapes"],
         meals: "Desayuno, Almuerzo",
-        accommodation: "Fin del tour"
+        mealsEn: "Breakfast, Lunch",
+        accommodation: "Fin del tour",
+        accommodationEn: "End of tour"
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Lagunas del Ausangate" },
-      { id: 2, type: "image", title: "Nevado Ausangate" },
-      { id: 3, type: "image", title: "Aguas termales de Pacchanta" },
-      { id: 4, type: "image", title: "Comunidad local" },
-      { id: 5, type: "image", title: "Textiles andinos" },
-      { id: 6, type: "image", title: "Paisaje de alta montaña" }
+      { id: 1, type: "image", title: "Lagunas del Ausangate", url: "/images/ausangate-1.jpg" },
+      { id: 2, type: "image", title: "Nevado Ausangate", url: "/images/ausangate-2.jpg" },
+      { id: 3, type: "image", title: "Comunidad local", url: "/images/comunidad-1.jpg" },
+      { id: 4, type: "image", title: "Textiles andinos", url: "/images/textiles.jpg" },
+      { id: 5, type: "image", title: "Paisaje de alta montaña", url: "/images/montanias.jpg" },
+      { id: 6, type: "image", title: "Laguna glaciar", url: "/images/laguna.jpg" }
     ]
   },
 
@@ -286,9 +304,12 @@ export const packages: Package[] = [
     tagline: "Travesía por la cordillera del Urubamba con comunidades tradicionales",
     taglineEn: "Journey through the Urubamba range with traditional communities",
     duration: "3 días / 2 noches",
+    durationEn: "3 days / 2 nights",
     difficulty: "Moderada a desafiante",
+    difficultyEn: "Moderate to challenging",
     elevation: "4,800m máx.",
     bestSeason: "Abril - Octubre",
+    bestSeasonEn: "April - October",
     price: 450,
     description: "El Lares Trek es una de las rutas de montaña más atractivas de la región Cusco. Atraviesa la cordillera del Urubamba, considerada tropical por su cercanía a la selva amazónica. Durante la caminata se recorren diversos ecosistemas andinos como ríos, bosques altoandinos, lagunas, cascadas y montañas nevadas, además de visitar comunidades tradicionales donde se mantienen vivas prácticas ancestrales. El recorrido finaliza en el pueblo de Lares, conocido por sus aguas termales y medicinales.",
     descriptionEn: "The Lares Trek is one of the most scenic mountain routes in the Cusco region. It crosses the Urubamba mountain range, a tropical range in the Peruvian Andes due to its proximity to the rainforest. Along the trek, travelers experience diverse Andean ecosystems including rivers, high-Andean forests, lagoons, waterfalls, snow-capped peaks, and traditional communities. The route also offers opportunities to observe local wildlife such as condors, deer, eagles, viscachas, and hummingbirds. The journey concludes in the town of Lares, famous for its thermal and medicinal hot springs.",
@@ -346,8 +367,11 @@ export const packages: Package[] = [
         description: "07:30 AM – Recojo en transporte privado hacia Huaran y luego a Saywapata (3,200 m s. n. m.). 08:30 AM – Inicio de la caminata. Ascenso de aproximadamente 3 horas por quebradas, ríos y bosques altoandinos. 11:30 AM – Llegada a la comunidad de Cancha Cancha. Descanso, mate de coca y snacks locales con una familia anfitriona. 12:30 PM – Continuación del ascenso hacia zonas más altas y armado de campamento cerca de la laguna Yanaqocha. 06:00 PM – Cena y pernocte en campamento.",
         descriptionEn: "07:30 AM – Pick-up by private transport to Huaran, continuing to Saywapata (3,200 m a.s.l.). 08:30 AM – Start of the hike. Approx. 3-hour ascent through ravines, rivers, and high-Andean forests. 11:30 AM – Arrival at the community of Cancha Cancha. Rest, coca tea, and local snacks with a host family. 12:30 PM – Continued ascent to higher elevations and camp setup near Yanaqocha Lagoon. 06:00 PM – Dinner and overnight camping.",
         highlights: ["Cancha Cancha", "Laguna Yanaqocha", "Bosques altoandinos"],
+        highlightsEn: ["Cancha Cancha", "Yanaqocha Lagoon", "High-Andean forests"],
         meals: "Almuerzo, Cena",
-        accommodation: "Campamento cerca de Laguna Yanaqocha"
+        mealsEn: "Lunch, Dinner",
+        accommodation: "Campamento cerca de Laguna Yanaqocha",
+        accommodationEn: "Camping near Yanaqocha Lagoon"
       },
       {
         day: 2,
@@ -356,8 +380,11 @@ export const packages: Package[] = [
         description: "07:00 AM – Desayuno y desmontaje del campamento. 08:00 AM – Caminata hacia el paso de montaña (4,800 m s. n. m.), disfrutando de vistas panorámicas espectaculares. Duración aproximada: 4 a 5 horas. 01:00 PM – Llegada a la comunidad de Quishuarani. 02:30 PM – Almuerzo en casa local y armado de campamento. 04:00 PM – Caminata opcional por la comunidad para conocer sus tradiciones. 07:00 PM – Cena.",
         descriptionEn: "07:00 AM – Breakfast and camp packing. 08:00 AM – Trek to the mountain pass (4,800 m a.s.l.), enjoying panoramic views. Approx. 4–5 hours of hiking. 01:00 PM – Arrival at the community of Quishuarani. 02:30 PM – Lunch with a local family and camp setup. 04:00 PM – Optional community walk. 07:00 PM – Dinner.",
         highlights: ["Paso 4,800m", "Vistas panorámicas", "Comunidad Quishuarani"],
+        highlightsEn: ["Pass 4,800m", "Panoramic views", "Quishuarani community"],
         meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Campamento en Quishuarani"
+        mealsEn: "Breakfast, Lunch, Dinner",
+        accommodation: "Campamento en Quishuarani",
+        accommodationEn: "Camping in Quishuarani"
       },
       {
         day: 3,
@@ -366,17 +393,20 @@ export const packages: Package[] = [
         description: "06:00 AM – Desayuno. 07:30 AM – Caminata de 4 horas hacia la comunidad de Cuncani. 11:00 AM – Parada para almuerzo ligero. 12:00 PM – Traslado a las aguas termales de Lares (45 minutos). Tiempo libre para relajarse en las aguas termales medicinales (2–3 horas). 03:00 PM – Transporte hacia el Valle Sagrado (aprox. 2.5 horas). 05:30 PM – Llegada.",
         descriptionEn: "06:00 AM – Breakfast. 07:30 AM – 4-hour hike to the community of Cuncani. 11:00 AM – Packed lunch stop. 12:00 PM – Transfer to the Lares Hot Springs (45 minutes). Relaxation time: 2–3 hours. 03:00 PM – Transport to the Sacred Valley (approx. 2.5 hours). 05:30 PM – Arrival.",
         highlights: ["Cuncani", "Aguas termales de Lares"],
+        highlightsEn: ["Cuncani", "Lares hot springs"],
         meals: "Desayuno, Almuerzo",
-        accommodation: "Fin del tour"
+        mealsEn: "Breakfast, Lunch",
+        accommodation: "Fin del tour",
+        accommodationEn: "End of tour"
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Paisajes del Lares Trek" },
-      { id: 2, type: "image", title: "Laguna Yanaqocha" },
-      { id: 3, type: "image", title: "Aguas termales de Lares" },
-      { id: 4, type: "image", title: "Comunidad tradicional" },
-      { id: 5, type: "image", title: "Paso de montaña" },
-      { id: 6, type: "image", title: "Bosque altoandino" }
+      { id: 1, type: "image", title: "Paisajes del Lares Trek", url: "/images/montanias.jpg" },
+      { id: 2, type: "image", title: "Laguna Yanaqocha", url: "/images/laguna.jpg" },
+      { id: 3, type: "image", title: "Comunidad tradicional", url: "/images/comunidad-2.jpg" },
+      { id: 4, type: "image", title: "Paso de montaña", url: "/images/ausangate-1.jpg" },
+      { id: 5, type: "image", title: "Textiles locales", url: "/images/textiles-2.jpg" },
+      { id: 6, type: "image", title: "Comunidad andina", url: "/images/comunidad-3.jpg" }
     ]
   },
 
@@ -389,9 +419,12 @@ export const packages: Package[] = [
     tagline: "Aventura en una de las zonas con mayor biodiversidad del planeta",
     taglineEn: "Adventure in one of the most biodiverse areas on Earth",
     duration: "5 días / 4 noches",
+    durationEn: "5 days / 4 nights",
     difficulty: "Moderada",
+    difficultyEn: "Moderate",
     elevation: "300m – 4,000m",
     bestSeason: "Mayo - Octubre",
+    bestSeasonEn: "May - October",
     price: 600,
     description: "El Parque Nacional del Manu es un área natural protegida ubicada en el sureste del Perú, entre las regiones de Cusco y Madre de Dios. Con una extensión de más de 1.9 millones de hectáreas, abarca desde los 300 m s. n. m. en la Amazonía hasta más de 4,000 m s. n. m. en los Andes. Este territorio alberga una de las mayores biodiversidades del planeta y conserva zonas prácticamente vírgenes. La tradición oral menciona que en sus profundidades podría encontrarse el mítico Paititi, la ciudad perdida de los Incas.",
     descriptionEn: "Manu National Park is a protected natural area located in southeastern Peru, between the regions of Cusco and Madre de Dios. Covering more than 1.9 million hectares, it extends from 300 m a.s.l. in the Amazon rainforest to over 4,000 m a.s.l. in the Andes. This territory shelters one of the highest levels of biodiversity on Earth and preserves vast pristine areas. According to oral tradition, the legendary lost Inca city of Paititi may lie hidden deep within this jungle.",
@@ -441,8 +474,11 @@ export const packages: Package[] = [
         description: "Salida desde Cusco en transporte público hacia el poblado de Salvación (aprox. 7 horas). En el camino se atraviesan paisajes altoandinos y bosques nublados. Parada técnica en Paucartambo. Llegada a Salvación por la tarde. Alojamiento en cabañas ubicadas en una colina con vistas panorámicas. Visita a la reserva natural Qocha Wasi, paseo en balsa y caminata por senderos de selva. Cena y descanso.",
         descriptionEn: "Departure from Cusco to the town of Salvación by public transport (approx. 7 hours). Along the way, travelers enjoy high-Andean landscapes and cloud forests. Technical stop in Paucartambo. Arrival in Salvación in the afternoon. Overnight stay in hillside cabins with panoramic views. Visit to Qocha Wasi Nature Reserve, including a rafting activity and jungle walk. Dinner and rest.",
         highlights: ["Paucartambo", "Bosque nublado", "Reserva Qocha Wasi"],
+        highlightsEn: ["Paucartambo", "Cloud forest", "Qocha Wasi Reserve"],
         meals: "Cena",
-        accommodation: "Cabañas en Salvación"
+        mealsEn: "Dinner",
+        accommodation: "Cabañas en Salvación",
+        accommodationEn: "Cabins in Salvación"
       },
       {
         day: 2,
@@ -451,8 +487,11 @@ export const packages: Package[] = [
         description: "Traslado en transporte local al poblado de Shintuya. Excursión de día y noche junto a una familia de la comunidad nativa Harakbut. Caminata de aproximadamente 4 horas hacia el interior de la selva, conociendo ríos, cascadas, plantas medicinales y fauna local. Noche en campamento rústico.",
         descriptionEn: "Transfer by local transport to Shintuya village. One-day and one-night excursion into the rainforest with a local Harakbut family. Approximately 4-hour hike into the jungle, learning about rivers, waterfalls, medicinal plants and wildlife. Overnight in a rustic jungle camp.",
         highlights: ["Comunidad Harakbut", "Selva virgen", "Plantas medicinales"],
+        highlightsEn: ["Harakbut community", "Virgin rainforest", "Medicinal plants"],
         meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Campamento rústico en la selva"
+        mealsEn: "Breakfast, Lunch, Dinner",
+        accommodation: "Campamento rústico en la selva",
+        accommodationEn: "Rustic jungle camp"
       },
       {
         day: 3,
@@ -461,8 +500,11 @@ export const packages: Package[] = [
         description: "Desayuno y caminata de retorno (aprox. 3 horas) hasta Shintuya. Almuerzo y traslado en bote hacia las faldas del Apu Pantiaqoya. Descanso en un complejo local y disfrute de aguas termomedicinales. Cena y pernocte.",
         descriptionEn: "Breakfast and return hike (approx. 3 hours) to Shintuya. Lunch followed by a short boat ride to the foothills of the sacred Pantiaqoya Mountain. Time to relax in local thermomedicinal hot springs. Dinner and overnight stay.",
         highlights: ["Apu Pantiaqoya", "Aguas termomedicinales", "Viaje en bote"],
+        highlightsEn: ["Apu Pantiaqoya", "Thermomedicinal hot springs", "Boat ride"],
         meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Hospedaje local en Pantiaqoya"
+        mealsEn: "Breakfast, Lunch, Dinner",
+        accommodation: "Hospedaje local en Pantiaqoya",
+        accommodationEn: "Local lodge in Pantiaqoya"
       },
       {
         day: 4,
@@ -471,8 +513,11 @@ export const packages: Package[] = [
         description: "Caminata de 45 minutos hacia cataratas y piscinas naturales. Tiempo para nadar y disfrutar del entorno. Almuerzo y retorno en bote a Shintuya. Traslado por la tarde al poblado de Salvación para pasar la última noche.",
         descriptionEn: "45-minute hike to waterfalls and natural pools. Time to swim and enjoy the surroundings. Lunch and boat return to Shintuya. Afternoon transfer to Salvación for the final overnight stay.",
         highlights: ["Cataratas", "Piscinas naturales", "Río Madre de Dios"],
+        highlightsEn: ["Waterfalls", "Natural pools", "Madre de Dios River"],
         meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Cabañas en Salvación"
+        mealsEn: "Breakfast, Lunch, Dinner",
+        accommodation: "Cabañas en Salvación",
+        accommodationEn: "Cabins in Salvación"
       },
       {
         day: 5,
@@ -481,17 +526,20 @@ export const packages: Package[] = [
         description: "Retorno desde Salvación hasta la ciudad del Cusco durante todo el día. Llegada por la tarde. Nota: A mayor número de personas, la tarifa se reduce.",
         descriptionEn: "Full-day return journey from Salvación to Cusco. Arrival in Cusco in the afternoon. Note: Price decreases with a larger group size.",
         highlights: ["Paisajes andinos", "Bosque nublado"],
+        highlightsEn: ["Andean landscapes", "Cloud forest"],
         meals: "Desayuno",
-        accommodation: "Fin del tour"
+        mealsEn: "Breakfast",
+        accommodation: "Fin del tour",
+        accommodationEn: "End of tour"
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Parque Nacional del Manu" },
-      { id: 2, type: "image", title: "Bosque nublado del Manu" },
-      { id: 3, type: "image", title: "Aguas termales de Pantiaqoya" },
-      { id: 4, type: "image", title: "Comunidad Harakbut" },
-      { id: 5, type: "image", title: "Cataratas" },
-      { id: 6, type: "image", title: "Fauna amazónica" }
+      { id: 1, type: "image", title: "Parque Nacional del Manu", url: "/images/manu.jpg" },
+      { id: 2, type: "image", title: "Bosque nublado del Manu", url: "/images/manu-3.jpg" },
+      { id: 3, type: "image", title: "Selva amazónica", url: "/images/manu-4.jpg" },
+      { id: 4, type: "image", title: "Comunidad Harakbut", url: "/images/comunidad-4.jpg" },
+      { id: 5, type: "image", title: "Naturaleza del Manu", url: "/images/manu-5.jpg" },
+      { id: 6, type: "image", title: "Selva del Manu", url: "/images/selva-manu.jpg" }
     ]
   }
 ];

@@ -223,7 +223,7 @@ export default function AllActivitiesPage() {
 
                       <div className="flex items-center gap-2 text-muted text-sm mb-3">
                         <Clock className="w-4 h-4 text-accent" />
-                        <span>{pkg.duration}</span>
+                        <span>{locale === "es" ? pkg.duration : (pkg.durationEn || pkg.duration)}</span>
                       </div>
 
                       <p className="text-muted text-sm leading-relaxed mb-4 flex-1 line-clamp-2">
