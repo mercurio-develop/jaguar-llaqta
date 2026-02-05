@@ -11,10 +11,22 @@ import Calendar from "@/components/Calendar";
 import Gallery from "@/components/Gallery";
 import { packages, type ActivityCategory } from "@/config/packages";
 
-const categoryConfig: Record<ActivityCategory, { icon: typeof Mountain; label: { es: string; en: string } }> = {
-  rutas: { icon: Mountain, label: { es: "Rutas", en: "Routes" } },
-  comunidad: { icon: Users, label: { es: "Comunidad", en: "Community" } },
-  ceremonias: { icon: Sparkles, label: { es: "Ceremonias", en: "Ceremonies" } },
+const categoryConfig: Record<
+  ActivityCategory,
+  { icon: typeof Mountain; label: { es: string; en: string } }
+> = {
+  rutas: {
+    icon: Mountain,
+    label: { es: "Rutas", en: "Routes" },
+  },
+  comunidad: {
+    icon: Users,
+    label: { es: "Comunidad", en: "Community" },
+  },
+  ceremonias: {
+    icon: Sparkles,
+    label: { es: "Ceremonias", en: "Ceremonies" },
+  },
 };
 
 const durationFilters = [
@@ -53,7 +65,7 @@ export default function AllActivitiesPage() {
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/activities-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/montanias.jpg')" }}
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container-custom text-center">
@@ -82,6 +94,7 @@ export default function AllActivitiesPage() {
                       </h3>
                       <p className="text-muted text-sm">{count} {locale === "es" ? "experiencias" : "experiences"}</p>
                     </div>
+                    {/* Thumbnail preview removed per request to place images within package cards */}
                     <ArrowRight className="w-5 h-5 text-muted group-hover:text-accent transition-colors" />
                   </Card>
                 </Link>
@@ -203,11 +216,24 @@ export default function AllActivitiesPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPackages.map((pkg) => {
                 const Icon = categoryConfig[pkg.category].icon;
+                // Determine package image with a safe fallback per category
+                const categoryFallback: Record<ActivityCategory, string> = {
+                  rutas: "/images/ausangate-1.jpg",
+                  comunidad: "/images/comunidad.jpg",
+                  ceremonias: "/images/coca-leaf.jpg",
+                };
+                const pkgImage = (pkg.gallery.find(g => g.type === "image" && g.url)?.url) || categoryFallback[pkg.category];
                 return (
                   <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support">
-                    {/* Image placeholder */}
-                    <div className="aspect-[16/10] bg-support/50 relative flex items-center justify-center">
-                      <Icon className="w-16 h-16 text-accent/20" />
+                    {/* Image */}
+                    <div className="aspect-[16/10] bg-support/50 relative overflow-hidden">
+                      <img
+                        src={pkgImage}
+                        alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/10" />
                       <div className="absolute top-3 left-3">
                         <span className="px-2 py-1 bg-primary/80 text-accent text-xs uppercase tracking-wider rounded">
                           {categoryConfig[pkg.category].label[locale]}
@@ -268,7 +294,7 @@ export default function AllActivitiesPage() {
             <div className="w-24 h-1 bg-accent mx-auto" />
           </div>
 
-          <Gallery locale={locale} showFilters={true} columns={4} />
+          <Gallery locale={locale} showFilters={true} columns={3} />
         </div>
       </section>
 

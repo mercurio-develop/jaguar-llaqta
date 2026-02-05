@@ -15,17 +15,17 @@ const categoryConfig: Record<ActivityCategory, {
 }> = {
   rutas: {
     icon: Mountain,
-    heroImage: "/images/rutas-hero.jpg",
+    heroImage: "/images/ausangate-1.jpg",
     color: "emerald"
   },
   comunidad: {
     icon: Users,
-    heroImage: "/images/comunidad-hero.jpg",
+    heroImage: "/images/comunidad.jpg",
     color: "blue"
   },
   ceremonias: {
     icon: Sparkles,
-    heroImage: "/images/ceremonias-hero.jpg",
+    heroImage: "/images/coca-leaf.jpg",
     color: "purple"
   },
 };
@@ -123,8 +123,15 @@ export default function CategoryPage({ category }: CategoryPageProps) {
               <Card key={pkg.id} className="p-0 overflow-hidden border border-support">
                 <div className="grid md:grid-cols-5 gap-0">
                   {/* Image */}
-                  <div className="md:col-span-2 aspect-[4/3] md:aspect-auto bg-support/50 relative flex items-center justify-center min-h-[250px]">
-                    <Icon className="w-20 h-20 text-accent/20" />
+                  <div className="md:col-span-2 aspect-[4/3] md:aspect-auto bg-support/50 relative min-h-[250px] overflow-hidden">
+                    {/* Package image or fallback to category hero */}
+                    <img
+                      src={(pkg.gallery.find((g) => g.type === "image" && g.url)?.url) || config.heroImage}
+                      alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/10" />
                   </div>
 
                   {/* Content */}
@@ -188,7 +195,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
                       </div>
                       <Link href={`/${locale}/actividades/${pkg.id}`}>
                         <Button className="flex items-center gap-2">
-                          {locale === "es" ? "Ver detalles" : "View details"}
+                          {locale === "es" ? "Ver más" : "View more"}
                           <ArrowRight className="w-4 h-4" />
                         </Button>
                       </Link>

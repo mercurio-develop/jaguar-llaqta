@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Mountain, Users, Sparkles, Image as ImageIcon, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { type ActivityCategory } from "@/config/packages";
+import { packages, type ActivityCategory } from "@/config/packages";
 import { type GalleryItem } from "@/config/packages";
 
 const categoryIcons: Record<ActivityCategory, typeof Mountain> = {
@@ -47,14 +47,14 @@ export default function Gallery({
   locale,
   items,
   showFilters = true,
-  columns = 4,
+  columns = 3,
   className
 }: GalleryProps) {
   const isSpanish = locale === "es";
   const [selectedCategory, setSelectedCategory] = useState<ActivityCategory | "all">("all");
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
 
-  // Use provided items or default gallery items
+  // Use provided items or aggregate all package gallery images for the main gallery
   const galleryItems = items
     ? items.map((item) => ({
         id: item.id,
@@ -64,7 +64,32 @@ export default function Gallery({
         location: "",
         url: item.url || "",
       }))
-    : defaultGalleryItems;
+    : (() => {
+        // Build a big gallery using all images from all packages
+        // and de-duplicate by URL to avoid repeated pictures
+        let autoId = 1;
+        const seen = new Set<string>();
+        const aggregated: typeof defaultGalleryItems = [];
+
+        for (const pkg of packages) {
+          for (const g of pkg.gallery || []) {
+            if (g.type !== "image" || !g.url) continue;
+            if (seen.has(g.url)) continue; // skip duplicates
+            seen.add(g.url);
+            aggregated.push({
+              id: autoId++,
+              category: pkg.category,
+              type: g.type,
+              title: g.title,
+              location: "",
+              url: g.url,
+            });
+          }
+        }
+
+        // Fallback to the static defaults if, for any reason, no images were found
+        return aggregated.length > 0 ? aggregated : defaultGalleryItems;
+      })();
 
   const filteredItems = !showFilters || selectedCategory === "all"
     ? galleryItems
@@ -213,8 +238,8 @@ export default function Gallery({
             </button>
           )}
 
-          <div className="max-w-4xl w-full">
-            <div className="aspect-video bg-support rounded-lg flex items-center justify-center overflow-hidden">
+          <div className="max-w-6xl w-full">
+            <div className="h-[70vh] bg-support rounded-lg flex items-center justify-center overflow-hidden">
               {filteredItems[currentIndex]?.url ? (
                 <img
                   src={filteredItems[currentIndex]?.url}
@@ -230,6 +255,47 @@ export default function Gallery({
               {filteredItems[currentIndex]?.location && (
                 <p className="text-muted text-sm">{filteredItems[currentIndex]?.location}</p>
               )}
+            </div>
+            {/* Thumbnails strip */}
+            <div className="mt-6">
+              <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide py-2">
+                {filteredItems.map((item, idx) => {
+                  const isActive = idx === currentIndex;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setSelectedItem(item.id)}
+                      aria-current={isActive ? "true" : undefined}
+                      className={cn(
+                        "relative flex-shrink-0 rounded-md overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent",
+                        isActive ? "ring-2 ring-accent" : "ring-1 ring-white/10 hover:ring-white/30"
+                      )}
+                      style={{ width: 180, height: 120 }}
+                      title={item.title}
+                    >
+                      {item.url ? (
+                        <img
+                          src={item.url}
+                          alt={item.title}
+                          loading="lazy"
+                          className={cn(
+                            "w-full h-full object-cover",
+                            isActive ? "opacity-100" : "opacity-90"
+                          )}
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-support flex items-center justify-center">
+                          <ImageIcon className="w-6 h-6 text-white/30" />
+                        </div>
+                      )}
+                      {/* Darken mask for non-active */}
+                      {!isActive && (
+                        <div className="absolute inset-0 bg-black/10" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

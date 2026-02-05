@@ -116,7 +116,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/about-hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/comunidad-3.jpg')" }}
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container-custom text-center">
@@ -161,10 +161,14 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] bg-support rounded overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-muted">Imagen de historia</span>
-                </div>
+              <div className="aspect-[4/3] bg-support rounded overflow-hidden relative">
+                <img
+                  src="/images/chincheros.jpg"
+                  alt={t("historyTitle")}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/20" />
               </div>
             </div>
           </div>

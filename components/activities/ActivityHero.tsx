@@ -18,12 +18,25 @@ const categoryLabels: Record<ActivityCategory, { es: string; en: string }> = {
 export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
   const isSpanish = locale === "es";
 
+  // Choose a representative hero image for the package
+  const categoryFallback: Record<ActivityCategory, string> = {
+    rutas: "/images/ausangate-1.jpg",
+    comunidad: "/images/comunidad.jpg",
+    ceremonias: "/images/coca-leaf.jpg",
+  };
+  const heroImage =
+    pkg.gallery.find((g) => g.type === "image" && g.url)?.url ||
+    categoryFallback[pkg.category];
+
   return (
-    <section className="relative min-h-[60vh] bg-gradient-to-b from-support/50 to-primary flex items-end">
-      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
-      <div className="absolute inset-0 flex items-center justify-center opacity-5">
-        <Mountain className="w-96 h-96 text-white" />
-      </div>
+    <section className="relative min-h-[60vh] flex items-end">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('${heroImage}')` }}
+      />
+      {/* Readability overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20" />
 
       <div className="container-custom relative z-10 pb-12">
         <Link

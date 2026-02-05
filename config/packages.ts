@@ -78,10 +78,10 @@ export const packages: Package[] = [
       { day: 1, title: "Experiencia completa de textiles", titleEn: "Complete textile experience", description: "8:00 AM recojo del hotel. Viaje a Chinchero. Demostración de teñido natural. Práctica en telar. Almuerzo con la comunidad. Visita al mercado. Regreso a Cusco 1:00 PM.", descriptionEn: "8:00 AM hotel pickup. Travel to Chinchero. Natural dyeing demonstration. Loom practice. Lunch with community. Market visit. Return to Cusco 1:00 PM.", meals: "Almuerzo", accommodation: "N/A" }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Tejedoras de Chinchero", url: "/images/chincheros.jpg" },
-      { id: 2, type: "image", title: "Textiles tradicionales", url: "/images/textiles.jpg" },
-      { id: 3, type: "image", title: "Tejido en telar", url: "/images/textiles-2.jpg" },
-      { id: 4, type: "image", title: "Colores naturales", url: "/images/textiles-3.jpg" }
+      { id: 1, type: "image", title: "Tejedoras de Chinchero", url: "/images/textiles.jpg" },
+      { id: 2, type: "image", title: "Textiles tradicionales", url: "/images/textiles-2.jpg" },
+      { id: 3, type: "image", title: "Tejido en telar", url: "/images/textiles-3.jpg" },
+      { id: 4, type: "image", title: "Colores naturales", url: "/images/chincheros.jpg" }
     ]
   },
 
@@ -537,7 +537,7 @@ export const packages: Package[] = [
       { id: 1, type: "image", title: "Parque Nacional del Manu", url: "/images/manu.jpg" },
       { id: 2, type: "image", title: "Bosque nublado del Manu", url: "/images/manu-3.jpg" },
       { id: 3, type: "image", title: "Selva amazónica", url: "/images/manu-4.jpg" },
-      { id: 4, type: "image", title: "Comunidad Harakbut", url: "/images/comunidad-4.jpg" },
+      { id: 4, type: "image", title: "Comunidad Harakbut", url: "/images/comunidad-3.jpg" },
       { id: 5, type: "image", title: "Naturaleza del Manu", url: "/images/manu-5.jpg" },
       { id: 6, type: "image", title: "Selva del Manu", url: "/images/selva-manu.jpg" }
     ]

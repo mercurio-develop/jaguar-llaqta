@@ -14,11 +14,11 @@ export default function Hero() {
       <div className="absolute inset-0">
         {/* Hero image */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center blur-sm "
           style={{ backgroundImage: "url('/images/hero-banner-home.jpg')" }}
         />
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/75 to-primary" />
       </div>
 
       {/* Content */}
@@ -48,10 +48,16 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <Link href={`/${locale}/actividades`} className="btn-primary text-lg px-8 py-4">
+            <Link
+              href={`/${locale}/actividades`}
+              className="btn-primary text-lg px-8 py-4"
+            >
               {t("heroCta_activities")}
             </Link>
-            <Link href={`/${locale}/contacto`} className="btn-secondary text-lg px-8 py-4">
+            <Link
+              href={`/${locale}/contacto`}
+              className="btn-secondary text-lg px-8 py-4"
+            >
               {t("heroCta_contactus")}
             </Link>
           </div>
