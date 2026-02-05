@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { notFound } from "next/navigation";
+import { useLocale } from "next-intl";
 import {
   ChevronDown,
   ChevronUp,
@@ -14,13 +14,12 @@ import {
   Check,
   X,
   AlertCircle,
-  Image as ImageIcon,
-  Play,
   ArrowLeft,
 } from "lucide-react";
 import { packages, DayItinerary, ActivityCategory } from "@/config/packages";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+import Gallery from "@/components/Gallery";
 
 interface ItineraryDayProps {
   day: DayItinerary;
@@ -29,8 +28,51 @@ interface ItineraryDayProps {
   locale: string;
 }
 
+function formatDescription(description: string) {
+  // Split by time patterns (e.g., "12:00 PM", "07:00 AM", "4:00 PM")
+  const timePattern = /(\d{1,2}:\d{2}\s*(?:AM|PM|am|pm)?)\s*[–-]\s*/g;
+  const parts = description.split(timePattern).filter(Boolean);
+
+  if (parts.length <= 1) {
+    // No times found, return as-is
+    return <p className="text-muted leading-relaxed">{description}</p>;
+  }
+
+  const items: { time: string; text: string }[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i].trim();
+    if (/^\d{1,2}:\d{2}\s*(?:AM|PM|am|pm)?$/.test(part)) {
+      // This is a time, next part is the description
+      const text = parts[i + 1]?.trim() || "";
+      items.push({ time: part, text });
+      i++; // Skip the next part as we already used it
+    }
+  }
+
+  // Check if there's text before the first time
+  const firstTimeIndex = description.search(timePattern);
+  const prefixText = firstTimeIndex > 0 ? description.substring(0, firstTimeIndex).trim() : "";
+
+  return (
+    <div className="space-y-3">
+      {prefixText && (
+        <p className="text-muted leading-relaxed">{prefixText}</p>
+      )}
+      {items.map((item, index) => (
+        <div key={index} className="flex gap-3">
+          <span className="text-accent font-medium whitespace-nowrap min-w-[70px]">
+            {item.time}
+          </span>
+          <p className="text-muted leading-relaxed">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ItineraryDay({ day, isOpen, onToggle, locale }: ItineraryDayProps) {
   const isSpanish = locale === "es";
+  const description = isSpanish ? day.description : day.descriptionEn;
 
   return (
     <div className="border border-support rounded overflow-hidden">
@@ -55,11 +97,11 @@ function ItineraryDay({ day, isOpen, onToggle, locale }: ItineraryDayProps) {
 
       {isOpen && (
         <div className="p-6 bg-primary-alt/50">
-          <p className="text-muted leading-relaxed mb-4">
-            {isSpanish ? day.description : day.descriptionEn}
-          </p>
+          <div className="mb-4">
+            {formatDescription(description)}
+          </div>
 
-          <div className="flex flex-wrap gap-6 text-sm">
+          <div className="flex flex-wrap gap-6 text-sm pt-4 border-t border-support/50">
             {day.highlights && day.highlights.length > 0 && (
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-accent mt-0.5" />
@@ -103,8 +145,7 @@ function ItineraryDay({ day, isOpen, onToggle, locale }: ItineraryDayProps) {
 }
 
 export default function ActivityDetailPage({ params }: { params: { id: string } }) {
-  const pathname = usePathname();
-  const locale = pathname.split("/")[1];
+  const locale = useLocale();
   const isSpanish = locale === "es";
 
   const pkg = packages.find((p) => p.id === params.id);
@@ -244,9 +285,18 @@ export default function ActivityDetailPage({ params }: { params: { id: string } 
                   {isSpanish ? "Resumen del Viaje" : "Trip Overview"}
                 </h2>
 
-                <p className="text-muted leading-relaxed text-lg mb-10">
+                <p className="text-muted leading-relaxed text-lg mb-6">
                   {isSpanish ? pkg.description : pkg.descriptionEn}
                 </p>
+
+                {/* Note/Glossary */}
+                {(pkg.note || pkg.noteEn) && (
+                  <div className="mb-10 p-4 bg-accent/5 border-l-2 border-accent">
+                    <p className="text-white/80 text-sm italic">
+                      {isSpanish ? pkg.note : pkg.noteEn}
+                    </p>
+                  </div>
+                )}
 
                 {/* Highlights */}
                 <div className="mb-10">
@@ -369,28 +419,12 @@ export default function ActivityDetailPage({ params }: { params: { id: string } 
                   {isSpanish ? "Galería" : "Gallery"}
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {pkg.gallery.map((item) => (
-                    <div
-                      key={item.id}
-                      className="aspect-square bg-support/50 overflow-hidden relative group cursor-pointer border border-support hover:border-accent/30 transition-colors"
-                    >
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        {item.type === "video" ? (
-                          <Play className="w-12 h-12 text-white/20 group-hover:text-accent/50 transition-colors" />
-                        ) : (
-                          <ImageIcon className="w-12 h-12 text-white/20 group-hover:text-white/40 transition-colors" />
-                        )}
-                      </div>
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary to-transparent p-4">
-                        <p className="text-white/80 text-sm">{item.title}</p>
-                        {item.type === "video" && (
-                          <span className="text-xs text-accent uppercase tracking-wider">Video</span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <Gallery
+                  locale={locale as "es" | "en"}
+                  items={pkg.gallery}
+                  showFilters={false}
+                  columns={3}
+                />
               </section>
             </div>
 

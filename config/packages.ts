@@ -33,6 +33,8 @@ export interface Package {
   price: number;
   description: string;
   descriptionEn: string;
+  note?: string;
+  noteEn?: string;
   highlights: string[];
   highlightsEn: string[];
   includes: string[];
@@ -46,178 +48,6 @@ export interface Package {
 }
 
 export const packages: Package[] = [
-  // RUTAS - Salkantay Trek
-  {
-    id: "salkantay",
-    category: "rutas",
-    name: "Salkantay Trek",
-    nameEn: "Salkantay Trek",
-    tagline: "La ruta alternativa más espectacular hacia Machu Picchu",
-    taglineEn: "The most spectacular alternative route to Machu Picchu",
-    duration: "5 días / 4 noches",
-    difficulty: "Moderada - Alta",
-    elevation: "4,630m máx.",
-    bestSeason: "Abril - Octubre",
-    price: 450,
-    description: "Atraviesa paisajes extraordinarios desde glaciares hasta selva nublada en esta épica travesía hacia Machu Picchu. El trek de Salkantay te lleva por el corazón de los Andes, pasando por el imponente nevado Salkantay (6,271m) y la cristalina Laguna Humantay.",
-    descriptionEn: "Cross extraordinary landscapes from glaciers to cloud forest on this epic journey to Machu Picchu. The Salkantay trek takes you through the heart of the Andes, passing the imposing Salkantay snow peak (6,271m) and the crystal-clear Humantay Lagoon.",
-    highlights: ["Nevado Salkantay", "Laguna Humantay", "Machu Picchu", "Selva nublada", "Comunidades locales"],
-    highlightsEn: ["Salkantay Mountain", "Humantay Lake", "Machu Picchu", "Cloud forest", "Local communities"],
-    includes: [
-      "Guía profesional bilingüe",
-      "Transporte ida y vuelta desde Cusco",
-      "4 noches de alojamiento (lodges y camping)",
-      "Todas las comidas durante el trek",
-      "Entrada a Machu Picchu",
-      "Tren de regreso a Cusco",
-      "Equipo de camping",
-      "Botiquín de primeros auxilios",
-      "Oxígeno de emergencia"
-    ],
-    includesEn: [
-      "Professional bilingual guide",
-      "Round-trip transport from Cusco",
-      "4 nights accommodation (lodges and camping)",
-      "All meals during the trek",
-      "Machu Picchu entrance",
-      "Return train to Cusco",
-      "Camping equipment",
-      "First aid kit",
-      "Emergency oxygen"
-    ],
-    notIncludes: [
-      "Vuelos internacionales",
-      "Seguro de viaje",
-      "Propinas",
-      "Bebidas alcohólicas",
-      "Snacks adicionales"
-    ],
-    notIncludesEn: [
-      "International flights",
-      "Travel insurance",
-      "Tips",
-      "Alcoholic beverages",
-      "Additional snacks"
-    ],
-    requirements: [
-      "Condición física moderada-buena",
-      "Aclimatación previa en Cusco (mínimo 2 días)",
-      "Botas de trekking",
-      "Ropa de abrigo para temperaturas bajo cero",
-      "Mochila de día (20-30L)",
-      "Protector solar y gorro",
-      "Botella de agua reutilizable"
-    ],
-    requirementsEn: [
-      "Moderate-good physical condition",
-      "Prior acclimatization in Cusco (minimum 2 days)",
-      "Trekking boots",
-      "Warm clothing for sub-zero temperatures",
-      "Day backpack (20-30L)",
-      "Sunscreen and hat",
-      "Reusable water bottle"
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Cusco - Soraypampa - Laguna Humantay",
-        titleEn: "Cusco - Soraypampa - Humantay Lagoon",
-        description: "Salida temprana de Cusco (4:00 AM). Viaje en bus hasta Mollepata para desayuno. Continuamos hasta Soraypampa (3,900m) donde iniciamos la caminata hacia la impresionante Laguna Humantay (4,200m). Tiempo para fotos y conexión con este lugar sagrado. Regreso al campamento para cena y noche en lodge.",
-        descriptionEn: "Early departure from Cusco (4:00 AM). Bus ride to Mollepata for breakfast. We continue to Soraypampa (3,900m) where we start hiking to the stunning Humantay Lagoon (4,200m). Time for photos and connection with this sacred place. Return to camp for dinner and night in lodge.",
-        highlights: ["Laguna Humantay", "Vistas del Salkantay"],
-        meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Lodge en Soraypampa"
-      },
-      {
-        day: 2,
-        title: "Soraypampa - Paso Salkantay - Chaullay",
-        titleEn: "Soraypampa - Salkantay Pass - Chaullay",
-        description: "El día más desafiante y espectacular. Ascenso temprano hacia el paso Salkantay (4,630m), el punto más alto del trek. Vistas impresionantes del nevado Salkantay. Descenso gradual hacia la selva nublada hasta Chaullay (2,900m). Cambio dramático de paisaje.",
-        descriptionEn: "The most challenging and spectacular day. Early ascent to Salkantay Pass (4,630m), the highest point of the trek. Stunning views of Salkantay mountain. Gradual descent to the cloud forest until Chaullay (2,900m). Dramatic landscape change.",
-        highlights: ["Paso Salkantay 4,630m", "Nevado Salkantay", "Cambio de ecosistemas"],
-        meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Camping en Chaullay"
-      },
-      {
-        day: 3,
-        title: "Chaullay - Santa Teresa",
-        titleEn: "Chaullay - Santa Teresa",
-        description: "Caminata relajada por la selva nublada. Observación de orquídeas, colibríes y plantaciones de café. Llegada a Santa Teresa donde disfrutamos de las aguas termales de Cocalmayo. Noche en hostal.",
-        descriptionEn: "Relaxed hike through the cloud forest. Observation of orchids, hummingbirds and coffee plantations. Arrival at Santa Teresa where we enjoy Cocalmayo hot springs. Night in hostel.",
-        highlights: ["Selva nublada", "Aguas termales", "Plantaciones de café"],
-        meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Hostal en Santa Teresa"
-      },
-      {
-        day: 4,
-        title: "Santa Teresa - Aguas Calientes",
-        titleEn: "Santa Teresa - Aguas Calientes",
-        description: "Caminata final por las vías del tren hacia Aguas Calientes. Tarde libre para explorar el pueblo. Briefing sobre la visita a Machu Picchu del día siguiente. Cena de celebración.",
-        descriptionEn: "Final hike along the train tracks to Aguas Calientes. Free afternoon to explore the town. Briefing about the next day's Machu Picchu visit. Celebration dinner.",
-        highlights: ["Río Urubamba", "Aguas Calientes"],
-        meals: "Desayuno, Almuerzo, Cena",
-        accommodation: "Hostal en Aguas Calientes"
-      },
-      {
-        day: 5,
-        title: "Machu Picchu - Cusco",
-        titleEn: "Machu Picchu - Cusco",
-        description: "Subida temprana a Machu Picchu para ver el amanecer. Tour guiado de 2 horas por la ciudadela. Tiempo libre para explorar. Opción de subir Huayna Picchu (costo adicional). Descenso a Aguas Calientes para almuerzo. Tren de regreso a Cusco.",
-        descriptionEn: "Early ascent to Machu Picchu to see the sunrise. 2-hour guided tour of the citadel. Free time to explore. Option to climb Huayna Picchu (additional cost). Descent to Aguas Calientes for lunch. Return train to Cusco.",
-        highlights: ["Machu Picchu", "Amanecer", "Tour guiado"],
-        meals: "Desayuno, Almuerzo",
-        accommodation: "Fin del tour"
-      }
-    ],
-    gallery: [
-      { id: 1, type: "image", title: "Laguna Humantay al amanecer" },
-      { id: 2, type: "image", title: "Nevado Salkantay" },
-      { id: 3, type: "image", title: "Paso Salkantay" },
-      { id: 4, type: "image", title: "Selva nublada" },
-      { id: 5, type: "video", title: "Resumen del trek" },
-      { id: 6, type: "image", title: "Machu Picchu" },
-      { id: 7, type: "image", title: "Grupo en la cumbre" },
-      { id: 8, type: "image", title: "Campamento" }
-    ]
-  },
-
-  // RUTAS - Ausangate
-  {
-    id: "ausangate",
-    category: "rutas",
-    name: "Ausangate y Montaña de Colores",
-    nameEn: "Ausangate and Rainbow Mountain",
-    tagline: "Trek circular alrededor del Apu más sagrado del Cusco",
-    taglineEn: "Circular trek around Cusco's most sacred Apu",
-    duration: "4 días / 3 noches",
-    difficulty: "Moderada",
-    elevation: "5,200m máx.",
-    bestSeason: "Abril - Noviembre",
-    price: 380,
-    description: "Rodea el majestuoso Ausangate, uno de los Apus más venerados de los Andes. Este trek te lleva por lagunas de colores imposibles, glaciares milenarios y la famosa Montaña de Siete Colores (Vinicunca).",
-    descriptionEn: "Circle the majestic Ausangate, one of the most revered Apus of the Andes. This trek takes you through impossibly colored lagoons, ancient glaciers and the famous Rainbow Mountain (Vinicunca).",
-    highlights: ["Montaña de Colores", "Lagunas glaciares", "Comunidades alpaqueras", "Aguas termales"],
-    highlightsEn: ["Rainbow Mountain", "Glacial lagoons", "Alpaca communities", "Hot springs"],
-    includes: ["Guía bilingüe", "Transporte", "Equipo de camping", "Alimentación completa", "Entradas"],
-    includesEn: ["Bilingual guide", "Transport", "Camping equipment", "Full meals", "Entrance fees"],
-    notIncludes: ["Seguro de viaje", "Propinas", "Bebidas extra"],
-    notIncludesEn: ["Travel insurance", "Tips", "Extra drinks"],
-    requirements: ["Buena condición física", "Aclimatación previa", "Ropa térmica"],
-    requirementsEn: ["Good physical condition", "Prior acclimatization", "Thermal clothing"],
-    itinerary: [
-      { day: 1, title: "Cusco - Upis", titleEn: "Cusco - Upis", description: "Viaje a Tinki e inicio del trek hacia Upis.", descriptionEn: "Travel to Tinki and start trek to Upis.", meals: "A, C", accommodation: "Camping" },
-      { day: 2, title: "Upis - Montaña de Colores - Anantapata", titleEn: "Upis - Rainbow Mountain - Anantapata", description: "Visita a Vinicunca y caminata hacia Anantapata.", descriptionEn: "Visit Vinicunca and hike to Anantapata.", meals: "D, A, C", accommodation: "Camping" },
-      { day: 3, title: "Anantapata - Pacchanta", titleEn: "Anantapata - Pacchanta", description: "Trek por lagunas glaciares hasta aguas termales.", descriptionEn: "Trek through glacial lagoons to hot springs.", meals: "D, A, C", accommodation: "Camping" },
-      { day: 4, title: "Pacchanta - Cusco", titleEn: "Pacchanta - Cusco", description: "Baño en aguas termales y regreso a Cusco.", descriptionEn: "Hot springs bath and return to Cusco.", meals: "D, A", accommodation: "Fin" }
-    ],
-    gallery: [
-      { id: 1, type: "image", title: "Montaña de Colores" },
-      { id: 2, type: "image", title: "Laguna glaciar" },
-      { id: 3, type: "image", title: "Ausangate" },
-      { id: 4, type: "image", title: "Alpacas" }
-    ]
-  },
-
   // COMUNIDAD - Textiles
   {
     id: "textiles",
@@ -343,6 +173,325 @@ export const packages: Package[] = [
       { id: 4, type: "video", title: "Experiencia del retiro" },
       { id: 5, type: "image", title: "Ofrenda nocturna" },
       { id: 6, type: "image", title: "Cielo estrellado" }
+    ]
+  },
+
+  // RUTAS - Ausangate Trek 3D2N (Seven Lakes)
+  {
+    id: "ausangate-trek-3d2n",
+    category: "rutas",
+    name: "Trek Ausangate – Siete Lagunas",
+    nameEn: "Ausangate Trek – Seven Lakes",
+    tagline: "Descubre el Apu más sagrado y sus lagunas glaciares",
+    taglineEn: "Discover the most sacred Apu and its glacial lagoons",
+    duration: "3 días / 2 noches",
+    difficulty: "Moderada",
+    elevation: "4,800m máx.",
+    bestSeason: "Abril - Noviembre",
+    price: 450,
+    description: "El Ausangate es la montaña más alta de la región Cusco y la quinta más alta del Perú, con una altitud de 6,385 metros sobre el nivel del mar. Se encuentra aproximadamente a 84 kilómetros al sureste de la ciudad del Cusco. Esta montaña sagrada es una de las más importantes dentro de la cosmovisión andina. El Apu Ausangate es considerado el padre de todas las montañas circundantes y un poderoso espíritu protector de la región. La zona también es reconocida por sus tradicionales textiles andinos, un conocimiento ancestral que se mantiene vivo y se transmite de generación en generación.",
+    descriptionEn: "Ausangate is the highest mountain in the Cusco region and the fifth highest in Peru, reaching 6,385 meters above sea level. It is located approximately 84 kilometers southeast of Cusco. This sacred mountain is one of the most important in Andean culture. Apu Ausangate is considered the father of all surrounding mountains and a powerful protector spirit of the region. The area is also renowned for its traditional Andean textiles—ancestral knowledge that remains alive and is passed down through local families.",
+    note: "APU: Palabra quechua que significa Dios o Espíritu Sagrado de la Montaña.",
+    noteEn: "APU: Quechua word meaning God or Sacred Mountain Spirit.",
+    highlights: ["Siete Lagunas del Ausangate", "Aguas termales de Pacchanta", "Comunidad local", "Nevado Ausangate"],
+    highlightsEn: ["Seven Lakes of Ausangate", "Pacchanta hot springs", "Local community", "Ausangate snow peak"],
+    includes: [
+      "Transporte privado (ida y vuelta)",
+      "Guía profesional",
+      "Alimentación completa por 3 días / 2 noches",
+      "Una noche de alojamiento en casa de familia local",
+      "Boleto de ingreso al Área de Conservación Ausangate",
+      "Equipo de montaña para una noche (carpa y bolsa de dormir)"
+    ],
+    includesEn: [
+      "Private transportation (round trip)",
+      "Professional guide",
+      "All meals for 3 days / 2 nights (lunch, dinner, breakfast, lunch)",
+      "One night accommodation with a local family",
+      "Entrance ticket to the Ausangate Conservation Area",
+      "Mountain equipment for one night (tent and sleeping bag)"
+    ],
+    notIncludes: [
+      "Snacks personales",
+      "Equipo personal de montaña"
+    ],
+    notIncludesEn: [
+      "Personal snacks",
+      "Personal mountain equipment"
+    ],
+    requirements: [
+      "Sombrero para el sol",
+      "Bloqueador solar",
+      "Botella de agua",
+      "Dinero en efectivo para souvenirs",
+      "DNI o Pasaporte",
+      "Cámara fotográfica"
+    ],
+    requirementsEn: [
+      "Sun hat",
+      "Sunscreen",
+      "Water bottle",
+      "Cash for souvenirs",
+      "ID / Passport",
+      "Camera"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Valle Sagrado – Pacchanta",
+        titleEn: "Sacred Valley – Pacchanta",
+        description: "12:00 PM – Recojo desde el Valle Sagrado y traslado al pueblo de Pacchanta (4,200 m s. n. m.). Tiempo aproximado de viaje: 4 horas en vehículo privado. 4:00 PM – Llegada a Pacchanta. Alojamiento en casa de una familia local, con alimentación incluida. La tarde está dedicada a la aclimatación, con una caminata suave por la zona y tiempo para relajarse en las aguas termales naturales. Cena y pernocte.",
+        descriptionEn: "12:00 PM – Pick-up from the Sacred Valley and transfer to the village of Pacchanta (4,200 m a.s.l.). Approximate travel time: 4 hours by private vehicle. 4:00 PM – Arrival in Pacchanta. Overnight stay with a local family, including meals and basic accommodation. The afternoon is dedicated to acclimatization, including a gentle walk and time to relax in the natural hot springs. Dinner and overnight stay.",
+        highlights: ["Pacchanta", "Aguas termales naturales"],
+        meals: "Almuerzo, Cena",
+        accommodation: "Casa de familia local"
+      },
+      {
+        day: 2,
+        title: "Siete Lagunas del Ausangate",
+        titleEn: "Seven Lakes of Ausangate",
+        description: "7:00 AM – Caminata de día completo para visitar las Siete Lagunas del Ausangate (ida y vuelta: 4 a 6 horas). Altitud máxima: 4,800 m s. n. m. Si las condiciones climáticas son favorables, existe la posibilidad de pasar la noche en la montaña en campamento. Si el clima no es favorable, retorno a Pacchanta para el almuerzo y tiempo adicional en las aguas termales. Cena y última noche en Pacchanta.",
+        descriptionEn: "7:00 AM – Full-day hike to visit the Seven Lakes of Ausangate (round trip: 4–6 hours). Highest altitude: 4,800 m a.s.l. If weather conditions are favorable, there is the possibility of camping overnight in the mountains. If weather conditions are unfavorable, return to Pacchanta for lunch and additional time at the hot springs. Dinner and overnight stay in Pacchanta.",
+        highlights: ["Siete Lagunas", "4,800 m s.n.m.", "Vistas del Ausangate"],
+        meals: "Desayuno, Almuerzo, Cena",
+        accommodation: "Casa de familia local o Campamento"
+      },
+      {
+        day: 3,
+        title: "Pacchanta – Valle Sagrado",
+        titleEn: "Pacchanta – Sacred Valley",
+        description: "7:00 AM – Retorno en vehículo privado al Valle Sagrado de los Incas. Tiempo aproximado de viaje: 4 horas.",
+        descriptionEn: "7:00 AM – Departure by private vehicle back to the Sacred Valley of the Incas. Approximate travel time: 4 hours.",
+        highlights: ["Paisajes andinos"],
+        meals: "Desayuno, Almuerzo",
+        accommodation: "Fin del tour"
+      }
+    ],
+    gallery: [
+      { id: 1, type: "image", title: "Lagunas del Ausangate" },
+      { id: 2, type: "image", title: "Nevado Ausangate" },
+      { id: 3, type: "image", title: "Aguas termales de Pacchanta" },
+      { id: 4, type: "image", title: "Comunidad local" },
+      { id: 5, type: "image", title: "Textiles andinos" },
+      { id: 6, type: "image", title: "Paisaje de alta montaña" }
+    ]
+  },
+
+  // RUTAS - Lares Trek 3D2N
+  {
+    id: "lares-trek-3d2n",
+    category: "rutas",
+    name: "Lares Trek",
+    nameEn: "Lares Trek",
+    tagline: "Travesía por la cordillera del Urubamba con comunidades tradicionales",
+    taglineEn: "Journey through the Urubamba range with traditional communities",
+    duration: "3 días / 2 noches",
+    difficulty: "Moderada a desafiante",
+    elevation: "4,800m máx.",
+    bestSeason: "Abril - Octubre",
+    price: 450,
+    description: "El Lares Trek es una de las rutas de montaña más atractivas de la región Cusco. Atraviesa la cordillera del Urubamba, considerada tropical por su cercanía a la selva amazónica. Durante la caminata se recorren diversos ecosistemas andinos como ríos, bosques altoandinos, lagunas, cascadas y montañas nevadas, además de visitar comunidades tradicionales donde se mantienen vivas prácticas ancestrales. El recorrido finaliza en el pueblo de Lares, conocido por sus aguas termales y medicinales.",
+    descriptionEn: "The Lares Trek is one of the most scenic mountain routes in the Cusco region. It crosses the Urubamba mountain range, a tropical range in the Peruvian Andes due to its proximity to the rainforest. Along the trek, travelers experience diverse Andean ecosystems including rivers, high-Andean forests, lagoons, waterfalls, snow-capped peaks, and traditional communities. The route also offers opportunities to observe local wildlife such as condors, deer, eagles, viscachas, and hummingbirds. The journey concludes in the town of Lares, famous for its thermal and medicinal hot springs.",
+    highlights: ["Laguna Yanaqocha", "Comunidades tradicionales", "Bosques altoandinos", "Aguas termales de Lares", "Paso de montaña 4,800m"],
+    highlightsEn: ["Yanaqocha Lagoon", "Traditional communities", "High-Andean forests", "Lares hot springs", "Mountain pass 4,800m"],
+    includes: [
+      "Transporte ida y vuelta",
+      "Alimentación completa (3 días / 2 noches)",
+      "Alojamiento y campamento",
+      "Equipo de montaña (carpas, colchonetas y bolsas de dormir)",
+      "Guiado y acompañamiento profesional",
+      "Ingreso a las aguas termales de Lares"
+    ],
+    includesEn: [
+      "Round-trip transportation",
+      "Full board (3 days / 2 nights)",
+      "Camping and lodging",
+      "Mountaineering equipment (tents, sleeping mats, sleeping bags)",
+      "Professional guiding and support",
+      "Entrance to the Lares hot springs"
+    ],
+    notIncludes: [
+      "Equipo personal de montaña",
+      "Snacks personales"
+    ],
+    notIncludesEn: [
+      "Personal mountaineering equipment",
+      "Personal snacks"
+    ],
+    requirements: [
+      "Ropa abrigadora e impermeable",
+      "Botella personal de agua",
+      "Documentos personales",
+      "Dinero en efectivo",
+      "Artículos de aseo",
+      "Ropa de baño y toalla",
+      "Sombrero o gorra",
+      "Bloqueador solar"
+    ],
+    requirementsEn: [
+      "Warm and rain clothing",
+      "Personal water bottle",
+      "Personal documents",
+      "Cash for souvenirs",
+      "Toiletries kit",
+      "Swimsuit and towel",
+      "Sun hat or cap",
+      "Sunscreen"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Huaran – Cancha Cancha – Laguna Yanaqocha",
+        titleEn: "Huaran – Cancha Cancha – Yanaqocha Lagoon",
+        description: "07:30 AM – Recojo en transporte privado hacia Huaran y luego a Saywapata (3,200 m s. n. m.). 08:30 AM – Inicio de la caminata. Ascenso de aproximadamente 3 horas por quebradas, ríos y bosques altoandinos. 11:30 AM – Llegada a la comunidad de Cancha Cancha. Descanso, mate de coca y snacks locales con una familia anfitriona. 12:30 PM – Continuación del ascenso hacia zonas más altas y armado de campamento cerca de la laguna Yanaqocha. 06:00 PM – Cena y pernocte en campamento.",
+        descriptionEn: "07:30 AM – Pick-up by private transport to Huaran, continuing to Saywapata (3,200 m a.s.l.). 08:30 AM – Start of the hike. Approx. 3-hour ascent through ravines, rivers, and high-Andean forests. 11:30 AM – Arrival at the community of Cancha Cancha. Rest, coca tea, and local snacks with a host family. 12:30 PM – Continued ascent to higher elevations and camp setup near Yanaqocha Lagoon. 06:00 PM – Dinner and overnight camping.",
+        highlights: ["Cancha Cancha", "Laguna Yanaqocha", "Bosques altoandinos"],
+        meals: "Almuerzo, Cena",
+        accommodation: "Campamento cerca de Laguna Yanaqocha"
+      },
+      {
+        day: 2,
+        title: "Paso de montaña – Quishuarani",
+        titleEn: "Mountain Pass – Quishuarani",
+        description: "07:00 AM – Desayuno y desmontaje del campamento. 08:00 AM – Caminata hacia el paso de montaña (4,800 m s. n. m.), disfrutando de vistas panorámicas espectaculares. Duración aproximada: 4 a 5 horas. 01:00 PM – Llegada a la comunidad de Quishuarani. 02:30 PM – Almuerzo en casa local y armado de campamento. 04:00 PM – Caminata opcional por la comunidad para conocer sus tradiciones. 07:00 PM – Cena.",
+        descriptionEn: "07:00 AM – Breakfast and camp packing. 08:00 AM – Trek to the mountain pass (4,800 m a.s.l.), enjoying panoramic views. Approx. 4–5 hours of hiking. 01:00 PM – Arrival at the community of Quishuarani. 02:30 PM – Lunch with a local family and camp setup. 04:00 PM – Optional community walk. 07:00 PM – Dinner.",
+        highlights: ["Paso 4,800m", "Vistas panorámicas", "Comunidad Quishuarani"],
+        meals: "Desayuno, Almuerzo, Cena",
+        accommodation: "Campamento en Quishuarani"
+      },
+      {
+        day: 3,
+        title: "Cuncani – Aguas termales de Lares – Valle Sagrado",
+        titleEn: "Cuncani – Lares Hot Springs – Sacred Valley",
+        description: "06:00 AM – Desayuno. 07:30 AM – Caminata de 4 horas hacia la comunidad de Cuncani. 11:00 AM – Parada para almuerzo ligero. 12:00 PM – Traslado a las aguas termales de Lares (45 minutos). Tiempo libre para relajarse en las aguas termales medicinales (2–3 horas). 03:00 PM – Transporte hacia el Valle Sagrado (aprox. 2.5 horas). 05:30 PM – Llegada.",
+        descriptionEn: "06:00 AM – Breakfast. 07:30 AM – 4-hour hike to the community of Cuncani. 11:00 AM – Packed lunch stop. 12:00 PM – Transfer to the Lares Hot Springs (45 minutes). Relaxation time: 2–3 hours. 03:00 PM – Transport to the Sacred Valley (approx. 2.5 hours). 05:30 PM – Arrival.",
+        highlights: ["Cuncani", "Aguas termales de Lares"],
+        meals: "Desayuno, Almuerzo",
+        accommodation: "Fin del tour"
+      }
+    ],
+    gallery: [
+      { id: 1, type: "image", title: "Paisajes del Lares Trek" },
+      { id: 2, type: "image", title: "Laguna Yanaqocha" },
+      { id: 3, type: "image", title: "Aguas termales de Lares" },
+      { id: 4, type: "image", title: "Comunidad tradicional" },
+      { id: 5, type: "image", title: "Paso de montaña" },
+      { id: 6, type: "image", title: "Bosque altoandino" }
+    ]
+  },
+
+  // RUTAS - Selva del Manu 5D4N
+  {
+    id: "manu-rainforest-5d4n",
+    category: "rutas",
+    name: "Selva del Manu",
+    nameEn: "Manu Rainforest",
+    tagline: "Aventura en una de las zonas con mayor biodiversidad del planeta",
+    taglineEn: "Adventure in one of the most biodiverse areas on Earth",
+    duration: "5 días / 4 noches",
+    difficulty: "Moderada",
+    elevation: "300m – 4,000m",
+    bestSeason: "Mayo - Octubre",
+    price: 600,
+    description: "El Parque Nacional del Manu es un área natural protegida ubicada en el sureste del Perú, entre las regiones de Cusco y Madre de Dios. Con una extensión de más de 1.9 millones de hectáreas, abarca desde los 300 m s. n. m. en la Amazonía hasta más de 4,000 m s. n. m. en los Andes. Este territorio alberga una de las mayores biodiversidades del planeta y conserva zonas prácticamente vírgenes. La tradición oral menciona que en sus profundidades podría encontrarse el mítico Paititi, la ciudad perdida de los Incas.",
+    descriptionEn: "Manu National Park is a protected natural area located in southeastern Peru, between the regions of Cusco and Madre de Dios. Covering more than 1.9 million hectares, it extends from 300 m a.s.l. in the Amazon rainforest to over 4,000 m a.s.l. in the Andes. This territory shelters one of the highest levels of biodiversity on Earth and preserves vast pristine areas. According to oral tradition, the legendary lost Inca city of Paititi may lie hidden deep within this jungle.",
+    highlights: ["Parque Nacional del Manu", "Bosque nublado", "Comunidad nativa Harakbut", "Aguas termales de Pantiaqoya", "Cataratas y piscinas naturales"],
+    highlightsEn: ["Manu National Park", "Cloud forest", "Harakbut native community", "Pantiaqoya hot springs", "Waterfalls and natural pools"],
+    includes: [
+      "Guiado y acompañamiento profesional",
+      "Alojamiento y alimentación completa por 5 días / 4 noches",
+      "Transporte vehicular y fluvial",
+      "Logística general del viaje"
+    ],
+    includesEn: [
+      "Professional guiding and assistance",
+      "Accommodation and full meals for 5 days / 4 nights",
+      "Land and river transportation",
+      "Trip logistics"
+    ],
+    notIncludes: [
+      "Equipo personal",
+      "Snacks personales"
+    ],
+    notIncludesEn: [
+      "Personal equipment",
+      "Personal snacks"
+    ],
+    requirements: [
+      "Ropa para lluvia y calor",
+      "Repelente de insectos",
+      "Botella reutilizable de agua",
+      "Cámara fotográfica",
+      "Documentos personales",
+      "Dinero en efectivo"
+    ],
+    requirementsEn: [
+      "Clothing for rain and heat",
+      "Insect repellent",
+      "Refillable water bottle",
+      "Camera",
+      "Personal documents",
+      "Cash"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Cusco – Salvación – Reserva Qocha Wasi",
+        titleEn: "Cusco – Salvación – Qocha Wasi Reserve",
+        description: "Salida desde Cusco en transporte público hacia el poblado de Salvación (aprox. 7 horas). En el camino se atraviesan paisajes altoandinos y bosques nublados. Parada técnica en Paucartambo. Llegada a Salvación por la tarde. Alojamiento en cabañas ubicadas en una colina con vistas panorámicas. Visita a la reserva natural Qocha Wasi, paseo en balsa y caminata por senderos de selva. Cena y descanso.",
+        descriptionEn: "Departure from Cusco to the town of Salvación by public transport (approx. 7 hours). Along the way, travelers enjoy high-Andean landscapes and cloud forests. Technical stop in Paucartambo. Arrival in Salvación in the afternoon. Overnight stay in hillside cabins with panoramic views. Visit to Qocha Wasi Nature Reserve, including a rafting activity and jungle walk. Dinner and rest.",
+        highlights: ["Paucartambo", "Bosque nublado", "Reserva Qocha Wasi"],
+        meals: "Cena",
+        accommodation: "Cabañas en Salvación"
+      },
+      {
+        day: 2,
+        title: "Shintuya – Excursión con comunidad Harakbut",
+        titleEn: "Shintuya – Harakbut Community Excursion",
+        description: "Traslado en transporte local al poblado de Shintuya. Excursión de día y noche junto a una familia de la comunidad nativa Harakbut. Caminata de aproximadamente 4 horas hacia el interior de la selva, conociendo ríos, cascadas, plantas medicinales y fauna local. Noche en campamento rústico.",
+        descriptionEn: "Transfer by local transport to Shintuya village. One-day and one-night excursion into the rainforest with a local Harakbut family. Approximately 4-hour hike into the jungle, learning about rivers, waterfalls, medicinal plants and wildlife. Overnight in a rustic jungle camp.",
+        highlights: ["Comunidad Harakbut", "Selva virgen", "Plantas medicinales"],
+        meals: "Desayuno, Almuerzo, Cena",
+        accommodation: "Campamento rústico en la selva"
+      },
+      {
+        day: 3,
+        title: "Retorno a Shintuya – Apu Pantiaqoya",
+        titleEn: "Return to Shintuya – Apu Pantiaqoya",
+        description: "Desayuno y caminata de retorno (aprox. 3 horas) hasta Shintuya. Almuerzo y traslado en bote hacia las faldas del Apu Pantiaqoya. Descanso en un complejo local y disfrute de aguas termomedicinales. Cena y pernocte.",
+        descriptionEn: "Breakfast and return hike (approx. 3 hours) to Shintuya. Lunch followed by a short boat ride to the foothills of the sacred Pantiaqoya Mountain. Time to relax in local thermomedicinal hot springs. Dinner and overnight stay.",
+        highlights: ["Apu Pantiaqoya", "Aguas termomedicinales", "Viaje en bote"],
+        meals: "Desayuno, Almuerzo, Cena",
+        accommodation: "Hospedaje local en Pantiaqoya"
+      },
+      {
+        day: 4,
+        title: "Cataratas y piscinas naturales – Salvación",
+        titleEn: "Waterfalls and Natural Pools – Salvación",
+        description: "Caminata de 45 minutos hacia cataratas y piscinas naturales. Tiempo para nadar y disfrutar del entorno. Almuerzo y retorno en bote a Shintuya. Traslado por la tarde al poblado de Salvación para pasar la última noche.",
+        descriptionEn: "45-minute hike to waterfalls and natural pools. Time to swim and enjoy the surroundings. Lunch and boat return to Shintuya. Afternoon transfer to Salvación for the final overnight stay.",
+        highlights: ["Cataratas", "Piscinas naturales", "Río Madre de Dios"],
+        meals: "Desayuno, Almuerzo, Cena",
+        accommodation: "Cabañas en Salvación"
+      },
+      {
+        day: 5,
+        title: "Salvación – Cusco",
+        titleEn: "Salvación – Cusco",
+        description: "Retorno desde Salvación hasta la ciudad del Cusco durante todo el día. Llegada por la tarde. Nota: A mayor número de personas, la tarifa se reduce.",
+        descriptionEn: "Full-day return journey from Salvación to Cusco. Arrival in Cusco in the afternoon. Note: Price decreases with a larger group size.",
+        highlights: ["Paisajes andinos", "Bosque nublado"],
+        meals: "Desayuno",
+        accommodation: "Fin del tour"
+      }
+    ],
+    gallery: [
+      { id: 1, type: "image", title: "Parque Nacional del Manu" },
+      { id: 2, type: "image", title: "Bosque nublado del Manu" },
+      { id: 3, type: "image", title: "Aguas termales de Pantiaqoya" },
+      { id: 4, type: "image", title: "Comunidad Harakbut" },
+      { id: 5, type: "image", title: "Cataratas" },
+      { id: 6, type: "image", title: "Fauna amazónica" }
     ]
   }
 ];

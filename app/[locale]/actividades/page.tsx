@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { Mountain, Users, Sparkles, Clock, ArrowRight, Filter, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Card from "@/components/ui/Card";
@@ -27,8 +26,7 @@ const durationFilters = [
 export default function AllActivitiesPage() {
   const t = useTranslations("activities");
   const tNav = useTranslations("nav");
-  const pathname = usePathname();
-  const locale = pathname.split("/")[1] as "es" | "en";
+  const locale = useLocale() as "es" | "en";
 
   const [selectedCategory, setSelectedCategory] = useState<ActivityCategory | "all">("all");
   const [selectedDuration, setSelectedDuration] = useState<string | "all">("all");
@@ -252,6 +250,44 @@ export default function AllActivitiesPage() {
               })}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 bg-primary-alt">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="section-title mb-4">
+              {locale === "es" ? "Galería" : "Gallery"}
+            </h2>
+            <p className="section-subtitle">
+              {locale === "es"
+                ? "Imágenes y videos de nuestras experiencias"
+                : "Images and videos from our experiences"}
+            </p>
+            <div className="w-24 h-1 bg-accent mx-auto" />
+          </div>
+
+          <Gallery locale={locale} showFilters={true} columns={4} />
+        </div>
+      </section>
+
+      {/* Calendar Section */}
+      <section className="py-16 bg-primary">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="section-title mb-4">
+              {locale === "es" ? "Calendario de Actividades" : "Activity Calendar"}
+            </h2>
+            <p className="section-subtitle">
+              {locale === "es"
+                ? "Encuentra la fecha perfecta para tu próxima aventura"
+                : "Find the perfect date for your next adventure"}
+            </p>
+            <div className="w-24 h-1 bg-accent mx-auto" />
+          </div>
+
+          <Calendar locale={locale} showUpcoming={true} />
         </div>
       </section>
     </div>
