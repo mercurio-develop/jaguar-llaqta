@@ -126,7 +126,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
                   <div className="md:col-span-2 aspect-[4/3] md:aspect-auto bg-support/50 relative min-h-[250px] overflow-hidden">
                     {/* Package image or fallback to category hero */}
                     <img
-                      src={(pkg.gallery.find((g) => g.type === "image" && g.url)?.url) || config.heroImage}
+                      src={pkg.heroImage || (pkg.gallery.find((g) => g.type === "image" && g.url)?.url) || config.heroImage}
                       alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"

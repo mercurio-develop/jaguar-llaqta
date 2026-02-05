@@ -25,6 +25,7 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
     ceremonias: "/images/coca-leaf.jpg",
   };
   const heroImage =
+    pkg.heroImage ||
     pkg.gallery.find((g) => g.type === "image" && g.url)?.url ||
     categoryFallback[pkg.category];
 

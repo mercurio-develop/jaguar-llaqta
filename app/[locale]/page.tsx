@@ -1,5 +1,5 @@
 import Hero from "@/components/home/Hero";
-import Services from "@/components/home/Services";
+import FeaturedExperiences from "@/components/home/FeaturedExperiences";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Testimonials from "@/components/home/Testimonials";
 
@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Services />
+      <FeaturedExperiences />
       <WhyChooseUs />
       <Testimonials />
     </>

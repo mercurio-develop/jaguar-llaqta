@@ -176,8 +176,16 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Vision, Mission, Objectives & Values Section */}
-      <section id="vision-mision" className="py-20 bg-primary-alt">
-        <div className="container-custom">
+      <section id="vision-mision" className="py-20 relative overflow-hidden">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/moray.jpg')" }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-primary/85" />
+
+        <div className="container-custom relative z-10">
           <h2 className="font-display text-3xl text-white text-center mb-12">{t("visionMissionTitle")}</h2>
 
           {/* Vision & Mission */}
@@ -293,8 +301,16 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Partner Organizations Section */}
-      <section id="organizaciones" className="py-20 bg-primary">
-        <div className="container-custom">
+      <section id="organizaciones" className="py-20 relative overflow-hidden">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/selva-manu.jpg')" }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-primary/80" />
+
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Building2 className="w-8 h-8 text-accent" />

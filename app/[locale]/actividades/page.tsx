@@ -222,7 +222,10 @@ export default function AllActivitiesPage() {
                   comunidad: "/images/comunidad.jpg",
                   ceremonias: "/images/coca-leaf.jpg",
                 };
-                const pkgImage = (pkg.gallery.find(g => g.type === "image" && g.url)?.url) || categoryFallback[pkg.category];
+                const pkgImage =
+                  pkg.heroImage ||
+                  (pkg.gallery.find(g => g.type === "image" && g.url)?.url) ||
+                  categoryFallback[pkg.category];
                 return (
                   <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support">
                     {/* Image */}

@@ -26,6 +26,12 @@ export interface Package {
   category: ActivityCategory;
   name: string;
   nameEn: string;
+  /**
+   * Optional explicit hero image for this package.
+   * If provided, it will be used in ActivityHero and package cards
+   * before falling back to the first gallery image or category defaults.
+   */
+  heroImage?: string;
   tagline: string;
   taglineEn: string;
   duration: string;

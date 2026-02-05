@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Star, Quote } from "lucide-react";
 import Card from "@/components/ui/Card";
 
@@ -39,10 +39,19 @@ const testimonials = [
 
 export default function Testimonials() {
   const t = useTranslations("home");
+  const locale = useLocale() as "es" | "en";
 
   return (
-    <section className="py-24 bg-primary-alt">
-      <div className="container-custom">
+    <section className="py-24 relative overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/machu-picchu-2.jpg')" }}
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-primary/80" />
+
+      <div className="container-custom relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="section-title">{t("testimonialsTitle")}</h2>
@@ -64,7 +73,7 @@ export default function Testimonials() {
 
               {/* Text */}
               <p className="text-white/80 leading-relaxed mb-6">
-                &ldquo;{testimonial.text.es}&rdquo;
+                &ldquo;{testimonial.text[locale]}&rdquo;
               </p>
 
               {/* Author */}

@@ -1,0 +1,205 @@
+GUÍA DE EDICIÓN DE IMÁGENES — TODOS LOS LUGARES DONDE SE PUEDEN CAMBIAR IMÁGENES
+
+Esta guía enumera de forma clara y completa todas las ubicaciones del código donde se definen imágenes y cómo cambiarlas.
+Las rutas son relativas a la raíz del repositorio.
+
+────────────────────────
+LISTA RÁPIDA (LO QUE QUIZÁ QUIERAS CAMBIAR)
+────────────────────────
+
+Fondo del hero en Home → components/home/Hero.tsx
+
+Hero de la página Todas las Actividades → app/[locale]/actividades/page.tsx
+
+Miniaturas de tarjetas de paquetes (grilla de Actividades) → config/packages.ts (galerías por paquete) y fallbacks en app/[locale]/actividades/page.tsx
+
+Hero de páginas de categoría (Rutas / Comunidad / Ceremonias) → components/activities/CategoryPage.tsx
+
+Hero del detalle de paquete → components/activities/ActivityHero.tsx (controlado por config/packages.ts)
+
+Galería global del sitio (Todos los tours) → components/Gallery.tsx (controlado por config/packages.ts)
+
+Hero y sección de imagen de la página “Sobre nosotros” → app/[locale]/sobre-nosotros/page.tsx
+
+Imagen para redes sociales (Open Graph) → config/site.ts
+
+Ubicación de archivos de imágenes → public/images (lista: images-urls.txt)
+
+────────────────────────
+REGLAS GENERALES
+────────────────────────
+
+Colocar los archivos de imagen en: public/images
+
+Referenciarlos en el código como "/images/tu-archivo.jpg" (Next.js sirve automáticamente desde /public)
+
+Preferir JPG/PNG, tamaños moderados y nombres descriptivos en minúsculas con guiones
+
+La mayoría de los cambios implican modificar la cadena dentro de backgroundImage o img src
+
+Existe una lista actualizada de URLs de imágenes en images-urls.txt
+
+────────────────────────
+PÁGINA DE INICIO (HOME)
+────────────────────────
+Archivo: components/home/Hero.tsx
+
+La imagen de fondo del hero se define inline:
+style={{ backgroundImage: "url('/images/hero-banner-home.jpg')" }}
+
+Para cambiarla: reemplazar hero-banner-home.jpg por cualquier archivo dentro de /public/images
+
+La legibilidad se controla con clases de Tailwind (blur, gradiente). Se pueden ajustar si es necesario, pero no es obligatorio para cambiar la foto
+
+────────────────────────
+PÁGINA “TODAS LAS ACTIVIDADES” (LISTADO)
+────────────────────────
+Archivo: app/[locale]/actividades/page.tsx
+
+Fondo del hero de la página:
+style={{ backgroundImage: "url('/images/montanias.jpg')" }}
+
+Imagen de las tarjetas de paquetes:
+
+Usa la primera imagen de la galería del paquete cuando existe
+
+Si el paquete no tiene galería, se usa un fallback por categoría:
+
+rutas → /images/ausangate-1.jpg
+
+comunidad → /images/comunidad.jpg
+
+ceremonias → /images/coca-leaf.jpg
+
+Para cambiar las imágenes:
+
+Actualizar la galería del paquete en config/packages.ts
+
+O modificar los fallbacks definidos en este archivo
+
+────────────────────────
+PÁGINAS DE CATEGORÍA (RUTAS / COMUNIDAD / CEREMONIAS)
+────────────────────────
+Archivo: components/activities/CategoryPage.tsx
+
+Las imágenes del hero por categoría están definidas en categoryConfig.heroImage:
+
+rutas → /images/ausangate-1.jpg
+
+comunidad → /images/comunidad.jpg
+
+ceremonias → /images/coca-leaf.jpg
+
+Los paquetes dentro de la página muestran la primera imagen de su galería
+
+Si no existe, usan la imagen hero de la categoría
+
+Para cambiar:
+
+Hero de categoría → editar categoryConfig.heroImage
+
+Imagen de un paquete → editar su galería en config/packages.ts
+
+────────────────────────
+PÁGINA DE DETALLE DEL PAQUETE
+────────────────────────
+Archivo: components/activities/ActivityHero.tsx
+
+Lógica de selección de imagen hero:
+
+Usa la primera imagen de la galería del paquete (config/packages.ts)
+
+Si no existe, usa un fallback por categoría:
+
+rutas → /images/ausangate-1.jpg
+
+comunidad → /images/comunidad.jpg
+
+ceremonias → /images/coca-leaf.jpg
+
+Para definir una imagen hero específica:
+
+Asegurarse de que la imagen deseada sea el primer elemento del array gallery del paquete
+
+────────────────────────
+DATOS DE PAQUETES (NOMBRES, DESCRIPCIONES, GALERÍAS)
+────────────────────────
+Archivo: config/packages.ts
+
+Ejemplo de elemento de galería:
+{ id: 1, type: "image", title: "Cocina rústica", url: "/images/cocina-rustica.jpg" }
+
+Cómo afectan las galerías a todo el sitio:
+
+La primera imagen se usa como:
+
+Hero en la página de detalle del paquete
+
+Imagen en las tarjetas (listado y categorías)
+
+Todas las imágenes se agregan a la galería global del sitio
+
+Para cambiar imágenes:
+
+Agregar, quitar o reordenar elementos del array gallery
+
+Asegurarse de que type === "image" y que el archivo exista en /public/images
+
+────────────────────────
+COMPONENTE DE GALERÍA (GALERÍA GLOBAL)
+────────────────────────
+Archivo: components/Gallery.tsx
+
+Cuando se usa sin la prop items, construye automáticamente una galería con todas las imágenes de todos los paquetes
+
+Elimina duplicados por URL
+
+Para incluir o quitar imágenes de esta galería global:
+
+Editar la galería del paquete correspondiente en config/packages.ts
+
+Los tamaños de miniaturas y el layout del lightbox se pueden ajustar en este componente
+
+────────────────────────
+PÁGINA “SOBRE NOSOTROS”
+────────────────────────
+Archivo: app/[locale]/sobre-nosotros/page.tsx
+
+Fondo del hero:
+style={{ backgroundImage: "url('/images/comunidad-3.jpg')" }}
+
+Imagen de la sección “Historia”:
+<img src="/images/chincheros.jpg" ... />
+
+Para cambiar:
+
+Reemplazar los nombres de archivo por cualquier imagen dentro de /public/images
+
+────────────────────────
+IMAGEN OPEN GRAPH (REDES SOCIALES)
+────────────────────────
+Archivo: config/site.ts
+
+ogImage: "/images/hero-banner-home.jpg"
+
+Esta imagen se usa para las previsualizaciones al compartir enlaces en redes sociales.
+
+────────────────────────
+DÓNDE AGREGAR NUEVAS IMÁGENES
+────────────────────────
+
+Directorio: public/images
+
+Referenciarlas como "/images/tu-archivo.jpg"
+
+Opcional: actualizar images-urls.txt si se necesita una lista compartible para clientes
+
+────────────────────────
+CONSEJOS
+────────────────────────
+
+Preferir imágenes horizontales para los hero (menos recorte)
+
+Usar títulos descriptivos en los elementos de galería (aparecen como captions en el lightbox)
+
+Mantener nombres de archivo en minúsculas y con guiones

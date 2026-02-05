@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { Mountain, Users, Sparkles, ArrowRight } from "lucide-react";
 import Card, { CardContent, CardDescription, CardTitle } from "@/components/ui/Card";
 
@@ -32,8 +31,7 @@ const services = [
 
 export default function Services() {
   const t = useTranslations("home");
-  const pathname = usePathname();
-  const locale = pathname.split("/")[1];
+  const locale = useLocale();
 
   return (
     <section className="py-24 bg-primary-alt">
