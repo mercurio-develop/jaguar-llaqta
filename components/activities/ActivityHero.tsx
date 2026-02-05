@@ -20,9 +20,9 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
 
   // Choose a representative hero image for the package
   const categoryFallback: Record<ActivityCategory, string> = {
-    rutas: "/images/ausangate-1.jpg",
+    rutas: "/images/ausangate-trek/IMG_8942.jpg",
     comunidad: "/images/comunidad.jpg",
-    ceremonias: "/images/coca-leaf.jpg",
+    ceremonias: "/images/machu-picchu.jpg",
   };
   const heroImage =
     pkg.heroImage ||

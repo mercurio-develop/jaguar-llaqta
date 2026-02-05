@@ -74,29 +74,68 @@ export default function AllActivitiesPage() {
         </div>
       </section>
 
-      {/* Category Cards */}
-      <section className="py-12 bg-primary-alt border-b border-white/10">
+      {/* Category Cards - Image style like home page */}
+      <section className="py-16 bg-primary">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-6">
             {(Object.keys(categoryConfig) as ActivityCategory[]).map((cat) => {
               const config = categoryConfig[cat];
-              const Icon = config.icon;
               const count = packages.filter(p => p.category === cat).length;
+              const categoryImages: Record<ActivityCategory, string> = {
+                rutas: "/images/ausangate-trek/IMG_8942.jpg",
+                comunidad: "/images/comunidad.jpg",
+                ceremonias: "/images/machu-picchu.jpg",
+              };
+              const categoryDesc: Record<ActivityCategory, { es: string; en: string }> = {
+                rutas: {
+                  es: "Trekkings por montañas nevadas y valles ancestrales de los Andes",
+                  en: "Treks through snow-capped mountains and ancestral valleys of the Andes"
+                },
+                comunidad: {
+                  es: "Conexión auténtica con familias y tradiciones andinas",
+                  en: "Authentic connection with Andean families and traditions"
+                },
+                ceremonias: {
+                  es: "Templos antiguos y ceremonias con maestros espirituales",
+                  en: "Ancient temples and ceremonies with spiritual masters"
+                },
+              };
               return (
-                <Link key={cat} href={`/${locale}/actividades/${cat}`}>
-                  <Card variant="hover" className="p-6 flex items-center gap-4 group">
-                    <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-7 h-7 text-accent" />
+                <Link
+                  key={cat}
+                  href={`/${locale}/actividades/${cat}`}
+                  className="group relative aspect-[4/5] overflow-hidden rounded-lg"
+                >
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style={{ backgroundImage: `url('${categoryImages[cat]}')` }}
+                  />
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
+
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-6">
+                    <h3 className="font-display text-2xl text-white uppercase tracking-wider mb-2 group-hover:text-accent transition-colors">
+                      {config.label[locale]}
+                    </h3>
+                    <p className="text-white/70 text-sm leading-relaxed mb-2">
+                      {categoryDesc[cat][locale]}
+                    </p>
+                    <p className="text-accent text-sm mb-4">
+                      {count} {locale === "es" ? "experiencias" : "experiences"}
+                    </p>
+                    <div className="flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-sm font-medium uppercase tracking-wider">
+                        {locale === "es" ? "Explorar" : "Explore"}
+                      </span>
+                      <ArrowRight className="w-4 h-4" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-lg text-white uppercase tracking-wider group-hover:text-accent transition-colors">
-                        {config.label[locale]}
-                      </h3>
-                      <p className="text-muted text-sm">{count} {locale === "es" ? "experiencias" : "experiences"}</p>
-                    </div>
-                    {/* Thumbnail preview removed per request to place images within package cards */}
-                    <ArrowRight className="w-5 h-5 text-muted group-hover:text-accent transition-colors" />
-                  </Card>
+                  </div>
+
+                  {/* Decorative corner */}
+                  <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-accent/50 group-hover:border-accent transition-colors" />
                 </Link>
               );
             })}
@@ -218,9 +257,9 @@ export default function AllActivitiesPage() {
                 const Icon = categoryConfig[pkg.category].icon;
                 // Determine package image with a safe fallback per category
                 const categoryFallback: Record<ActivityCategory, string> = {
-                  rutas: "/images/ausangate-1.jpg",
+                  rutas: "/images/ausangate-trek/IMG_8942.jpg",
                   comunidad: "/images/comunidad.jpg",
-                  ceremonias: "/images/coca-leaf.jpg",
+                  ceremonias: "/images/machu-picchu.jpg",
                 };
                 const pkgImage =
                   pkg.heroImage ||

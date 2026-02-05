@@ -15,7 +15,7 @@ const categoryConfig: Record<ActivityCategory, {
 }> = {
   rutas: {
     icon: Mountain,
-    heroImage: "/images/ausangate-1.jpg",
+    heroImage: "/images/ausangate-trek/IMG_8942.jpg",
     color: "emerald"
   },
   comunidad: {
@@ -25,7 +25,7 @@ const categoryConfig: Record<ActivityCategory, {
   },
   ceremonias: {
     icon: Sparkles,
-    heroImage: "/images/coca-leaf.jpg",
+    heroImage: "/images/machu-picchu.jpg",
     color: "purple"
   },
 };

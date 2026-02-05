@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Mountain, Users, Sparkles, Image as ImageIcon, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Mountain, Users, Sparkles, Image as ImageIcon, Play, X, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { packages, type ActivityCategory } from "@/config/packages";
 import { type GalleryItem } from "@/config/packages";
@@ -21,19 +21,96 @@ const defaultGalleryItems: Array<{
   location: string;
   url: string;
 }> = [
-  { id: 1, category: "rutas", type: "image", title: "Ausangate", location: "Cusco", url: "/images/ausangate-1.jpg" },
-  { id: 2, category: "rutas", type: "image", title: "Laguna", location: "Cusco", url: "/images/laguna.jpg" },
-  { id: 3, category: "rutas", type: "image", title: "Montañas", location: "Ausangate", url: "/images/montanias.jpg" },
-  { id: 4, category: "rutas", type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
-  { id: 5, category: "comunidad", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
-  { id: 6, category: "comunidad", type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
-  { id: 7, category: "comunidad", type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
-  { id: 8, category: "comunidad", type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
-  { id: 9, category: "ceremonias", type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
-  { id: 10, category: "ceremonias", type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
-  { id: 11, category: "ceremonias", type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
-  { id: 12, category: "ceremonias", type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
+  // Rutas - Ausangate
+  { id: 1, category: "rutas", type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
+  { id: 2, category: "rutas", type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
+  { id: 3, category: "rutas", type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
+  // Rutas - Lares
+  { id: 4, category: "rutas", type: "image", title: "Lares Trek", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
+  { id: 5, category: "rutas", type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
+  { id: 6, category: "rutas", type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
+  // Rutas - Manu
+  { id: 7, category: "rutas", type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
+  { id: 8, category: "rutas", type: "image", title: "Montañas", location: "Cusco", url: "/images/montanias.jpg" },
+  // Comunidad
+  { id: 9, category: "comunidad", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
+  { id: 10, category: "comunidad", type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
+  { id: 11, category: "comunidad", type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
+  { id: 12, category: "comunidad", type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
+  { id: 13, category: "comunidad", type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek/IMG_3312.jpg" },
+  { id: 14, category: "comunidad", type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek/IMG_7274.jpg" },
+  // Ceremonias
+  { id: 15, category: "ceremonias", type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
+  { id: 16, category: "ceremonias", type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
+  { id: 17, category: "ceremonias", type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
+  { id: 18, category: "ceremonias", type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
 ];
+
+// Lazy image component with intersection observer
+function LazyImage({
+  src,
+  alt,
+  className,
+  onLoad
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  onLoad?: () => void;
+}) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "100px" }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={imgRef} className="w-full h-full">
+      {isInView ? (
+        <>
+          {!isLoaded && (
+            <div className="absolute inset-0 bg-support flex items-center justify-center">
+              <Loader2 className="w-6 h-6 text-accent animate-spin" />
+            </div>
+          )}
+          <img
+            src={src}
+            alt={alt}
+            className={cn(
+              className,
+              "transition-opacity duration-300",
+              isLoaded ? "opacity-100" : "opacity-0"
+            )}
+            onLoad={() => {
+              setIsLoaded(true);
+              onLoad?.();
+            }}
+          />
+        </>
+      ) : (
+        <div className="w-full h-full bg-support flex items-center justify-center">
+          <ImageIcon className="w-8 h-8 text-white/20" />
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface GalleryProps {
   locale: "es" | "en";
@@ -41,6 +118,8 @@ interface GalleryProps {
   showFilters?: boolean;
   columns?: 2 | 3 | 4;
   className?: string;
+  initialLoadCount?: number;
+  loadMoreCount?: number;
 }
 
 export default function Gallery({
@@ -48,11 +127,21 @@ export default function Gallery({
   items,
   showFilters = true,
   columns = 3,
-  className
+  className,
+  initialLoadCount = 12,
+  loadMoreCount = 12
 }: GalleryProps) {
   const isSpanish = locale === "es";
   const [selectedCategory, setSelectedCategory] = useState<ActivityCategory | "all">("all");
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [visibleCount, setVisibleCount] = useState(initialLoadCount);
+  const [isMounted, setIsMounted] = useState(false);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
+  // Track mount state to avoid hydration mismatch
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Use provided items or aggregate all package gallery images for the main gallery
   const galleryItems = items
@@ -94,6 +183,32 @@ export default function Gallery({
   const filteredItems = !showFilters || selectedCategory === "all"
     ? galleryItems
     : galleryItems.filter((item) => item.category === selectedCategory);
+
+  // Reset visible count when filter changes
+  useEffect(() => {
+    setVisibleCount(initialLoadCount);
+  }, [selectedCategory, initialLoadCount]);
+
+  // Intersection observer for infinite scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && visibleCount < filteredItems.length) {
+          setVisibleCount((prev) => Math.min(prev + loadMoreCount, filteredItems.length));
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [visibleCount, filteredItems.length, loadMoreCount]);
+
+  const visibleItems = filteredItems.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredItems.length;
 
   const currentIndex = selectedItem !== null
     ? filteredItems.findIndex((item) => item.id === selectedItem)
@@ -156,9 +271,18 @@ export default function Gallery({
         </div>
       )}
 
+      {/* Image count - only show after mount to avoid hydration mismatch */}
+      {isMounted && (
+        <p className="text-muted text-sm text-center mb-4">
+          {isSpanish
+            ? `Mostrando ${visibleItems.length} de ${filteredItems.length} imágenes`
+            : `Showing ${visibleItems.length} of ${filteredItems.length} images`}
+        </p>
+      )}
+
       {/* Gallery grid */}
       <div className={cn("grid gap-4", gridCols[columns])}>
-        {filteredItems.map((item) => {
+        {visibleItems.map((item) => {
           const Icon = items ? ImageIcon : categoryIcons[item.category as ActivityCategory];
           return (
             <button
@@ -193,9 +317,9 @@ export default function Gallery({
                 {item.location && <p className="text-white/60 text-xs">{item.location}</p>}
               </div>
 
-              {/* Image */}
+              {/* Image with lazy loading */}
               {item.url ? (
-                <img
+                <LazyImage
                   src={item.url}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -209,6 +333,13 @@ export default function Gallery({
           );
         })}
       </div>
+
+      {/* Load more trigger */}
+      {hasMore && (
+        <div ref={loadMoreRef} className="flex justify-center py-8">
+          <Loader2 className="w-8 h-8 text-accent animate-spin" />
+        </div>
+      )}
 
       {/* Lightbox */}
       {selectedItem !== null && (
