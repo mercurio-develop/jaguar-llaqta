@@ -267,7 +267,7 @@ export default function Calendar({ locale, showUpcoming = true, className }: Cal
                           </span>
                         </div>
                         <div className="flex items-center justify-between mt-2">
-                          <span className="text-accent font-medium">${activity.price}</span>
+                          <span className="text-accent font-bold tracking-tight">${activity.price}</span>
                           <span className="text-xs text-muted">
                             {activity.spots} {isSpanish ? "plazas" : "spots"}
                           </span>

@@ -17,11 +17,14 @@ export default function Header() {
 
   const locale = pathname.split("/")[1];
 
-  const isActive = (href: string) => {
+  const isActive = (href: string, exact = false) => {
     if (href === "/") {
       return pathname === `/${locale}`;
     }
     const fullPath = `/${locale}${href}`;
+    if (exact) {
+      return pathname === fullPath;
+    }
     return pathname === fullPath || pathname.startsWith(fullPath + "/");
   };
 
@@ -76,7 +79,7 @@ export default function Header() {
                           href={`/${locale}${child.href}`}
                           className={cn(
                             "block px-4 py-2 text-sm transition-colors",
-                            isActive(child.href)
+                            isActive(child.href, true)
                               ? "text-accent bg-white/5"
                               : "text-white/80 hover:text-white hover:bg-white/5"
                           )}
@@ -143,7 +146,7 @@ export default function Header() {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={cn(
                           "block px-4 py-2 text-sm transition-colors",
-                          isActive(child.href)
+                          isActive(child.href, true)
                             ? "text-accent"
                             : "text-white/60 hover:text-white"
                         )}
