@@ -17,7 +17,6 @@ export interface DayItinerary {
 export interface GalleryItem {
   id: number;
   type: "image" | "video";
-  title: string;
   url?: string;
 }
 
@@ -82,13 +81,13 @@ export const packages: Package[] = [
   //   requirements: ["Ningún requisito físico especial", "Interés en artesanía"],
   //   requirementsEn: ["No special physical requirements", "Interest in crafts"],
   //   itinerary: [
-  //     { day: 1, title: "Experiencia completa de textiles", titleEn: "Complete textile experience", description: "8:00 AM recojo del hotel. Viaje a Chinchero. Demostración de teñido natural. Práctica en telar. Almuerzo con la comunidad. Visita al mercado. Regreso a Cusco 1:00 PM.", descriptionEn: "8:00 AM hotel pickup. Travel to Chinchero. Natural dyeing demonstration. Loom practice. Lunch with community. Market visit. Return to Cusco 1:00 PM.", meals: "Almuerzo", accommodation: "N/A" }
+  //     { day: 1, titleEn: "Complete textile experience", description: "8:00 AM recojo del hotel. Viaje a Chinchero. Demostración de teñido natural. Práctica en telar. Almuerzo con la comunidad. Visita al mercado. Regreso a Cusco 1:00 PM.", descriptionEn: "8:00 AM hotel pickup. Travel to Chinchero. Natural dyeing demonstration. Loom practice. Lunch with community. Market visit. Return to Cusco 1:00 PM.", meals: "Almuerzo", accommodation: "N/A" }
   //   ],
   //   gallery: [
-  //     { id: 1, type: "image", title: "Tejedoras de Chinchero", url: "/images/textiles.jpg" },
-  //     { id: 2, type: "image", title: "Textiles tradicionales", url: "/images/textiles-2.jpg" },
-  //     { id: 3, type: "image", title: "Tejido en telar", url: "/images/textiles-3.jpg" },
-  //     { id: 4, type: "image", title: "Colores naturales", url: "/images/chincheros.jpg" }
+  //     { id: 1, type: "image", url: "/images/textiles.jpg" },
+  //     { id: 2, type: "image", url: "/images/textiles-2.jpg" },
+  //     { id: 3, type: "image", url: "/images/textiles-3.jpg" },
+  //     { id: 4, type: "image", url: "/images/chincheros.jpg" }
   //   ]
   // },
   //
@@ -114,13 +113,13 @@ export const packages: Package[] = [
   //   requirements: ["Ninguno", "Informar alergias alimentarias"],
   //   requirementsEn: ["None", "Inform food allergies"],
   //   itinerary: [
-  //     { day: 1, title: "Del mercado a la mesa", titleEn: "From market to table", description: "7:30 AM Mercado San Pedro. 9:30 AM viaje a comunidad. 10:30 AM cosecha. 12:00 PM preparación pachamanca. 2:00 PM almuerzo. 4:00 PM regreso.", descriptionEn: "7:30 AM San Pedro Market. 9:30 AM travel to community. 10:30 AM harvest. 12:00 PM pachamanca preparation. 2:00 PM lunch. 4:00 PM return.", meals: "Almuerzo completo", accommodation: "N/A" }
+  //     { day: 1, titleEn: "From market to table", description: "7:30 AM Mercado San Pedro. 9:30 AM viaje a comunidad. 10:30 AM cosecha. 12:00 PM preparación pachamanca. 2:00 PM almuerzo. 4:00 PM regreso.", descriptionEn: "7:30 AM San Pedro Market. 9:30 AM travel to community. 10:30 AM harvest. 12:00 PM pachamanca preparation. 2:00 PM lunch. 4:00 PM return.", meals: "Almuerzo completo", accommodation: "N/A" }
   //   ],
   //   gallery: [
-  //     { id: 1, type: "image", title: "Cocina rústica", url: "/images/cocina-rustica.jpg" },
-  //     { id: 2, type: "image", title: "Comunidad local", url: "/images/comunidad.jpg" },
-  //     { id: 3, type: "image", title: "Tradiciones andinas", url: "/images/comunidad-1.jpg" },
-  //     { id: 4, type: "image", title: "Paisaje andino", url: "/images/comunidad-2.jpg" }
+  //     { id: 1, type: "image", url: "/images/cocina-rustica.jpg" },
+  //     { id: 2, type: "image", url: "/images/comunidad.jpg" },
+  //     { id: 3, type: "image", url: "/images/comunidad-1.jpg" },
+  //     { id: 4, type: "image", url: "/images/comunidad-2.jpg" }
   //   ]
   // },
   //
@@ -146,13 +145,13 @@ export const packages: Package[] = [
   //   requirements: ["Mente abierta", "Respeto por las tradiciones", "No consumir alcohol 24h antes"],
   //   requirementsEn: ["Open mind", "Respect for traditions", "No alcohol 24h before"],
   //   itinerary: [
-  //     { day: 1, title: "Ceremonia de ofrenda", titleEn: "Offering ceremony", description: "8:00 AM recojo. Viaje a sitio sagrado. Introducción a cosmovisión andina. Preparación del despacho. Ceremonia de ofrenda. Meditación. Regreso 12:00 PM.", descriptionEn: "8:00 AM pickup. Travel to sacred site. Introduction to Andean worldview. Despacho preparation. Offering ceremony. Meditation. Return 12:00 PM.", meals: "Mate de coca", accommodation: "N/A" }
+  //     { day: 1, titleEn: "Offering ceremony", description: "8:00 AM recojo. Viaje a sitio sagrado. Introducción a cosmovisión andina. Preparación del despacho. Ceremonia de ofrenda. Meditación. Regreso 12:00 PM.", descriptionEn: "8:00 AM pickup. Travel to sacred site. Introduction to Andean worldview. Despacho preparation. Offering ceremony. Meditation. Return 12:00 PM.", meals: "Mate de coca", accommodation: "N/A" }
   //   ],
   //   gallery: [
-  //     { id: 1, type: "image", title: "Hoja de coca", url: "/images/coca-leaf.jpg" },
-  //     { id: 2, type: "image", title: "Sacsayhuaman", url: "/images/sacsayhuaman.jpg" },
-  //     { id: 3, type: "image", title: "Ruinas sagradas", url: "/images/ruins.jpg" },
-  //     { id: 4, type: "image", title: "Moray", url: "/images/moray.jpg" }
+  //     { id: 1, type: "image", url: "/images/coca-leaf.jpg" },
+  //     { id: 2, type: "image", url: "/images/sacsayhuaman.jpg" },
+  //     { id: 3, type: "image", url: "/images/ruins.jpg" },
+  //     { id: 4, type: "image", url: "/images/moray.jpg" }
   //   ]
   // },
   //
@@ -178,17 +177,17 @@ export const packages: Package[] = [
   //   requirements: ["Compromiso con el proceso", "Abstinencia de alcohol/drogas 1 semana antes", "Buena salud mental"],
   //   requirementsEn: ["Commitment to the process", "No alcohol/drugs 1 week before", "Good mental health"],
   //   itinerary: [
-  //     { day: 1, title: "Llegada y apertura", titleEn: "Arrival and opening", description: "Recepción en el retiro. Ceremonia de bienvenida. Introducción al programa. Meditación guiada. Cena y descanso.", descriptionEn: "Reception at retreat. Welcome ceremony. Program introduction. Guided meditation. Dinner and rest.", meals: "C", accommodation: "Retiro" },
-  //     { day: 2, title: "Día de ceremonias", titleEn: "Ceremony day", description: "4:00 AM Ritual del amanecer en Sacsayhuamán. Desayuno. Ceremonia de Pachamama. Almuerzo consciente. Tarde de meditación y reflexión. Cena.", descriptionEn: "4:00 AM Sunrise ritual at Sacsayhuaman. Breakfast. Pachamama ceremony. Conscious lunch. Afternoon meditation and reflection. Dinner.", meals: "D, A, C", accommodation: "Retiro" },
-  //     { day: 3, title: "Cierre e integración", titleEn: "Closing and integration", description: "Meditación matutina. Desayuno. Ceremonia de cierre y gratitud. Círculo de compartir. Almuerzo de despedida. Regreso a Cusco.", descriptionEn: "Morning meditation. Breakfast. Closing and gratitude ceremony. Sharing circle. Farewell lunch. Return to Cusco.", meals: "D, A", accommodation: "Fin" }
+  //     { day: 1, titleEn: "Arrival and opening", description: "Recepción en el retiro. Ceremonia de bienvenida. Introducción al programa. Meditación guiada. Cena y descanso.", descriptionEn: "Reception at retreat. Welcome ceremony. Program introduction. Guided meditation. Dinner and rest.", meals: "C", accommodation: "Retiro" },
+  //     { day: 2, titleEn: "Ceremony day", description: "4:00 AM Ritual del amanecer en Sacsayhuamán. Desayuno. Ceremonia de Pachamama. Almuerzo consciente. Tarde de meditación y reflexión. Cena.", descriptionEn: "4:00 AM Sunrise ritual at Sacsayhuaman. Breakfast. Pachamama ceremony. Conscious lunch. Afternoon meditation and reflection. Dinner.", meals: "D, A, C", accommodation: "Retiro" },
+  //     { day: 3, titleEn: "Closing and integration", description: "Meditación matutina. Desayuno. Ceremonia de cierre y gratitud. Círculo de compartir. Almuerzo de despedida. Regreso a Cusco.", descriptionEn: "Morning meditation. Breakfast. Closing and gratitude ceremony. Sharing circle. Farewell lunch. Return to Cusco.", meals: "D, A", accommodation: "Fin" }
   //   ],
   //   gallery: [
-  //     { id: 1, type: "image", title: "Sacsayhuaman", url: "/images/sacsayhuaman.jpg" },
-  //     { id: 2, type: "image", title: "Inti Punku", url: "/images/inti-punku.jpg" },
-  //     { id: 3, type: "image", title: "Moray", url: "/images/moray.jpg" },
-  //     { id: 4, type: "image", title: "Hoja de coca", url: "/images/coca-leaf.jpg" },
-  //     { id: 5, type: "image", title: "Montañas sagradas", url: "/images/montanias.jpg" },
-  //     { id: 6, type: "image", title: "Ruinas", url: "/images/ruins.jpg" }
+  //     { id: 1, type: "image", url: "/images/sacsayhuaman.jpg" },
+  //     { id: 2, type: "image", url: "/images/inti-punku.jpg" },
+  //     { id: 3, type: "image", url: "/images/moray.jpg" },
+  //     { id: 4, type: "image", url: "/images/coca-leaf.jpg" },
+  //     { id: 5, type: "image", url: "/images/montanias.jpg" },
+  //     { id: 6, type: "image", url: "/images/ruins.jpg" }
   //   ]
   // },
 
@@ -267,23 +266,22 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Comunidad Cancha Cancha", url: "/images/cancha-cancha/IMG_0119.jpg" },
-      { id: 2, type: "image", title: "Sendero altoandino", url: "/images/cancha-cancha/IMG_0135.jpg" },
-      { id: 3, type: "image", title: "Paisaje del valle", url: "/images/cancha-cancha/IMG_0177.jpg" },
-      { id: 4, type: "image", title: "Vista panorámica", url: "/images/cancha-cancha/IMG_0211-2.jpg" },
-      { id: 5, type: "image", title: "Caminata por el valle", url: "/images/cancha-cancha/IMG_0238.jpg" },
-      { id: 6, type: "image", title: "Flora nativa", url: "/images/cancha-cancha/IMG_0291.jpg" },
-      { id: 7, type: "image", title: "Ecosistema altoandino", url: "/images/cancha-cancha/IMG_0299.jpg" },
-      { id: 8, type: "image", title: "Comunidad andina", url: "/images/cancha-cancha/IMG_0302.jpg" },
-      { id: 9, type: "image", title: "Textiles tradicionales", url: "/images/cancha-cancha/IMG_0307.jpg" },
-      { id: 10, type: "image", title: "Familia local", url: "/images/cancha-cancha/IMG_0310.jpg" },
-      { id: 11, type: "image", title: "Vida comunitaria", url: "/images/cancha-cancha/IMG_0312.jpg" },
-      { id: 12, type: "image", title: "Paisaje andino", url: "/images/cancha-cancha/IMG_0338.jpg" },
-      { id: 13, type: "image", title: "Montañas del Urubamba", url: "/images/cancha-cancha/IMG_0344.jpg" },
-      { id: 14, type: "image", title: "Naturaleza andina", url: "/images/cancha-cancha/IMG_5994.jpg" },
-      { id: 15, type: "image", title: "Valle de Huaran", url: "/images/cancha-cancha/IMG_6001.jpg" },
-      { id: 16, type: "image", title: "Artesanía textil", url: "/images/cancha-cancha/IMG_7271.jpg" },
-      { id: 17, type: "image", title: "Experiencia comunitaria", url: "/images/cancha-cancha/IMG_9323.JPG" }
+      { id: 1, type: "image", url: "/images/cancha-cancha/IMG_0119.jpg" },
+      { id: 3, type: "image", url: "/images/cancha-cancha/IMG_0177.jpg" },
+      { id: 4, type: "image", url: "/images/cancha-cancha/IMG_0211-2.jpg" },
+      { id: 5, type: "image", url: "/images/cancha-cancha/IMG_0238.jpg" },
+      { id: 6, type: "image", url: "/images/cancha-cancha/IMG_0291.jpg" },
+      { id: 7, type: "image", url: "/images/cancha-cancha/IMG_0299.jpg" },
+      { id: 8, type: "image", url: "/images/cancha-cancha/IMG_0302.jpg" },
+      { id: 9, type: "image", url: "/images/cancha-cancha/IMG_0307.jpg" },
+      { id: 10, type: "image", url: "/images/cancha-cancha/IMG_0310.jpg" },
+      { id: 11, type: "image", url: "/images/cancha-cancha/IMG_0312.jpg" },
+      { id: 12, type: "image", url: "/images/cancha-cancha/IMG_0338.jpg" },
+      { id: 13, type: "image", url: "/images/cancha-cancha/IMG_0344.jpg" },
+      { id: 14, type: "image", url: "/images/cancha-cancha/IMG_5994.jpg" },
+      { id: 15, type: "image", url: "/images/cancha-cancha/IMG_6001.jpg" },
+      { id: 16, type: "image", url: "/images/cancha-cancha/IMG_7271.jpg" },
+      { id: 17, type: "image", url: "/images/cancha-cancha/IMG_9323.jpg" }
     ]
   },
 
@@ -362,13 +360,13 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Inti Punku", url: "/images/inti-punku/IMG_5633.jpg" },
-      { id: 2, type: "image", title: "Vista del Valle Sagrado", url: "/images/inti-punku/IMG_5648-2.jpg" },
-      { id: 3, type: "image", title: "Sendero hacia Inti Punku", url: "/images/inti-punku/IMG_5658.jpg" },
-      { id: 4, type: "image", title: "Paisaje andino", url: "/images/inti-punku/32627201693_5cc37e75b2_o.jpg" },
-      { id: 5, type: "image", title: "Canteras de Cacchicata", url: "/images/inti-punku/33121893274_e26c65da39_o.jpg" },
-      { id: 6, type: "image", title: "Portal sagrado", url: "/images/inti-punku/33580393130_c342837737_o.jpg" },
-      { id: 7, type: "image", title: "Puerta del Sol", url: "/images/inti-punku/33924324086_3318d9120b_o.jpg" }
+      { id: 1, type: "image", url: "/images/inti-punku/IMG_5633.jpg" },
+      { id: 2, type: "image", url: "/images/inti-punku/IMG_5648-2.jpg" },
+      { id: 3, type: "image", url: "/images/inti-punku/IMG_5658.jpg" },
+      { id: 4, type: "image", url: "/images/inti-punku/32627201693_5cc37e75b2_o.jpg" },
+      { id: 5, type: "image", url: "/images/inti-punku/33121893274_e26c65da39_o.jpg" },
+      { id: 6, type: "image", url: "/images/inti-punku/33580393130_c342837737_o.jpg" },
+      { id: 7, type: "image", url: "/images/inti-punku/33924324086_3318d9120b_o.jpg" }
     ]
   },
 
@@ -378,7 +376,7 @@ export const packages: Package[] = [
     category: "rutas",
     name: "Ñaupa Waka – Experiencia Sagrada",
     nameEn: "Ñaupa Waka – Sacred Site Experience",
-    heroImage: "/images/naupa-waka/IMG_4874.JPG",
+    heroImage: "/images/naupa-waka/IMG_4874.jpg",
     tagline: "Visita un oráculo inca oculto en la montaña",
     taglineEn: "Visit an Inca oracle hidden within the mountain",
     duration: "Medio día",
@@ -441,13 +439,14 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Templo de Ñaupa Waka", url: "/images/naupa-waka/IMG_4874.JPG" },
-      { id: 2, type: "image", title: "Escalinata sagrada", url: "/images/naupa-waka/escalinata.JPG" },
-      { id: 3, type: "image", title: "Interior del templo", url: "/images/naupa-waka/IMG_4921.JPG" },
-      { id: 4, type: "image", title: "Altar de piedra", url: "/images/naupa-waka/IMG_4853-copia.JPG" },
-      { id: 5, type: "image", title: "Sitio arqueológico", url: "/images/naupa-waka/IMG_4854-copia.JPG" },
-      { id: 6, type: "image", title: "Vista del sitio", url: "/images/naupa-waka/IMG_4985.JPG" },
-      { id: 7, type: "image", title: "Restos ancestrales", url: "/images/naupa-waka/momias.JPG" }
+      { id: 1, type: "image", url: "/images/naupa-waka/escalinata.jpg" },
+      { id: 2, type: "image", url: "/images/naupa-waka/IMG_4853-copia.jpg" },
+      { id: 3, type: "image", url: "/images/naupa-waka/IMG_4853-copia-2.jpg" },
+      { id: 4, type: "image", url: "/images/naupa-waka/IMG_4854-copia.jpg" },
+      { id: 5, type: "image", url: "/images/naupa-waka/IMG_4874.jpg" },
+      { id: 6, type: "image", url: "/images/naupa-waka/IMG_4921.jpg" },
+      { id: 7, type: "image", url: "/images/naupa-waka/IMG_4985.jpg" },
+      { id: 8, type: "image", url: "/images/naupa-waka/momias.jpg" }
     ]
   },
 
@@ -526,19 +525,19 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Sitio de Pumamarca", url: "/images/pumamarca/IMG_4987.jpg" },
-      { id: 2, type: "image", title: "Ruinas preincas", url: "/images/pumamarca/IMG_5005.jpg" },
-      { id: 3, type: "image", title: "Terrazas antiguas", url: "/images/pumamarca/IMG_5010.jpg" },
-      { id: 4, type: "image", title: "Arquitectura preinca", url: "/images/pumamarca/IMG_5011.jpg" },
-      { id: 5, type: "image", title: "Vista panorámica", url: "/images/pumamarca/IMG_5013.jpg" },
-      { id: 6, type: "image", title: "Valle circundante", url: "/images/pumamarca/IMG_5024.jpg" },
-      { id: 7, type: "image", title: "Paisaje de montaña", url: "/images/pumamarca/IMG_5028.jpg" },
-      { id: 8, type: "image", title: "Caminata por el sendero", url: "/images/pumamarca/IMG_5074.jpg" },
-      { id: 9, type: "image", title: "Flora nativa", url: "/images/pumamarca/IMG_5084.jpg" },
-      { id: 10, type: "image", title: "Muros de piedra", url: "/images/pumamarca/IMG_5096.jpg" },
-      { id: 11, type: "image", title: "Paisaje andino", url: "/images/pumamarca/IMG_5149.jpg" },
-      { id: 12, type: "image", title: "Montañas del entorno", url: "/images/pumamarca/IMG_5179.jpg" },
-      { id: 13, type: "image", title: "Ollantaytambo", url: "/images/pumamarca/IMG_5202.jpg" }
+      { id: 1, type: "image", url: "/images/pumamarca/IMG_4987.jpg" },
+      { id: 2, type: "image", url: "/images/pumamarca/IMG_5005.jpg" },
+      { id: 3, type: "image", url: "/images/pumamarca/IMG_5010.jpg" },
+      { id: 4, type: "image", url: "/images/pumamarca/IMG_5011.jpg" },
+      { id: 5, type: "image", url: "/images/pumamarca/IMG_5013.jpg" },
+      { id: 6, type: "image", url: "/images/pumamarca/IMG_5024.jpg" },
+      { id: 7, type: "image", url: "/images/pumamarca/IMG_5028.jpg" },
+      { id: 8, type: "image", url: "/images/pumamarca/IMG_5074.jpg" },
+      { id: 9, type: "image", url: "/images/pumamarca/IMG_5084.jpg" },
+      { id: 10, type: "image", url: "/images/pumamarca/IMG_5096.jpg" },
+      { id: 11, type: "image", url: "/images/pumamarca/IMG_5149.jpg" },
+      { id: 12, type: "image", url: "/images/pumamarca/IMG_5179.jpg" },
+      { id: 13, type: "image", url: "/images/pumamarca/IMG_5202.jpg" }
     ]
   },
 
@@ -548,7 +547,7 @@ export const packages: Package[] = [
     category: "rutas",
     name: "Pumawanka – Trekking de Naturaleza",
     nameEn: "Pumawanka – Nature Trek",
-    heroImage: "/images/montanias.jpg",
+    heroImage: "/images/pumawanka/IMG_5694.jpg",
     tagline: "Camino inca ancestral entre los Andes y la selva",
     taglineEn: "Ancient Inca trail connecting the Andes to the jungle",
     duration: "Día completo (6 horas de caminata)",
@@ -613,7 +612,21 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Valle de Pumawanka", url: "/images/montanias.jpg" }
+      { id: 1, type: "image", url: "/images/pumawanka/IMG_0122.jpg" },
+      { id: 2, type: "image", url: "/images/pumawanka/IMG_5496.jpg" },
+      { id: 3, type: "image", url: "/images/pumawanka/IMG_5498.jpg" },
+      { id: 4, type: "image", url: "/images/pumawanka/IMG_5504.jpg" },
+      { id: 5, type: "image", url: "/images/pumawanka/IMG_5513.jpg" },
+      { id: 6, type: "image", url: "/images/pumawanka/IMG_5514.jpg" },
+      { id: 7, type: "image", url: "/images/pumawanka/IMG_5519.jpg" },
+      { id: 8, type: "image", url: "/images/pumawanka/IMG_5526.jpg" },
+      { id: 9, type: "image", url: "/images/pumawanka/IMG_5694.jpg" },
+      { id: 10, type: "image", url: "/images/pumawanka/IMG_5713.jpg" },
+      { id: 11, type: "image", url: "/images/pumawanka/IMG_5718.jpg" },
+      { id: 12, type: "image", url: "/images/pumawanka/IMG_5719.jpg" },
+      { id: 13, type: "image", url: "/images/pumawanka/IMG_5722.jpg" },
+      { id: 14, type: "image", url: "/images/pumawanka/IMG_5733.jpg" },
+      { id: 15, type: "image", url: "/images/pumawanka/IMG_5739.jpg" }
     ]
   },
 
@@ -722,24 +735,24 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Nevado Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
-      { id: 2, type: "image", title: "Laguna glaciar", url: "/images/ausangate-trek/IMG_8938.jpg" },
-      { id: 3, type: "image", title: "Siete Lagunas", url: "/images/ausangate-trek/IMG_8960.jpg" },
-      { id: 4, type: "image", title: "Vista panorámica", url: "/images/ausangate-trek/IMG_8971.jpg" },
-      { id: 5, type: "image", title: "Laguna turquesa", url: "/images/ausangate-trek/IMG_8952.jpg" },
-      { id: 6, type: "image", title: "Paisaje andino", url: "/images/ausangate-trek/IMG_8970.jpg" },
-      { id: 7, type: "image", title: "Amanecer en Ausangate", url: "/images/ausangate-trek/IMG_8937.jpg" },
-      { id: 8, type: "image", title: "Montaña de colores", url: "/images/ausangate-trek/IMG_3172.jpg" },
-      { id: 9, type: "image", title: "Caminata por el valle", url: "/images/ausangate-trek/IMG_3130.jpg" },
-      { id: 10, type: "image", title: "Paisaje de alta montaña", url: "/images/ausangate-trek/IMG_3148.jpg" },
-      { id: 11, type: "image", title: "Sendero del Ausangate", url: "/images/ausangate-trek/IMG_3159.jpg" },
-      { id: 12, type: "image", title: "Valle glaciar", url: "/images/ausangate-trek/IMG_3200.jpg" },
-      { id: 13, type: "image", title: "Comunidad Pacchanta", url: "/images/ausangate-trek/IMG_8550.jpg" },
-      { id: 14, type: "image", title: "Laguna cristalina", url: "/images/ausangate-trek/IMG_8523.jpg" },
-      { id: 15, type: "image", title: "Reflejos en la laguna", url: "/images/ausangate-trek/IMG_8544.jpg" },
-      { id: 16, type: "image", title: "Atardecer andino", url: "/images/ausangate-trek/IMG_8788.jpg" },
-      { id: 17, type: "image", title: "Fauna local", url: "/images/ausangate-trek/IMG_8798.jpg" },
-      { id: 18, type: "image", title: "Paisaje místico", url: "/images/ausangate-trek/IMG_9123-2.jpg" }
+      { id: 1, type: "image", url: "/images/ausangate-trek/IMG_8942.jpg" },
+      { id: 2, type: "image", url: "/images/ausangate-trek/IMG_8938.jpg" },
+      { id: 3, type: "image", url: "/images/ausangate-trek/IMG_8960.jpg" },
+      { id: 4, type: "image", url: "/images/ausangate-trek/IMG_8971.jpg" },
+      { id: 5, type: "image", url: "/images/ausangate-trek/IMG_8952.jpg" },
+      { id: 6, type: "image", url: "/images/ausangate-trek/IMG_8970.jpg" },
+      { id: 7, type: "image", url: "/images/ausangate-trek/IMG_8937.jpg" },
+      { id: 8, type: "image", url: "/images/ausangate-trek/IMG_3172.jpg" },
+      { id: 9, type: "image", url: "/images/ausangate-trek/IMG_3130.jpg" },
+      { id: 10, type: "image", url: "/images/ausangate-trek/IMG_3148.jpg" },
+      { id: 11, type: "image", url: "/images/ausangate-trek/IMG_3159.jpg" },
+      { id: 12, type: "image", url: "/images/ausangate-trek/IMG_3200.jpg" },
+      { id: 13, type: "image", url: "/images/ausangate-trek/IMG_8550.jpg" },
+      { id: 14, type: "image", url: "/images/ausangate-trek/IMG_8523.jpg" },
+      { id: 15, type: "image", url: "/images/ausangate-trek/IMG_8544.jpg" },
+      { id: 16, type: "image", url: "/images/ausangate-trek/IMG_8788.jpg" },
+      { id: 17, type: "image", url: "/images/ausangate-trek/IMG_8798.jpg" },
+      { id: 18, type: "image", url: "/images/ausangate-trek/IMG_9123-2.jpg" }
     ]
   },
 
@@ -850,48 +863,53 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Laguna Yanaqocha", url: "/images/lares-trek/IMG_3461.jpg" },
-      { id: 2, type: "image", title: "Paso de montaña", url: "/images/lares-trek/IMG_3450.jpg" },
-      { id: 3, type: "image", title: "Vista panorámica", url: "/images/lares-trek/IMG_3449.jpg" },
-      { id: 4, type: "image", title: "Bosque altoandino", url: "/images/lares-trek/IMG_3482.jpg" },
-      { id: 5, type: "image", title: "Valle del Lares", url: "/images/lares-trek/IMG_3487.jpg" },
-      { id: 6, type: "image", title: "Comunidad Cancha Cancha", url: "/images/lares-trek/IMG_3347.jpg" },
-      { id: 7, type: "image", title: "Comunidad Quishuarani", url: "/images/lares-trek/IMG_3349.jpg" },
-      { id: 8, type: "image", title: "Caminata por el sendero", url: "/images/lares-trek/IMG_3441.jpg" },
-      { id: 9, type: "image", title: "Textiles tradicionales", url: "/images/lares-trek/IMG_3312.jpg" },
-      { id: 10, type: "image", title: "Tejedoras andinas", url: "/images/lares-trek/IMG_3118.jpg" },
-      { id: 11, type: "image", title: "Familia local", url: "/images/lares-trek/IMG_7274.jpg" },
-      { id: 12, type: "image", title: "Artesanía textil", url: "/images/lares-trek/IMG_7271.jpg" },
-      { id: 13, type: "image", title: "Comunidad andina", url: "/images/lares-trek/IMG_7303.jpg" },
-      { id: 14, type: "image", title: "Tradiciones vivas", url: "/images/lares-trek/IMG_7327.jpg" },
-      { id: 15, type: "image", title: "Cultura local", url: "/images/lares-trek/IMG_7334.jpg" },
-      { id: 16, type: "image", title: "Encuentro comunitario", url: "/images/lares-trek/IMG_7337.jpg" },
-      { id: 17, type: "image", title: "Paisaje montañoso", url: "/images/lares-trek/IMG_0008.jpg" },
-      { id: 18, type: "image", title: "Trekking andino", url: "/images/lares-trek/IMG_0177.jpg" },
-      { id: 19, type: "image", title: "Sendero del Lares", url: "/images/lares-trek/IMG_0211-2.jpg" },
-      { id: 20, type: "image", title: "Vista del valle", url: "/images/lares-trek/IMG_0276.jpg" },
-      { id: 21, type: "image", title: "Naturaleza andina", url: "/images/lares-trek/IMG_1768.jpg" },
-      { id: 22, type: "image", title: "Flora local", url: "/images/lares-trek/IMG_1770.jpg" },
-      { id: 23, type: "image", title: "Paisaje verde", url: "/images/lares-trek/IMG_1772.jpg" },
-      { id: 24, type: "image", title: "Montañas del Lares", url: "/images/lares-trek/IMG_1783.jpg" },
-      { id: 25, type: "image", title: "Camino ancestral", url: "/images/lares-trek/IMG_3092.jpg" },
-      { id: 26, type: "image", title: "Tejido en proceso", url: "/images/lares-trek/IMG_3123-2.jpg" },
-      { id: 27, type: "image", title: "Colores andinos", url: "/images/lares-trek/IMG_3295-2.jpg" },
-      { id: 28, type: "image", title: "Telar tradicional", url: "/images/lares-trek/IMG_3340-3.jpg" },
-      { id: 29, type: "image", title: "Caminata grupal", url: "/images/lares-trek/IMG_3385.jpg" },
-      { id: 30, type: "image", title: "Descanso en ruta", url: "/images/lares-trek/IMG_3392-2.jpg" },
-      { id: 31, type: "image", title: "Sendero de montaña", url: "/images/lares-trek/IMG_3409.jpg" },
-      { id: 32, type: "image", title: "Vista elevada", url: "/images/lares-trek/IMG_3420.jpg" },
-      { id: 33, type: "image", title: "Campamento base", url: "/images/lares-trek/IMG_3424.jpg" },
-      { id: 34, type: "image", title: "Atardecer en Lares", url: "/images/lares-trek/IMG_3465.jpg" },
-      { id: 35, type: "image", title: "Refugio andino", url: "/images/lares-trek/IMG_3468.jpg" },
-      { id: 36, type: "image", title: "Momento de descanso", url: "/images/lares-trek/IMG_3492.jpg" },
-      { id: 37, type: "image", title: "Laguna escondida", url: "/images/lares-trek/IMG_3499-2.jpg" },
-      { id: 38, type: "image", title: "Reflejo en el agua", url: "/images/lares-trek/IMG_3499.jpg" },
-      { id: 39, type: "image", title: "Aventura en grupo", url: "/images/lares-trek/IMG_4668.jpg" },
-      { id: 40, type: "image", title: "Experiencia única", url: "/images/lares-trek/IMG_8864.jpg" },
-      { id: 41, type: "image", title: "Recuerdos del Lares", url: "/images/lares-trek/IMG_8867.jpg" },
-      { id: 42, type: "image", title: "Final del trek", url: "/images/lares-trek/IMG_5025.jpg" }
+      { id: 1, type: "image", url: "/images/lares-trek/IMG_0008.jpg" },
+      { id: 2, type: "image", url: "/images/lares-trek/IMG_0177.jpg" },
+      { id: 3, type: "image", url: "/images/lares-trek/IMG_0211-2.jpg" },
+      { id: 4, type: "image", url: "/images/lares-trek/IMG_0276.jpg" },
+      { id: 5, type: "image", url: "/images/lares-trek/IMG_1768.jpg" },
+      { id: 6, type: "image", url: "/images/lares-trek/IMG_1770.jpg" },
+      { id: 7, type: "image", url: "/images/lares-trek/IMG_1772.jpg" },
+      { id: 8, type: "image", url: "/images/lares-trek/IMG_1783.jpg" },
+      { id: 9, type: "image", url: "/images/lares-trek/IMG_3092.jpg" },
+      { id: 10, type: "image", url: "/images/lares-trek/IMG_3118.jpg" },
+      { id: 11, type: "image", url: "/images/lares-trek/IMG_3123-2.jpg" },
+      { id: 12, type: "image", url: "/images/lares-trek/IMG_3295-2.jpg" },
+      { id: 13, type: "image", url: "/images/lares-trek/IMG_3312.jpg" },
+      { id: 14, type: "image", url: "/images/lares-trek/IMG_3340-3.jpg" },
+      { id: 15, type: "image", url: "/images/lares-trek/IMG_3347.jpg" },
+      { id: 16, type: "image", url: "/images/lares-trek/IMG_3349.jpg" },
+      { id: 17, type: "image", url: "/images/lares-trek/IMG_3385.jpg" },
+      { id: 18, type: "image", url: "/images/lares-trek/IMG_3392-2.jpg" },
+      { id: 19, type: "image", url: "/images/lares-trek/IMG_3409.jpg" },
+      { id: 20, type: "image", url: "/images/lares-trek/IMG_3420.jpg" },
+      { id: 21, type: "image", url: "/images/lares-trek/IMG_3424.jpg" },
+      { id: 22, type: "image", url: "/images/lares-trek/IMG_3441.jpg" },
+      { id: 23, type: "image", url: "/images/lares-trek/IMG_3449.jpg" },
+      { id: 24, type: "image", url: "/images/lares-trek/IMG_3450.jpg" },
+      { id: 25, type: "image", url: "/images/lares-trek/IMG_3461.jpg" },
+      { id: 26, type: "image", url: "/images/lares-trek/IMG_3465.jpg" },
+      { id: 27, type: "image", url: "/images/lares-trek/IMG_3468.jpg" },
+      { id: 28, type: "image", url: "/images/lares-trek/IMG_3482.jpg" },
+      { id: 29, type: "image", url: "/images/lares-trek/IMG_3487.jpg" },
+      { id: 30, type: "image", url: "/images/lares-trek/IMG_3492.jpg" },
+      { id: 31, type: "image", url: "/images/lares-trek/IMG_3499-2.jpg" },
+      { id: 32, type: "image", url: "/images/lares-trek/IMG_3499.jpg" },
+      { id: 33, type: "image", url: "/images/lares-trek/IMG_4668.jpg" },
+      { id: 34, type: "image", url: "/images/lares-trek/IMG_5025.jpg" },
+      { id: 35, type: "image", url: "/images/lares-trek/IMG_7271.jpg" },
+      { id: 36, type: "image", url: "/images/lares-trek/IMG_7274.jpg" },
+      { id: 37, type: "image", url: "/images/lares-trek/IMG_7303.jpg" },
+      { id: 38, type: "image", url: "/images/lares-trek/IMG_7327.jpg" },
+      { id: 39, type: "image", url: "/images/lares-trek/IMG_7334.jpg" },
+      { id: 40, type: "image", url: "/images/lares-trek/IMG_7337.jpg" },
+      { id: 41, type: "image", url: "/images/lares-trek/IMG_7339.jpg" },
+      { id: 42, type: "image", url: "/images/lares-trek/IMG_8864.jpg" },
+      { id: 43, type: "image", url: "/images/lares-trek/IMG_8867.jpg" },
+      { id: 44, type: "image", url: "/images/lares-trek/IMG_9413.jpg" },
+      { id: 45, type: "image", url: "/images/lares-trek/IMG_9622.jpg" },
+      { id: 46, type: "image", url: "/images/lares-trek/IMG_9708.jpg" },
+      { id: 47, type: "image", url: "/images/lares-trek/IMG_9764.jpg" }
     ]
   },
 
@@ -901,7 +919,7 @@ export const packages: Package[] = [
     category: "rutas",
     name: "Selva del Manu",
     nameEn: "Manu Rainforest",
-    heroImage: "/images/manu.jpg",
+    heroImage: "/images/manu-rainforest/IMG_6466.jpg",
     tagline: "Aventura en una de las zonas con mayor biodiversidad del planeta",
     taglineEn: "Adventure in one of the most biodiverse areas on Earth",
     duration: "5 días / 4 noches",
@@ -1020,12 +1038,99 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", title: "Parque Nacional del Manu", url: "/images/manu.jpg" },
-      { id: 2, type: "image", title: "Bosque nublado del Manu", url: "/images/manu-3.jpg" },
-      { id: 3, type: "image", title: "Selva amazónica", url: "/images/manu-4.jpg" },
-      { id: 4, type: "image", title: "Comunidad Harakbut", url: "/images/comunidad-3.jpg" },
-      { id: 5, type: "image", title: "Naturaleza del Manu", url: "/images/manu-5.jpg" },
-      { id: 6, type: "image", title: "Selva del Manu", url: "/images/selva-manu.jpg" }
+      { id: 1, type: "image", url: "/images/manu-rainforest/IMG_6390.jpg" },
+      { id: 2, type: "image", url: "/images/manu-rainforest/IMG_6398.jpg" },
+      { id: 3, type: "image", url: "/images/manu-rainforest/IMG_6416.jpg" },
+      { id: 4, type: "image", url: "/images/manu-rainforest/IMG_6419.jpg" },
+      { id: 5, type: "image", url: "/images/manu-rainforest/IMG_6420.jpg" },
+      { id: 6, type: "image", url: "/images/manu-rainforest/IMG_6422.jpg" },
+      { id: 7, type: "image", url: "/images/manu-rainforest/IMG_6424.jpg" },
+      { id: 8, type: "image", url: "/images/manu-rainforest/IMG_6430.jpg" },
+      { id: 9, type: "image", url: "/images/manu-rainforest/IMG_6445.jpg" },
+      { id: 10, type: "image", url: "/images/manu-rainforest/IMG_6449.jpg" },
+      { id: 11, type: "image", url: "/images/manu-rainforest/IMG_6450.jpg" },
+      { id: 12, type: "image", url: "/images/manu-rainforest/IMG_6451.jpg" },
+      { id: 13, type: "image", url: "/images/manu-rainforest/IMG_6466.jpg" },
+      { id: 14, type: "image", url: "/images/manu-rainforest/IMG_6475.jpg" },
+      { id: 15, type: "image", url: "/images/manu-rainforest/IMG_6479.jpg" },
+      { id: 16, type: "image", url: "/images/manu-rainforest/IMG_6483.jpg" },
+      { id: 17, type: "image", url: "/images/manu-rainforest/IMG_6487.jpg" },
+      { id: 18, type: "image", url: "/images/manu-rainforest/IMG_6488.jpg" },
+      { id: 19, type: "image", url: "/images/manu-rainforest/IMG_6493.jpg" },
+      { id: 20, type: "image", url: "/images/manu-rainforest/IMG_6498.jpg" },
+      { id: 21, type: "image", url: "/images/manu-rainforest/IMG_6499.jpg" },
+      { id: 22, type: "image", url: "/images/manu-rainforest/IMG_6500.jpg" },
+      { id: 23, type: "image", url: "/images/manu-rainforest/IMG_6505.jpg" },
+      { id: 24, type: "image", url: "/images/manu-rainforest/IMG_6509.jpg" },
+      { id: 25, type: "image", url: "/images/manu-rainforest/IMG_6583.jpg" },
+      { id: 26, type: "image", url: "/images/manu-rainforest/IMG_6584.jpg" },
+      { id: 27, type: "image", url: "/images/manu-rainforest/IMG_6585.jpg" },
+      { id: 28, type: "image", url: "/images/manu-rainforest/IMG_6592.jpg" },
+      { id: 29, type: "image", url: "/images/manu-rainforest/IMG_6593.jpg" },
+      { id: 30, type: "image", url: "/images/manu-rainforest/IMG_6594.jpg" },
+      { id: 31, type: "image", url: "/images/manu-rainforest/IMG_6617.jpg" },
+      { id: 32, type: "image", url: "/images/manu-rainforest/IMG_6653-2.jpg" },
+      { id: 33, type: "image", url: "/images/manu-rainforest/IMG_6653.jpg" },
+      { id: 34, type: "image", url: "/images/manu-rainforest/IMG_6654.jpg" },
+      { id: 35, type: "image", url: "/images/manu-rainforest/IMG_6655.jpg" },
+      { id: 36, type: "image", url: "/images/manu-rainforest/IMG_6658.jpg" },
+      { id: 37, type: "image", url: "/images/manu-rainforest/IMG_6663.jpg" },
+      { id: 38, type: "image", url: "/images/manu-rainforest/IMG_6668.jpg" },
+      { id: 39, type: "image", url: "/images/manu-rainforest/IMG_6671-2.jpg" },
+      { id: 40, type: "image", url: "/images/manu-rainforest/IMG_6671.jpg" },
+      { id: 41, type: "image", url: "/images/manu-rainforest/IMG_6677.jpg" },
+      { id: 42, type: "image", url: "/images/manu-rainforest/IMG_6679.jpg" },
+      { id: 43, type: "image", url: "/images/manu-rainforest/IMG_6680.jpg" },
+      { id: 44, type: "image", url: "/images/manu-rainforest/IMG_6682-2.jpg" },
+      { id: 45, type: "image", url: "/images/manu-rainforest/IMG_6682.jpg" },
+      { id: 46, type: "image", url: "/images/manu-rainforest/IMG_6684.jpg" },
+      { id: 47, type: "image", url: "/images/manu-rainforest/IMG_6685.jpg" },
+      { id: 48, type: "image", url: "/images/manu-rainforest/IMG_6686.jpg" },
+      { id: 49, type: "image", url: "/images/manu-rainforest/IMG_6689.jpg" },
+      { id: 50, type: "image", url: "/images/manu-rainforest/IMG_6692.jpg" },
+      { id: 51, type: "image", url: "/images/manu-rainforest/IMG_6693.jpg" },
+      { id: 52, type: "image", url: "/images/manu-rainforest/IMG_6697.jpg" },
+      { id: 53, type: "image", url: "/images/manu-rainforest/IMG_6699.jpg" },
+      { id: 54, type: "image", url: "/images/manu-rainforest/IMG_6707.jpg" },
+      { id: 55, type: "image", url: "/images/manu-rainforest/IMG_6711.jpg" },
+      { id: 56, type: "image", url: "/images/manu-rainforest/IMG_6714.jpg" },
+      { id: 57, type: "image", url: "/images/manu-rainforest/IMG_6731.jpg" },
+      { id: 58, type: "image", url: "/images/manu-rainforest/IMG_6733.jpg" },
+      { id: 59, type: "image", url: "/images/manu-rainforest/IMG_6737.jpg" },
+      { id: 60, type: "image", url: "/images/manu-rainforest/IMG_6738.jpg" },
+      { id: 61, type: "image", url: "/images/manu-rainforest/IMG_6760.jpg" },
+      { id: 62, type: "image", url: "/images/manu-rainforest/IMG_7628.jpg" },
+      { id: 63, type: "image", url: "/images/manu-rainforest/IMG_7642.jpg" },
+      { id: 64, type: "image", url: "/images/manu-rainforest/IMG_7649.jpg" },
+      { id: 65, type: "image", url: "/images/manu-rainforest/IMG_7656.jpg" },
+      { id: 66, type: "image", url: "/images/manu-rainforest/IMG_7659.jpg" },
+      { id: 67, type: "image", url: "/images/manu-rainforest/IMG_7663.jpg" },
+      { id: 68, type: "image", url: "/images/manu-rainforest/IMG_7664.jpg" },
+      { id: 69, type: "image", url: "/images/manu-rainforest/IMG_7667.jpg" },
+      { id: 70, type: "image", url: "/images/manu-rainforest/IMG_7668.jpg" },
+      { id: 71, type: "image", url: "/images/manu-rainforest/IMG_7669.jpg" },
+      { id: 72, type: "image", url: "/images/manu-rainforest/IMG_7670.jpg" },
+      { id: 73, type: "image", url: "/images/manu-rainforest/IMG_7672.jpg" },
+      { id: 74, type: "image", url: "/images/manu-rainforest/IMG_7673.jpg" },
+      { id: 75, type: "image", url: "/images/manu-rainforest/IMG_7677.jpg" },
+      { id: 76, type: "image", url: "/images/manu-rainforest/IMG_7683.jpg" },
+      { id: 77, type: "image", url: "/images/manu-rainforest/IMG_7685.jpg" },
+      { id: 78, type: "image", url: "/images/manu-rainforest/IMG_7688.jpg" },
+      { id: 79, type: "image", url: "/images/manu-rainforest/IMG_7689.jpg" },
+      { id: 80, type: "image", url: "/images/manu-rainforest/IMG_7691.jpg" },
+      { id: 81, type: "image", url: "/images/manu-rainforest/IMG_7700.jpg" },
+      { id: 82, type: "image", url: "/images/manu-rainforest/IMG_7717.jpg" },
+      { id: 83, type: "image", url: "/images/manu-rainforest/IMG_7718.jpg" },
+      { id: 84, type: "image", url: "/images/manu-rainforest/IMG_7720.jpg" },
+      { id: 85, type: "image", url: "/images/manu-rainforest/IMG_7721.jpg" },
+      { id: 86, type: "image", url: "/images/manu-rainforest/IMG_7722.jpg" },
+      { id: 87, type: "image", url: "/images/manu-rainforest/IMG_7725.jpg" },
+      { id: 88, type: "image", url: "/images/manu-rainforest/IMG_7729.jpg" },
+      { id: 89, type: "image", url: "/images/manu-rainforest/IMG_7731.jpg" },
+      { id: 90, type: "image", url: "/images/manu-rainforest/IMG_7765.jpg" },
+      { id: 91, type: "image", url: "/images/manu-rainforest/IMG_7766.jpg" },
+      { id: 92, type: "image", url: "/images/manu-rainforest/IMG_7845.jpg" },
+      { id: 93, type: "image", url: "/images/manu-rainforest/IMG_7859.jpg" }
     ]
   }
 ];

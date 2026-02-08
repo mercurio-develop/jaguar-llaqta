@@ -149,7 +149,7 @@ export default function Gallery({
         id: item.id,
         category: "rutas" as ActivityCategory, // Package gallery items don't have category
         type: item.type,
-        title: item.title,
+        title: "",
         location: "",
         url: item.url || "",
       }))
@@ -169,7 +169,7 @@ export default function Gallery({
               id: autoId++,
               category: pkg.category,
               type: g.type,
-              title: g.title,
+              title: pkg.name,
               location: "",
               url: g.url,
             });
@@ -312,17 +312,19 @@ export default function Gallery({
               )}
 
               {/* Info on hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-white text-sm font-medium truncate">{item.title}</p>
-                {item.location && <p className="text-white/60 text-xs">{item.location}</p>}
-              </div>
+              {(item.title || item.location) && (
+                <div className="absolute bottom-0 left-0 right-0 p-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {item.title && <p className="text-white text-sm font-medium truncate">{item.title}</p>}
+                  {item.location && <p className="text-white/60 text-xs">{item.location}</p>}
+                </div>
+              )}
 
               {/* Image with lazy loading */}
               {item.url ? (
                 <LazyImage
                   src={item.url}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="w-full h-full bg-support flex items-center justify-center">
