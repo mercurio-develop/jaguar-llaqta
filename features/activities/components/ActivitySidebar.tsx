@@ -32,16 +32,16 @@ export default function ActivitySidebar({ pkg, locale }: ActivitySidebarProps) {
           </div>
 
           <div className="space-y-4 mb-8">
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex flex-col gap-1 text-sm">
               <span className="text-muted uppercase tracking-wider">
                 {isSpanish ? "Duración" : "Duration"}
               </span>
-              <span className="text-white">
+              <span className="text-white leading-snug">
                 {isSpanish ? pkg.duration : (pkg.durationEn || pkg.duration)}
               </span>
             </div>
             {pkg.difficulty && (
-              <div className="flex items-center justify-between text-sm">
+              <div className="flex flex-col gap-1 text-sm">
                 <span className="text-muted uppercase tracking-wider">
                   {isSpanish ? "Dificultad" : "Difficulty"}
                 </span>

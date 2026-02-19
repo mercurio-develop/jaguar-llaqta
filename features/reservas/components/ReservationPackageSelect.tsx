@@ -81,9 +81,9 @@ export default function ReservationPackageSelect({
                       {locale === "es" ? pkg.name : pkg.nameEn}
                     </h3>
 
-                    <div className="flex items-center gap-2 text-muted text-sm mb-3">
-                      <Clock className="w-4 h-4 text-accent" />
-                      <span>
+                    <div className="flex items-start gap-2 text-muted text-sm mb-3">
+                      <Clock className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="min-w-0 leading-snug">
                         {locale === "es"
                           ? pkg.duration
                           : pkg.durationEn || pkg.duration}

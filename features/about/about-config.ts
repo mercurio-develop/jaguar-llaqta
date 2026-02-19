@@ -1,5 +1,3 @@
-import { Compass, Heart, Target } from "lucide-react";
-
 export const teamMembers = [
   {
     name: "Alvaro Mauricio Ugarte Forno",
@@ -46,6 +44,8 @@ export const partnerOrganizations = [
       "Organización comprometida con el turismo responsable y comunitario.",
   },
 ];
+
+import { Compass, Heart, Target } from "lucide-react";
 
 export const values = [
   { icon: Compass, titleKey: "authenticity", descKey: "authenticityDesc" },
