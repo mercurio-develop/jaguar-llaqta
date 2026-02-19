@@ -85,7 +85,7 @@ export default function AllActivitiesPage() {
             </p>
             <div className="w-24 h-1 bg-accent mx-auto" />
           </div>
-          <Gallery locale={locale} showFilters={true} columns={3} />
+          <Gallery locale={locale} showFilters={true} columns={3} initialLoadCount={6} loadMoreCount={6} />
         </div>
       </section>
 

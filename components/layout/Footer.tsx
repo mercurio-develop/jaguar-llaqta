@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary-alt border-t border-white/10">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -94,21 +94,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-display text-lg text-white mb-4">{t("footer.newsletter")}</h4>
-            <p className="text-muted text-sm mb-4">{t("footer.newsletterDesc")}</p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder={t("footer.emailPlaceholder")}
-                className="flex-1 bg-support border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder:text-muted focus:outline-none focus:border-accent"
-              />
-              <button type="submit" className="btn-primary text-sm px-4">
-                {t("footer.subscribe")}
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Bottom */}

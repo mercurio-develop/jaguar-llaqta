@@ -19,8 +19,13 @@ export default function CategoryHero({ category }: CategoryHeroProps) {
   const config = categoryConfig[category];
   const Icon = config.icon;
 
-  const titleKey = `category${category.charAt(0).toUpperCase() + category.slice(1)}Title` as const;
   const descKey = `category${category.charAt(0).toUpperCase() + category.slice(1)}Desc` as const;
+
+  const categoryLabels: Record<ActivityCategory, { es: string; en: string }> = {
+    rutas: { es: "Rutas", en: "Routes" },
+    comunidad: { es: "Comunidad", en: "Community" },
+    ceremonias: { es: "Ceremonias", en: "Ceremonies" },
+  };
 
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-end">
@@ -44,7 +49,7 @@ export default function CategoryHero({ category }: CategoryHeroProps) {
           </div>
           <div>
             <h1 className="font-display text-4xl md:text-5xl text-white uppercase tracking-wider">
-              {t(titleKey)}
+              {categoryLabels[category][locale === "es" ? "es" : "en"]}
             </h1>
           </div>
         </div>

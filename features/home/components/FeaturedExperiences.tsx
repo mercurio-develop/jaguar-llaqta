@@ -10,21 +10,21 @@ const experiences = [
     image: "/images/ausangate-trek/IMG_8942.jpg",
     titleKey: "expRoutesTitle",
     descKey: "expRoutesDesc",
-    href: "/actividades#rutas",
+    href: "/actividades/rutas",
   },
   {
     id: "comunidad",
     image: "/images/comunidad.jpg",
     titleKey: "expCommunityTitle",
     descKey: "expCommunityDesc",
-    href: "/actividades#comunidad",
+    href: "/actividades/comunidad",
   },
   {
     id: "ceremonias",
     image: "/images/machu-picchu.jpg",
     titleKey: "expCeremoniesTitle",
     descKey: "expCeremoniesDesc",
-    href: "/actividades#ceremonias",
+    href: "/actividades/ceremonias",
   },
 ];
 
@@ -42,40 +42,36 @@ export default function FeaturedExperiences() {
         </div>
 
         {/* Experiences grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {experiences.map((exp) => (
             <Link
               key={exp.id}
               href={`/${locale}${exp.href}`}
-              className="group relative aspect-[4/5] overflow-hidden rounded-lg"
+              className="group flex flex-col rounded-lg border border-[#333] bg-white/[0.03] overflow-hidden hover:border-accent/40 transition-colors"
             >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                style={{ backgroundImage: `url('${exp.image}')` }}
-              />
+              {/* Image - rounded top */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  style={{ backgroundImage: `url('${exp.image}')` }}
+                />
+              </div>
 
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
-
-              {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <h3 className="font-display text-2xl text-white uppercase tracking-wider mb-2 group-hover:text-accent transition-colors">
+              {/* Text area */}
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="font-display text-2xl font-bold text-white uppercase tracking-wider mb-3 group-hover:text-accent transition-colors">
                   {t(exp.titleKey)}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed mb-4 line-clamp-2">
+                <p className="text-[#9ca3af] text-sm leading-[1.7] mb-5 flex-1">
                   {t(exp.descKey)}
                 </p>
-                <div className="flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-2 text-accent">
                   <span className="text-sm font-medium uppercase tracking-wider">
                     {locale === "es" ? "Descubrir" : "Discover"}
                   </span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
-
-              {/* Decorative corner */}
-              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-accent/50 group-hover:border-accent transition-colors" />
             </Link>
           ))}
         </div>

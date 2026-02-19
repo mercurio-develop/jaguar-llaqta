@@ -35,7 +35,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -53,11 +53,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .section-title {
-    @apply font-display text-4xl md:text-5xl text-white uppercase tracking-wide mb-4;
+    @apply font-display text-4xl md:text-5xl font-bold text-white uppercase tracking-wide mb-4;
   }
 
   .section-subtitle {
-    @apply text-muted text-lg md:text-xl mb-8;
+    @apply text-white/60 text-lg md:text-xl leading-[1.7] mb-8;
   }
 
   .card {

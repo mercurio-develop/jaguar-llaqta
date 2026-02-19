@@ -49,7 +49,7 @@ export default function Testimonials() {
         style={{ backgroundImage: "url('/images/machu-picchu-2.jpg')" }}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-primary/80" />
+      <div className="absolute inset-0 bg-primary/85" />
 
       <div className="container-custom relative z-10">
         {/* Section header */}
@@ -60,26 +60,26 @@ export default function Testimonials() {
         {/* Testimonials grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} variant="default" className="relative">
+            <Card key={testimonial.id} variant="default" className="relative p-8">
               {/* Quote icon */}
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-accent/20" />
+              <Quote className="absolute top-8 right-8 w-10 h-10 text-accent/20" />
 
               {/* Rating */}
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-5">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-white/80 leading-relaxed mb-6">
+              <p className="text-[#d1d5db] text-base font-normal leading-[1.7] mb-6">
                 &ldquo;{testimonial.text[locale]}&rdquo;
               </p>
 
               {/* Author */}
               <div className="border-t border-white/10 pt-4">
-                <p className="font-medium text-white">{testimonial.name}</p>
-                <p className="text-sm text-muted">{testimonial.country}</p>
+                <p className="font-display font-semibold text-white">{testimonial.name}</p>
+                <p className="text-sm text-[#9ca3af] mt-1">{testimonial.country}</p>
               </div>
             </Card>
           ))}

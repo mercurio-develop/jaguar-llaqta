@@ -26,7 +26,7 @@ const defaultGalleryItems: Array<{
   { id: 2, category: "rutas", type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
   { id: 3, category: "rutas", type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
   // Rutas - Lares
-  { id: 4, category: "rutas", type: "image", title: "Lares Trek", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
+  { id: 4, category: "rutas", type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
   { id: 5, category: "rutas", type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
   { id: 6, category: "rutas", type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
   // Rutas - Manu
@@ -136,7 +136,7 @@ export default function Gallery({
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(initialLoadCount);
   const [isMounted, setIsMounted] = useState(false);
-  const loadMoreRef = useRef<HTMLDivElement>(null);
+
 
   // Track mount state to avoid hydration mismatch
   useEffect(() => {
@@ -189,23 +189,9 @@ export default function Gallery({
     setVisibleCount(initialLoadCount);
   }, [selectedCategory, initialLoadCount]);
 
-  // Intersection observer for infinite scroll
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && visibleCount < filteredItems.length) {
-          setVisibleCount((prev) => Math.min(prev + loadMoreCount, filteredItems.length));
-        }
-      },
-      { rootMargin: "200px" }
-    );
-
-    if (loadMoreRef.current) {
-      observer.observe(loadMoreRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [visibleCount, filteredItems.length, loadMoreCount]);
+  const loadMore = useCallback(() => {
+    setVisibleCount((prev) => Math.min(prev + loadMoreCount, filteredItems.length));
+  }, [filteredItems.length, loadMoreCount]);
 
   const visibleItems = filteredItems.slice(0, visibleCount);
   const hasMore = visibleCount < filteredItems.length;
@@ -336,10 +322,15 @@ export default function Gallery({
         })}
       </div>
 
-      {/* Load more trigger */}
+      {/* Show more button */}
       {hasMore && (
-        <div ref={loadMoreRef} className="flex justify-center py-8">
-          <Loader2 className="w-8 h-8 text-accent animate-spin" />
+        <div className="flex justify-center pt-10">
+          <button
+            onClick={loadMore}
+            className="px-8 py-3 border border-accent/30 text-accent text-sm font-medium uppercase tracking-wider rounded hover:bg-accent/10 transition-colors"
+          >
+            {isSpanish ? "Ver más" : "Show more"}
+          </button>
         </div>
       )}
 

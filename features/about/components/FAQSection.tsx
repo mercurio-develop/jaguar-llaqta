@@ -14,7 +14,6 @@ export default function FAQSection() {
     { q: tFaq("q2"), a: tFaq("a2") },
     { q: tFaq("q3"), a: tFaq("a3") },
     { q: tFaq("q4"), a: tFaq("a4") },
-    { q: tFaq("q5"), a: tFaq("a5") },
   ];
 
   return (

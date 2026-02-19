@@ -27,16 +27,16 @@ export const categoryImages: Record<ActivityCategory, string> = {
 
 export const categoryDescriptions: Record<ActivityCategory, { es: string; en: string }> = {
   rutas: {
-    es: "Trekkings por montañas nevadas y valles ancestrales de los Andes",
-    en: "Treks through snow-capped mountains and ancestral valleys of the Andes",
+    es: "Recorre rutas alternativas de Cusco, interactuando con la naturaleza o llegando a vestigios de culturas pre hispánicas de la mano de nuestros guías experimentados.",
+    en: "Explore alternative routes in Cusco, interacting with nature or reaching vestiges of pre-Hispanic cultures guided by our experienced guides.",
   },
   comunidad: {
-    es: "Conexión auténtica con familias y tradiciones andinas",
-    en: "Authentic connection with Andean families and traditions",
+    es: "Conoce de cerca el modo en que viven las comunidades nativas de Cusco. Ingresa a su dinámica diaria en vivienda, costumbres, actividades y armonía con la naturaleza.",
+    en: "Get to know firsthand how the native communities of Cusco live. Enter their daily dynamics in housing, customs, activities and harmony with nature.",
   },
   ceremonias: {
-    es: "Templos antiguos y ceremonias con maestros espirituales",
-    en: "Ancient temples and ceremonies with spiritual masters",
+    es: "Vive la experiencia de la tradición mágica ancestral, conoce y sumérgete en la interacción entre el Ser y el Todo, a través de ceremonias tradicionales de la cultura viva ancestral.",
+    en: "Live the experience of ancestral magical tradition, discover and immerse yourself in the interaction between Being and the Whole, through traditional ceremonies of the living ancestral culture.",
   },
 };
 

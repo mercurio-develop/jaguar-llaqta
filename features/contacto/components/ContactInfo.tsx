@@ -36,7 +36,7 @@ export default function ContactInfo() {
               rel="noopener noreferrer"
               className="text-accent text-sm hover:underline"
             >
-              Escríbenos por WhatsApp
+              {t("whatsappText")}
             </a>
           </div>
         </div>
@@ -71,23 +71,34 @@ export default function ContactInfo() {
         </div>
       </Card>
 
-      {/* Social Links */}
-      <div className="flex items-center gap-4 justify-center pt-4">
+      {/* Social Links - left aligned with brand colors */}
+      <div className="flex items-center gap-3 pt-4">
         <a
           href={siteConfig.links.facebook}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 rounded-lg bg-support flex items-center justify-center text-white/60 hover:text-accent hover:bg-accent/10 transition-colors"
+          className="w-10 h-10 rounded-lg flex items-center justify-center bg-[#1877F2] hover:bg-[#1666d4] transition-colors"
+          aria-label="Facebook"
         >
-          <Facebook className="w-5 h-5" />
+          <Facebook className="w-5 h-5 text-white" />
         </a>
         <a
           href={siteConfig.links.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 rounded-lg bg-support flex items-center justify-center text-white/60 hover:text-accent hover:bg-accent/10 transition-colors"
+          className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:opacity-90 transition-opacity"
+          aria-label="Instagram"
         >
-          <Instagram className="w-5 h-5" />
+          <Instagram className="w-5 h-5 text-white" />
+        </a>
+        <a
+          href={siteConfig.links.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-10 h-10 rounded-lg flex items-center justify-center bg-[#25D366] hover:bg-[#20bd5a] transition-colors"
+          aria-label="WhatsApp"
+        >
+          <Phone className="w-5 h-5 text-white" />
         </a>
       </div>
     </div>

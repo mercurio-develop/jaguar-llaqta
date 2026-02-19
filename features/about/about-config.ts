@@ -2,19 +2,22 @@ import { Compass, Heart, Target } from "lucide-react";
 
 export const teamMembers = [
   {
-    name: "Carlos Quispe",
-    role: "Fundador & Guía Principal",
-    description: "Nacido en Cusco, con más de 15 años de experiencia en turismo ancestral.",
+    name: "Alvaro Mauricio Ugarte Forno",
+    role: "Jefe de Operaciones y Guía Principal",
+    roleEn: "Head of Operations & Lead Guide",
+    description:
+      "Guía experimentado de Turismo Alternativo. Conocedor de diversas rutas naturales y de vestigios pre hispánicos. Profesional trilingüe (Español, Inglés y Quechua) con contacto y cercanía constante a Comunidades Nativas y a la Cultura Viva Ancestral del Perú.",
+    descriptionEn:
+      "Experienced Alternative Tourism guide. Knowledgeable in diverse natural routes and pre-Hispanic vestiges. Trilingual professional (Spanish, English and Quechua) with constant contact and closeness to Native Communities and the Living Ancestral Culture of Peru.",
   },
   {
-    name: "María Huamán",
-    role: "Coordinadora de Experiencias",
-    description: "Especialista en conexión con comunidades y experiencias culturales.",
-  },
-  {
-    name: "Jorge Condori",
-    role: "Guía de Montaña",
-    description: "Certificado en alta montaña y conocedor de rutas sagradas.",
+    name: "Alonso Castro Cordano",
+    role: "Jefe Administrativo y de Comunicaciones",
+    roleEn: "Head of Administration & Communications",
+    description:
+      "Profesional en el rubro turístico y en Experiencia del Consumidor. Con años de experiencia en asesorar y capacitar en el trato e interacción de los servicios brindados con los clientes, dándole un valor agregado a la experiencia turística y flujo administrativo de la agencia.",
+    descriptionEn:
+      "Professional in the tourism industry and Customer Experience. With years of experience in advising and training in the treatment and interaction of services provided to clients, adding value to the tourism experience and administrative flow of the agency.",
   },
 ];
 
@@ -22,12 +25,14 @@ export const partnerOrganizations = [
   {
     name: "Comunidad de Chinchero",
     type: "Comunidad Local",
-    description: "Artesanos textiles que preservan técnicas ancestrales de tejido andino.",
+    description:
+      "Artesanos textiles que preservan técnicas ancestrales de tejido andino.",
   },
   {
     name: "Asociación de Guías de Montaña",
     type: "Guías Especializados",
-    description: "Guías certificados con profundo conocimiento de las rutas sagradas.",
+    description:
+      "Guías certificados con profundo conocimiento de las rutas sagradas.",
   },
   {
     name: "Pampamesayoq de Ollantaytambo",
@@ -37,7 +42,8 @@ export const partnerOrganizations = [
   {
     name: "Turismo Sostenible Perú",
     type: "ONG",
-    description: "Organización comprometida con el turismo responsable y comunitario.",
+    description:
+      "Organización comprometida con el turismo responsable y comunitario.",
   },
 ];
 

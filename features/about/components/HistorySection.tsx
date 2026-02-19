@@ -15,9 +15,11 @@ export default function HistorySection() {
               <History className="w-8 h-8 text-accent" />
               <h2 className="font-display text-3xl text-white">{t("historyTitle")}</h2>
             </div>
-            <p className="text-muted leading-relaxed text-lg">
-              {t("historyText")}
-            </p>
+            <div className="text-muted leading-relaxed text-lg space-y-4">
+              {t("historyText").split("\n\n").map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] bg-support rounded overflow-hidden relative">

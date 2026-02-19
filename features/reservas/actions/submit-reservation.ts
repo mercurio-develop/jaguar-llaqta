@@ -2,6 +2,7 @@
 
 import { prisma } from "@/lib/db";
 import { sendReservationConfirmation } from "@/lib/emails/send-reservation-confirmation";
+import { sendReservationNotification } from "@/lib/emails/send-reservation-notification";
 import {
   ActionState,
   fromErrorToActionState,
@@ -29,14 +30,25 @@ export const submitReservation = async (
     });
 
     try {
-      await sendReservationConfirmation(parsed.email, {
-        toName: parsed.name,
-        packageName: parsed.packageId,
-        date: parsed.date,
-        participants: parsed.participants,
-      });
+      await Promise.all([
+        sendReservationConfirmation(parsed.email, {
+          toName: parsed.name,
+          packageName: parsed.packageId,
+          date: parsed.date,
+          participants: parsed.participants,
+        }),
+        sendReservationNotification({
+          name: parsed.name,
+          email: parsed.email,
+          phone: parsed.phone,
+          packageName: parsed.packageId,
+          date: parsed.date,
+          participants: parsed.participants,
+          notes: parsed.notes || null,
+        }),
+      ]);
     } catch (emailError) {
-      console.error("Failed to send reservation email:", emailError);
+      console.error("Failed to send reservation emails:", emailError);
     }
 
     return toActionState("SUCCESS", "Reserva creada correctamente");

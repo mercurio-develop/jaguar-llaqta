@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Mountain, Users, Sparkles, ArrowRight } from "lucide-react";
-import Card, { CardContent, CardDescription, CardTitle } from "@/components/ui/Card";
 
 const services = [
   {
@@ -11,21 +10,21 @@ const services = [
     icon: Mountain,
     titleKey: "serviceRoutes",
     descKey: "serviceRoutesDesc",
-    href: "/actividades#rutas",
+    href: "/actividades/rutas",
   },
   {
     id: "community",
     icon: Users,
     titleKey: "serviceCommunity",
     descKey: "serviceCommunityDesc",
-    href: "/actividades#comunidad",
+    href: "/actividades/comunidad",
   },
   {
     id: "ceremonies",
     icon: Sparkles,
     titleKey: "serviceCeremonies",
     descKey: "serviceCeremoniesDesc",
-    href: "/actividades#ceremonias",
+    href: "/actividades/ceremonias",
   },
 ];
 
@@ -42,38 +41,38 @@ export default function Services() {
           <p className="section-subtitle">{t("servicesSubtitle")}</p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Services grid - seamless, no boxes */}
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-14">
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <Link key={service.id} href={`/${locale}${service.href}`}>
-                <Card variant="hover" className="h-full group cursor-pointer">
-                  <CardContent>
-                    {/* Icon */}
-                    <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-8 h-8 text-accent" />
-                    </div>
+              <Link
+                key={service.id}
+                href={`/${locale}${service.href}`}
+                className="group text-center"
+              >
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+                  <Icon className="w-8 h-8 text-accent" />
+                </div>
 
-                    {/* Title */}
-                    <CardTitle className="text-2xl mb-3 group-hover:text-accent transition-colors">
-                      {t(service.titleKey)}
-                    </CardTitle>
+                {/* Title */}
+                <h3 className="font-display text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
+                  {t(service.titleKey)}
+                </h3>
 
-                    {/* Description */}
-                    <CardDescription className="text-base leading-relaxed">
-                      {t(service.descKey)}
-                    </CardDescription>
+                {/* Description */}
+                <p className="text-[#d1d5db] text-base leading-[1.7] mb-5">
+                  {t(service.descKey)}
+                </p>
 
-                    {/* Link indicator */}
-                    <div className="mt-6 flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-sm font-medium uppercase tracking-wider">
-                        {locale === "es" ? "Explorar" : "Explore"}
-                      </span>
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </CardContent>
-                </Card>
+                {/* Link */}
+                <div className="flex items-center justify-center gap-2 text-accent">
+                  <span className="text-sm font-medium uppercase tracking-wider">
+                    {locale === "es" ? "Explorar" : "Explore"}
+                  </span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </div>
               </Link>
             );
           })}

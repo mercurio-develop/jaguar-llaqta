@@ -6,12 +6,12 @@ export const siteConfig = {
   links: {
     facebook: "https://facebook.com/jaguarllaqta",
     instagram: "https://instagram.com/jaguarllaqta",
-    whatsapp: "https://wa.me/51XXXXXXXXX",
-    email: "info@jaguarllaqta.com",
+    whatsapp: "https://wa.me/51926935820",
+    email: "augarteforno@gmail.com",
   },
   contact: {
-    phone: "+51 XXX XXX XXX",
-    email: "info@jaguarllaqta.com",
+    phone: "+51 926 935 820",
+    email: "augarteforno@gmail.com",
     address: "Cusco, Perú",
   },
 };
