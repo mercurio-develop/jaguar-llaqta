@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
                 const Icon = value.icon;
                 return (
                   <div key={index} className="flex flex-row items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 my-auto">
+                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-2">
                       <Icon className="w-6 h-6 text-accent" />
                     </div>
                     <div className="flex-1 min-w-0">

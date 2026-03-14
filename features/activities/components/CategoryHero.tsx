@@ -23,7 +23,7 @@ export default function CategoryHero({ category }: CategoryHeroProps) {
 
   const categoryLabels: Record<ActivityCategory, { es: string; en: string }> = {
     rutas: { es: "Rutas", en: "Routes" },
-    comunidad: { es: "Comunidad", en: "Community" },
+    comunidad: { es: "Comunidades", en: "Communities" },
     ceremonias: { es: "Ceremonias", en: "Ceremonies" },
   };
 
@@ -40,7 +40,7 @@ export default function CategoryHero({ category }: CategoryHeroProps) {
           className="inline-flex items-center gap-2 text-accent hover:text-accent-alt transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>{locale === "es" ? "Todos los tours" : "All tours"}</span>
+          <span>{locale === "es" ? "Actividades" : "All tours"}</span>
         </Link>
 
         <div className="flex items-center gap-4 mb-4">

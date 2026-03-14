@@ -62,7 +62,7 @@ export default function VisionMissionSection() {
             <div className="flex-1 space-y-8">
               {objectives.map((key, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-3" />
                   <p className="text-[#d1d5db] text-base leading-[1.85]">
                     {t(key)}
                   </p>
@@ -80,7 +80,7 @@ export default function VisionMissionSection() {
             <div className="flex-1 space-y-7">
               {values.map((value, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-2.5" />
                   <div>
                     <h4 className="font-display text-base font-bold text-white mb-1">
                       {t(value.titleKey)}

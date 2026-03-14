@@ -11,7 +11,7 @@ interface ActivityHeroProps {
 
 const categoryLabels: Record<ActivityCategory, { es: string; en: string }> = {
   rutas: { es: "Rutas", en: "Routes" },
-  comunidad: { es: "Comunidad", en: "Community" },
+  comunidad: { es: "Comunidades", en: "Communities" },
   ceremonias: { es: "Ceremonias", en: "Ceremonies" },
 };
 
@@ -27,7 +27,7 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
   const heroImage =
     pkg.heroImage ||
     pkg.gallery.find((g) => g.type === "image" && g.url)?.url ||
-    categoryFallback[pkg.category];
+    categoryFallback[pkg.categories[0]];
 
   return (
     <section className="relative min-h-[60vh] flex items-end">
@@ -41,7 +41,7 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
 
       <div className="container-custom relative z-10 pb-12">
         <Link
-          href={`/${locale}/actividades#${pkg.category}`}
+          href={`/${locale}/actividades#${pkg.categories[0]}`}
           className="inline-flex items-center gap-2 text-accent hover:text-accent-alt transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -49,9 +49,11 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
         </Link>
 
         <div className="flex flex-wrap items-center gap-3 mb-4">
-          <span className="px-3 py-1 border border-accent/30 text-accent text-sm uppercase tracking-widest">
-            {categoryLabels[pkg.category][isSpanish ? "es" : "en"]}
-          </span>
+          {pkg.categories.map((cat) => (
+            <span key={cat} className="px-3 py-1 border border-accent/30 text-accent text-sm uppercase tracking-widest">
+              {categoryLabels[cat][isSpanish ? "es" : "en"]}
+            </span>
+          ))}
         </div>
 
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-wider mb-4">

@@ -46,7 +46,7 @@ export default function ReservationPackageSelect({
               const pkgImage =
                 pkg.heroImage ||
                 pkg.gallery.find((g) => g.type === "image" && g.url)?.url ||
-                categoryImages[pkg.category];
+                categoryImages[pkg.categories[0]];
               const isSelected = selectedPackage?.id === pkg.id;
 
               return (

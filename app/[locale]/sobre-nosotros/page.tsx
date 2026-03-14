@@ -19,7 +19,7 @@ export default function AboutPage() {
     { id: "vision-mision", label: t("visionMissionTitle") },
     { id: "asociados", label: t("teamTitle") },
     { id: "faq", label: tFaq("title") },
-    { id: "organizaciones", label: t("organizationsTitle") },
+   // { id: "organizaciones", label: t("organizationsTitle") },
   ];
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function AboutPage() {
       <VisionMissionSection />
       <TeamSection />
       <FAQSection />
-      <PartnersSection />
+      {/*<PartnersSection />*/}
     </div>
   );
 }

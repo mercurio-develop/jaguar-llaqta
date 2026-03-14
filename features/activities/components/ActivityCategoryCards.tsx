@@ -20,7 +20,7 @@ export default function ActivityCategoryCards({ locale }: ActivityCategoryCardsP
         <div className="grid md:grid-cols-3 gap-8">
           {(Object.keys(categoryLabelsConfig) as ActivityCategory[]).map((cat) => {
             const config = categoryLabelsConfig[cat];
-            const count = packages.filter(p => p.category === cat).length;
+            const count = packages.filter(p => p.categories.includes(cat)).length;
             return (
               <Link
                 key={cat}

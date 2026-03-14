@@ -15,35 +15,35 @@ const categoryIcons: Record<ActivityCategory, typeof Mountain> = {
 // Default gallery items for the main gallery view
 const defaultGalleryItems: Array<{
   id: number;
-  category: ActivityCategory;
+  categories: ActivityCategory[];
   type: "image" | "video";
   title: string;
   location: string;
   url: string;
 }> = [
   // Rutas - Ausangate
-  { id: 1, category: "rutas", type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
-  { id: 2, category: "rutas", type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
-  { id: 3, category: "rutas", type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
+  { id: 1, categories: ["rutas"], type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
+  { id: 2, categories: ["rutas"], type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
+  { id: 3, categories: ["rutas"], type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
   // Rutas - Lares
-  { id: 4, category: "rutas", type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
-  { id: 5, category: "rutas", type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
-  { id: 6, category: "rutas", type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
+  { id: 4, categories: ["rutas"], type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
+  { id: 5, categories: ["rutas"], type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
+  { id: 6, categories: ["rutas"], type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
   // Rutas - Manu
-  { id: 7, category: "rutas", type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
-  { id: 8, category: "rutas", type: "image", title: "Montañas", location: "Cusco", url: "/images/montanias.jpg" },
+  { id: 7, categories: ["rutas"], type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
+  { id: 8, categories: ["rutas"], type: "image", title: "Montañas", location: "Cusco", url: "/images/montanias.jpg" },
   // Comunidad
-  { id: 9, category: "comunidad", type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
-  { id: 10, category: "comunidad", type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
-  { id: 11, category: "comunidad", type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
-  { id: 12, category: "comunidad", type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
-  { id: 13, category: "comunidad", type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek/IMG_3312.jpg" },
-  { id: 14, category: "comunidad", type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek/IMG_7274.jpg" },
+  { id: 9, categories: ["comunidad"], type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
+  { id: 10, categories: ["comunidad"], type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
+  { id: 11, categories: ["comunidad"], type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
+  { id: 12, categories: ["comunidad"], type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
+  { id: 13, categories: ["comunidad"], type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek/IMG_3312.jpg" },
+  { id: 14, categories: ["comunidad"], type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek/IMG_7274.jpg" },
   // Ceremonias
-  { id: 15, category: "ceremonias", type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
-  { id: 16, category: "ceremonias", type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
-  { id: 17, category: "ceremonias", type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
-  { id: 18, category: "ceremonias", type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
+  { id: 15, categories: ["ceremonias"], type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
+  { id: 16, categories: ["ceremonias"], type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
+  { id: 17, categories: ["ceremonias"], type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
+  { id: 18, categories: ["ceremonias"], type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
 ];
 
 // Lazy image component with intersection observer
@@ -132,7 +132,7 @@ export default function Gallery({
   loadMoreCount = 12
 }: GalleryProps) {
   const isSpanish = locale === "es";
-  const [selectedCategory, setSelectedCategory] = useState<ActivityCategory | "all">("all");
+  const [selectedCategories, setSelectedCategories] = useState<ActivityCategory[]>([]);
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(initialLoadCount);
   const [isMounted, setIsMounted] = useState(false);
@@ -147,7 +147,7 @@ export default function Gallery({
   const galleryItems = items
     ? items.map((item) => ({
         id: item.id,
-        category: "rutas" as ActivityCategory, // Package gallery items don't have category
+        categories: ["rutas"] as ActivityCategory[], // Package gallery items don't have category
         type: item.type,
         title: "",
         location: "",
@@ -167,7 +167,7 @@ export default function Gallery({
             seen.add(g.url);
             aggregated.push({
               id: autoId++,
-              category: pkg.category,
+              categories: pkg.categories,
               type: g.type,
               title: pkg.name,
               location: "",
@@ -180,14 +180,14 @@ export default function Gallery({
         return aggregated.length > 0 ? aggregated : defaultGalleryItems;
       })();
 
-  const filteredItems = !showFilters || selectedCategory === "all"
+  const filteredItems = !showFilters || selectedCategories.length === 0
     ? galleryItems
-    : galleryItems.filter((item) => item.category === selectedCategory);
+    : galleryItems.filter((item) => item.categories.some((c) => selectedCategories.includes(c)));
 
   // Reset visible count when filter changes
   useEffect(() => {
     setVisibleCount(initialLoadCount);
-  }, [selectedCategory, initialLoadCount]);
+  }, [selectedCategories, initialLoadCount]);
 
   const loadMore = useCallback(() => {
     setVisibleCount((prev) => Math.min(prev + loadMoreCount, filteredItems.length));
@@ -216,7 +216,7 @@ export default function Gallery({
 
   const categoryLabels: Record<ActivityCategory, { es: string; en: string }> = {
     rutas: { es: "Rutas", en: "Routes" },
-    comunidad: { es: "Comunidad", en: "Community" },
+    comunidad: { es: "Comunidades", en: "Communities" },
     ceremonias: { es: "Ceremonias", en: "Ceremonies" },
   };
 
@@ -226,10 +226,10 @@ export default function Gallery({
       {showFilters && !items && (
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           <button
-            onClick={() => setSelectedCategory("all")}
+            onClick={() => setSelectedCategories([])}
             className={cn(
               "px-4 py-2 rounded-full text-sm font-medium transition-all",
-              selectedCategory === "all"
+              selectedCategories.length === 0
                 ? "bg-accent text-primary"
                 : "bg-support text-white/70 hover:text-white"
             )}
@@ -241,10 +241,12 @@ export default function Gallery({
             return (
               <button
                 key={cat}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => setSelectedCategories((prev) =>
+                  prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+                )}
                 className={cn(
                   "px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2",
-                  selectedCategory === cat
+                  selectedCategories.includes(cat)
                     ? "bg-accent text-primary"
                     : "bg-support text-white/70 hover:text-white"
                 )}
@@ -269,7 +271,7 @@ export default function Gallery({
       {/* Gallery grid */}
       <div className={cn("grid gap-4", gridCols[columns])}>
         {visibleItems.map((item) => {
-          const Icon = items ? ImageIcon : categoryIcons[item.category as ActivityCategory];
+          const Icon = items ? ImageIcon : categoryIcons[item.categories[0] as ActivityCategory];
           return (
             <button
               key={item.id}

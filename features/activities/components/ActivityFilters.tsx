@@ -7,9 +7,10 @@ import { categoryLabelsConfig, durationFilters } from "@/features/activities/act
 
 interface ActivityFiltersProps {
   locale: "es" | "en";
-  selectedCategory: ActivityCategory | "all";
+  selectedCategories: ActivityCategory[];
+  onCategoriesChange: (cat: ActivityCategory) => void;
+  onClearCategories: () => void;
   selectedDuration: string | "all";
-  onCategoryChange: (cat: ActivityCategory | "all") => void;
   onDurationChange: (dur: string | "all") => void;
   onClear: () => void;
   hasActiveFilters: boolean;
@@ -17,9 +18,10 @@ interface ActivityFiltersProps {
 
 export default function ActivityFilters({
   locale,
-  selectedCategory,
+  selectedCategories,
+  onCategoriesChange,
+  onClearCategories,
   selectedDuration,
-  onCategoryChange,
   onDurationChange,
   onClear,
   hasActiveFilters,
@@ -52,10 +54,10 @@ export default function ActivityFilters({
           </p>
           <div className="flex flex-wrap gap-2">
             <button
-              onClick={() => onCategoryChange("all")}
+              onClick={() => onClearCategories()}
               className={cn(
                 "px-3 py-1.5 text-sm transition-all border rounded",
-                selectedCategory === "all"
+                selectedCategories.length === 0
                   ? "bg-accent text-primary border-accent"
                   : "border-white/20 text-muted hover:text-white hover:border-white/40"
               )}
@@ -65,10 +67,10 @@ export default function ActivityFilters({
             {(Object.keys(categoryLabelsConfig) as ActivityCategory[]).map((cat) => (
               <button
                 key={cat}
-                onClick={() => onCategoryChange(cat)}
+                onClick={() => onCategoriesChange(cat)}
                 className={cn(
                   "px-3 py-1.5 text-sm transition-all border rounded flex items-center gap-1.5",
-                  selectedCategory === cat
+                  selectedCategories.includes(cat)
                     ? "bg-accent/10 text-accent border-accent/30"
                     : "border-white/20 text-muted hover:text-white hover:border-white/40"
                 )}

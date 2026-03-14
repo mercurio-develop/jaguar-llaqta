@@ -47,7 +47,7 @@ const generateActivities = () => {
       id: `${pkg.id}-1`,
       title: pkg.name,
       titleEn: pkg.nameEn,
-      category: pkg.category,
+      category: pkg.categories[0],
       date: date1,
       duration: pkg.duration,
       price: pkg.price,
@@ -58,7 +58,7 @@ const generateActivities = () => {
       id: `${pkg.id}-2`,
       title: pkg.name,
       titleEn: pkg.nameEn,
-      category: pkg.category,
+      category: pkg.categories[0],
       date: date2,
       duration: pkg.duration,
       price: pkg.price,
@@ -219,7 +219,7 @@ export default function Calendar({ locale, showUpcoming = true, className }: Cal
               {(Object.keys(categoryIcons) as ActivityCategory[]).map((key) => {
                 const labels: Record<ActivityCategory, { es: string; en: string }> = {
                   rutas: { es: "Rutas", en: "Routes" },
-                  comunidad: { es: "Comunidad", en: "Community" },
+                  comunidad: { es: "Comunidades", en: "Communities" },
                   ceremonias: { es: "Ceremonias", en: "Ceremonies" },
                 };
                 return (

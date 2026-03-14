@@ -4,9 +4,9 @@ export const teamMembers = [
     role: "Jefe de Operaciones y Guía Principal",
     roleEn: "Head of Operations & Lead Guide",
     description:
-      "Guía experimentado de Turismo Alternativo. Conocedor de diversas rutas naturales y de vestigios pre hispánicos. Profesional trilingüe (Español, Inglés y Quechua) con contacto y cercanía constante a Comunidades Nativas y a la Cultura Viva Ancestral del Perú.",
+      "Con años de experiencia trabajando en turismo responsable. Conocedor de diversas rutas y destinos de naturaleza y herencia ancestral. En contacto permanente con la Cultura Viva del Perú.",
     descriptionEn:
-      "Experienced Alternative Tourism guide. Knowledgeable in diverse natural routes and pre-Hispanic vestiges. Trilingual professional (Spanish, English and Quechua) with constant contact and closeness to Native Communities and the Living Ancestral Culture of Peru.",
+      "With years of experience working in responsible tourism. Knowledgeable in diverse routes and destinations of nature and ancestral heritage. In permanent contact with the Living Culture of Peru.",
   },
   {
     name: "Alonso Castro Cordano",
@@ -57,5 +57,4 @@ export const objectives = [
   "objectiveOne",
   "objectiveTwo",
   "objectiveThree",
-  "objectiveFour",
 ] as const;

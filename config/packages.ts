@@ -22,7 +22,7 @@ export interface GalleryItem {
 
 export interface Package {
   id: string;
-  category: ActivityCategory;
+  categories: ActivityCategory[];
   name: string;
   nameEn: string;
   /**
@@ -194,19 +194,19 @@ export const packages: Package[] = [
   // RUTAS - Cancha Cancha Full Day
   {
     id: "cancha-cancha",
-    category: "comunidad",
+    categories: ["comunidad", "rutas"],
     name: "Cancha Cancha",
     nameEn: "Cancha Cancha",
-    heroImage: "/images/cancha-cancha/IMG_0310.jpg",
-    tagline: "Caminata y encuentro con una comunidad altoandina",
+    heroImage: "/images/cancha-cancha/IMG_0238.jpg",
+    tagline: "Caminata y Encuentro con una Comunidad Altoandina",
     taglineEn: "Hike and encounter with a high Andean community",
-    duration: "Día completo (5 horas de caminata)",
-    durationEn: "Full day (5 hours hiking)",
+    duration: "Día completo",
+    durationEn: "Full day",
     difficulty: "Moderado",
     difficultyEn: "Moderate",
-    elevation: "3,200m inicio",
-    bestSeason: "Abril - Noviembre",
-    bestSeasonEn: "April - November",
+    elevation: "3,200m. - 4,000m.",
+    bestSeason: "",
+    bestSeasonEn: "",
     price: 150,
     description: "Esta caminata de día completo se realiza en el valle de Huaran, dentro de la cordillera del Urubamba. El recorrido ofrece paisajes naturales, flora nativa y ecosistemas altoandinos. La experiencia culmina en la comunidad altoandina de Cancha Cancha, donde una familia local recibe a los visitantes para compartir un almuerzo tradicional y conocer su forma de vida, agricultura, ganadería y textiles ancestrales.",
     descriptionEn: "This full-day trek takes place in the Huaran Valley, located in the Urubamba mountain range. The route offers scenic landscapes with native plants, high-Andean ecosystems, and traditional rural life. The experience culminates in the high Andean community of Cancha Cancha, where visitors are welcomed by a local family to share a traditional lunch and learn about daily life, agriculture, livestock, and traditional textiles.",
@@ -288,7 +288,7 @@ export const packages: Package[] = [
   // RUTAS - Inti Punku Full Day
   {
     id: "inti-punku",
-    category: "rutas",
+    categories: ["rutas"],
     name: "Inti Punku",
     nameEn: "Inti Punku",
     heroImage: "/images/inti-punku/IMG_5633.jpg",
@@ -373,7 +373,7 @@ export const packages: Package[] = [
   // RUTAS - Ñaupa Waka Half Day
   {
     id: "naupa-waka",
-    category: "rutas",
+    categories: ["rutas"],
     name: "Ñaupa Waka",
     nameEn: "Ñaupa Waka",
     heroImage: "/images/naupa-waka/IMG_4874.jpg",
@@ -453,13 +453,13 @@ export const packages: Package[] = [
   // RUTAS - Pumamarca Full Day
   {
     id: "pumamarca",
-    category: "rutas",
+    categories: ["rutas"],
     name: "Pumamarca",
     nameEn: "Pumamarca",
     heroImage: "/images/pumamarca/IMG_5005.jpg",
     tagline: "Explora un sitio preinca con vistas impresionantes",
     taglineEn: "Explore a pre-Inca site with stunning views",
-    duration: "Día completo (6 horas de caminata)",
+    duration: "Día completo",
     durationEn: "Full day (6 hours hiking)",
     difficulty: "Moderado",
     difficultyEn: "Moderate",
@@ -544,20 +544,20 @@ export const packages: Package[] = [
   // RUTAS - Pumawanka Full Day
   {
     id: "pumawanka",
-    category: "comunidad",
+    categories: ["rutas"],
     name: "Pumawanka",
     nameEn: "Pumawanka",
     heroImage: "/images/pumawanka/IMG_5694.jpg",
-    tagline: "Camino inca ancestral entre los Andes y la selva",
+    tagline: "Camino Inca  entre los Andes y la selva",
     taglineEn: "Ancient Inca trail connecting the Andes to the jungle",
-    duration: "Día completo (6 horas de caminata)",
-    durationEn: "Full day (6 hours hiking)",
-    difficulty: "Fácil a Moderado",
-    difficultyEn: "Easy to Moderate",
-    elevation: "Chupani, Valle de Pumawanka",
-    bestSeason: "Abril - Noviembre",
-    bestSeasonEn: "April - November",
-    price: 125,
+    duration: "Día completo",
+    durationEn: "Full day",
+    difficulty: "Moderado a Facil",
+    difficultyEn: "Moderate to Easy",
+    elevation: "3700m max.",
+    bestSeason: "",
+    bestSeasonEn: "",
+    price: 100,
     description: "Esta hermosa caminata de día completo se realiza en el valle de Pumawanka, ubicado en la cordillera del Urubamba. Es una experiencia ideal para quienes buscan una conexión profunda con la naturaleza. La ruta sigue un antiguo camino inca a través de ecosistemas altoandinos, bosques, plantas nativas y ríos. Durante el recorrido se visita un sitio arqueológico enigmático antes de llegar a la comunidad altoandina de Sutoc Paccha. Históricamente, este camino fue una de las rutas más importantes del Imperio Inca, conectando los Andes con la selva.",
     descriptionEn: "This beautiful full-day trek takes place in the Pumawanka Valley, located within the Urubamba mountain range. It is an ideal experience for travelers seeking a deep connection with nature. The hike follows an ancient Inca trail through high-Andean ecosystems, forests, native plants, and rivers. Along the way, we visit an enigmatic archaeological site before reaching the high-Andean community of Sutoc Paccha. Historically, this route was one of the most important Inca paths connecting the Andes with the jungle regions.",
     highlights: ["Camino inca ancestral", "Sitio arqueológico Inca Raqay", "Comunidad Sutoc Paccha", "Cascadas"],
@@ -573,12 +573,12 @@ export const packages: Package[] = [
     notIncludes: [
       "Snacks personales",
       "Equipo personal de montaña",
-      "Transporte desde su ubicación hasta Chupani (punto de inicio)"
+      "Transporte desde su ubicación hasta Chupani - Pumawanka - Urubamba (punto de inicio)"
     ],
     notIncludesEn: [
       "Personal snacks",
       "Personal mountain equipment",
-      "Transportation from your location to Chupani (starting point)"
+      "Transportation from your location to Chupani - Pumawanka - Urubamba(starting point)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -607,22 +607,18 @@ export const packages: Package[] = [
         highlightsEn: ["Inca Raqay", "Sutoc Paccha", "Waterfalls"],
         meals: "Almuerzo",
         mealsEn: "Lunch",
-        accommodation: "N/A",
-        accommodationEn: "N/A"
+        accommodation: "",
+        accommodationEn: ""
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/pumawanka/IMG_0122.jpg" },
       { id: 2, type: "image", url: "/images/pumawanka/IMG_5496.jpg" },
       { id: 3, type: "image", url: "/images/pumawanka/IMG_5498.jpg" },
       { id: 4, type: "image", url: "/images/pumawanka/IMG_5504.jpg" },
-      { id: 5, type: "image", url: "/images/pumawanka/IMG_5513.jpg" },
       { id: 6, type: "image", url: "/images/pumawanka/IMG_5514.jpg" },
       { id: 7, type: "image", url: "/images/pumawanka/IMG_5519.jpg" },
-      { id: 8, type: "image", url: "/images/pumawanka/IMG_5526.jpg" },
       { id: 9, type: "image", url: "/images/pumawanka/IMG_5694.jpg" },
       { id: 10, type: "image", url: "/images/pumawanka/IMG_5713.jpg" },
-      { id: 11, type: "image", url: "/images/pumawanka/IMG_5718.jpg" },
       { id: 12, type: "image", url: "/images/pumawanka/IMG_5719.jpg" },
       { id: 13, type: "image", url: "/images/pumawanka/IMG_5722.jpg" },
       { id: 14, type: "image", url: "/images/pumawanka/IMG_5733.jpg" },
@@ -633,7 +629,7 @@ export const packages: Package[] = [
   // RUTAS - Ausangate Trek 3D2N (Seven Lakes)
   {
     id: "ausangate-trek-3d2n",
-    category: "rutas",
+    categories: ["rutas"],
     name: "Ausangate",
     nameEn: "Ausangate",
     heroImage: "/images/ausangate-trek/IMG_8942.jpg",
@@ -759,7 +755,7 @@ export const packages: Package[] = [
   // RUTAS - Lares Trek 3D2N
   {
     id: "lares-trek-3d2n",
-    category: "rutas",
+    categories: ["rutas", "comunidad"],
     name: "Lares",
     nameEn: "Lares",
     heroImage: "/images/lares-trek/IMG_3449.jpg",
@@ -916,7 +912,7 @@ export const packages: Package[] = [
   // RUTAS - Selva del Manu 5D4N
   {
     id: "manu-rainforest-5d4n",
-    category: "rutas",
+    categories: ["rutas"],
     name: "Selva del Manu",
     nameEn: "Manu Rainforest",
     heroImage: "/images/manu-rainforest/IMG_6466.jpg",
@@ -1067,7 +1063,7 @@ export const packages: Package[] = [
 ];
 
 export const getPackagesByCategory = (category: ActivityCategory) =>
-  packages.filter((p) => p.category === category);
+  packages.filter((p) => p.categories.includes(category));
 
 export const getPackageById = (id: string) =>
   packages.find((p) => p.id === id);

@@ -14,24 +14,24 @@ export default function AllActivitiesPage() {
   const tNav = useTranslations("nav");
   const locale = useLocale() as "es" | "en";
 
-  const [selectedCategory, setSelectedCategory] = useState<ActivityCategory | "all">("all");
+  const [selectedCategories, setSelectedCategories] = useState<ActivityCategory[]>([]);
   const [selectedDuration, setSelectedDuration] = useState<string | "all">("all");
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
 
   const filteredPackages = packages.filter((pkg) => {
-    const matchCategory = selectedCategory === "all" || pkg.category === selectedCategory;
+    const matchCategory = selectedCategories.length === 0 || pkg.categories.some((c) => selectedCategories.includes(c));
     const matchDuration = selectedDuration === "all" || durationFilters.find(f => f.id === selectedDuration)?.check(pkg.duration);
     const matchPrice = pkg.price >= priceRange[0] && pkg.price <= priceRange[1];
     return matchCategory && matchDuration && matchPrice;
   });
 
   const clearFilters = () => {
-    setSelectedCategory("all");
+    setSelectedCategories([]);
     setSelectedDuration("all");
     setPriceRange([0, 1000]);
   };
 
-  const hasActiveFilters = selectedCategory !== "all" || selectedDuration !== "all" || priceRange[0] > 0 || priceRange[1] < 1000;
+  const hasActiveFilters = selectedCategories.length > 0 || selectedDuration !== "all" || priceRange[0] > 0 || priceRange[1] < 1000;
 
   return (
     <div className="pt-20">
@@ -55,9 +55,14 @@ export default function AllActivitiesPage() {
         <div className="container-custom">
           <ActivityFilters
             locale={locale}
-            selectedCategory={selectedCategory}
+            selectedCategories={selectedCategories}
+            onCategoriesChange={(cat) => {
+              setSelectedCategories((prev) =>
+                prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+              );
+            }}
+            onClearCategories={() => setSelectedCategories([])}
             selectedDuration={selectedDuration}
-            onCategoryChange={setSelectedCategory}
             onDurationChange={setSelectedDuration}
             onClear={clearFilters}
             hasActiveFilters={hasActiveFilters}

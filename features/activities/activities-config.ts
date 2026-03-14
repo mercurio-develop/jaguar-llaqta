@@ -11,7 +11,7 @@ export const categoryLabelsConfig: Record<
   },
   comunidad: {
     icon: Users,
-    label: { es: "Comunidad", en: "Community" },
+    label: { es: "Comunidades", en: "Communities" },
   },
   ceremonias: {
     icon: Sparkles,

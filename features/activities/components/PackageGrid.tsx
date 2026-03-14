@@ -31,7 +31,7 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
         const pkgImage =
           pkg.heroImage ||
           (pkg.gallery.find(g => g.type === "image" && g.url)?.url) ||
-          categoryImages[pkg.category];
+          categoryImages[pkg.categories[0]];
         return (
           <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support">
             {/* Image */}
@@ -44,9 +44,13 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
               />
               <div className="absolute inset-0 bg-black/10" />
               <div className="absolute top-3 left-3">
-                <span className="px-2 py-1 bg-primary/80 text-accent text-xs uppercase tracking-wider rounded">
-                  {categoryLabelsConfig[pkg.category].label[locale]}
-                </span>
+                <div className="flex gap-1">
+                  {pkg.categories.map((cat) => (
+                    <span key={cat} className="px-2 py-1 bg-primary/80 text-accent text-xs uppercase tracking-wider rounded">
+                      {categoryLabelsConfig[cat].label[locale]}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
