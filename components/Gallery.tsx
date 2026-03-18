@@ -12,9 +12,9 @@ const categoryIcons: Record<ActivityCategory, typeof Mountain> = {
   ceremonias: Sparkles,
 };
 
-// Default gallery items for the main gallery view
+// Default gallery items for the main gallery view (fallback only)
 const defaultGalleryItems: Array<{
-  id: number;
+  id: string;
   categories: ActivityCategory[];
   type: "image" | "video";
   title: string;
@@ -22,28 +22,28 @@ const defaultGalleryItems: Array<{
   url: string;
 }> = [
   // Rutas - Ausangate
-  { id: 1, categories: ["rutas"], type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
-  { id: 2, categories: ["rutas"], type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
-  { id: 3, categories: ["rutas"], type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
+  { id: "fallback-1", categories: ["rutas"], type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
+  { id: "fallback-2", categories: ["rutas"], type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
+  { id: "fallback-3", categories: ["rutas"], type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
   // Rutas - Lares
-  { id: 4, categories: ["rutas"], type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
-  { id: 5, categories: ["rutas"], type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
-  { id: 6, categories: ["rutas"], type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
+  { id: "fallback-4", categories: ["rutas"], type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
+  { id: "fallback-5", categories: ["rutas"], type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
+  { id: "fallback-6", categories: ["rutas"], type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
   // Rutas - Manu
-  { id: 7, categories: ["rutas"], type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
-  { id: 8, categories: ["rutas"], type: "image", title: "Montañas", location: "Cusco", url: "/images/montanias.jpg" },
+  { id: "fallback-7", categories: ["rutas"], type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
+  { id: "fallback-8", categories: ["rutas"], type: "image", title: "Montañas", location: "Cusco", url: "/images/montanias.jpg" },
   // Comunidad
-  { id: 9, categories: ["comunidad"], type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
-  { id: 10, categories: ["comunidad"], type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
-  { id: 11, categories: ["comunidad"], type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
-  { id: 12, categories: ["comunidad"], type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
-  { id: 13, categories: ["comunidad"], type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek/IMG_3312.jpg" },
-  { id: 14, categories: ["comunidad"], type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek/IMG_7274.jpg" },
+  { id: "fallback-9", categories: ["comunidad"], type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
+  { id: "fallback-10", categories: ["comunidad"], type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
+  { id: "fallback-11", categories: ["comunidad"], type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
+  { id: "fallback-12", categories: ["comunidad"], type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
+  { id: "fallback-13", categories: ["comunidad"], type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek/IMG_3312.jpg" },
+  { id: "fallback-14", categories: ["comunidad"], type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek/IMG_7274.jpg" },
   // Ceremonias
-  { id: 15, categories: ["ceremonias"], type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
-  { id: 16, categories: ["ceremonias"], type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
-  { id: 17, categories: ["ceremonias"], type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
-  { id: 18, categories: ["ceremonias"], type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
+  { id: "fallback-15", categories: ["ceremonias"], type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
+  { id: "fallback-16", categories: ["ceremonias"], type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
+  { id: "fallback-17", categories: ["ceremonias"], type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
+  { id: "fallback-18", categories: ["ceremonias"], type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
 ];
 
 // Lazy image component with intersection observer
@@ -133,10 +133,10 @@ export default function Gallery({
 }: GalleryProps) {
   const isSpanish = locale === "es";
   const [selectedCategories, setSelectedCategories] = useState<ActivityCategory[]>([]);
-  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(initialLoadCount);
   const [isMounted, setIsMounted] = useState(false);
-
+  const [shuffledItems, setShuffledItems] = useState<typeof galleryItems | null>(null);
 
   // Track mount state to avoid hydration mismatch
   useEffect(() => {
@@ -145,9 +145,9 @@ export default function Gallery({
 
   // Use provided items or aggregate all package gallery images for the main gallery
   const galleryItems = items
-    ? items.map((item) => ({
-        id: item.id,
-        categories: ["rutas"] as ActivityCategory[], // Package gallery items don't have category
+    ? items.map((item, idx) => ({
+        id: item.id ?? String(idx + 1),
+        categories: [] as ActivityCategory[],
         type: item.type,
         title: "",
         location: "",
@@ -166,7 +166,7 @@ export default function Gallery({
             if (seen.has(g.url)) continue; // skip duplicates
             seen.add(g.url);
             aggregated.push({
-              id: autoId++,
+              id: String(autoId++),
               categories: pkg.categories,
               type: g.type,
               title: pkg.name,
@@ -180,9 +180,18 @@ export default function Gallery({
         return aggregated.length > 0 ? aggregated : defaultGalleryItems;
       })();
 
+  // Shuffle main gallery client-side only (no items prop = main gallery)
+  useEffect(() => {
+    if (!items && isMounted) {
+      setShuffledItems([...galleryItems].sort(() => Math.random() - 0.5));
+    }
+  }, [isMounted]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const displayItems = (!items && isMounted && shuffledItems) ? shuffledItems : galleryItems;
+
   const filteredItems = !showFilters || selectedCategories.length === 0
-    ? galleryItems
-    : galleryItems.filter((item) => item.categories.some((c) => selectedCategories.includes(c)));
+    ? displayItems
+    : displayItems.filter((item) => item.categories.some((c) => selectedCategories.includes(c)));
 
   // Reset visible count when filter changes
   useEffect(() => {

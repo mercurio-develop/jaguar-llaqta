@@ -10,7 +10,7 @@ export async function sendContactNotification(data: {
   const adminEmail = process.env.ADMIN_EMAIL || "orqodev@gmail.com";
 
   return resend.emails.send({
-    from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+    from: process.env.RESEND_FROM_EMAIL |
     to: adminEmail,
     subject: `Nuevo contacto de ${data.name}`,
     react: (

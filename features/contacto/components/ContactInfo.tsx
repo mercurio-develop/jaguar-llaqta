@@ -1,7 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Mail, Phone, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 import Card from "@/components/ui/Card";
 import { siteConfig } from "@/config/site";
 
@@ -74,22 +84,13 @@ export default function ContactInfo() {
       {/* Social Links - left aligned with brand colors */}
       <div className="flex items-center gap-3 pt-4">
         <a
-          href={siteConfig.links.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-10 h-10 rounded-lg flex items-center justify-center bg-[#1877F2] hover:bg-[#1666d4] transition-colors"
-          aria-label="Facebook"
-        >
-          <Facebook className="w-5 h-5 text-white" />
-        </a>
-        <a
           href={siteConfig.links.instagram}
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:opacity-90 transition-opacity"
           aria-label="Instagram"
         >
-          <Instagram className="w-5 h-5 text-white" />
+          <InstagramIcon className="w-5 h-5 text-white" />
         </a>
         <a
           href={siteConfig.links.whatsapp}

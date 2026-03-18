@@ -1,9 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 import { siteConfig } from "@/config/site";
 import { footerNavigation } from "@/config/navigation";
 
@@ -21,9 +32,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                <span className="font-display text-primary text-xl font-bold">JL</span>
-              </div>
+              <Image
+                src="/logo/logo.jpeg"
+                alt="Jaguar Llaqta"
+                width={48}
+                height={48}
+                className="rounded-full object-cover"
+              />
               <span className="font-display text-xl text-white">JAGUAR LLAQTA</span>
             </div>
             <p className="text-muted text-sm">{t("footer.tagline")}</p>
@@ -31,22 +46,13 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href={siteConfig.links.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-accent transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
                 href={siteConfig.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <InstagramIcon className="w-5 h-5" />
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
@@ -101,17 +107,6 @@ export default function Footer() {
           <p className="text-muted text-sm">
             © {currentYear} Jaguar Llaqta. {t("footer.rights")}
           </p>
-          <div className="flex items-center gap-4 text-sm">
-            {footerNavigation.legal.map((item) => (
-              <Link
-                key={item.href}
-                href={`/${locale}${item.href}`}
-                className="text-muted hover:text-accent transition-colors"
-              >
-                {item.titleKey}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

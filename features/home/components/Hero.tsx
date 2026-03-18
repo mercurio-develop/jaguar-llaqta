@@ -36,6 +36,11 @@ export default function Hero() {
             {t("heroTitle")}
           </h1>
 
+          {/* Subtitle */}
+          <p className="font-display text-2xl md:text-3xl text-accent uppercase tracking-wide">
+            {t("heroSubtitle")}
+          </p>
+
           {/* Description */}
           <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed to-accent/50 ">
             {t("heroDescription")}

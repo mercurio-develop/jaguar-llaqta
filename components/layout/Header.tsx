@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { mainNavigation } from "@/config/navigation";
 import { cn } from "@/lib/utils";
@@ -34,9 +35,13 @@ export default function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-              <span className="font-display text-primary text-xl font-bold">JL</span>
-            </div>
+            <Image
+              src="/logo/logo.jpeg"
+              alt="Jaguar Llaqta"
+              width={48}
+              height={48}
+              className="rounded-full object-cover"
+            />
             <span className="font-display text-xl text-white hidden sm:block">
               JAGUAR LLAQTA
             </span>

@@ -16,6 +16,7 @@ model Reservation {
   date         DateTime
   participants Int
   notes        String?
+  travelers    String?
   status       String   @default("pending")
   paymentId    String?
   amount       Float?

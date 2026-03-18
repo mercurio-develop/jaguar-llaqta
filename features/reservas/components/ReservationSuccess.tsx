@@ -20,9 +20,8 @@ export default function ReservationSuccess() {
             <Check className="w-10 h-10 text-green-500" />
           </div>
           <h2 className="font-display text-2xl text-white mb-4">{t("successTitle")}</h2>
-          <p className="text-muted mb-6">{t("successDesc")}</p>
-          <p className="text-sm text-muted mb-8">
-            Te contactaremos pronto para confirmar los detalles y proceder con el pago.
+          <p className="text-muted mb-8">
+            {t("successDesc")} Te contactaremos pronto para confirmar los detalles y proceder con el pago.
           </p>
           <Link href={`/${locale}`}>
             <Button>Volver al inicio</Button>

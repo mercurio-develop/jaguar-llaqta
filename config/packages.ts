@@ -15,7 +15,7 @@ export interface DayItinerary {
 }
 
 export interface GalleryItem {
-  id: number;
+  id: string;
   type: "image" | "video";
   url?: string;
 }
@@ -59,138 +59,6 @@ export interface Package {
 }
 
 export const packages: Package[] = [
-  // // COMUNIDAD - Textiles
-  // {
-  //   id: "textiles",
-  //   category: "comunidad",
-  //   name: "Taller de Textiles en Chinchero",
-  //   nameEn: "Textile Workshop in Chinchero",
-  //   heroImage: "/images/textiles.jpg",
-  //   tagline: "Aprende el arte milenario del tejido andino",
-  //   taglineEn: "Learn the ancient art of Andean weaving",
-  //   duration: "Medio día (5 horas)",
-  //   price: 75,
-  //   description: "Sumérgete en el mundo de los textiles andinos con las maestras tejedoras de Chinchero. Aprenderás el proceso completo: desde el esquilado de alpacas hasta el tejido en telar, pasando por el teñido natural con plantas locales.",
-  //   descriptionEn: "Immerse yourself in the world of Andean textiles with master weavers from Chinchero. You'll learn the complete process: from alpaca shearing to loom weaving, including natural dyeing with local plants.",
-  //   highlights: ["Teñido natural", "Tejido en telar", "Almuerzo típico", "Mercado local"],
-  //   highlightsEn: ["Natural dyeing", "Loom weaving", "Typical lunch", "Local market"],
-  //   includes: ["Transporte desde Cusco", "Guía", "Materiales", "Almuerzo tradicional", "Visita al mercado"],
-  //   includesEn: ["Transport from Cusco", "Guide", "Materials", "Traditional lunch", "Market visit"],
-  //   notIncludes: ["Compras personales", "Propinas"],
-  //   notIncludesEn: ["Personal shopping", "Tips"],
-  //   requirements: ["Ningún requisito físico especial", "Interés en artesanía"],
-  //   requirementsEn: ["No special physical requirements", "Interest in crafts"],
-  //   itinerary: [
-  //     { day: 1, titleEn: "Complete textile experience", description: "8:00 AM recojo del hotel. Viaje a Chinchero. Demostración de teñido natural. Práctica en telar. Almuerzo con la comunidad. Visita al mercado. Regreso a Cusco 1:00 PM.", descriptionEn: "8:00 AM hotel pickup. Travel to Chinchero. Natural dyeing demonstration. Loom practice. Lunch with community. Market visit. Return to Cusco 1:00 PM.", meals: "Almuerzo", accommodation: "N/A" }
-  //   ],
-  //   gallery: [
-  //     { id: 1, type: "image", url: "/images/textiles.jpg" },
-  //     { id: 2, type: "image", url: "/images/textiles-2.jpg" },
-  //     { id: 3, type: "image", url: "/images/textiles-3.jpg" },
-  //     { id: 4, type: "image", url: "/images/chincheros.jpg" }
-  //   ]
-  // },
-  //
-  // // COMUNIDAD - Gastronomía
-  // {
-  //   id: "gastronomia",
-  //   category: "comunidad",
-  //   name: "Experiencia Gastronómica Andina",
-  //   nameEn: "Andean Gastronomic Experience",
-  //   heroImage: "/images/cocina-rustica.jpg",
-  //   tagline: "Cocina, sabores y tradición de los Andes",
-  //   taglineEn: "Cooking, flavors and Andean tradition",
-  //   duration: "Día completo (8 horas)",
-  //   price: 95,
-  //   description: "Una inmersión total en la gastronomía andina. Visita al mercado de San Pedro, cosecha de ingredientes en una chacra familiar, y preparación de platos tradicionales como pachamanca y chicha de jora.",
-  //   descriptionEn: "A total immersion in Andean gastronomy. Visit San Pedro market, harvest ingredients at a family farm, and prepare traditional dishes like pachamanca and chicha de jora.",
-  //   highlights: ["Mercado San Pedro", "Cocina con leña", "Pachamanca", "Chicha de jora"],
-  //   highlightsEn: ["San Pedro Market", "Wood fire cooking", "Pachamanca", "Chicha de jora"],
-  //   includes: ["Transporte", "Guía culinario", "Todos los ingredientes", "Almuerzo preparado", "Recetario"],
-  //   includesEn: ["Transport", "Culinary guide", "All ingredients", "Prepared lunch", "Recipe book"],
-  //   notIncludes: ["Bebidas alcohólicas extra", "Propinas"],
-  //   notIncludesEn: ["Extra alcoholic drinks", "Tips"],
-  //   requirements: ["Ninguno", "Informar alergias alimentarias"],
-  //   requirementsEn: ["None", "Inform food allergies"],
-  //   itinerary: [
-  //     { day: 1, titleEn: "From market to table", description: "7:30 AM Mercado San Pedro. 9:30 AM viaje a comunidad. 10:30 AM cosecha. 12:00 PM preparación pachamanca. 2:00 PM almuerzo. 4:00 PM regreso.", descriptionEn: "7:30 AM San Pedro Market. 9:30 AM travel to community. 10:30 AM harvest. 12:00 PM pachamanca preparation. 2:00 PM lunch. 4:00 PM return.", meals: "Almuerzo completo", accommodation: "N/A" }
-  //   ],
-  //   gallery: [
-  //     { id: 1, type: "image", url: "/images/cocina-rustica.jpg" },
-  //     { id: 2, type: "image", url: "/images/comunidad.jpg" },
-  //     { id: 3, type: "image", url: "/images/comunidad-1.jpg" },
-  //     { id: 4, type: "image", url: "/images/comunidad-2.jpg" }
-  //   ]
-  // },
-  //
-  // // CEREMONIAS - Pachamama
-  // {
-  //   id: "pachamama",
-  //   category: "ceremonias",
-  //   name: "Ceremonia a la Pachamama",
-  //   nameEn: "Pachamama Ceremony",
-  //   heroImage: "/images/coca-leaf.jpg",
-  //   tagline: "Ofrenda sagrada a la Madre Tierra",
-  //   taglineEn: "Sacred offering to Mother Earth",
-  //   duration: "Medio día (4 horas)",
-  //   price: 80,
-  //   description: "Participa en una ceremonia de ofrenda (despacho) a la Pachamama guiada por un pampamesayoq, heredero de la tradición espiritual andina. Aprende sobre la cosmovisión andina y conecta con la energía de la Madre Tierra.",
-  //   descriptionEn: "Participate in an offering ceremony (despacho) to Pachamama guided by a pampamesayoq, heir to the Andean spiritual tradition. Learn about the Andean worldview and connect with Mother Earth's energy.",
-  //   highlights: ["Despacho andino", "Meditación", "Coca kintu", "Lugar sagrado"],
-  //   highlightsEn: ["Andean despacho", "Meditation", "Coca kintu", "Sacred place"],
-  //   includes: ["Transporte", "Maestro pampamesayoq", "Materiales ceremoniales", "Mate de coca", "Traducción"],
-  //   includesEn: ["Transport", "Pampamesayoq master", "Ceremonial materials", "Coca tea", "Translation"],
-  //   notIncludes: ["Propinas al maestro"],
-  //   notIncludesEn: ["Tips for the master"],
-  //   requirements: ["Mente abierta", "Respeto por las tradiciones", "No consumir alcohol 24h antes"],
-  //   requirementsEn: ["Open mind", "Respect for traditions", "No alcohol 24h before"],
-  //   itinerary: [
-  //     { day: 1, titleEn: "Offering ceremony", description: "8:00 AM recojo. Viaje a sitio sagrado. Introducción a cosmovisión andina. Preparación del despacho. Ceremonia de ofrenda. Meditación. Regreso 12:00 PM.", descriptionEn: "8:00 AM pickup. Travel to sacred site. Introduction to Andean worldview. Despacho preparation. Offering ceremony. Meditation. Return 12:00 PM.", meals: "Mate de coca", accommodation: "N/A" }
-  //   ],
-  //   gallery: [
-  //     { id: 1, type: "image", url: "/images/coca-leaf.jpg" },
-  //     { id: 2, type: "image", url: "/images/sacsayhuaman.jpg" },
-  //     { id: 3, type: "image", url: "/images/ruins.jpg" },
-  //     { id: 4, type: "image", url: "/images/moray.jpg" }
-  //   ]
-  // },
-  //
-  // // CEREMONIAS - Retiro
-  // {
-  //   id: "retiro-espiritual",
-  //   category: "ceremonias",
-  //   name: "Retiro Espiritual Completo",
-  //   nameEn: "Complete Spiritual Retreat",
-  //   heroImage: "/images/sacsayhuaman.jpg",
-  //   tagline: "Inmersión profunda en la espiritualidad andina",
-  //   taglineEn: "Deep immersion in Andean spirituality",
-  //   duration: "3 días / 2 noches",
-  //   price: 450,
-  //   description: "Un retiro transformador que combina múltiples ceremonias, meditación diaria, visitas a lugares sagrados y guía espiritual personalizada. Incluye ceremonia de Pachamama, ritual del amanecer y ceremonia de cierre bajo las estrellas.",
-  //   descriptionEn: "A transformative retreat combining multiple ceremonies, daily meditation, visits to sacred places and personalized spiritual guidance. Includes Pachamama ceremony, sunrise ritual and closing ceremony under the stars.",
-  //   highlights: ["Múltiples ceremonias", "Meditación diaria", "Lugares sagrados", "Guía personal"],
-  //   highlightsEn: ["Multiple ceremonies", "Daily meditation", "Sacred places", "Personal guide"],
-  //   includes: ["Alojamiento en retiro", "Alimentación vegetariana", "Todas las ceremonias", "Transporte", "Guía espiritual personal"],
-  //   includesEn: ["Retreat lodging", "Vegetarian meals", "All ceremonies", "Transport", "Personal spiritual guide"],
-  //   notIncludes: ["Vuelos", "Seguro", "Gastos personales"],
-  //   notIncludesEn: ["Flights", "Insurance", "Personal expenses"],
-  //   requirements: ["Compromiso con el proceso", "Abstinencia de alcohol/drogas 1 semana antes", "Buena salud mental"],
-  //   requirementsEn: ["Commitment to the process", "No alcohol/drugs 1 week before", "Good mental health"],
-  //   itinerary: [
-  //     { day: 1, titleEn: "Arrival and opening", description: "Recepción en el retiro. Ceremonia de bienvenida. Introducción al programa. Meditación guiada. Cena y descanso.", descriptionEn: "Reception at retreat. Welcome ceremony. Program introduction. Guided meditation. Dinner and rest.", meals: "C", accommodation: "Retiro" },
-  //     { day: 2, titleEn: "Ceremony day", description: "4:00 AM Ritual del amanecer en Sacsayhuamán. Desayuno. Ceremonia de Pachamama. Almuerzo consciente. Tarde de meditación y reflexión. Cena.", descriptionEn: "4:00 AM Sunrise ritual at Sacsayhuaman. Breakfast. Pachamama ceremony. Conscious lunch. Afternoon meditation and reflection. Dinner.", meals: "D, A, C", accommodation: "Retiro" },
-  //     { day: 3, titleEn: "Closing and integration", description: "Meditación matutina. Desayuno. Ceremonia de cierre y gratitud. Círculo de compartir. Almuerzo de despedida. Regreso a Cusco.", descriptionEn: "Morning meditation. Breakfast. Closing and gratitude ceremony. Sharing circle. Farewell lunch. Return to Cusco.", meals: "D, A", accommodation: "Fin" }
-  //   ],
-  //   gallery: [
-  //     { id: 1, type: "image", url: "/images/sacsayhuaman.jpg" },
-  //     { id: 2, type: "image", url: "/images/inti-punku.jpg" },
-  //     { id: 3, type: "image", url: "/images/moray.jpg" },
-  //     { id: 4, type: "image", url: "/images/coca-leaf.jpg" },
-  //     { id: 5, type: "image", url: "/images/montanias.jpg" },
-  //     { id: 6, type: "image", url: "/images/ruins.jpg" }
-  //   ]
-  // },
-
   // RUTAS - Cancha Cancha Full Day
   {
     id: "cancha-cancha",
@@ -266,22 +134,22 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/cancha-cancha/IMG_0119.jpg" },
-      { id: 3, type: "image", url: "/images/cancha-cancha/IMG_0177.jpg" },
-      { id: 4, type: "image", url: "/images/cancha-cancha/IMG_0211-2.jpg" },
-      { id: 5, type: "image", url: "/images/cancha-cancha/IMG_0238.jpg" },
-      { id: 6, type: "image", url: "/images/cancha-cancha/IMG_0291.jpg" },
-      { id: 7, type: "image", url: "/images/cancha-cancha/IMG_0299.jpg" },
-      { id: 8, type: "image", url: "/images/cancha-cancha/IMG_0302.jpg" },
-      { id: 9, type: "image", url: "/images/cancha-cancha/IMG_0307.jpg" },
-      { id: 10, type: "image", url: "/images/cancha-cancha/IMG_0310.jpg" },
-      { id: 11, type: "image", url: "/images/cancha-cancha/IMG_0312.jpg" },
-      { id: 12, type: "image", url: "/images/cancha-cancha/IMG_0338.jpg" },
-      { id: 13, type: "image", url: "/images/cancha-cancha/IMG_0344.jpg" },
-      { id: 14, type: "image", url: "/images/cancha-cancha/IMG_5994.jpg" },
-      { id: 15, type: "image", url: "/images/cancha-cancha/IMG_6001.jpg" },
-      { id: 16, type: "image", url: "/images/cancha-cancha/IMG_7271.jpg" },
-      { id: 17, type: "image", url: "/images/cancha-cancha/IMG_9323.jpg" }
+      { id: "wo26pxrc", type: "image", url: "/images/cancha-cancha/IMG_0119.jpg" },
+      { id: "nmuqkjm4", type: "image", url: "/images/cancha-cancha/IMG_0177.jpg" },
+      { id: "9rkw1vm2", type: "image", url: "/images/cancha-cancha/IMG_0211-2.jpg" },
+      { id: "gyfpmb5c", type: "image", url: "/images/cancha-cancha/IMG_0238.jpg" },
+      { id: "mquz6z6p", type: "image", url: "/images/cancha-cancha/IMG_0291.jpg" },
+      { id: "g3fy0ios", type: "image", url: "/images/cancha-cancha/IMG_0299.jpg" },
+      { id: "5dmp6qap", type: "image", url: "/images/cancha-cancha/IMG_0302.jpg" },
+      { id: "uyracmto", type: "image", url: "/images/cancha-cancha/IMG_0307.jpg" },
+      { id: "4zzfcf59", type: "image", url: "/images/cancha-cancha/IMG_0310.jpg" },
+      { id: "3s3d5skl", type: "image", url: "/images/cancha-cancha/IMG_0312.jpg" },
+      { id: "07j3lijr", type: "image", url: "/images/cancha-cancha/IMG_0338.jpg" },
+      { id: "he04sxmi", type: "image", url: "/images/cancha-cancha/IMG_0344.jpg" },
+      { id: "cz73rzm0", type: "image", url: "/images/cancha-cancha/IMG_5994.jpg" },
+      { id: "np73pg8d", type: "image", url: "/images/cancha-cancha/IMG_6001.jpg" },
+      { id: "i6s7wwxd", type: "image", url: "/images/cancha-cancha/IMG_7271.jpg" },
+      { id: "mesxpz3o", type: "image", url: "/images/cancha-cancha/IMG_9323.jpg" }
     ]
   },
 
@@ -294,13 +162,13 @@ export const packages: Package[] = [
     heroImage: "/images/inti-punku/IMG_5633.jpg",
     tagline: "Camina hacia el portal sagrado de los incas",
     taglineEn: "Hike to the sacred Inca portal",
-    duration: "Día completo (6–7 horas de caminata)",
-    durationEn: "Full day (6–7 hours hiking)",
+    duration: "Día completo",
+    durationEn: "Full day",
     difficulty: "Moderado",
     difficultyEn: "Moderate",
     elevation: "Cacchicata",
-    bestSeason: "Abril - Noviembre",
-    bestSeasonEn: "April - November",
+    bestSeason: "",
+    bestSeasonEn: "",
     price: 150,
     description: "Esta caminata de día completo se realiza en los alrededores del histórico pueblo inca de Ollantaytambo. Un transporte nos lleva hasta la comunidad andina de Cacchicata, punto de inicio de la caminata. El recorrido incluye aproximadamente cuatro horas de ascenso a través de paisajes con flora y fauna nativa. La caminata conduce a un sitio arqueológico enigmático y culmina en Inti Punku, conocido por los incas como la Puerta del Sol, un portal sagrado con una de las mejores vistas del Valle Sagrado, el río Wilkamayu y la montaña sagrada Apu Waqay Willka (Apu Verónica).",
     descriptionEn: "This full-day hike takes place just outside the historic Inca town of Ollantaytambo. Transportation takes us to the Andean community of Cacchicata, where the trek begins. The route includes approximately four hours of ascent through landscapes rich in native flora and fauna. The hike leads to an enigmatic archaeological site and culminates at Inti Punku, known by the Incas as the Sun Gate — a sacred portal offering one of the most impressive panoramic views of the Sacred Valley, the Wilkamayu River, and the sacred mountain Apu Waqay Willka (Apu Veronica).",
@@ -355,18 +223,18 @@ export const packages: Package[] = [
         highlightsEn: ["Inti Punku", "Cacchicata quarries", "Andean offering"],
         meals: "Almuerzo",
         mealsEn: "Lunch",
-        accommodation: "N/A",
-        accommodationEn: "N/A"
+        accommodation: "",
+        accommodationEn: ""
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/inti-punku/IMG_5633.jpg" },
-      { id: 2, type: "image", url: "/images/inti-punku/IMG_5648-2.jpg" },
-      { id: 3, type: "image", url: "/images/inti-punku/IMG_5658.jpg" },
-      { id: 4, type: "image", url: "/images/inti-punku/32627201693_5cc37e75b2_o.jpg" },
-      { id: 5, type: "image", url: "/images/inti-punku/33121893274_e26c65da39_o.jpg" },
-      { id: 6, type: "image", url: "/images/inti-punku/33580393130_c342837737_o.jpg" },
-      { id: 7, type: "image", url: "/images/inti-punku/33924324086_3318d9120b_o.jpg" }
+      { id: "8cre13hd", type: "image", url: "/images/inti-punku/IMG_5633.jpg" },
+      { id: "z69mfj6m", type: "image", url: "/images/inti-punku/IMG_5648-2.jpg" },
+      { id: "nvje1lwn", type: "image", url: "/images/inti-punku/IMG_5658.jpg" },
+      { id: "u0xkm7h5", type: "image", url: "/images/inti-punku/32627201693_5cc37e75b2_o.jpg" },
+      { id: "d3jsumxy", type: "image", url: "/images/inti-punku/33121893274_e26c65da39_o.jpg" },
+      { id: "9zxs64gn", type: "image", url: "/images/inti-punku/33580393130_c342837737_o.jpg" },
+      { id: "p7z0gzv3", type: "image", url: "/images/inti-punku/33924324086_3318d9120b_o.jpg" }
     ]
   },
 
@@ -434,19 +302,18 @@ export const packages: Package[] = [
         highlightsEn: ["Ñaupa Waka", "Andean offering", "Sacred Valley Brewery"],
         meals: "Snack",
         mealsEn: "Snack",
-        accommodation: "N/A",
-        accommodationEn: "N/A"
+        accommodation: "",
+        accommodationEn: ""
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/naupa-waka/escalinata.jpg" },
-      { id: 2, type: "image", url: "/images/naupa-waka/IMG_4853-copia.jpg" },
-      { id: 3, type: "image", url: "/images/naupa-waka/IMG_4853-copia-2.jpg" },
-      { id: 4, type: "image", url: "/images/naupa-waka/IMG_4854-copia.jpg" },
-      { id: 5, type: "image", url: "/images/naupa-waka/IMG_4874.jpg" },
-      { id: 6, type: "image", url: "/images/naupa-waka/IMG_4921.jpg" },
-      { id: 7, type: "image", url: "/images/naupa-waka/IMG_4985.jpg" },
-      { id: 8, type: "image", url: "/images/naupa-waka/momias.jpg" }
+      { id: "ownnf9bq", type: "image", url: "/images/naupa-waka/escalinata.jpg" },
+      { id: "beg4klvk", type: "image", url: "/images/naupa-waka/IMG_4853-copia.jpg" },
+      { id: "qhc121vl", type: "image", url: "/images/naupa-waka/IMG_4854-copia.jpg" },
+      { id: "3v3v3tlp", type: "image", url: "/images/naupa-waka/IMG_4874.jpg" },
+      { id: "3o3k4l07", type: "image", url: "/images/naupa-waka/IMG_4921.jpg" },
+      { id: "c50lsw5i", type: "image", url: "/images/naupa-waka/IMG_4985.jpg" },
+      { id: "whiih4i2", type: "image", url: "/images/naupa-waka/momias.jpg" }
     ]
   },
 
@@ -460,12 +327,12 @@ export const packages: Package[] = [
     tagline: "Explora un sitio preinca con vistas impresionantes",
     taglineEn: "Explore a pre-Inca site with stunning views",
     duration: "Día completo",
-    durationEn: "Full day (6 hours hiking)",
+    durationEn: "Full day",
     difficulty: "Moderado",
     difficultyEn: "Moderate",
     elevation: "Munaypata, Ollantaytambo",
-    bestSeason: "Abril - Noviembre",
-    bestSeasonEn: "April - November",
+    bestSeason: "",
+    bestSeasonEn: "",
     price: 150,
     description: "Esta hermosa caminata de día completo se realiza en los alrededores del histórico pueblo de Ollantaytambo. El recorrido atraviesa un valle con gran diversidad de plantas nativas, riachuelos y antiguos sistemas de terrazas agrícolas. La caminata inicia en Munaypata, una pequeña comunidad andina ubicada a unos 10 minutos de Ollantaytambo. Tras un ascenso gradual de aproximadamente tres horas, se llega al sitio arqueológico preinca de Pumamarca, donde es posible apreciar la magnitud de su construcción, su ubicación estratégica y su notable ingeniería, todo ello acompañado de vistas impresionantes de los valles y montañas circundantes.",
     descriptionEn: "This beautiful full-day hike takes place on the outskirts of the historic town of Ollantaytambo. The route crosses a scenic valley rich in native plants, streams, and ancient agricultural terrace systems. The hike begins in Munaypata, a small Andean community located approximately 10 minutes from Ollantaytambo. After a gradual ascent of about three hours, we reach the pre-Inca archaeological site of Pumamarca, where visitors can appreciate its impressive architecture, strategic location, and advanced engineering, all surrounded by spectacular views of the surrounding valleys and mountains.",
@@ -520,24 +387,24 @@ export const packages: Package[] = [
         highlightsEn: ["Pumamarca", "Inca terraces", "Panoramic views"],
         meals: "Almuerzo",
         mealsEn: "Lunch",
-        accommodation: "N/A",
-        accommodationEn: "N/A"
+        accommodation: "",
+        accommodationEn: ""
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/pumamarca/IMG_4987.jpg" },
-      { id: 2, type: "image", url: "/images/pumamarca/IMG_5005.jpg" },
-      { id: 3, type: "image", url: "/images/pumamarca/IMG_5010.jpg" },
-      { id: 4, type: "image", url: "/images/pumamarca/IMG_5011.jpg" },
-      { id: 5, type: "image", url: "/images/pumamarca/IMG_5013.jpg" },
-      { id: 6, type: "image", url: "/images/pumamarca/IMG_5024.jpg" },
-      { id: 7, type: "image", url: "/images/pumamarca/IMG_5028.jpg" },
-      { id: 8, type: "image", url: "/images/pumamarca/IMG_5074.jpg" },
-      { id: 9, type: "image", url: "/images/pumamarca/IMG_5084.jpg" },
-      { id: 10, type: "image", url: "/images/pumamarca/IMG_5096.jpg" },
-      { id: 11, type: "image", url: "/images/pumamarca/IMG_5149.jpg" },
-      { id: 12, type: "image", url: "/images/pumamarca/IMG_5179.jpg" },
-      { id: 13, type: "image", url: "/images/pumamarca/IMG_5202.jpg" }
+      { id: "x8amaj78", type: "image", url: "/images/pumamarca/IMG_4987.jpg" },
+      { id: "sdu9j8w1", type: "image", url: "/images/pumamarca/IMG_5005.jpg" },
+      { id: "8p7a7jkj", type: "image", url: "/images/pumamarca/IMG_5010.jpg" },
+      { id: "fh6sy0e7", type: "image", url: "/images/pumamarca/IMG_5011.jpg" },
+      { id: "lllujbzd", type: "image", url: "/images/pumamarca/IMG_5013.jpg" },
+      { id: "foulh0eq", type: "image", url: "/images/pumamarca/IMG_5024.jpg" },
+      { id: "pftuzj9k", type: "image", url: "/images/pumamarca/IMG_5028.jpg" },
+      { id: "e5tp9bpk", type: "image", url: "/images/pumamarca/IMG_5074.jpg" },
+      { id: "7rlt42ga", type: "image", url: "/images/pumamarca/IMG_5084.jpg" },
+      { id: "wcsfn4ge", type: "image", url: "/images/pumamarca/IMG_5096.jpg" },
+      { id: "2276nqtt", type: "image", url: "/images/pumamarca/IMG_5149.jpg" },
+      { id: "i3os763e", type: "image", url: "/images/pumamarca/IMG_5179.jpg" },
+      { id: "f3mjb590", type: "image", url: "/images/pumamarca/IMG_5202.jpg" }
     ]
   },
 
@@ -612,17 +479,17 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 2, type: "image", url: "/images/pumawanka/IMG_5496.jpg" },
-      { id: 3, type: "image", url: "/images/pumawanka/IMG_5498.jpg" },
-      { id: 4, type: "image", url: "/images/pumawanka/IMG_5504.jpg" },
-      { id: 6, type: "image", url: "/images/pumawanka/IMG_5514.jpg" },
-      { id: 7, type: "image", url: "/images/pumawanka/IMG_5519.jpg" },
-      { id: 9, type: "image", url: "/images/pumawanka/IMG_5694.jpg" },
-      { id: 10, type: "image", url: "/images/pumawanka/IMG_5713.jpg" },
-      { id: 12, type: "image", url: "/images/pumawanka/IMG_5719.jpg" },
-      { id: 13, type: "image", url: "/images/pumawanka/IMG_5722.jpg" },
-      { id: 14, type: "image", url: "/images/pumawanka/IMG_5733.jpg" },
-      { id: 15, type: "image", url: "/images/pumawanka/IMG_5739.jpg" }
+      { id: "5768l9u8", type: "image", url: "/images/pumawanka/IMG_5496.jpg" },
+      { id: "75v3phq3", type: "image", url: "/images/pumawanka/IMG_5498.jpg" },
+      { id: "nq56cwkq", type: "image", url: "/images/pumawanka/IMG_5504.jpg" },
+      { id: "svjxprra", type: "image", url: "/images/pumawanka/IMG_5514.jpg" },
+      { id: "i43wtum3", type: "image", url: "/images/pumawanka/IMG_5519.jpg" },
+      { id: "jgbxxdzk", type: "image", url: "/images/pumawanka/IMG_5694.jpg" },
+      { id: "3x11vtbk", type: "image", url: "/images/pumawanka/IMG_5713.jpg" },
+      { id: "ljfad0zr", type: "image", url: "/images/pumawanka/IMG_5719.jpg" },
+      { id: "1pn3w95k", type: "image", url: "/images/pumawanka/IMG_5722.jpg" },
+      { id: "90u8ni5w", type: "image", url: "/images/pumawanka/IMG_5733.jpg" },
+      { id: "gcqcwg8u", type: "image", url: "/images/pumawanka/IMG_5739.jpg" }
     ]
   },
 
@@ -640,8 +507,8 @@ export const packages: Package[] = [
     difficulty: "Moderada",
     difficultyEn: "Moderate",
     elevation: "4,800m máx.",
-    bestSeason: "Abril - Noviembre",
-    bestSeasonEn: "April - November",
+    bestSeason: "",
+    bestSeasonEn: "",
     price: 450,
     description: "El Ausangate es la montaña más alta de la región Cusco y la quinta más alta del Perú, con una altitud de 6,385 metros sobre el nivel del mar. Se encuentra aproximadamente a 84 kilómetros al sureste de la ciudad del Cusco. Esta montaña sagrada es una de las más importantes dentro de la cosmovisión andina. El Apu Ausangate es considerado el padre de todas las montañas circundantes y un poderoso espíritu protector de la región. La zona también es reconocida por sus tradicionales textiles andinos, un conocimiento ancestral que se mantiene vivo y se transmite de generación en generación.",
     descriptionEn: "Ausangate is the highest mountain in the Cusco region and the fifth highest in Peru, reaching 6,385 meters above sea level. It is located approximately 84 kilometers southeast of Cusco. This sacred mountain is one of the most important in Andean culture. Apu Ausangate is considered the father of all surrounding mountains and a powerful protector spirit of the region. The area is also renowned for its traditional Andean textiles—ancestral knowledge that remains alive and is passed down through local families.",
@@ -731,24 +598,24 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/ausangate-trek/IMG_8942.jpg" },
-      { id: 2, type: "image", url: "/images/ausangate-trek/IMG_8938.jpg" },
-      { id: 3, type: "image", url: "/images/ausangate-trek/IMG_8960.jpg" },
-      { id: 4, type: "image", url: "/images/ausangate-trek/IMG_8971.jpg" },
-      { id: 5, type: "image", url: "/images/ausangate-trek/IMG_8952.jpg" },
-      { id: 6, type: "image", url: "/images/ausangate-trek/IMG_8970.jpg" },
-      { id: 7, type: "image", url: "/images/ausangate-trek/IMG_8937.jpg" },
-      { id: 8, type: "image", url: "/images/ausangate-trek/IMG_3172.jpg" },
-      { id: 9, type: "image", url: "/images/ausangate-trek/IMG_3130.jpg" },
-      { id: 10, type: "image", url: "/images/ausangate-trek/IMG_3148.jpg" },
-      { id: 11, type: "image", url: "/images/ausangate-trek/IMG_3159.jpg" },
-      { id: 12, type: "image", url: "/images/ausangate-trek/IMG_3200.jpg" },
-      { id: 13, type: "image", url: "/images/ausangate-trek/IMG_8550.jpg" },
-      { id: 14, type: "image", url: "/images/ausangate-trek/IMG_8523.jpg" },
-      { id: 15, type: "image", url: "/images/ausangate-trek/IMG_8544.jpg" },
-      { id: 16, type: "image", url: "/images/ausangate-trek/IMG_8788.jpg" },
-      { id: 17, type: "image", url: "/images/ausangate-trek/IMG_8798.jpg" },
-      { id: 18, type: "image", url: "/images/ausangate-trek/IMG_9123-2.jpg" }
+      { id: "3ptjsyyr", type: "image", url: "/images/ausangate-trek/IMG_8942.jpg" },
+      { id: "ssh7dzs8", type: "image", url: "/images/ausangate-trek/IMG_8938.jpg" },
+      { id: "yfyqyacu", type: "image", url: "/images/ausangate-trek/IMG_8960.jpg" },
+      { id: "cgg9kjw9", type: "image", url: "/images/ausangate-trek/IMG_8971.jpg" },
+      { id: "vkjvxth7", type: "image", url: "/images/ausangate-trek/IMG_8952.jpg" },
+      { id: "vjs5sapm", type: "image", url: "/images/ausangate-trek/IMG_8970.jpg" },
+      { id: "1rkpws5x", type: "image", url: "/images/ausangate-trek/IMG_8937.jpg" },
+      { id: "8zn1uphy", type: "image", url: "/images/ausangate-trek/IMG_3172.jpg" },
+      { id: "jv34p7gl", type: "image", url: "/images/ausangate-trek/IMG_3130.jpg" },
+      { id: "13afaas2", type: "image", url: "/images/ausangate-trek/IMG_3148.jpg" },
+      { id: "cza8tz99", type: "image", url: "/images/ausangate-trek/IMG_3159.jpg" },
+      { id: "45oljv5q", type: "image", url: "/images/ausangate-trek/IMG_3200.jpg" },
+      { id: "dznmpjf9", type: "image", url: "/images/ausangate-trek/IMG_8550.jpg" },
+      { id: "zwdegzvl", type: "image", url: "/images/ausangate-trek/IMG_8523.jpg" },
+      { id: "d0v4ftz5", type: "image", url: "/images/ausangate-trek/IMG_8544.jpg" },
+      { id: "3o31kzo1", type: "image", url: "/images/ausangate-trek/IMG_8788.jpg" },
+      { id: "xu1fy9mo", type: "image", url: "/images/ausangate-trek/IMG_8798.jpg" },
+      { id: "dk7wdyrq", type: "image", url: "/images/ausangate-trek/IMG_9123-2.jpg" }
     ]
   },
 
@@ -766,8 +633,8 @@ export const packages: Package[] = [
     difficulty: "Moderada a desafiante",
     difficultyEn: "Moderate to challenging",
     elevation: "4,800m máx.",
-    bestSeason: "Abril - Octubre",
-    bestSeasonEn: "April - October",
+    bestSeason: "",
+    bestSeasonEn: "",
     price: 450,
     description: "Lares es una de las rutas de montaña más atractivas de la región Cusco. Atraviesa la cordillera del Urubamba, considerada tropical por su cercanía a la selva amazónica. Durante la caminata se recorren diversos ecosistemas andinos como ríos, bosques altoandinos, lagunas, cascadas y montañas nevadas, además de visitar comunidades tradicionales donde se mantienen vivas prácticas ancestrales. El recorrido finaliza en el pueblo de Lares, conocido por sus aguas termales y medicinales.",
     descriptionEn: "The Lares Trek is one of the most scenic mountain routes in the Cusco region. It crosses the Urubamba mountain range, a tropical range in the Peruvian Andes due to its proximity to the rainforest. Along the trek, travelers experience diverse Andean ecosystems including rivers, high-Andean forests, lagoons, waterfalls, snow-capped peaks, and traditional communities. The route also offers opportunities to observe local wildlife such as condors, deer, eagles, viscachas, and hummingbirds. The journey concludes in the town of Lares, famous for its thermal and medicinal hot springs.",
@@ -859,53 +726,49 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/lares-trek/IMG_0008.jpg" },
-      { id: 2, type: "image", url: "/images/lares-trek/IMG_0177.jpg" },
-      { id: 3, type: "image", url: "/images/lares-trek/IMG_0211-2.jpg" },
-      { id: 4, type: "image", url: "/images/lares-trek/IMG_0276.jpg" },
-      { id: 5, type: "image", url: "/images/lares-trek/IMG_1768.jpg" },
-      { id: 6, type: "image", url: "/images/lares-trek/IMG_1770.jpg" },
-      { id: 7, type: "image", url: "/images/lares-trek/IMG_1772.jpg" },
-      { id: 8, type: "image", url: "/images/lares-trek/IMG_1783.jpg" },
-      { id: 9, type: "image", url: "/images/lares-trek/IMG_3092.jpg" },
-      { id: 10, type: "image", url: "/images/lares-trek/IMG_3118.jpg" },
-      { id: 11, type: "image", url: "/images/lares-trek/IMG_3123-2.jpg" },
-      { id: 12, type: "image", url: "/images/lares-trek/IMG_3295-2.jpg" },
-      { id: 13, type: "image", url: "/images/lares-trek/IMG_3312.jpg" },
-      { id: 14, type: "image", url: "/images/lares-trek/IMG_3340-3.jpg" },
-      { id: 15, type: "image", url: "/images/lares-trek/IMG_3347.jpg" },
-      { id: 16, type: "image", url: "/images/lares-trek/IMG_3349.jpg" },
-      { id: 17, type: "image", url: "/images/lares-trek/IMG_3385.jpg" },
-      { id: 18, type: "image", url: "/images/lares-trek/IMG_3392-2.jpg" },
-      { id: 19, type: "image", url: "/images/lares-trek/IMG_3409.jpg" },
-      { id: 20, type: "image", url: "/images/lares-trek/IMG_3420.jpg" },
-      { id: 21, type: "image", url: "/images/lares-trek/IMG_3424.jpg" },
-      { id: 22, type: "image", url: "/images/lares-trek/IMG_3441.jpg" },
-      { id: 23, type: "image", url: "/images/lares-trek/IMG_3449.jpg" },
-      { id: 24, type: "image", url: "/images/lares-trek/IMG_3450.jpg" },
-      { id: 25, type: "image", url: "/images/lares-trek/IMG_3461.jpg" },
-      { id: 26, type: "image", url: "/images/lares-trek/IMG_3465.jpg" },
-      { id: 27, type: "image", url: "/images/lares-trek/IMG_3468.jpg" },
-      { id: 28, type: "image", url: "/images/lares-trek/IMG_3482.jpg" },
-      { id: 29, type: "image", url: "/images/lares-trek/IMG_3487.jpg" },
-      { id: 30, type: "image", url: "/images/lares-trek/IMG_3492.jpg" },
-      { id: 31, type: "image", url: "/images/lares-trek/IMG_3499-2.jpg" },
-      { id: 32, type: "image", url: "/images/lares-trek/IMG_3499.jpg" },
-      { id: 33, type: "image", url: "/images/lares-trek/IMG_4668.jpg" },
-      { id: 34, type: "image", url: "/images/lares-trek/IMG_5025.jpg" },
-      { id: 35, type: "image", url: "/images/lares-trek/IMG_7271.jpg" },
-      { id: 36, type: "image", url: "/images/lares-trek/IMG_7274.jpg" },
-      { id: 37, type: "image", url: "/images/lares-trek/IMG_7303.jpg" },
-      { id: 38, type: "image", url: "/images/lares-trek/IMG_7327.jpg" },
-      { id: 39, type: "image", url: "/images/lares-trek/IMG_7334.jpg" },
-      { id: 40, type: "image", url: "/images/lares-trek/IMG_7337.jpg" },
-      { id: 41, type: "image", url: "/images/lares-trek/IMG_7339.jpg" },
-      { id: 42, type: "image", url: "/images/lares-trek/IMG_8864.jpg" },
-      { id: 43, type: "image", url: "/images/lares-trek/IMG_8867.jpg" },
-      { id: 44, type: "image", url: "/images/lares-trek/IMG_9413.jpg" },
-      { id: 45, type: "image", url: "/images/lares-trek/IMG_9622.jpg" },
-      { id: 46, type: "image", url: "/images/lares-trek/IMG_9708.jpg" },
-      { id: 47, type: "image", url: "/images/lares-trek/IMG_9764.jpg" }
+      { id: "oafg9v5k", type: "image", url: "/images/lares-trek/IMG_0008.jpg" },
+      { id: "2xqrpj0k", type: "image", url: "/images/lares-trek/IMG_0177.jpg" },
+      { id: "2jxvfm1p", type: "image", url: "/images/lares-trek/IMG_0211-2.jpg" },
+      { id: "qxpvi1eh", type: "image", url: "/images/lares-trek/IMG_0276.jpg" },
+      { id: "zxj4pjcn", type: "image", url: "/images/lares-trek/IMG_1768.jpg" },
+      { id: "fxy8m9an", type: "image", url: "/images/lares-trek/IMG_1770.jpg" },
+      { id: "n7wrdgat", type: "image", url: "/images/lares-trek/IMG_1772.jpg" },
+      { id: "ypsfuakk", type: "image", url: "/images/lares-trek/IMG_1783.jpg" },
+      { id: "6birole9", type: "image", url: "/images/lares-trek/IMG_3092.jpg" },
+      { id: "dgukelv8", type: "image", url: "/images/lares-trek/IMG_3118.jpg" },
+      { id: "68h2dru3", type: "image", url: "/images/lares-trek/IMG_3123-2.jpg" },
+      { id: "0u4k0p2j", type: "image", url: "/images/lares-trek/IMG_3295-2.jpg" },
+      { id: "c143i332", type: "image", url: "/images/lares-trek/IMG_3312.jpg" },
+      { id: "ur6miib8", type: "image", url: "/images/lares-trek/IMG_3340-3.jpg" },
+      { id: "ngcf9zsx", type: "image", url: "/images/lares-trek/IMG_3347.jpg" },
+      { id: "c0swu5ay", type: "image", url: "/images/lares-trek/IMG_3349.jpg" },
+      { id: "o97gcpkr", type: "image", url: "/images/lares-trek/IMG_3385.jpg" },
+      { id: "1lcd9vle", type: "image", url: "/images/lares-trek/IMG_3392-2.jpg" },
+      { id: "4mc1jn7d", type: "image", url: "/images/lares-trek/IMG_3409.jpg" },
+      { id: "3sjhsuej", type: "image", url: "/images/lares-trek/IMG_3420.jpg" },
+      { id: "k50eda8l", type: "image", url: "/images/lares-trek/IMG_3424.jpg" },
+      { id: "8djg3hcz", type: "image", url: "/images/lares-trek/IMG_3441.jpg" },
+      { id: "quiwrmwn", type: "image", url: "/images/lares-trek/IMG_3449.jpg" },
+      { id: "8tu73prk", type: "image", url: "/images/lares-trek/IMG_3461.jpg" },
+      { id: "nq18d6gm", type: "image", url: "/images/lares-trek/IMG_3465.jpg" },
+      { id: "vdwarg2k", type: "image", url: "/images/lares-trek/IMG_3468.jpg" },
+      { id: "vdp0tqvm", type: "image", url: "/images/lares-trek/IMG_3482.jpg" },
+      { id: "i9pbyhla", type: "image", url: "/images/lares-trek/IMG_3492.jpg" },
+      { id: "jphe1rc9", type: "image", url: "/images/lares-trek/IMG_3499.jpg" },
+      { id: "27vnxswj", type: "image", url: "/images/lares-trek/IMG_4668.jpg" },
+      { id: "xv84weu1", type: "image", url: "/images/lares-trek/IMG_5025.jpg" },
+      { id: "rriue9po", type: "image", url: "/images/lares-trek/IMG_7271.jpg" },
+      { id: "v5joimgg", type: "image", url: "/images/lares-trek/IMG_7274.jpg" },
+      { id: "67hfrtr3", type: "image", url: "/images/lares-trek/IMG_7303.jpg" },
+      { id: "i5rbe4nc", type: "image", url: "/images/lares-trek/IMG_7327.jpg" },
+      { id: "ldps5m7j", type: "image", url: "/images/lares-trek/IMG_7334.jpg" },
+      { id: "kbytktic", type: "image", url: "/images/lares-trek/IMG_7339.jpg" },
+      { id: "jww91uie", type: "image", url: "/images/lares-trek/IMG_8864.jpg" },
+      { id: "c5abhzfy", type: "image", url: "/images/lares-trek/IMG_8867.jpg" },
+      { id: "f6dij8xo", type: "image", url: "/images/lares-trek/IMG_9413.jpg" },
+      { id: "uknpuuvh", type: "image", url: "/images/lares-trek/IMG_9622.jpg" },
+      { id: "dot1rqo2", type: "image", url: "/images/lares-trek/IMG_9708.jpg" },
+      { id: "ooidy419", type: "image", url: "/images/lares-trek/IMG_9764.jpg" }
     ]
   },
 
@@ -923,8 +786,8 @@ export const packages: Package[] = [
     difficulty: "Moderada",
     difficultyEn: "Moderate",
     elevation: "300m – 4,000m",
-    bestSeason: "Mayo - Octubre",
-    bestSeasonEn: "May - October",
+    bestSeason: "",
+    bestSeasonEn: "",
     price: 600,
     description: "El Parque Nacional del Manu es un área natural protegida ubicada en el sureste del Perú, entre las regiones de Cusco y Madre de Dios. Con una extensión de más de 1.9 millones de hectáreas, abarca desde los 300 m s. n. m. en la Amazonía hasta más de 4,000 m s. n. m. en los Andes. Este territorio alberga una de las mayores biodiversidades del planeta y conserva zonas prácticamente vírgenes. La tradición oral menciona que en sus profundidades podría encontrarse el mítico Paititi, la ciudad perdida de los Incas.",
     descriptionEn: "Manu National Park is a protected natural area located in southeastern Peru, between the regions of Cusco and Madre de Dios. Covering more than 1.9 million hectares, it extends from 300 m a.s.l. in the Amazon rainforest to over 4,000 m a.s.l. in the Andes. This territory shelters one of the highest levels of biodiversity on Earth and preserves vast pristine areas. According to oral tradition, the legendary lost Inca city of Paititi may lie hidden deep within this jungle.",
@@ -1034,30 +897,24 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: 1, type: "image", url: "/images/manu-rainforest/IMG_6390.jpg" },
-      { id: 2, type: "image", url: "/images/manu-rainforest/IMG_6398.jpg" },
-      { id: 3, type: "image", url: "/images/manu-rainforest/IMG_6416.jpg" },
-      { id: 4, type: "image", url: "/images/manu-rainforest/IMG_6420.jpg" },
-      { id: 5, type: "image", url: "/images/manu-rainforest/IMG_6424.jpg" },
-      { id: 6, type: "image", url: "/images/manu-rainforest/IMG_6430.jpg" },
-      { id: 7, type: "image", url: "/images/manu-rainforest/IMG_6445.jpg" },
-      { id: 8, type: "image", url: "/images/manu-rainforest/IMG_6451.jpg" },
-      { id: 9, type: "image", url: "/images/manu-rainforest/IMG_6466.jpg" },
-      { id: 10, type: "image", url: "/images/manu-rainforest/IMG_6475.jpg" },
-      { id: 11, type: "image", url: "/images/manu-rainforest/IMG_6479.jpg" },
-      { id: 12, type: "image", url: "/images/manu-rainforest/IMG_6487.jpg" },
-      { id: 13, type: "image", url: "/images/manu-rainforest/IMG_6488.jpg" },
-      { id: 14, type: "image", url: "/images/manu-rainforest/IMG_6498.jpg" },
-      { id: 15, type: "image", url: "/images/manu-rainforest/IMG_6499.jpg" },
-      { id: 16, type: "image", url: "/images/manu-rainforest/IMG_6500.jpg" },
-      { id: 17, type: "image", url: "/images/manu-rainforest/IMG_6505.jpg" },
-      { id: 18, type: "image", url: "/images/manu-rainforest/IMG_7642.jpg" },
-      { id: 19, type: "image", url: "/images/manu-rainforest/IMG_7649.jpg" },
-      { id: 20, type: "image", url: "/images/manu-rainforest/IMG_7656.jpg" },
-      { id: 21, type: "image", url: "/images/manu-rainforest/IMG_7664.jpg" },
-      { id: 22, type: "image", url: "/images/manu-rainforest/IMG_7672.jpg" },
-      { id: 23, type: "image", url: "/images/manu-rainforest/IMG_7721.jpg" },
-      { id: 24, type: "image", url: "/images/manu-rainforest/IMG_7731.jpg" }
+      { id: "53elr4b3", type: "image", url: "/images/manu-rainforest/IMG_6398.jpg" },
+      { id: "o3h21mih", type: "image", url: "/images/manu-rainforest/IMG_6416.jpg" },
+      { id: "yzbjfxm8", type: "image", url: "/images/manu-rainforest/IMG_6420.jpg" },
+      { id: "21xbo9rm", type: "image", url: "/images/manu-rainforest/IMG_6430.jpg" },
+      { id: "dbmmaxz7", type: "image", url: "/images/manu-rainforest/IMG_6466.jpg" },
+      { id: "lcyzxyd8", type: "image", url: "/images/manu-rainforest/IMG_6475.jpg" },
+      { id: "mcd6leb5", type: "image", url: "/images/manu-rainforest/IMG_6487.jpg" },
+      { id: "sm9p7gg2", type: "image", url: "/images/manu-rainforest/IMG_6498.jpg" },
+      { id: "0kb2l2z1", type: "image", url: "/images/manu-rainforest/IMG_6499.jpg" },
+      { id: "z3ahy8xf", type: "image", url: "/images/manu-rainforest/IMG_6500.jpg" },
+      { id: "aoralprx", type: "image", url: "/images/manu-rainforest/IMG_6505.jpg" },
+      { id: "z9n6fza2", type: "image", url: "/images/manu-rainforest/IMG_7642.jpg" },
+      { id: "6rkoxgnq", type: "image", url: "/images/manu-rainforest/IMG_7649.jpg" },
+      { id: "6ed41kb6", type: "image", url: "/images/manu-rainforest/IMG_7656.jpg" },
+      { id: "sxi0h9th", type: "image", url: "/images/manu-rainforest/IMG_7664.jpg" },
+      { id: "303una3r", type: "image", url: "/images/manu-rainforest/IMG_7672.jpg" },
+      { id: "3xyubcru", type: "image", url: "/images/manu-rainforest/IMG_7721.jpg" },
+      { id: "hykhoehy", type: "image", url: "/images/manu-rainforest/IMG_7731.jpg" }
     ]
   }
 ];

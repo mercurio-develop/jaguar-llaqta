@@ -3,7 +3,7 @@ import EmailContactConfirmation from "@/emails/contacto/email-contact-confirmati
 
 export async function sendContactConfirmation(to: string, toName: string) {
   return resend.emails.send({
-    from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+    from: process.env.RESEND_FROM_EMAIL |
     to,
     subject: "Recibimos tu mensaje - Jaguar Llaqta",
     react: <EmailContactConfirmation toName={toName} />,
