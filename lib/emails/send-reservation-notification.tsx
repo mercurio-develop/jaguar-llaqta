@@ -37,7 +37,7 @@ export async function sendReservationNotification(data: {
   return resend.emails.send({
     from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
     to: adminEmail,
-    subject: `Nueva reserva de ${data.name} - ${data.packageName}`,
+    subject: `Nueva Pre reserva de ${data.name} - ${data.packageName}`,
     html,
     attachments: data.attachments?.map((a) => ({
       filename: a.filename,

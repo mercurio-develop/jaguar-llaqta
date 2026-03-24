@@ -106,13 +106,13 @@ export default function EmailReservationNotification({
   return (
     <Html>
       <Head />
-      <Preview>Nueva reserva de {name} - {packageName}</Preview>
+      <Preview>Nueva Pre reserva de {name} - {packageName}</Preview>
       <Tailwind>
         <Body className="bg-gray-100 font-sans">
           <Container className="mx-auto max-w-[560px] rounded-lg bg-white p-8">
             <Section>
               <Text className="text-center text-2xl font-bold" style={{ color: "#C9A24D" }}>
-                Jaguar Llaqta — Nueva Reserva
+                Jaguar Llaqta — Nueva Pre Reserva
               </Text>
               <Text className="text-lg font-semibold text-gray-800">
                 Se ha recibido una nueva solicitud de reserva

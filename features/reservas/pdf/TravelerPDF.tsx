@@ -24,16 +24,26 @@ const styles = StyleSheet.create({
     fontSize: 9,
   },
   // Header
-  headerWrap: { alignItems: "center", marginBottom: 18 },
-  title: { fontSize: 26, fontFamily: "Helvetica-Bold", letterSpacing: 3, color: DARK },
+  headerWrap: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 14,
+  },
+  headerLeft: { flex: 1 },
+  headerCenter: { flex: 1, alignItems: "center" },
+  headerRight: { flex: 1, alignItems: "flex-end" },
+  tourLabel: { fontSize: 7.5, color: MUTED, marginBottom: 2 },
+  tourValue: { fontSize: 9, fontFamily: "Helvetica-Bold", color: DARK },
+  title: { fontSize: 22, fontFamily: "Helvetica-Bold", letterSpacing: 3, color: DARK },
   badge: {
     backgroundColor: GOLD,
     borderRadius: 3,
     paddingVertical: 3,
     paddingHorizontal: 14,
-    marginTop: 5,
+    marginTop: 4,
   },
   badgeText: { fontSize: 9, fontFamily: "Helvetica-Bold", color: WHITE, letterSpacing: 2 },
+  formLabel: { fontSize: 9, fontFamily: "Helvetica-Bold", color: MUTED, letterSpacing: 1 },
   divider: { borderBottomWidth: 1.5, borderBottomColor: GOLD, marginBottom: 14 },
   // Traveler page separator
   travelerLabel: {
@@ -230,13 +240,27 @@ function TravelerPage({
     <Page size="A4" style={styles.page}>
       {/* Header */}
       <View style={styles.headerWrap}>
-        <Text style={styles.title}>{lang === "es" ? "FORMULARIO" : "FORM"}</Text>
-        <View style={styles.badge}>
-          <Text style={styles.badgeText}>JAGUAR LLAQTA</Text>
+        {/* Left: tour details */}
+        <View style={styles.headerLeft}>
+          <Text style={styles.tourLabel}>{lang === "es" ? "Tour" : "Tour"}</Text>
+          <Text style={styles.tourValue}>{packageName}</Text>
+          <Text style={[styles.tourLabel, { marginTop: 5 }]}>{lang === "es" ? "Fecha" : "Date"}</Text>
+          <Text style={styles.tourValue}>{date}</Text>
         </View>
-        <Text style={{ fontSize: 8, color: MUTED, marginTop: 6 }}>
-          {packageName}  ·  {date}
-        </Text>
+
+        {/* Center: brand */}
+        <View style={styles.headerCenter}>
+          <Text style={styles.title}>JAGUAR</Text>
+          <Text style={styles.title}>LLAQTA</Text>
+          <View style={styles.badge}>
+            <Text style={styles.badgeText}>INNER TRAVEL</Text>
+          </View>
+        </View>
+
+        {/* Right: form title */}
+        <View style={styles.headerRight}>
+          <Text style={styles.formLabel}>{lang === "es" ? "FORMULARIO" : "FORM"}</Text>
+        </View>
       </View>
       <View style={styles.divider} />
 
