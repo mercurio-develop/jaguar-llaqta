@@ -45,6 +45,16 @@ const testimonials = [
       en: "Álvaro knows the mountains perfectly, he is attentive at all times and knows how to create a warm and authentic atmosphere. Thanks to him we not only walked through incredible places, but we also understood the culture and life in the Andes much better.",
     },
   },
+  {
+    id: 5,
+    name: "Nika Lozovska",
+    country: "Ucrania",
+    rating: 5,
+    text: {
+      es: "Mi amigo y yo tuvimos la increíble oportunidad de hacer una ruta con Álvaro y su equipo durante 4 días... no exagero al decir que cambió mi vida y mi percepción de 'explorar el mundo' en general. Estuvimos en plena naturaleza salvaje, pero con total seguridad gracias a este guía experimentado y profesional. Conocimos la cultura y pasamos tiempo a solas con la naturaleza. Fue simplemente espectacular.",
+      en: "Me and my friend had an absolutely amazing chance to do a trail with Alvaro and his team during 4 days….i am not exaggerating if saying that it had changed my life and my perception of “exploring the world” in general. We were in absolute wild, but in absolute safety thanks to this experienced and professional guide. We got to know about culture, we got to spend time one on one with nature. It was just spectacular.",
+    },
+  },
 ];
 
 export default function Testimonials() {
