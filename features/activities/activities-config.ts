@@ -20,8 +20,8 @@ export const categoryLabelsConfig: Record<
 };
 
 export const categoryImages: Record<ActivityCategory, string> = {
-  rutas: "/images/ausangate-trek/IMG_8942.jpg",
-  comunidad: "/images/comunidad.jpg",
+  rutas: "/images/IMG_7189-3.jpg",
+  comunidad: "/images/IMG_9939.jpg",
   ceremonias: "/images/machu-picchu.jpg",
 };
 

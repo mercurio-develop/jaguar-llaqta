@@ -39,7 +39,7 @@ export default function AllActivitiesPage() {
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/montanias.jpg')" }}
+          style={{ backgroundImage: "url('/images/choquequirao/IMG_6584.jpg')" }}
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container-custom text-center">
