@@ -28,6 +28,31 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TouristInformationCenter",
+  name: "Jaguar Llaqta",
+  description: "Agencia de turismo alternativo en Cusco, Perú. Rutas de trekking, comunidades nativas y ceremonias andinas.",
+  url: "https://jaguarllaqta.com",
+  email: "jaguarllaqta@gmail.com",
+  telephone: "+51926935820",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cusco",
+    addressCountry: "PE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -13.5226,
+    longitude: -71.9674,
+  },
+  areaServed: "Cusco, Perú",
+  priceRange: "$$",
+  sameAs: [
+    "https://www.instagram.com/jaguarllaqta",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -35,6 +60,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-primary min-h-screen flex flex-col">
         {children}
       </body>
