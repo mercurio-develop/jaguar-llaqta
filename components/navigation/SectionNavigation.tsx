@@ -60,21 +60,24 @@ export default function SectionNavigation({
   }, [sections, activeSection, onSectionChange, enableScrollDetection, scrollOffset]);
 
   return (
-    <nav className={cn("sticky top-20 z-40 bg-primary border-b border-support", className)}>
+    <nav className={cn("sticky top-20 z-40 bg-primary/95 backdrop-blur-sm border-b border-white/10", className)}>
       <div className="container-custom">
-        <div className="flex justify-center gap-1 overflow-x-auto py-3">
+        <div className="flex justify-start md:justify-center items-center gap-2 md:gap-8 overflow-x-auto scrollbar-hide py-1">
           {sections.map((section) => (
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
               className={cn(
-                "px-5 py-2 font-medium transition-colors whitespace-nowrap uppercase tracking-wider text-sm",
+                "relative px-4 py-4 text-xs md:text-sm font-medium transition-all whitespace-nowrap uppercase tracking-widest",
                 activeSection === section.id
-                  ? "text-accent border-b-2 border-accent"
-                  : "text-muted hover:text-white"
+                  ? "text-accent"
+                  : "text-white/50 hover:text-white"
               )}
             >
               {section.label}
+              {activeSection === section.id && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent shadow-[0_0_8px_rgba(201,162,77,0.5)]" />
+              )}
             </button>
           ))}
         </div>

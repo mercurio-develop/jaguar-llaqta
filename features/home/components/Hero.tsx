@@ -14,8 +14,11 @@ export default function Hero() {
       <div className="absolute inset-0">
         {/* Hero image */}
         <div
-          className="absolute inset-0 bg-cover bg-center blur-sm "
-          style={{ backgroundImage: "url('/images/hero-banner-home.jpg')" }}
+          className="absolute inset-0 bg-cover blur-sm"
+          style={{ 
+            backgroundImage: "url('/images/lares-trek/IMG_3347.jpg')",
+            backgroundPosition: "center 20%"
+          }}
         />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/75 to-primary" />

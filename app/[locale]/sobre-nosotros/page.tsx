@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
+import SectionNavigation from "@/components/navigation/SectionNavigation";
 import HistorySection from "@/features/about/components/HistorySection";
 import VisionMissionSection from "@/features/about/components/VisionMissionSection";
 import TeamSection from "@/features/about/components/TeamSection";
@@ -19,34 +20,7 @@ export default function AboutPage() {
     { id: "vision-mision", label: t("visionMissionTitle") },
     { id: "asociados", label: t("teamTitle") },
     { id: "faq", label: tFaq("title") },
-   // { id: "organizaciones", label: t("organizationsTitle") },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i].id);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i].id);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 140;
-      const elementPosition = element.offsetTop - offset;
-      window.scrollTo({ top: elementPosition, behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="pt-20">
@@ -64,32 +38,17 @@ export default function AboutPage() {
       </section>
 
       {/* Section Navigation */}
-      <nav className="sticky top-20 z-40 bg-primary border-b border-white/10">
-        <div className="container-custom">
-          <div className="flex justify-center overflow-x-auto scrollbar-hide">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className={cn(
-                  "px-6 py-4 text-sm font-medium whitespace-nowrap transition-colors border-b-2",
-                  activeSection === section.id
-                    ? "text-accent border-accent"
-                    : "text-white/60 border-transparent hover:text-white"
-                )}
-              >
-                {section.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
+      <SectionNavigation
+        sections={sections}
+        activeSection={activeSection}
+        onSectionChange={setActiveSection}
+        enableScrollDetection={true}
+      />
 
       <HistorySection />
       <VisionMissionSection />
       <TeamSection />
       <FAQSection />
-      {/*<PartnersSection />*/}
     </div>
   );
 }

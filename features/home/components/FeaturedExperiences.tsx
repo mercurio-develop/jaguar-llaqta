@@ -7,14 +7,14 @@ import { ArrowRight } from "lucide-react";
 const experiences = [
   {
     id: "rutas",
-    image: "/images/ausangate-trek/IMG_8942.jpg",
+    image: "/images/IMG_7189-3.jpg",
     titleKey: "expRoutesTitle",
     descKey: "expRoutesDesc",
     href: "/actividades/rutas",
   },
   {
     id: "comunidad",
-    image: "/images/comunidad.jpg",
+    image: "/images/IMG_9939.jpg",
     titleKey: "expCommunityTitle",
     descKey: "expCommunityDesc",
     href: "/actividades/comunidad",

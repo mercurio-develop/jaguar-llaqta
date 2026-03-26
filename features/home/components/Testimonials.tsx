@@ -16,6 +16,16 @@ const testimonials = [
     },
   },
   {
+    id: 5,
+    name: "Nika Lozovska",
+    country: "Ucrania",
+    rating: 5,
+    text: {
+      es: "Mi amigo y yo tuvimos la increíble oportunidad de hacer una ruta con Álvaro y su equipo durante 4 días... no exagero al decir que cambió mi vida y mi percepción de 'explorar el mundo' en general. Estuvimos en plena naturaleza salvaje, pero con total seguridad gracias a este guía experimentado y profesional. Conocimos la cultura y pasamos tiempo a solas con la naturaleza. Fue simplemente espectacular.",
+      en: "Me and my friend had an absolutely amazing chance to do a trail with Alvaro and his team during 4 days….i am not exaggerating if saying that it had changed my life and my perception of “exploring the world” in general. We were in absolute wild, but in absolute safety thanks to this experienced and professional guide. We got to know about culture, we got to spend time one on one with nature. It was just spectacular.",
+    },
+  },
+  {
     id: 2,
     name: "Javier",
     country: "España",
@@ -45,16 +55,6 @@ const testimonials = [
       en: "Álvaro knows the mountains perfectly, he is attentive at all times and knows how to create a warm and authentic atmosphere. Thanks to him we not only walked through incredible places, but we also understood the culture and life in the Andes much better.",
     },
   },
-  {
-    id: 5,
-    name: "Nika Lozovska",
-    country: "Ucrania",
-    rating: 5,
-    text: {
-      es: "Mi amigo y yo tuvimos la increíble oportunidad de hacer una ruta con Álvaro y su equipo durante 4 días... no exagero al decir que cambió mi vida y mi percepción de 'explorar el mundo' en general. Estuvimos en plena naturaleza salvaje, pero con total seguridad gracias a este guía experimentado y profesional. Conocimos la cultura y pasamos tiempo a solas con la naturaleza. Fue simplemente espectacular.",
-      en: "Me and my friend had an absolutely amazing chance to do a trail with Alvaro and his team during 4 days….i am not exaggerating if saying that it had changed my life and my perception of “exploring the world” in general. We were in absolute wild, but in absolute safety thanks to this experienced and professional guide. We got to know about culture, we got to spend time one on one with nature. It was just spectacular.",
-    },
-  },
 ];
 
 export default function Testimonials() {
@@ -67,13 +67,16 @@ export default function Testimonials() {
   const dragStartX = useRef(0);
   const scrollStartLeft = useRef(0);
 
-  const CARD_WIDTH = 420;
-  const GAP = 24;
-  const STEP = CARD_WIDTH + GAP;
-
   const scrollBy = (direction: "prev" | "next") => {
     if (!trackRef.current) return;
-    trackRef.current.scrollBy({ left: direction === "next" ? STEP : -STEP, behavior: "smooth" });
+    const firstCard = trackRef.current.firstElementChild as HTMLElement;
+    if (!firstCard) return;
+    
+    const cardWidth = firstCard.offsetWidth;
+    const gap = 24; // gap-6
+    const step = cardWidth + gap;
+    
+    trackRef.current.scrollBy({ left: direction === "next" ? step : -step, behavior: "smooth" });
   };
 
   const onMouseDown = (e: React.MouseEvent) => {
@@ -114,28 +117,27 @@ export default function Testimonials() {
           <h2 className="section-title">{t("testimonialsTitle")}</h2>
         </div>
 
-        {/* Carousel */}
-        <div className="relative">
-          {/* Left arrow */}
+        {/* Carousel Container */}
+        <div className="container-custom relative">
+          {/* Navigation Arrows - Adjusted position to be outside on large screens if possible, or inside */}
           <button
             onClick={() => scrollBy("prev")}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-accent transition-colors"
+            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-accent transition-colors hidden md:block"
           >
-            <ChevronLeft className="w-8 h-8" />
+            <ChevronLeft className="w-10 h-10" />
           </button>
 
-          {/* Right arrow */}
           <button
             onClick={() => scrollBy("next")}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-accent transition-colors"
+            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-accent transition-colors hidden md:block"
           >
-            <ChevronRight className="w-8 h-8" />
+            <ChevronRight className="w-10 h-10" />
           </button>
 
           {/* Scrollable track */}
           <div
             ref={trackRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide cursor-grab px-16 py-2"
+            className="flex gap-6 overflow-x-auto scrollbar-hide cursor-grab py-4"
             style={{ scrollSnapType: "x mandatory" }}
             onMouseDown={onMouseDown}
             onMouseMove={onMouseMove}
@@ -145,33 +147,49 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="w-[420px] flex-shrink-0 bg-support/50 border border-white/10 shadow-md shadow-black/20 rounded-xl p-8 flex flex-col"
+                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 bg-support/50 border border-white/10 shadow-md shadow-black/20 rounded-xl px-8 py-6 flex flex-col"
                 style={{ scrollSnapAlign: "start" }}
               >
                 {/* Name + Quote */}
-                <div className="flex items-start justify-between mb-2">
+                <div className="flex items-start justify-between mb-1">
                   <p className="font-display text-xl font-semibold text-white">{testimonial.name}</p>
                   <Quote className="w-8 h-8 text-accent/20 flex-shrink-0" />
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center gap-1 mb-5">
+                <div className="flex items-center gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                   ))}
                 </div>
 
                 {/* Review text */}
-                <p className="text-[#d1d5db] text-base font-normal leading-[1.7] flex-1">
+                <p className="text-[#d1d5db] text-base font-normal leading-[1.6] flex-1 italic">
                   &ldquo;{testimonial.text[locale]}&rdquo;
                 </p>
 
                 {/* Country — always at the bottom */}
-                <div className="border-t border-white/10 pt-4 mt-4">
+                <div className="border-t border-white/10 pt-3 mt-3">
                   <p className="text-sm text-[#9ca3af]">{testimonial.country}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Mobile Navigation Arrows */}
+          <div className="flex justify-center gap-8 mt-8 md:hidden">
+            <button
+              onClick={() => scrollBy("prev")}
+              className="text-white/60 hover:text-accent transition-colors"
+            >
+              <ChevronLeft className="w-8 h-8" />
+            </button>
+            <button
+              onClick={() => scrollBy("next")}
+              className="text-white/60 hover:text-accent transition-colors"
+            >
+              <ChevronRight className="w-8 h-8" />
+            </button>
           </div>
         </div>
       </div>

@@ -29,6 +29,13 @@ export default function ActivitySidebar({ pkg, locale }: ActivitySidebarProps) {
             <p className="text-muted text-sm">
               {isSpanish ? "por persona" : "per person"}
             </p>
+            <div className="mt-4 p-2 bg-accent/5 rounded border border-accent/10">
+              <p className="text-[10px] uppercase tracking-widest text-accent font-semibold leading-tight px-1">
+                {isSpanish 
+                  ? "Descuentos disponibles en grupos grandes"
+                  : "Special rates for larger groups"}
+              </p>
+            </div>
           </div>
 
           <div className="space-y-4 mb-8">

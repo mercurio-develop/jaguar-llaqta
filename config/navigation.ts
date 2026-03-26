@@ -23,7 +23,6 @@ export const mainNavigation: NavItem[] = [
       { titleKey: "nav.aboutVision", href: "/sobre-nosotros#vision-mision" },
       { titleKey: "nav.aboutTeam", href: "/sobre-nosotros#asociados" },
       { titleKey: "nav.faq", href: "/sobre-nosotros#faq" },
-      { titleKey: "nav.aboutOrganizations", href: "/sobre-nosotros#organizaciones" },
     ],
   },
   {

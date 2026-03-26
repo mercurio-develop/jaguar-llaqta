@@ -26,24 +26,13 @@ export default function ActivityDetailPage({ params }: { params: { id: string } 
 
   const [activeSection, setActiveSection] = useState("overview");
 
-  const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 140;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="pt-20">
       <ActivityHero pkg={pkg} locale={locale} />
 
       <ActivityNav
         activeSection={activeSection}
-        onSectionChange={scrollToSection}
+        onSectionChange={setActiveSection}
         locale={locale}
       />
 

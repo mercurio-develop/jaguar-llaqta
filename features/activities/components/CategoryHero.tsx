@@ -30,8 +30,11 @@ export default function CategoryHero({ category }: CategoryHeroProps) {
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-end">
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${config.heroImage}')` }}
+        className="absolute inset-0 bg-cover"
+        style={{ 
+          backgroundImage: `url('${config.heroImage}')`,
+          backgroundPosition: config.backgroundPosition || "center"
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30" />
       <div className="relative z-10 container-custom pb-12">
