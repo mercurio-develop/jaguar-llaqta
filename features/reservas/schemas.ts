@@ -5,7 +5,7 @@ export const travelerSchema = z.object({
   fullName: z.string().min(2, "Nombre requerido"),
   birthDate: z.string().min(1, "Fecha requerida"),
   nationality: z.string().min(1, "Nacionalidad requerida"),
-  idPassport: z.string().min(1, "DNI/Pasaporte requerido"),
+  idPassport: z.string().optional(),
   languages: z.string().optional(),
   phone: z.string().optional(),
   email: z.string().optional(),

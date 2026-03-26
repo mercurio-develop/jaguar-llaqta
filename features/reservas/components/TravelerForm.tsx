@@ -234,7 +234,7 @@ export default function TravelerForm({
 
             <div className="grid sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-white text-xs mb-1">{t.idPassport} *</label>
+                <label className="block text-white text-xs mb-1">{t.idPassport}</label>
                 <input
                   {...register(`${p}.idPassport`)}
                   className={inputClass}
