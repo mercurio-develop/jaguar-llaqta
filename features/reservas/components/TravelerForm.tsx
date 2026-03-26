@@ -238,7 +238,7 @@ export default function TravelerForm({
                 <input
                   {...register(`${p}.idPassport`)}
                   className={inputClass}
-                  placeholder="XX-123456"
+                  placeholder={t.idPassport}
                 />
                 {travelerErrors?.idPassport && (
                   <p className="text-red-400 text-xs mt-1">{travelerErrors.idPassport.message}</p>

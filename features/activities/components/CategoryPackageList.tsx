@@ -17,7 +17,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
   const locale = pathname.split("/")[1] as "es" | "en";
 
   const config = categoryConfig[category];
-  const categoryPackages = getPackagesByCategory(category);
+  const categoryPackages = getPackagesByCategory(category).sort((a, b) => b.price - a.price);
 
   return (
     <section className="py-16 bg-primary">

@@ -22,8 +22,8 @@ export async function generateMetadata({
       ? "Turismo ancestral y alternativo en Cusco, Perú. Trekking por rutas únicas, vivencias con comunidades nativas y ceremonias andinas auténticas. Experimenta el Perú profundo con Jaguar Llaqta."
       : "Ancestral and alternative tourism in Cusco, Peru. Trekking unique routes, experiences with native communities and authentic Andean ceremonies. Experience deep Peru with Jaguar Llaqta.",
     keywords: isEs
-      ? ["turismo ancestral cusco", "turismo alternativo cusco", "turismo ancestral peru", "trekking cusco", "ceremonias andinas cusco", "comunidades nativas cusco", "jaguar llaqta", "ausangate", "choquequirao", "turismo espiritual peru"]
-      : ["ancestral tourism cusco", "alternative tourism cusco", "ancestral tourism peru", "trekking cusco", "andean ceremonies cusco", "native communities cusco", "jaguar llaqta", "ausangate trek", "spiritual tourism peru"],
+      ? ["turismo ancestral cusco", "turismo alternativo cusco", "cultura viva cusco", "trekking cusco", "rutas cusco", "expediciones cusco", "comunidades alto andinas", "ceremonias andinas", "pachamama", "naturaleza cusco", "cultura inca", "descubre peru", "viajes peru", "jaguar llaqta"]
+      : ["ancestral tourism cusco", "alternative tourism cusco", "living culture cusco", "cusco trekking", "andean expeditions", "high andean communities", "andean ceremonies", "pachamama", "inca culture", "nature cusco", "discover peru", "travel peru", "andes travel", "jaguar llaqta"],
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
       languages: { es: `${BASE_URL}/es`, en: `${BASE_URL}/en` },

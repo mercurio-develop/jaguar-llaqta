@@ -34,12 +34,10 @@ export default function EmailContactConfirmation({
                 Hola {toName},
               </Text>
               <Text className="text-gray-600">
-                Gracias por contactarnos. Hemos recibido tu mensaje y te
-                responderemos a la brevedad posible.
+                Gracias por contactarnos, hemos recibido tu mensaje.
               </Text>
               <Text className="text-gray-600">
-                Nuestro equipo revisará tu consulta y se pondrá en contacto
-                contigo dentro de las próximas 24-48 horas.
+                Nuestro equipo revisará tu consulta y se pondrá en contacto contigo lo antes posible.
               </Text>
               <Text className="text-sm text-gray-400">
                 — El equipo de Jaguar Llaqta

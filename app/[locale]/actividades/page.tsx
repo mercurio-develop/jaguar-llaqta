@@ -23,7 +23,7 @@ export default function AllActivitiesPage() {
     const matchDuration = selectedDuration === "all" || durationFilters.find(f => f.id === selectedDuration)?.check(pkg.duration);
     const matchPrice = pkg.price >= priceRange[0] && pkg.price <= priceRange[1];
     return matchCategory && matchDuration && matchPrice;
-  });
+  }).sort((a, b) => b.price - a.price);
 
   const clearFilters = () => {
     setSelectedCategories([]);

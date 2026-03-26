@@ -777,7 +777,7 @@ export const packages: Package[] = [
   // RUTAS - Selva del Manu 5D4N
   {
     id: "manu-rainforest-5d4n",
-    categories: ["comunidad", "rutas"],
+    categories: ["rutas"],
     name: "Selva del Manu",
     nameEn: "Manu Rainforest",
     heroImage: "/images/manu-rainforest/IMG_0104.JPG",
@@ -1297,16 +1297,17 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: "cc2d1", type: "image", url: "/images/cancha-cancha/IMG_0238.jpg" },
-      { id: "cc2d2", type: "image", url: "/images/cancha-cancha/IMG_0119.jpg" },
-      { id: "cc2d3", type: "image", url: "/images/cancha-cancha/IMG_0177.jpg" },
-      { id: "cc2d4", type: "image", url: "/images/cancha-cancha/IMG_0291.jpg" },
-      { id: "cc2d5", type: "image", url: "/images/cancha-cancha/IMG_0299.jpg" },
-      { id: "cc2d6", type: "image", url: "/images/cancha-cancha/IMG_0302.jpg" },
-      { id: "cc2d7", type: "image", url: "/images/cancha-cancha/IMG_0307.jpg" },
-      { id: "cc2d8", type: "image", url: "/images/cancha-cancha/IMG_0310.jpg" },
-      { id: "cc2d9", type: "image", url: "/images/cancha-cancha/IMG_0338.jpg" },
-      { id: "cc2d10", type: "image", url: "/images/cancha-cancha/IMG_0344.jpg" }
+      { id: "cc2d1", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0291.jpg" },
+      { id: "cc2d2", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0177.jpg" },
+      { id: "cc2d3", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0211-2.jpg" },
+      { id: "cc2d4", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0302.jpg" },
+      { id: "cc2d5", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0344.jpg" },
+      { id: "cc2d6", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_6001.jpg" },
+      { id: "cc2d7", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8566.jpg" },
+      { id: "cc2d8", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8591.jpg" },
+      { id: "cc2d9", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8601.jpg" },
+      { id: "cc2d10", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8614.jpg" },
+      { id: "cc2d11", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8616.jpg" }
     ]
   },
   {
