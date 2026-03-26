@@ -23,9 +23,6 @@ export default function TeamSection() {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card key={index} className="p-6 text-center">
-              <div className="w-20 h-20 rounded-full bg-support mx-auto mb-4 flex items-center justify-center">
-                <span className="text-muted text-sm">Foto</span>
-              </div>
               <h3 className="font-display text-xl text-white mb-1">{member.name}</h3>
               <p className="text-accent text-sm mb-3">
                 {locale === "en" && member.roleEn ? member.roleEn : member.role}
