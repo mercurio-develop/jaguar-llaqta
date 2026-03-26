@@ -3,24 +3,38 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Jaguar Llaqta - Turismo Ancestral en Cusco",
+    default: "Jaguar Llaqta | Turismo Ancestral y Alternativo en Cusco, Perú",
     template: "%s | Jaguar Llaqta",
   },
-  description: "Descubre el Cusco auténtico a través de experiencias que conectan con la sabiduría ancestral andina.",
-  keywords: ["turismo", "cusco", "peru", "ancestral", "espiritual", "trekking", "comunidades"],
+  description: "Turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas. Ancestral and alternative tourism in Cusco, Peru.",
+  keywords: [
+    "turismo ancestral cusco",
+    "turismo alternativo cusco",
+    "turismo ancestral peru",
+    "turismo alternativo peru",
+    "ancestral tourism cusco",
+    "alternative tourism cusco",
+    "trekking cusco",
+    "ceremonias andinas",
+    "comunidades nativas cusco",
+    "jaguar llaqta",
+    "turismo espiritual cusco",
+    "andean ceremonies",
+    "cusco trekking",
+  ],
   authors: [{ name: "Jaguar Llaqta" }],
   openGraph: {
     type: "website",
     locale: "es_PE",
     url: "https://jaguarllaqta.com",
     siteName: "Jaguar Llaqta",
-    title: "Jaguar Llaqta - Turismo Ancestral en Cusco",
-    description: "Descubre el Cusco auténtico a través de experiencias que conectan con la sabiduría ancestral andina.",
+    title: "Jaguar Llaqta | Turismo Ancestral y Alternativo en Cusco",
+    description: "Turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jaguar Llaqta - Turismo Ancestral en Cusco",
-    description: "Descubre el Cusco auténtico a través de experiencias que conectan con la sabiduría ancestral andina",
+    title: "Jaguar Llaqta | Turismo Ancestral y Alternativo en Cusco",
+    description: "Turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas.",
   },
   robots: {
     index: true,
@@ -33,15 +47,16 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "TouristInformationCenter",
+  "@type": "TravelAgency",
   name: "Jaguar Llaqta",
-  description: "Agencia de turismo alternativo en Cusco, Perú. Rutas de trekking, comunidades nativas y ceremonias andinas.",
+  description: "Agencia de turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas. Ancestral and alternative tourism agency in Cusco, Peru.",
   url: "https://jaguarllaqta.com",
   email: "jaguarllaqta@gmail.com",
   telephone: "+51926935820",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Cusco",
+    addressRegion: "Cusco",
     addressCountry: "PE",
   },
   geo: {
@@ -49,8 +64,17 @@ const jsonLd = {
     latitude: -13.5226,
     longitude: -71.9674,
   },
-  areaServed: "Cusco, Perú",
+  areaServed: ["Cusco", "Perú"],
   priceRange: "$$",
+  knowsAbout: [
+    "turismo ancestral",
+    "turismo alternativo",
+    "trekking cusco",
+    "ceremonias andinas",
+    "comunidades nativas",
+    "ancestral tourism",
+    "alternative tourism",
+  ],
   sameAs: [
     "https://www.instagram.com/jaguarllaqta",
   ],
