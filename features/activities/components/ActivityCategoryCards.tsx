@@ -17,17 +17,6 @@ export default function ActivityCategoryCards({ locale }: ActivityCategoryCardsP
   return (
     <section className="py-16 bg-primary">
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="section-title mb-4">
-            {locale === "es" ? "Descubre nuestras experiencias" : "Discover our experiences"}
-          </h2>
-          <p className="section-subtitle">
-            {locale === "es"
-              ? "Sumérgete en el Perú profundo, su cultura viva y lugares sagrados."
-              : "Immerse yourself in deep Peru, its living culture and sacred places."}
-          </p>
-          <div className="w-24 h-1 bg-accent mx-auto" />
-        </div>
         <div className="grid md:grid-cols-3 gap-8">
           {(Object.keys(categoryLabelsConfig) as ActivityCategory[]).map((cat) => {
             const config = categoryLabelsConfig[cat];
