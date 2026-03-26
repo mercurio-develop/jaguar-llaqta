@@ -31,9 +31,13 @@ export default function ActivitySidebar({ pkg, locale }: ActivitySidebarProps) {
             </p>
             <div className="mt-4 p-2 bg-accent/5 rounded border border-accent/10">
               <p className="text-[10px] uppercase tracking-widest text-accent font-semibold leading-tight px-1">
-                {isSpanish 
-                  ? "Descuentos disponibles en grupos grandes"
-                  : "Special rates for larger groups"}
+                {pkg.id === "full-day-spiritual"
+                  ? (isSpanish
+                      ? "ESTA EXPERIENCIA ES PARA GRUPOS GRANDES (MIN 10 personas)"
+                      : "THIS EXPERIENCE IS FOR LARGE GROUPS (MIN 10 people)")
+                  : (isSpanish
+                      ? "Descuentos disponibles en grupos grandes"
+                      : "Special rates for larger groups")}
               </p>
             </div>
           </div>

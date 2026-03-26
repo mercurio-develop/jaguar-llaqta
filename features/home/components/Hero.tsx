@@ -16,13 +16,14 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover blur-sm"
           style={{ 
-            backgroundImage: "url('/images/lares-trek/IMG_3347.jpg')",
+            backgroundImage: "url('/images/history.jpg')",
             backgroundPosition: "center 20%"
           }}
         />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/75 to-primary" />
       </div>
+
 
       {/* Content */}
       <div className="relative z-10 container-custom text-center">
