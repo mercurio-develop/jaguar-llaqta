@@ -1,9 +1,9 @@
 "use server";
 
 import { createElement } from "react";
-import { prisma } from "@/lib/db";
 import { sendReservationConfirmation } from "@/lib/emails/send-reservation-confirmation";
 import { sendReservationNotification } from "@/lib/emails/send-reservation-notification";
+import { sendReservationAlert } from "@/lib/emails/send-reservation-alert";
 import {
   ActionState,
   fromErrorToActionState,
@@ -31,27 +31,19 @@ export const submitReservation = async (
   try {
     const parsed = reservationSchema.parse(data);
 
-    await prisma.reservation.create({
-      data: {
-        name: parsed.name,
-        email: parsed.email,
-        phone: parsed.phone,
-        package: parsed.packageId,
-        date: new Date(parsed.date),
-        participants: parsed.participants,
-        notes: parsed.notes || null,
-        travelers: JSON.stringify(parsed.travelers),
-        status: "pending",
-      },
-    });
-
     try {
       const sanitize = (s: string) =>
         s.replace(/[^a-zA-Z0-9À-ÿ]/g, "_").replace(/_+/g, "_").toUpperCase();
 
       const pdfFilename = `PRESERVA_${sanitize(parsed.packageId)}_${sanitize(parsed.name)}_${sanitize(parsed.date)}.pdf`;
 
-      const pdf = await generatePDF(parsed.travelers, "es", parsed.packageId, parsed.date);
+      let pdfAttachments: { filename: string; content: Buffer }[] = [];
+      try {
+        const pdf = await generatePDF(parsed.travelers, "es", parsed.packageId, parsed.date);
+        pdfAttachments = [{ filename: pdfFilename, content: pdf }];
+      } catch (pdfError) {
+        console.error("Failed to generate PDF, sending emails without attachment:", pdfError);
+      }
 
       await Promise.all([
         sendReservationConfirmation(parsed.email, {
@@ -69,7 +61,13 @@ export const submitReservation = async (
           participants: parsed.participants,
           notes: parsed.notes || null,
           travelers: parsed.travelers,
-          attachments: [{ filename: pdfFilename, content: pdf }],
+          attachments: pdfAttachments,
+        }),
+        sendReservationAlert({
+          name: parsed.name,
+          packageName: parsed.packageId,
+          date: parsed.date,
+          participants: parsed.participants,
         }),
       ]);
     } catch (emailError) {

@@ -1,6 +1,5 @@
 "use server";
 
-import { prisma } from "@/lib/db";
 import { sendContactConfirmation } from "@/lib/emails/send-contact-confirmation";
 import { sendContactNotification } from "@/lib/emails/send-contact-notification";
 import {
@@ -15,15 +14,6 @@ export const submitContact = async (
 ): Promise<ActionState> => {
   try {
     const parsed = contactSchema.parse(data);
-
-    await prisma.contact.create({
-      data: {
-        name: parsed.name,
-        email: parsed.email,
-        subject: parsed.subject || null,
-        message: parsed.message,
-      },
-    });
 
     try {
       await Promise.all([

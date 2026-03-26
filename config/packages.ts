@@ -107,7 +107,8 @@ export const packages: Package[] = [
       "Dinero en efectivo",
       "DNI o Pasaporte",
       "Cámara fotográfica",
-      "Ropa para Lluvia"
+      "Ropa para Lluvia",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Sun hat or cap",
@@ -116,7 +117,8 @@ export const packages: Package[] = [
       "Cash for souvenirs",
       "ID / Passport",
       "Camera",
-      "Rain gear"
+      "Rain gear",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -178,7 +180,7 @@ export const packages: Package[] = [
     ],
     includesEn: [
       "Professional guide",
-      "Box lunch",
+      "Box Lunch",
       "Cultural and historical interpretation"
     ],
     notIncludes: [
@@ -198,7 +200,8 @@ export const packages: Package[] = [
       "Dinero en efectivo",
       "DNI o Pasaporte",
       "Cámara fotográfica",
-      "Ropa para Lluvia"
+      "Ropa para Lluvia",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Sun hat or cap",
@@ -207,7 +210,8 @@ export const packages: Package[] = [
       "Cash for souvenirs",
       "ID / Passport",
       "Camera",
-      "Rain gear"
+      "Rain gear",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -278,12 +282,14 @@ export const packages: Package[] = [
     requirements: [
       "Sombrero o gorra",
       "Cámara fotográfica",
-      "Botella de agua"
+      "Botella de agua",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Sun hat or cap",
       "Camera",
-      "Water bottle"
+      "Water bottle",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -339,7 +345,7 @@ export const packages: Package[] = [
     ],
     includesEn: [
       "Professional guide",
-      "Box lunch",
+      "Box Lunch",
       "Entrance ticket to the archaeological site"
     ],
     notIncludes: [
@@ -359,7 +365,8 @@ export const packages: Package[] = [
       "Dinero en efectivo",
       "DNI o Pasaporte",
       "Cámara fotográfica",
-      "Ropa para Lluvia"
+      "Ropa para Lluvia",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Sun hat or cap",
@@ -368,7 +375,8 @@ export const packages: Package[] = [
       "Cash for souvenirs",
       "ID / Passport",
       "Camera",
-      "Rain gear"
+      "Rain gear",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -446,7 +454,8 @@ export const packages: Package[] = [
       "Botella de agua",
       "Dinero en efectivo",
       "DNI o Pasaporte",
-      "Cámara fotográfica"
+      "Cámara fotográfica",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Sun hat or cap",
@@ -454,7 +463,8 @@ export const packages: Package[] = [
       "Water bottle",
       "Cash for souvenirs",
       "ID / Passport",
-      "Camera"
+      "Camera",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -497,8 +507,8 @@ export const packages: Package[] = [
     taglineEn: "Discover the most important Apu of Andean region, its beautiful lagoons and high Andean landscapes.",
     duration: "3 días / 2 noches",
     durationEn: "3 days / 2 nights",
-    difficulty: "Moderada",
-    difficultyEn: "Moderate",
+    difficulty: "Moderado / Desafiante",
+    difficultyEn: "Moderado / Desafiante",
     elevation: "4,800m máx.",
     bestSeason: "",
     bestSeasonEn: "",
@@ -539,7 +549,8 @@ export const packages: Package[] = [
       "Botella de agua",
       "Dinero en efectivo para souvenirs",
       "DNI o Pasaporte",
-      "Cámara fotográfica"
+      "Cámara fotográfica",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Sun hat",
@@ -547,7 +558,8 @@ export const packages: Package[] = [
       "Water bottle",
       "Cash for souvenirs",
       "ID / Passport",
-      "Camera"
+      "Camera",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -665,7 +677,8 @@ export const packages: Package[] = [
       "Artículos de aseo",
       "Ropa de baño y toalla",
       "Sombrero o gorra",
-      "Bloqueador solar"
+      "Bloqueador solar",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Warm and rain clothing",
@@ -675,7 +688,8 @@ export const packages: Package[] = [
       "Toiletries kit",
       "Swimsuit and towel",
       "Sun hat or cap",
-      "Sunscreen"
+      "Sunscreen",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -709,7 +723,7 @@ export const packages: Package[] = [
         title: "Quishuarani – Cuncani – Lares",
         titleEn: "Quishuarani – Cuncani – Lares",
         description: "06:00 AM – Desayuno. 07:30 AM – Caminata de 4 horas hacia la comunidad de Cuncani. 11:00 AM – Refrigerio. 12:00 PM – Traslado en transporte privado a las aguas termales de Lares (45 minutos). Tiempo libre para relajarse (2 horas). 03:00 PM – Transporte hacia el Valle Sagrado (aprox. 2.5 horas). 05:30 PM – Llegada a Calca.",
-        descriptionEn: "06:00 AM – Breakfast. 07:30 AM – 4-hour hike to the community of Cuncani. 11:00 AM – Lunch Box. 12:00 PM – Transfer to the Lares Hot Springs (45 minutes). Relaxation time: 2 hours. 03:00 PM – Transport to the Sacred Valley (approx. 2.5 hours). 05:30 PM – Arrival to Calca.",
+        descriptionEn: "06:00 AM – Breakfast. 07:30 AM – 4-hour hike to the community of Cuncani. 11:00 AM – Box Lunch. 12:00 PM – Transfer to the Lares Hot Springs (45 minutes). Relaxation time: 2 hours. 03:00 PM – Transport to the Sacred Valley (approx. 2.5 hours). 05:30 PM – Arrival to Calca.",
         highlights: ["Aguas termales de Lares"],
         highlightsEn: ["Lares Hot Springs"],
         meals: "Desayuno, Almuerzo",
@@ -766,7 +780,7 @@ export const packages: Package[] = [
     categories: ["comunidad", "rutas"],
     name: "Selva del Manu",
     nameEn: "Manu Rainforest",
-    heroImage: "/images/manu-rainforest/IMG_6466.jpg",
+    heroImage: "/images/manu-rainforest/IMG_0104.JPG",
     tagline: "Aventura en una de las zonas con mayor biodiversidad del planeta",
     taglineEn: "Adventure in one of the most biodiverse areas on Earth",
     duration: "5 días / 4 noches",
@@ -807,7 +821,8 @@ export const packages: Package[] = [
       "Botella reutilizable de agua",
       "Cámara fotográfica",
       "Documentos personales",
-      "Dinero en efectivo"
+      "Dinero en efectivo",
+      "Bastones de Trekking"
     ],
     requirementsEn: [
       "Clothing for rain and heat",
@@ -815,7 +830,8 @@ export const packages: Package[] = [
       "Refillable water bottle",
       "Camera",
       "Personal documents",
-      "Cash"
+      "Cash",
+      "Trekking Poles"
     ],
     itinerary: [
       {
@@ -885,23 +901,49 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: "53elr4b3", type: "image", url: "/images/manu-rainforest/IMG_6398.jpg" },
-      { id: "o3h21mih", type: "image", url: "/images/manu-rainforest/IMG_6416.jpg" },
-      { id: "yzbjfxm8", type: "image", url: "/images/manu-rainforest/IMG_6420.jpg" },
-      { id: "21xbo9rm", type: "image", url: "/images/manu-rainforest/IMG_6430.jpg" },
-      { id: "dbmmaxz7", type: "image", url: "/images/manu-rainforest/IMG_6466.jpg" },
-      { id: "lcyzxyd8", type: "image", url: "/images/manu-rainforest/IMG_6475.jpg" },
-      { id: "mcd6leb5", type: "image", url: "/images/manu-rainforest/IMG_6487.jpg" },
-      { id: "sm9p7gg2", type: "image", url: "/images/manu-rainforest/IMG_6498.jpg" },
-      { id: "0kb2l2z1", type: "image", url: "/images/manu-rainforest/IMG_6499.jpg" },
-      { id: "z3ahy8xf", type: "image", url: "/images/manu-rainforest/IMG_6500.jpg" },
-      { id: "aoralprx", type: "image", url: "/images/manu-rainforest/IMG_6505.jpg" },
-      { id: "z9n6fza2", type: "image", url: "/images/manu-rainforest/IMG_7642.jpg" },
-      { id: "6rkoxgnq", type: "image", url: "/images/manu-rainforest/IMG_7649.jpg" },
-      { id: "sxi0h9th", type: "image", url: "/images/manu-rainforest/IMG_7664.jpg" },
-      { id: "303una3r", type: "image", url: "/images/manu-rainforest/IMG_7672.jpg" },
-      { id: "3xyubcru", type: "image", url: "/images/manu-rainforest/IMG_7721.jpg" },
-      { id: "hykhoehy", type: "image", url: "/images/manu-rainforest/IMG_7731.jpg" }
+      { id: "mr01", type: "image", url: "/images/manu-rainforest/[000079].jpg" },
+      { id: "mr02", type: "image", url: "/images/manu-rainforest/[000283].jpg" },
+      { id: "mr03", type: "image", url: "/images/manu-rainforest/[000342].jpg" },
+      { id: "mr04", type: "image", url: "/images/manu-rainforest/[000343].jpg" },
+      { id: "mr05", type: "image", url: "/images/manu-rainforest/[000456].jpg" },
+      { id: "mr06", type: "image", url: "/images/manu-rainforest/[000529].jpg" },
+      { id: "mr07", type: "image", url: "/images/manu-rainforest/[000571].jpg" },
+      { id: "mr08", type: "image", url: "/images/manu-rainforest/[000596].jpg" },
+      { id: "mr09", type: "image", url: "/images/manu-rainforest/[000756].jpg" },
+      { id: "mr10", type: "image", url: "/images/manu-rainforest/[000800].jpg" },
+      { id: "mr11", type: "image", url: "/images/manu-rainforest/[000802].jpg" },
+      { id: "mr12", type: "image", url: "/images/manu-rainforest/[000805].jpg" },
+      { id: "mr13", type: "image", url: "/images/manu-rainforest/Copoazu.jpg" },
+      { id: "mr14", type: "image", url: "/images/manu-rainforest/Fish Tailed Palm.jpg" },
+      { id: "mr15", type: "image", url: "/images/manu-rainforest/Hibiscus.jpg" },
+      { id: "mr16", type: "image", url: "/images/manu-rainforest/IMG_0077.JPG" },
+      { id: "mr17", type: "image", url: "/images/manu-rainforest/IMG_0085.JPG" },
+      { id: "mr18", type: "image", url: "/images/manu-rainforest/IMG_0087.JPG" },
+      { id: "mr19", type: "image", url: "/images/manu-rainforest/IMG_0104.JPG" },
+      { id: "mr20", type: "image", url: "/images/manu-rainforest/IMG_2532.jpg" },
+      { id: "mr21", type: "image", url: "/images/manu-rainforest/IMG_3707.jpg" },
+      { id: "mr22", type: "image", url: "/images/manu-rainforest/IMG_6390.jpg" },
+      { id: "mr23", type: "image", url: "/images/manu-rainforest/IMG_6398.jpg" },
+      { id: "mr24", type: "image", url: "/images/manu-rainforest/IMG_6416.jpg" },
+      { id: "mr25", type: "image", url: "/images/manu-rainforest/IMG_6420.jpg" },
+      { id: "mr26", type: "image", url: "/images/manu-rainforest/IMG_6424.jpg" },
+      { id: "mr27", type: "image", url: "/images/manu-rainforest/IMG_6466.jpg" },
+      { id: "mr28", type: "image", url: "/images/manu-rainforest/IMG_6475.jpg" },
+      { id: "mr29", type: "image", url: "/images/manu-rainforest/IMG_6487.jpg" },
+      { id: "mr30", type: "image", url: "/images/manu-rainforest/IMG_6498.jpg" },
+      { id: "mr31", type: "image", url: "/images/manu-rainforest/IMG_6499.jpg" },
+      { id: "mr32", type: "image", url: "/images/manu-rainforest/IMG_6500.jpg" },
+      { id: "mr33", type: "image", url: "/images/manu-rainforest/IMG_6505.jpg" },
+      { id: "mr34", type: "image", url: "/images/manu-rainforest/IMG_7642.jpg" },
+      { id: "mr35", type: "image", url: "/images/manu-rainforest/IMG_7649.jpg" },
+      { id: "mr36", type: "image", url: "/images/manu-rainforest/IMG_8477.jpg" },
+      { id: "mr37", type: "image", url: "/images/manu-rainforest/IMG_8516.JPG" },
+      { id: "mr38", type: "image", url: "/images/manu-rainforest/IMG_8578.JPG" },
+      { id: "mr39", type: "image", url: "/images/manu-rainforest/Lim[on.jpg" },
+      { id: "mr40", type: "image", url: "/images/manu-rainforest/Pink Banana.jpg" },
+      { id: "mr41", type: "image", url: "/images/manu-rainforest/Rubarbo de Guatemala.jpg" },
+      { id: "mr42", type: "image", url: "/images/manu-rainforest/selva-manu.jpg" },
+      { id: "mr43", type: "image", url: "/images/manu-rainforest/Shapaja Palm Tree.jpg" },
     ]
   },
 
@@ -911,21 +953,21 @@ export const packages: Package[] = [
     categories: ["rutas"],
     name: "Choquequirao",
     nameEn: "Choquequirao",
-    heroImage: "/images/choquequirao/IMG_6584.jpg",
+    heroImage: "/images/choquequirao/IMG_6847.jpg",
     tagline: "Descubre la mitica ciudad perdida de los Incas y su misterio ancestral.",
     taglineEn: "Discover the mythical lost city of the Incas and its ancestral mystery.",
     duration: "4 días / 3 noches",
     durationEn: "4 days / 3 nights",
-    difficulty: "Moderado a desafiante",
-    difficultyEn: "Moderate to challenging",
+    difficulty: "Difícil / Alta Exigencia",
+    difficultyEn: "Difícil / Alta Exigencia",
     elevation: "3,900 m máx.",
     bestSeason: "",
     bestSeasonEn: "",
     price: 600,
     description: "Este trekking de 4 días conduce a uno de los complejos arqueológicos más impresionantes y menos visitados del Perú: Choquequirao. La ruta atraviesa profundos cañones, paisajes andinos y ecosistemas diversos, ofreciendo una experiencia auténtica de conexión con la naturaleza y la historia. Conocido como la hermana sagrada de Machu Picchu, Choquequirao destaca por su magnitud, misterio y ubicación estratégica. Es una experiencia ideal para viajeros que buscan aventura, reto físico y conexión cultural.",
     descriptionEn: "This 4-day trek leads to one of the most impressive and least visited archaeological sites in Peru: Choquequirao. The route crosses deep canyons, Andean landscapes, and diverse ecosystems. Known as the sacred sister of Machu Picchu, Choquequirao stands out for its scale, mystery, and strategic location. It is ideal for travelers seeking adventure, physical challenge, and cultural connection.",
-    highlights: ["Complejo arqueológico de Choquequirao", "Cañón del Apurímac", "Paisajes andinos vírgenes"],
-    highlightsEn: ["Choquequirao archaeological complex", "Apurimac Canyon", "Pristine Andean landscapes"],
+    highlights: ["Complejo arqueológico de Choquequirao", "Cañón del Apurímac" ],
+    highlightsEn: ["Choquequirao archaeological complex", "Apurimac Canyon" ],
     includes: [
       "Transporte privado ida y vuelta",
       "Alimentación y Hospedaje",
@@ -952,7 +994,8 @@ export const packages: Package[] = [
       "Botella de agua",
       "Casaca de lluvia",
       "Ropa de cambio",
-      "Cámara fotográfica"
+      "Cámara fotográfica",
+      "Bastones de trekking"
     ],
     requirementsEn: [
       "Trekking boots",
@@ -960,21 +1003,22 @@ export const packages: Package[] = [
       "Water bottle",
       "Rain jacket",
       "Change of clothes",
-      "Camera"
+      "Camera",
+      "Trekking poles"
     ],
     itinerary: [
       {
         day: 1,
         title: "Cusco – Capuliyoc – Chiquisqa",
         titleEn: "Cusco – Capuliyoc – Chiquisqa",
-        description: "Traslado desde Cusco hacia Capuliyoc y caminata en descenso durante aproximadamente 3 horas hasta Chiquisqa.",
+        description: "11:30 AM - Traslado desde Cusco hacia Capuliyoc y caminata en descenso durante aproximadamente 3 horas hasta Chiquisqa.",
         descriptionEn: "Transfer and descent hike to Chiquisqa.",
         highlights: ["Capuliyoc"],
         highlightsEn: ["Capuliyoc"],
         meals: "Almuerzo, Cena",
         mealsEn: "Lunch, Dinner",
-        accommodation: "Campamento en Chiquisqa",
-        accommodationEn: "Camping in Chiquisqa"
+        accommodation: "Refugio en Chiquisqa",
+        accommodationEn: "Refugee in Chiquisqa"
       },
       {
         day: 2,
@@ -986,21 +1030,21 @@ export const packages: Package[] = [
         highlightsEn: ["Apurimac River", "Marampata"],
         meals: "Desayuno, Almuerzo, Cena",
         mealsEn: "Breakfast, Lunch, Dinner",
-        accommodation: "Campamento en Marampata",
-        accommodationEn: "Camping in Marampata"
+        accommodation: "Refugio en Marampata",
+        accommodationEn: "Refugee in Marampata"
       },
       {
         day: 3,
         title: "Marampata – Choquequirao – Marampata",
         titleEn: "Marampata – Choquequirao – Marampata",
-        description: "Caminata hacia el complejo arqueológico de Choquequirao y exploración completa del sitio.",
+        description: "Caminata hacia el complejo arqueológico de Choquequirao y exploración completa del lugar.",
         descriptionEn: "Visit and exploration of the archaeological site.",
         highlights: ["Choquequirao"],
         highlightsEn: ["Choquequirao"],
         meals: "Desayuno, Almuerzo, Cena",
         mealsEn: "Breakfast, Lunch, Dinner",
-        accommodation: "Campamento en Marampata",
-        accommodationEn: "Camping in Marampata"
+        accommodation: "Refugio en Marampata",
+        accommodationEn: "Refugee in Marampata"
       },
       {
         day: 4,
@@ -1017,7 +1061,6 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: "c1", type: "image", url: "/images/choquequirao/IMG_6584.jpg" },
       { id: "c2", type: "image", url: "/images/choquequirao/IMG_6585.jpg" },
       { id: "c3", type: "image", url: "/images/choquequirao/IMG_6617.jpg" },
       { id: "c4", type: "image", url: "/images/choquequirao/IMG_6653-2.jpg" },
@@ -1027,13 +1070,10 @@ export const packages: Package[] = [
       { id: "c8", type: "image", url: "/images/choquequirao/IMG_6668.jpg" },
       { id: "c9", type: "image", url: "/images/choquequirao/IMG_6671.jpg" },
       { id: "c10", type: "image", url: "/images/choquequirao/IMG_6682.jpg" },
-      { id: "c11", type: "image", url: "/images/choquequirao/IMG_6682-2.jpg" },
       { id: "c12", type: "image", url: "/images/choquequirao/IMG_6693.jpg" },
       { id: "c13", type: "image", url: "/images/choquequirao/IMG_6697.jpg" },
-      { id: "c14", type: "image", url: "/images/choquequirao/IMG_6699.jpg" },
       { id: "c15", type: "image", url: "/images/choquequirao/IMG_6707.jpg" },
       { id: "c16", type: "image", url: "/images/choquequirao/IMG_6711.jpg" },
-      { id: "c17", type: "image", url: "/images/choquequirao/IMG_6714.jpg" },
       { id: "c18", type: "image", url: "/images/choquequirao/IMG_6731.jpg" },
       { id: "c19", type: "image", url: "/images/choquequirao/IMG_6737.jpg" },
       { id: "c20", type: "image", url: "/images/choquequirao/IMG_6738.jpg" },
@@ -1059,10 +1099,221 @@ export const packages: Package[] = [
     ]
   },
   {
+    id: "quishuarani-2d1n",
+    categories: ["comunidad", "rutas"],
+    name: "Quishuarani",
+    nameEn: "Quishuarani",
+    heroImage: "/images/quishuarani/IMG_9618.jpg",
+    tagline: "Se parte de una experiencia autentica con familias de comunidades alto andinas.",
+    taglineEn: "Be part of an authentic experience with families from high Andean communities.",
+    duration: "2 días / 1 noche",
+    durationEn: "2 days / 1 night",
+    difficulty: "Moderado",
+    difficultyEn: "Moderate",
+    elevation: "3900m - 4,400 m máx.",
+    bestSeason: "",
+    bestSeasonEn: "",
+    price: 350,
+    description: "Quishuarani es una comunidad alto andina ubicada en la cordillera de Urubamba, en la región de Lares. Esta experiencia permite un contacto directo con familias locales, sus costumbres, tradiciones y su forma de vida. Durante dos días y una noche, los viajeros conviven con una familia local, participando en actividades como la textilería tradicional, la ganadería y la vida comunitaria. Además, el recorrido incluye caminatas hacia lagunas y cataratas, así como la realización de una ofrenda andina con hojas de coca.",
+    descriptionEn: "Quishuarani is a high Andean community located in the Urubamba mountain range, in the Lares region. This experience offers direct contact with local families, their traditions, and way of life. For two days and one night, travelers live with a local family, participating in activities such as traditional textile making, livestock care, and daily community life. The experience also includes hikes to lagoons and waterfalls, as well as a traditional Andean offering using coca leaves.",
+    highlights: ["Convivencia familiar", "Textilería tradicional", "Laguna Qoyalay", "Cataratas de Quishuarani"],
+    highlightsEn: ["Family coexistence", "Traditional textiles", "Qoyalay lagoon", "Quishuarani waterfalls"],
+    includes: [
+      "Transporte ida y vuelta",
+      "Alimentación completa",
+      "Alojamiento y campamento",
+      "Guía profesional"
+    ],
+    includesEn: [
+      "Round-trip transportation",
+      "Full meals",
+      "Accommodation and camping",
+      "Professional guide"
+    ],
+    notIncludes: [
+      "Equipo personal",
+      "Snacks personales",
+      "Equipo de montaña",
+    ],
+    notIncludesEn: [
+      "Personal equipment",
+      "Personal snacks",
+      "Mountain equipment",
+    ],
+    requirements: [
+      "Ropa abrigadora e impermeable",
+      "Botella de agua",
+      "Documentos personales",
+      "Dinero en efectivo",
+      "Artículos de aseo",
+      "Sombrero o gorra",
+      "Bloqueador solar",
+      "Bastones de Trekking"
+    ],
+    requirementsEn: [
+      "Warm and waterproof clothing",
+      "Water bottle",
+      "Personal documents",
+      "Cash",
+      "Toiletries",
+      "Hat or cap",
+      "Sunscreen",
+      "Trekking Poles"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Valle Sagrado – Quishuarani",
+        titleEn: "Sacred Valley – Quishuarani",
+        description: "08:00 AM – Recojo en transporte privado desde el Valle Sagrado hacia la comunidad de Quishuarani. 11:00 AM – Llegada. 11:30 AM – Recepción por una familia local. 12:00 PM – Demostración de textilería tradicional. 01:00 PM – Almuerzo. 02:30 PM – Caminata hacia las cataratas de Quishuarani y la laguna Qoyalay con ofrenda simbólica. 06:00 PM – Retorno, cena y convivencia.",
+        descriptionEn: "08:00 AM – Pick-up from the Sacred Valley and transfer to Quishuarani. 11:00 AM – Arrival. 11:30 AM – Welcome by a local family. 12:00 PM – Traditional textile demonstration. 01:00 PM – Lunch. 02:30 PM – Hike to waterfalls and Qoyalay lagoon with coca leaf offering. 06:00 PM – Return, dinner and time with family.",
+        highlights: ["Textilería", "Laguna Qoyalay"],
+        highlightsEn: ["Textiles", "Qoyalay Lagoon"],
+        meals: "Almuerzo, Cena",
+        mealsEn: "Lunch, Dinner",
+        accommodation: "Casa de familia local",
+        accommodationEn: "Local family home"
+      },
+      {
+        day: 2,
+        title: "Quishuarani – Calca – Valle Sagrado",
+        titleEn: "Quishuarani – Calca – Sacred Valley",
+        description: "06:00 AM – Desayuno. 07:00 AM – Caminata de aproximadamente 3 horas atravesando quebradas, lagunas y miradores naturales. 01:00 PM – Retorno a la comunidad y almuerzo. 02:00 PM – Traslado en transporte hacia Calca. 04:30 PM – Llegada al Valle Sagrado.",
+        descriptionEn: "06:00 AM – Breakfast. 07:00 AM – Hike of approximately 3 hours through valleys, lagoons, and viewpoints. 01:00 PM – Return and lunch. 02:00 PM – Transfer to Calca. 04:30 PM – Arrival at the Sacred Valley.",
+        highlights: ["Quebradas y lagunas"],
+        highlightsEn: ["Valleys and lagoons"],
+        meals: "Desayuno, Almuerzo",
+        mealsEn: "Breakfast, Lunch",
+        accommodation: "Fin del tour",
+        accommodationEn: "End of tour"
+      }
+    ],
+    gallery: [
+      { id: "qu09", type: "image", url: "/images/quishuarani/IMG_7073.jpg" },
+      { id: "qu10", type: "image", url: "/images/quishuarani/IMG_8611.jpg" },
+      { id: "qu11", type: "image", url: "/images/quishuarani/IMG_9413.jpg" },
+      { id: "qu12", type: "image", url: "/images/quishuarani/IMG_9618.jpg" },
+      { id: "qu08", type: "image", url: "/images/quishuarani/IMG_7066-2.jpg" },
+      { id: "qu13", type: "image", url: "/images/quishuarani/IMG_9708.jpg" },
+      { id: "qu14", type: "image", url: "/images/quishuarani/IMG_9726.jpg" },
+      { id: "qu15", type: "image", url: "/images/quishuarani/IMG_9764.jpg" },
+      { id: "qu01", type: "image", url: "/images/quishuarani/IMG_1772.jpg" },
+      { id: "qu02", type: "image", url: "/images/quishuarani/IMG_3118.jpg" },
+      { id: "qu03", type: "image", url: "/images/quishuarani/IMG_3123-2.jpg" },
+      { id: "qu04", type: "image", url: "/images/quishuarani/IMG_3392-2.jpg" },
+      { id: "qu05", type: "image", url: "/images/quishuarani/IMG_3410.jpg" },
+      { id: "qu06", type: "image", url: "/images/quishuarani/IMG_3420.jpg" },
+      { id: "qu07", type: "image", url: "/images/quishuarani/IMG_3487.jpg" },
+    ]
+  },
+  {
+    id: "cancha-cancha-2d1n",
+    categories: ["comunidad", "rutas"],
+    name: "Cancha Cancha - 2 dias 1 Noche",
+    nameEn: "Cancha Cancha 2D1N",
+    heroImage: "/images/cancha-cancha/IMG_0238.jpg",
+    tagline: "Se parte de una experiencia autentica con familias de comunidades alto andinas.",
+    taglineEn: "Be part of an authentic experience with families from high Andean communities.",
+    duration: "2 días / 1 noche",
+    durationEn: "2 days / 1 night",
+    difficulty: "Moderado",
+    difficultyEn: "Moderate",
+    elevation: "3,200m - 4,400m max.",
+    bestSeason: "",
+    bestSeasonEn: "",
+    price: 290,
+    description: "Hermosa caminata por el valle de Huarán, en la cordillera de Urubamba. Iniciamos en Saywapata, recorriendo un bello valle con bosques nativos por unas 4 horas de ascenso hasta llegar a la comunidad altoandina de Cancha Cancha. Aquí seremos recibidos por una familia local, con un delicioso almuerzo, conoceremos su casa, textileria tradicional, agricultura, ganadería y compartiremos una auténtica experiencia con la naturaleza y la cultura andina. El segundo día visitamos la laguna sagrada de Wasan Qocha.",
+    descriptionEn: "Beautiful trekking over the Huaran valley, located in the Urubamba mountain range. We start from Saywapata, going through a beautiful valley with native plants and trees for about 4 hours of ascent until we reach the high Andean community of Cancha Cancha. Here we will be received by one of the local families, with a delicious local lunch, we will get to know the family house, traditional textiles, agriculture, livestock, and we will share an authentic experience with nature and Andean culture. The next day we visit Wasan Qocha sacred lake.",
+    highlights: ["Comunidad Cancha Cancha", "Laguna Wasan Qocha", "Convivencia cultural","Laguna Yanacocha"],
+    highlightsEn: ["Cancha Cancha community", "Wasan Qocha Lagoon", "Cultural coexistence","Yanacocha Lagoon"],
+    includes: [
+      "Transporte privado ida y vuelta",
+      "Guía profesional",
+      "Alimentación completa",
+      "Recepción en casa de familia local",
+      "Carga de equipaje"
+    ],
+    includesEn: [
+      "Private transportation round trip",
+      "Professional guide",
+      "Full meals",
+      "Reception in a local family house",
+      "Luggage load"
+    ],
+    notIncludes: [
+      "Snacks personales",
+      "Equipo personal de montaña"
+    ],
+    notIncludesEn: [
+      "Personal snacks",
+      "Personal mountain equipment"
+    ],
+    requirements: [
+      "Sombrero o gorra",
+      "Bloqueador solar",
+      "Botella de agua",
+      "Dinero en efectivo",
+      "DNI o Pasaporte",
+      "Cámara fotográfica",
+      "Ropa para Lluvia",
+      "Bastones de Trekking"
+    ],
+    requirementsEn: [
+      "Sun hat",
+      "Sunscreen",
+      "Water bottle",
+      "Cash for souvenirs",
+      "ID",
+      "Camera",
+      "Rain equipment",
+      "Trekking Poles"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Valle Sagrado – Saywapata – Cancha Cancha",
+        titleEn: "Sacred Valley – Saywapata – Cancha Cancha",
+        description: "08:00 AM – Recojo en transporte hacia Saywapata. 08:30 AM – Inicio de la caminata de ascenso (aprox. 4 horas). 12:30 PM – Llegada a Cancha Cancha y recepción en casa de familia local. Almuerzo y descanso. 03:00 PM – Compartir con la familia, aprender de su agricultura, textiles y animales. Posible visita a la laguna Yanaqocha para una ofrenda andina. 06:00 PM – Cena y descanso.",
+        descriptionEn: "08:00 AM – Pick-up and transfer to Saywapata. 08:30 AM – Start of the hike (approx. 4 hours). 12:30 PM – Arrival at Cancha Cancha and reception in a local family house. Lunch and rest. 03:00 PM – Share with the local family, learn about agriculture, textiles and animals. Optional visit to Yanaqocha lagoon for an Andean offering. 06:00 PM – Dinner and rest.",
+        highlights: ["Llegada a comunidad", "Experiencia cultural"],
+        highlightsEn: ["Arrival at community", "Cultural experience"],
+        meals: "Almuerzo, Cena",
+        mealsEn: "Lunch, Dinner",
+        accommodation: "Casa de familia local",
+        accommodationEn: "Local family home"
+      },
+      {
+        day: 2,
+        title: "Cancha Cancha – Wasan Qocha – Valle Sagrado",
+        titleEn: "Cancha Cancha – Wasan Qocha – Sacred Valley",
+        description: "07:00 AM – Desayuno e inicio de caminata hacia la laguna sagrada Wasan Qocha (2 horas). 10:00 AM – Llegada a la laguna, descanso y ofrenda andina. 11:00 AM – Retorno a la casa de familia (1h 20m). 12:30 PM – Almuerzo y descanso. 02:00 PM – Descenso hacia el Valle Sagrado. 04:30 PM – Fin de la caminata.",
+        descriptionEn: "07:00 AM – Breakfast and hike to Wasan Qocha sacred lake (2 hours). 10:00 AM – Arrival at the lake, rest and Andean offering. 11:00 AM – Return to family house (1h 20m). 12:30 PM – Lunch and rest. 02:00 PM – Descent to the Sacred Valley. 04:30 PM – End of hike.",
+        highlights: ["Laguna Wasan Qocha", "Ofrenda Andina"],
+        highlightsEn: ["Wasan Qocha Lake", "Andean Offering"],
+        meals: "Desayuno, Almuerzo",
+        mealsEn: "Breakfast, Lunch",
+        accommodation: "Fin del tour",
+        accommodationEn: "End of tour"
+      }
+    ],
+    gallery: [
+      { id: "cc2d1", type: "image", url: "/images/cancha-cancha/IMG_0238.jpg" },
+      { id: "cc2d2", type: "image", url: "/images/cancha-cancha/IMG_0119.jpg" },
+      { id: "cc2d3", type: "image", url: "/images/cancha-cancha/IMG_0177.jpg" },
+      { id: "cc2d4", type: "image", url: "/images/cancha-cancha/IMG_0291.jpg" },
+      { id: "cc2d5", type: "image", url: "/images/cancha-cancha/IMG_0299.jpg" },
+      { id: "cc2d6", type: "image", url: "/images/cancha-cancha/IMG_0302.jpg" },
+      { id: "cc2d7", type: "image", url: "/images/cancha-cancha/IMG_0307.jpg" },
+      { id: "cc2d8", type: "image", url: "/images/cancha-cancha/IMG_0310.jpg" },
+      { id: "cc2d9", type: "image", url: "/images/cancha-cancha/IMG_0338.jpg" },
+      { id: "cc2d10", type: "image", url: "/images/cancha-cancha/IMG_0344.jpg" }
+    ]
+  },
+  {
     id: "full-day-spiritual",
     categories: ["ceremonias"],
-    name: "Full Day Espiritual",
-    nameEn: "Full Day Spiritual",
+    name: " Ofrenda Andina y Temazcali",
+    nameEn: "Temezcali and Andean Offering",
     heroImage: "/images/coca-offering/ceremonies.jpg",
     tagline: "Conecta con rituales ancestrales de purificación y conexión con el mundo espiritual de los Andes.",
     taglineEn: "Connect with ancestral purification rituals and the spiritual world of the Andes.",
@@ -1117,14 +1368,14 @@ export const packages: Package[] = [
         day: 1,
         title: "Valle Sagrado – Arin – Temazcal – Valle Sagrado",
         titleEn: "Sacred Valley – Arin – Temazcal – Sacred Valley",
-        description: "08:00 AM – Recojo desde su alojamiento y traslado hacia el pueblo de Arin. 09:00 AM – Inicio de la ofrenda andina. 11:30 AM – Quema de la ofrenda. 12:00 PM – Ingreso al temazcal para iniciar la ceremonia. 03:00 PM – Finalización, almuerzo y tiempo de descanso. 05:00 PM – Retorno.",
-        descriptionEn: "08:00 AM – Pick-up from your accommodation and transfer to Arin village. 09:00 AM – Start of the Andean offering (approx. 1.5 hours). 11:30 AM – Burning of the offering in the sacred fire. 12:00 PM – Entry into the temazcal (sweat lodge) to begin the ceremony (approx. 3 hours). 03:00 PM – End of the ceremony, lunch, and relaxation time. 05:00 PM – Return transfer to your accommodation.",
-        highlights: ["Ofrenda Andina", "Temazcal"],
-        highlightsEn: ["Andean Offering", "Temazcal"],
+        description: "08:00 AM – Recojo desde su alojamiento y traslado hacia el pueblo de Arin. 09:00 AM – Inicio de la ofrenda andina. 11:30 AM – Quema de la ofrenda. 12:00 PM – Ingreso al temazcali para iniciar la ceremonia. 03:00 PM – Finalización, almuerzo y tiempo de descanso. 05:00 PM – Retorno.",
+        descriptionEn: "08:00 AM – Pick-up from your accommodation and transfer to Arin village. 09:00 AM – Start of the Andean offering (approx. 1.5 hours). 11:30 AM – Burning of the offering in the sacred fire. 12:00 PM – Entry into the temazcali (sweat lodge) to begin the ceremony (approx. 3 hours). 03:00 PM – End of the ceremony, lunch, and relaxation time. 05:00 PM – Return transfer to your accommodation.",
+        highlights: ["Ofrenda Andina", "Temazcali"],
+        highlightsEn: ["Andean Offering", "Temazcali"],
         meals: "Almuerzo",
         mealsEn: "Lunch",
-        accommodation: "N/A",
-        accommodationEn: "N/A"
+        accommodation: "",
+        accommodationEn: ""
       }
     ],
     gallery: [
@@ -1137,8 +1388,8 @@ export const packages: Package[] = [
   {
     id: "half-day-spiritual",
     categories: ["ceremonias"],
-    name: "Half Day Espiritual",
-    nameEn: "Half Day Spiritual",
+    name: "Ofrenda Ancestral Andina",
+    nameEn: "Ancestral Andean Offering",
     heroImage: "/images/coca-offering/ceremonies(1).jpg",
     tagline: "Se parte de una ceremonia ancestral de conexión con el mundo andino.",
     taglineEn: "Be part of an ancestral ceremony of connection with the Andean world.",
@@ -1157,14 +1408,13 @@ export const packages: Package[] = [
     includes: [
       "Ofrenda andina y limpieza energética",
       "Lectura de hojas de coca",
-      "Visita a un entorno natural",
-      "Box lunch"
+      "Refrigerio"
     ],
     includesEn: [
       "Andean offering and energy cleansing",
       "Coca leaf reading",
       "Visit to a natural setting",
-      "Box lunch"
+      "Box Lunch"
     ],
     notIncludes: [
       "Transporte"
@@ -1191,10 +1441,10 @@ export const packages: Package[] = [
         descriptionEn: "08:00 AM – Pick-up from your accommodation and transfer to an ancient temple in the Sacred Valley of the Incas. 09:00 AM – Start of the experience with coca leaf reading, followed by the preparation of the Andean offering guided by the spiritual leader. 12:30 PM – End of the experience and return.",
         highlights: ["Lectura de Coca", "Ofrenda Andina"],
         highlightsEn: ["Coca Reading", "Andean Offering"],
-        meals: "Box lunch",
-        mealsEn: "Box lunch",
-        accommodation: "N/A",
-        accommodationEn: "N/A"
+        meals: "Refrigerio",
+        mealsEn: "Box Lunch",
+        accommodation: "",
+        accommodationEn: ""
       }
     ],
     gallery: [
@@ -1204,207 +1454,7 @@ export const packages: Package[] = [
       { id: "co4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" }
     ]
   },
-  {
-    id: "quishuarani-2d1n",
-    categories: ["comunidad", "rutas"],
-    name: "Quishuarani",
-    nameEn: "Quishuarani",
-    heroImage: "/images/comunidad-1.jpg",
-    tagline: "Se parte de una experiencia autentica con familias de comunidades alto andinas.",
-    taglineEn: "Be part of an authentic experience with families from high Andean communities.",
-    duration: "2 días / 1 noche",
-    durationEn: "2 days / 1 night",
-    difficulty: "Moderado",
-    difficultyEn: "Moderate",
-    elevation: "4,400 m máx.",
-    bestSeason: "",
-    bestSeasonEn: "",
-    price: 350,
-    description: "Quishuarani es una comunidad altoandina ubicada en la cordillera del Urubamba, en la región de Lares. Esta experiencia permite un contacto directo con familias locales, sus costumbres, tradiciones y su forma de vida ancestral. Durante dos días y una noche, los viajeros conviven con una familia local, participando en actividades como la textilería tradicional, la ganadería y la vida comunitaria. Además, el recorrido incluye caminatas hacia lagunas y cataratas, así como la realización de una ofrenda andina con hojas de coca.",
-    descriptionEn: "Quishuarani is a high Andean community located in the Urubamba mountain range, in the Lares region. This experience offers direct contact with local families, their traditions, and ancestral way of life. For two days and one night, travelers live with a local family, participating in activities such as traditional textile making, livestock care, and daily community life. The experience also includes hikes to lagoons and waterfalls, as well as a traditional Andean offering using coca leaves.",
-    highlights: ["Convivencia familiar", "Textilería tradicional", "Laguna Qoyalay", "Cataratas de Quishuarani"],
-    highlightsEn: ["Family coexistence", "Traditional textiles", "Qoyalay lagoon", "Quishuarani waterfalls"],
-    includes: [
-      "Transporte ida y vuelta",
-      "Alimentación completa",
-      "Alojamiento y campamento",
-      "Equipo de montaña",
-      "Guía profesional"
-    ],
-    includesEn: [
-      "Round-trip transportation",
-      "Full meals",
-      "Accommodation and camping",
-      "Mountain equipment",
-      "Professional guide"
-    ],
-    notIncludes: [
-      "Equipo personal",
-      "Snacks personales"
-    ],
-    notIncludesEn: [
-      "Personal equipment",
-      "Personal snacks"
-    ],
-    requirements: [
-      "Ropa abrigadora e impermeable",
-      "Botella de agua",
-      "Documentos personales",
-      "Dinero en efectivo",
-      "Artículos de aseo",
-      "Sombrero o gorra",
-      "Bloqueador solar"
-    ],
-    requirementsEn: [
-      "Warm and waterproof clothing",
-      "Water bottle",
-      "Personal documents",
-      "Cash",
-      "Toiletries",
-      "Hat or cap",
-      "Sunscreen"
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Valle Sagrado – Quishuarani",
-        titleEn: "Sacred Valley – Quishuarani",
-        description: "08:00 AM – Recojo en transporte privado desde el Valle Sagrado hacia la comunidad de Quishuarani. 11:00 AM – Llegada. 11:30 AM – Recepción por una familia local. 12:00 PM – Demostración de textilería tradicional. 01:00 PM – Almuerzo. 02:30 PM – Caminata hacia las cataratas de Quishuarani y la laguna Qoyalay con ofrenda simbólica. 06:00 PM – Retorno, cena y convivencia.",
-        descriptionEn: "08:00 AM – Pick-up from the Sacred Valley and transfer to Quishuarani. 11:00 AM – Arrival. 11:30 AM – Welcome by a local family. 12:00 PM – Traditional textile demonstration. 01:00 PM – Lunch. 02:30 PM – Hike to waterfalls and Qoyalay lagoon with coca leaf offering. 06:00 PM – Return, dinner and time with family.",
-        highlights: ["Textilería", "Laguna Qoyalay"],
-        highlightsEn: ["Textiles", "Qoyalay Lagoon"],
-        meals: "Almuerzo, Cena",
-        mealsEn: "Lunch, Dinner",
-        accommodation: "Casa de familia local",
-        accommodationEn: "Local family home"
-      },
-      {
-        day: 2,
-        title: "Quishuarani – Calca – Valle Sagrado",
-        titleEn: "Quishuarani – Calca – Sacred Valley",
-        description: "06:00 AM – Desayuno tradicional. 07:00 AM – Caminata de aproximadamente 3 horas atravesando quebradas, lagunas y miradores naturales. 01:00 PM – Retorno a la comunidad y almuerzo. 02:00 PM – Traslado en transporte hacia Calca. 04:30 PM – Llegada al Valle Sagrado.",
-        descriptionEn: "06:00 AM – Traditional breakfast. 07:00 AM – Hike of approximately 3 hours through valleys, lagoons, and viewpoints. 01:00 PM – Return and lunch. 02:00 PM – Transfer to Calca. 04:30 PM – Arrival at the Sacred Valley.",
-        highlights: ["Quebradas y lagunas"],
-        highlightsEn: ["Valleys and lagoons"],
-        meals: "Desayuno, Almuerzo",
-        mealsEn: "Breakfast, Lunch",
-        accommodation: "Fin del tour",
-        accommodationEn: "End of tour"
-      }
-    ],
-    gallery: [
-      { id: "qu1", type: "image", url: "/images/comunidad-1.jpg" },
-      { id: "qu2", type: "image", url: "/images/comunidad-2.jpg" },
-      { id: "qu3", type: "image", url: "/images/comunidad-3.jpg" },
-      { id: "qu4", type: "image", url: "/images/comunidad-6.jpg" },
-      { id: "qu5", type: "image", url: "/images/comunidad.jpg" },
-      { id: "qu6", type: "image", url: "/images/textiles.jpg" },
-      { id: "qu7", type: "image", url: "/images/textiles-2.jpg" },
-      { id: "qu8", type: "image", url: "/images/textiles-3.jpg" },
-      { id: "qu9", type: "image", url: "/images/montanias.jpg" }
-    ]
-  },
-  {
-    id: "cancha-cancha-2d1n",
-    categories: ["comunidad", "rutas"],
-    name: "Cancha Cancha - 2 dias 1 Noche",
-    nameEn: "Cancha Cancha 2D1N",
-    heroImage: "/images/cancha-cancha/IMG_0238.jpg",
-    tagline: "Se parte de una experiencia autentica con familias de comunidades alto andinas.",
-    taglineEn: "Be part of an authentic experience with families from high Andean communities.",
-    duration: "2 días / 1 noche",
-    durationEn: "2 days / 1 night",
-    difficulty: "Moderado",
-    difficultyEn: "Moderate",
-    elevation: "3,200m - 4,200m",
-    bestSeason: "",
-    bestSeasonEn: "",
-    price: 290,
-    description: "Hermosa caminata por el valle de Huarán, en la cordillera de Urubamba. Iniciamos en Saywapata, recorriendo un bello valle con plantas y árboles nativos por unas 4 horas de ascenso hasta llegar a la comunidad altoandina de Cancha Cancha. Aquí seremos recibidos por una familia local, con un delicioso almuerzo, conoceremos su casa, textiles tradicionales, agricultura, ganadería y compartiremos una auténtica experiencia con la naturaleza y la cultura andina. El segundo día visitamos la laguna sagrada de Wasan Qocha.",
-    descriptionEn: "Beautiful trekking over the Huaran valley, located in the Urubamba mountain range. We start from Saywapata, going through a beautiful valley with native plants and trees for about 4 hours of ascent until we reach the high Andean community of Cancha Cancha. Here we will be received by one of the local families, with a delicious local lunch, we will get to know the family house, traditional textiles, agriculture, livestock, and we will share an authentic experience with nature and Andean culture. The next day we visit Wasan Qocha sacred lake.",
-    highlights: ["Comunidad Cancha Cancha", "Laguna Wasan Qocha", "Convivencia cultural"],
-    highlightsEn: ["Cancha Cancha community", "Wasan Qocha sacred lake", "Cultural coexistence"],
-    includes: [
-      "Transporte privado ida y vuelta",
-      "Guía profesional",
-      "Alimentación completa",
-      "Recepción en casa de familia local",
-      "Carga de equipaje"
-    ],
-    includesEn: [
-      "Private transportation round trip",
-      "Professional guide",
-      "Full meals",
-      "Reception in a local family house",
-      "Luggage load"
-    ],
-    notIncludes: [
-      "Snacks personales",
-      "Equipo personal de montaña"
-    ],
-    notIncludesEn: [
-      "Personal snacks",
-      "Personal mountain equipment"
-    ],
-    requirements: [
-      "Sombrero o gorra",
-      "Bloqueador solar",
-      "Botella de agua",
-      "Dinero en efectivo",
-      "DNI o Pasaporte",
-      "Cámara fotográfica",
-      "Ropa para Lluvia"
-    ],
-    requirementsEn: [
-      "Sun hat",
-      "Sunscreen",
-      "Water bottle",
-      "Cash for souvenirs",
-      "ID",
-      "Camera",
-      "Rain equipment"
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Valle Sagrado – Saywapata – Cancha Cancha",
-        titleEn: "Sacred Valley – Saywapata – Cancha Cancha",
-        description: "08:00 AM – Recojo en transporte hacia Saywapata. 08:30 AM – Inicio de la caminata de ascenso (aprox. 4 horas). 12:30 PM – Llegada a Cancha Cancha y recepción en casa de familia local. Almuerzo y descanso. 03:00 PM – Compartir con la familia, aprender de su agricultura, textiles y animales. Posible visita a la laguna Yanaqocha para una ofrenda andina. 06:00 PM – Cena y descanso.",
-        descriptionEn: "08:00 AM – Pick-up and transfer to Saywapata. 08:30 AM – Start of the hike (approx. 4 hours). 12:30 PM – Arrival at Cancha Cancha and reception in a local family house. Lunch and rest. 03:00 PM – Share with the local family, learn about agriculture, textiles and animals. Optional visit to Yanaqocha lagoon for an Andean offering. 06:00 PM – Dinner and rest.",
-        highlights: ["Llegada a comunidad", "Experiencia cultural"],
-        highlightsEn: ["Arrival at community", "Cultural experience"],
-        meals: "Almuerzo, Cena",
-        mealsEn: "Lunch, Dinner",
-        accommodation: "Casa de familia local",
-        accommodationEn: "Local family home"
-      },
-      {
-        day: 2,
-        title: "Cancha Cancha – Wasan Qocha – Valle Sagrado",
-        titleEn: "Cancha Cancha – Wasan Qocha – Sacred Valley",
-        description: "07:00 AM – Desayuno e inicio de caminata hacia la laguna sagrada Wasan Qocha (2 horas). 10:00 AM – Llegada a la laguna, descanso y ofrenda andina. 11:00 AM – Retorno a la casa de familia (1h 20m). 12:30 PM – Almuerzo y descanso. 02:00 PM – Descenso hacia el Valle Sagrado. 04:30 PM – Fin de la caminata.",
-        descriptionEn: "07:00 AM – Breakfast and hike to Wasan Qocha sacred lake (2 hours). 10:00 AM – Arrival at the lake, rest and Andean offering. 11:00 AM – Return to family house (1h 20m). 12:30 PM – Lunch and rest. 02:00 PM – Descent to the Sacred Valley. 04:30 PM – End of hike.",
-        highlights: ["Laguna Wasan Qocha", "Ofrenda Andina"],
-        highlightsEn: ["Wasan Qocha Lake", "Andean Offering"],
-        meals: "Desayuno, Almuerzo",
-        mealsEn: "Breakfast, Lunch",
-        accommodation: "Fin del tour",
-        accommodationEn: "End of tour"
-      }
-    ],
-    gallery: [
-      { id: "cc2d1", type: "image", url: "/images/cancha-cancha/IMG_0238.jpg" },
-      { id: "cc2d2", type: "image", url: "/images/cancha-cancha/IMG_0119.jpg" },
-      { id: "cc2d3", type: "image", url: "/images/cancha-cancha/IMG_0177.jpg" },
-      { id: "cc2d4", type: "image", url: "/images/cancha-cancha/IMG_0291.jpg" },
-      { id: "cc2d5", type: "image", url: "/images/cancha-cancha/IMG_0299.jpg" },
-      { id: "cc2d6", type: "image", url: "/images/cancha-cancha/IMG_0302.jpg" },
-      { id: "cc2d7", type: "image", url: "/images/cancha-cancha/IMG_0307.jpg" },
-      { id: "cc2d8", type: "image", url: "/images/cancha-cancha/IMG_0310.jpg" },
-      { id: "cc2d9", type: "image", url: "/images/cancha-cancha/IMG_0338.jpg" },
-      { id: "cc2d10", type: "image", url: "/images/cancha-cancha/IMG_0344.jpg" }
-    ]
-  }
+
 ];
 
 export const getPackagesByCategory = (category: ActivityCategory) =>
