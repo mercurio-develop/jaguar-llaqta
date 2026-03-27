@@ -15,7 +15,7 @@ interface ActivityCategoryCardsProps {
 
 export default function ActivityCategoryCards({ locale }: ActivityCategoryCardsProps) {
   return (
-    <section className="py-16 bg-primary">
+    <section className="py-12 bg-primary">
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-8">
           {(Object.keys(categoryLabelsConfig) as ActivityCategory[]).map((cat) => {
