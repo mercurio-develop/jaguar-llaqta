@@ -49,17 +49,17 @@ export const difficultyFilters = [
   {
     id: "moderado",
     label: { es: "Moderado", en: "Moderate" },
-    check: (d: string) => /moderado|moderada|moderate/i.test(d) && !/desafiante|challeng|difícil|dificil|difficult/i.test(d),
+    check: (d: string) => /moderado|moderada|moderate/i.test(d),
   },
   {
     id: "desafiante",
     label: { es: "Desafiante", en: "Challenging" },
-    check: (d: string) => /desafiante|challeng/i.test(d) && !/difícil|dificil|difficult|alta exigencia|high demand/i.test(d),
+    check: (d: string) => /desafiante|challeng/i.test(d),
   },
   {
     id: "alta-exigencia",
-    label: { es: "Alta Exigencia", en: "Hard to High Demand" },
-    check: (d: string) => /difícil|dificil|difficult|alta exigencia|high demand/i.test(d),
+    label: { es: "Alta Exigencia", en: "High Demand" },
+    check: (d: string) => /alta exigencia|high demand/i.test(d),
   },
 ];
 

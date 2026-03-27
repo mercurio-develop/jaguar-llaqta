@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Clock } from "lucide-react";
+import { Clock, Mountain } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { type Package, type ActivityCategory } from "@/config/packages";
@@ -75,9 +75,17 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
                 {locale === "es" ? pkg.name : pkg.nameEn}
               </h3>
 
-              <div className="flex items-center gap-2 text-muted text-sm mb-3">
-                <Clock className="w-4 h-4 text-accent" />
-                <span>{locale === "es" ? pkg.duration : (pkg.durationEn || pkg.duration)}</span>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-muted text-sm mb-3">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-accent" />
+                  <span>{locale === "es" ? pkg.duration : (pkg.durationEn || pkg.duration)}</span>
+                </div>
+                {pkg.difficulty && (
+                  <div className="flex items-center gap-2">
+                    <Mountain className="w-4 h-4 text-accent" />
+                    <span>{locale === "es" ? pkg.difficulty : (pkg.difficultyEn || pkg.difficulty)}</span>
+                  </div>
+                )}
               </div>
 
               <p className="text-muted text-sm leading-relaxed mb-4 flex-1 line-clamp-2">
