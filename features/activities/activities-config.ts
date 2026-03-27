@@ -40,6 +40,29 @@ export const categoryDescriptions: Record<ActivityCategory, { es: string; en: st
   },
 };
 
+export const difficultyFilters = [
+  {
+    id: "facil",
+    label: { es: "Fácil", en: "Easy" },
+    check: (d: string) => /fácil|facil|easy/i.test(d),
+  },
+  {
+    id: "moderado",
+    label: { es: "Moderado", en: "Moderate" },
+    check: (d: string) => /moderado|moderada|moderate/i.test(d) && !/desafiante|challeng|difícil|dificil|difficult/i.test(d),
+  },
+  {
+    id: "desafiante",
+    label: { es: "Desafiante", en: "Challenging" },
+    check: (d: string) => /desafiante|challeng/i.test(d) && !/difícil|dificil|difficult|alta exigencia|high demand/i.test(d),
+  },
+  {
+    id: "alta-exigencia",
+    label: { es: "Alta Exigencia", en: "Hard to High Demand" },
+    check: (d: string) => /difícil|dificil|difficult|alta exigencia|high demand/i.test(d),
+  },
+];
+
 export const durationFilters = [
   { id: "half-day", label: { es: "Medio día", en: "Half day" }, check: (d: string) => d.toLowerCase().includes("medio") || d.toLowerCase().includes("half") },
   { id: "full-day", label: { es: "Día completo", en: "Full day" }, check: (d: string) => d.toLowerCase().includes("día completo") || d.toLowerCase().includes("full day") || d.includes("8 horas") },

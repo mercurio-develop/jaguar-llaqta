@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Gallery from "@/components/Gallery";
 import { packages, type ActivityCategory } from "@/config/packages";
-import { durationFilters } from "@/features/activities/activities-config";
+import { durationFilters, difficultyFilters } from "@/features/activities/activities-config";
 import ActivityCategoryCards from "@/features/activities/components/ActivityCategoryCards";
 import ActivityFilters from "@/features/activities/components/ActivityFilters";
 import PackageGrid from "@/features/activities/components/PackageGrid";
@@ -16,22 +16,22 @@ export default function AllActivitiesPage() {
 
   const [selectedCategories, setSelectedCategories] = useState<ActivityCategory[]>([]);
   const [selectedDuration, setSelectedDuration] = useState<string | "all">("all");
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
 
   const filteredPackages = packages.filter((pkg) => {
     const matchCategory = selectedCategories.length === 0 || pkg.categories.some((c) => selectedCategories.includes(c));
     const matchDuration = selectedDuration === "all" || durationFilters.find(f => f.id === selectedDuration)?.check(pkg.duration);
-    const matchPrice = pkg.price >= priceRange[0] && pkg.price <= priceRange[1];
-    return matchCategory && matchDuration && matchPrice;
-  }).sort((a, b) => b.price - a.price);
+    const matchDifficulty = selectedDifficulty === "all" || (pkg.difficulty ? difficultyFilters.find(f => f.id === selectedDifficulty)?.check(pkg.difficulty) : false);
+    return matchCategory && matchDuration && matchDifficulty;
+  });
 
   const clearFilters = () => {
     setSelectedCategories([]);
     setSelectedDuration("all");
-    setPriceRange([0, 1000]);
+    setSelectedDifficulty("all");
   };
 
-  const hasActiveFilters = selectedCategories.length > 0 || selectedDuration !== "all" || priceRange[0] > 0 || priceRange[1] < 1000;
+  const hasActiveFilters = selectedCategories.length > 0 || selectedDuration !== "all" || selectedDifficulty !== "all";
 
   return (
     <div className="pt-20">
@@ -64,11 +64,13 @@ export default function AllActivitiesPage() {
             onClearCategories={() => setSelectedCategories([])}
             selectedDuration={selectedDuration}
             onDurationChange={setSelectedDuration}
+            selectedDifficulty={selectedDifficulty}
+            onDifficultyChange={setSelectedDifficulty}
             onClear={clearFilters}
             hasActiveFilters={hasActiveFilters}
           />
 
-          <p className="text-muted text-sm mb-6">
+          <p className="text-accent text-base capitalize tracking-wider mb-6">
             {filteredPackages.length} {locale === "es" ? "experiencias encontradas" : "experiences found"}
           </p>
 

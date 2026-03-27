@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { type ActivityCategory } from "@/config/packages";
-import { categoryLabelsConfig, durationFilters } from "@/features/activities/activities-config";
+import { categoryLabelsConfig, durationFilters, difficultyFilters } from "@/features/activities/activities-config";
 import FilterShell from "./FilterShell";
 
 interface ActivityFiltersProps {
@@ -12,6 +12,8 @@ interface ActivityFiltersProps {
   onClearCategories: () => void;
   selectedDuration: string | "all";
   onDurationChange: (dur: string | "all") => void;
+  selectedDifficulty: string;
+  onDifficultyChange: (d: string) => void;
   onClear: () => void;
   hasActiveFilters: boolean;
 }
@@ -27,10 +29,15 @@ export default function ActivityFilters({
   onClearCategories,
   selectedDuration,
   onDurationChange,
+  selectedDifficulty,
+  onDifficultyChange,
   onClear,
   hasActiveFilters,
 }: ActivityFiltersProps) {
-  const activeCount = selectedCategories.length + (selectedDuration !== "all" ? 1 : 0);
+  const activeCount =
+    selectedCategories.length +
+    (selectedDuration !== "all" ? 1 : 0) +
+    (selectedDifficulty !== "all" ? 1 : 0);
 
   return (
     <FilterShell locale={locale} activeCount={activeCount} onClear={onClear}>
@@ -82,6 +89,31 @@ export default function ActivityFilters({
             ))}
           </div>
         </div>
+
+        {/* Difficulty */}
+        <div>
+          <p className="text-muted text-xs uppercase tracking-wider mb-2">
+            {locale === "es" ? "Dificultad" : "Difficulty"}
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            <button
+              onClick={() => onDifficultyChange("all")}
+              className={cn(chipBase, selectedDifficulty === "all" ? "bg-accent text-primary border-accent" : chipInactive)}
+            >
+              {locale === "es" ? "Todos" : "All"}
+            </button>
+            {difficultyFilters.map((f) => (
+              <button
+                key={f.id}
+                onClick={() => onDifficultyChange(f.id)}
+                className={cn(chipBase, selectedDifficulty === f.id ? chipActive : chipInactive)}
+              >
+                {f.label[locale]}
+              </button>
+            ))}
+          </div>
+        </div>
+
       </div>
     </FilterShell>
   );

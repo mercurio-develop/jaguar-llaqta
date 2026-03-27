@@ -3,14 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Clock, Mountain, MapPin, Calendar, ArrowRight, Check, ArrowUpDown } from "lucide-react";
+import { Clock, Mountain, MapPin, Calendar, ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import LazyImage from "@/components/ui/LazyImage";
 import { categoryConfig } from "./category-config";
 import { getPackagesByCategory, type ActivityCategory } from "@/config/packages";
-import { durationFilters } from "@/features/activities/activities-config";
+import { durationFilters, difficultyFilters } from "@/features/activities/activities-config";
 import FilterShell from "./FilterShell";
 
 interface CategoryPackageListProps {
@@ -28,25 +28,22 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
   const config = categoryConfig[category];
   const allPackages = getPackagesByCategory(category);
 
-  const difficulties = Array.from(
-    new Set(allPackages.map((p) => p.difficulty).filter(Boolean))
-  ) as string[];
+  const difficulties = difficultyFilters.filter((f) =>
+    allPackages.some((p) => p.difficulty && f.check(p.difficulty))
+  );
 
   const [selectedDuration, setSelectedDuration] = useState<string>("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
-  const [sortPrice, setSortPrice] = useState<"asc" | "desc">("desc");
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
   const activeCount =
     (selectedDuration !== "all" ? 1 : 0) +
-    (selectedDifficulty !== "all" ? 1 : 0) +
-    (sortPrice !== "desc" ? 1 : 0);
+    (selectedDifficulty !== "all" ? 1 : 0);
 
   const clearAll = () => {
     setSelectedDuration("all");
     setSelectedDifficulty("all");
-    setSortPrice("desc");
   };
 
   const scrollToResults = () => {
@@ -59,10 +56,9 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
         selectedDuration === "all" ||
         durationFilters.find((f) => f.id === selectedDuration)?.check(pkg.duration);
       const matchDifficulty =
-        selectedDifficulty === "all" || pkg.difficulty === selectedDifficulty;
+        selectedDifficulty === "all" || (pkg.difficulty ? difficultyFilters.find(f => f.id === selectedDifficulty)?.check(pkg.difficulty) : false);
       return matchDuration && matchDifficulty;
-    })
-    .sort((a, b) => sortPrice === "desc" ? b.price - a.price : a.price - b.price);
+    });
 
   // Scroll reveal
   const [visibleIds, setVisibleIds] = useState<Set<string>>(new Set());
@@ -116,30 +112,15 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
             <button onClick={() => setSelectedDifficulty("all")} className={cn(chipBase, selectedDifficulty === "all" ? "bg-accent text-primary border-accent" : chipInactive)}>
               {locale === "es" ? "Todos" : "All"}
             </button>
-            {difficulties.map((d) => (
-              <button key={d} onClick={() => setSelectedDifficulty(d)} className={cn(chipBase, selectedDifficulty === d ? chipActive : chipInactive)}>
-                {d}
+            {difficulties.map((f) => (
+              <button key={f.id} onClick={() => setSelectedDifficulty(f.id)} className={cn(chipBase, selectedDifficulty === f.id ? chipActive : chipInactive)}>
+                {f.label[locale]}
               </button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Sort by price */}
-      <div>
-        <p className="text-muted text-xs uppercase tracking-wider mb-2">
-          {locale === "es" ? "Precio" : "Price"}
-        </p>
-        <button
-          onClick={() => setSortPrice((p) => p === "desc" ? "asc" : "desc")}
-          className={cn(chipBase, "flex items-center gap-1.5", chipActive)}
-        >
-          <ArrowUpDown className="w-3 h-3" />
-          {sortPrice === "desc"
-            ? (locale === "es" ? "Mayor a menor" : "High to low")
-            : (locale === "es" ? "Menor a mayor" : "Low to high")}
-        </button>
-      </div>
     </div>
   );
 
@@ -152,7 +133,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
 
         {/* Results anchor */}
         <div ref={resultsRef}>
-          <p className="text-muted text-sm mb-6">
+          <p className="text-accent text-base capitalize tracking-wider mb-6">
             {filtered.length} {locale === "es" ? "experiencias" : "experiences"}
           </p>
 
