@@ -36,7 +36,7 @@ function FilterContent({
           <button
             onClick={onClearCategories}
             className={cn(
-              "px-2.5 py-1 text-xs transition-all border rounded",
+              "px-2.5 py-1 text-xs md:text-sm transition-all border rounded",
               selectedCategories.length === 0
                 ? "bg-accent text-primary border-accent"
                 : "border-white/20 text-muted hover:text-white hover:border-white/40"
@@ -49,7 +49,7 @@ function FilterContent({
               key={cat}
               onClick={() => onCategoriesChange(cat)}
               className={cn(
-                "px-2.5 py-1 text-xs transition-all border rounded flex items-center gap-1",
+                "px-2.5 py-1 text-xs md:text-sm transition-all border rounded flex items-center gap-1",
                 selectedCategories.includes(cat)
                   ? "bg-accent/10 text-accent border-accent/30"
                   : "border-white/20 text-muted hover:text-white hover:border-white/40"
@@ -70,7 +70,7 @@ function FilterContent({
           <button
             onClick={() => onDurationChange("all")}
             className={cn(
-              "px-2.5 py-1 text-xs transition-all border rounded",
+              "px-2.5 py-1 text-xs md:text-sm transition-all border rounded",
               selectedDuration === "all"
                 ? "bg-accent text-primary border-accent"
                 : "border-white/20 text-muted hover:text-white hover:border-white/40"
@@ -83,7 +83,7 @@ function FilterContent({
               key={filter.id}
               onClick={() => onDurationChange(filter.id)}
               className={cn(
-                "px-2.5 py-1 text-xs transition-all border rounded",
+                "px-2.5 py-1 text-xs md:text-sm transition-all border rounded",
                 selectedDuration === filter.id
                   ? "bg-accent/10 text-accent border-accent/30"
                   : "border-white/20 text-muted hover:text-white hover:border-white/40"
