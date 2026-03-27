@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Clock, Mountain, MapPin, Calendar, ArrowRight, Check } from "lucide-react";
@@ -7,6 +8,7 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { categoryConfig } from "./category-config";
 import { getPackagesByCategory, type ActivityCategory } from "@/config/packages";
+import LazyImage from "@/components/ui/LazyImage";
 
 interface CategoryPackageListProps {
   category: ActivityCategory;
@@ -19,6 +21,29 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
   const config = categoryConfig[category];
   const categoryPackages = getPackagesByCategory(category).sort((a, b) => b.price - a.price);
 
+  const [visibleIds, setVisibleIds] = useState<Set<string>>(new Set());
+  const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("data-id");
+            if (id) {
+              setVisibleIds((prev) => new Set(prev).add(id));
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      { rootMargin: "0px 0px -60px 0px" }
+    );
+
+    Object.values(cardRefs.current).forEach((el) => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-16 bg-primary">
       <div className="container-custom">
@@ -28,15 +53,23 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
 
         <div className="space-y-8">
           {categoryPackages.map((pkg) => (
-            <Card key={pkg.id} className="p-0 overflow-hidden border border-support">
+            <div
+              key={pkg.id}
+              data-id={pkg.id}
+              ref={(el) => { cardRefs.current[pkg.id] = el; }}
+              className={`transition-all duration-700 ease-out ${
+                visibleIds.has(pkg.id)
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+            >
+            <Card className="p-0 overflow-hidden border border-support">
               <div className="grid md:grid-cols-5 gap-0">
                 {/* Image */}
                 <div className="md:col-span-2 aspect-[4/3] md:aspect-auto bg-support/50 relative min-h-[250px] overflow-hidden">
-                  <img
+                  <LazyImage
                     src={pkg.heroImage || (pkg.gallery.find((g) => g.type === "image" && g.url)?.url) || config.heroImage}
                     alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/10" />
                 </div>
@@ -110,6 +143,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
                 </div>
               </div>
             </Card>
+            </div>
           ))}
         </div>
       </div>

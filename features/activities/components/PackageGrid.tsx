@@ -1,11 +1,13 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Clock } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { type Package, type ActivityCategory } from "@/config/packages";
 import { categoryLabelsConfig, categoryImages } from "@/features/activities/activities-config";
+import LazyImage from "@/components/ui/LazyImage";
 
 interface PackageGridProps {
   locale: "es" | "en";
@@ -13,7 +15,19 @@ interface PackageGridProps {
 }
 
 export default function PackageGrid({ locale, packages }: PackageGridProps) {
-  if (packages.length === 0) {
+  const [displayed, setDisplayed] = useState(packages);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    setFading(true);
+    const t = setTimeout(() => {
+      setDisplayed(packages);
+      setFading(false);
+    }, 200);
+    return () => clearTimeout(t);
+  }, [packages]);
+
+  if (displayed.length === 0 && !fading) {
     return (
       <div className="text-center py-12">
         <p className="text-muted">
@@ -26,21 +40,22 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {packages.map((pkg) => {
+    <div
+      className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-opacity duration-200"
+      style={{ opacity: fading ? 0 : 1 }}
+    >
+      {displayed.map((pkg, idx) => {
         const pkgImage =
           pkg.heroImage ||
           (pkg.gallery.find(g => g.type === "image" && g.url)?.url) ||
           categoryImages[pkg.categories[0]];
         return (
-          <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support">
+          <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support animate-card-in" style={{ animationDelay: `${idx * 80}ms` }}>
             {/* Image */}
             <div className="aspect-[16/10] bg-support/50 relative overflow-hidden">
-              <img
+              <LazyImage
                 src={pkgImage}
                 alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/10" />
               <div className="absolute top-3 left-3">
