@@ -15,6 +15,7 @@ interface ActivityFiltersProps {
   selectedDifficulty: string;
   onDifficultyChange: (d: string) => void;
   onClear: () => void;
+  onClose?: () => void;
   hasActiveFilters: boolean;
 }
 
@@ -32,6 +33,7 @@ export default function ActivityFilters({
   selectedDifficulty,
   onDifficultyChange,
   onClear,
+  onClose,
   hasActiveFilters,
 }: ActivityFiltersProps) {
   const activeCount =
@@ -40,7 +42,7 @@ export default function ActivityFilters({
     (selectedDifficulty !== "all" ? 1 : 0);
 
   return (
-    <FilterShell locale={locale} activeCount={activeCount} onClear={onClear}>
+    <FilterShell locale={locale} activeCount={activeCount} onClear={onClear} onClose={onClose}>
       <div className="flex flex-wrap gap-6">
         {/* Category */}
         <div>

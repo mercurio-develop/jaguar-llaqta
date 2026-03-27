@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Gallery from "@/components/Gallery";
 import { packages, type ActivityCategory } from "@/config/packages";
@@ -13,6 +13,9 @@ export default function AllActivitiesPage() {
   const t = useTranslations("activities");
   const tNav = useTranslations("nav");
   const locale = useLocale() as "es" | "en";
+
+  const resultsRef = useRef<HTMLDivElement>(null);
+  const scrollToResults = () => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   const [selectedCategories, setSelectedCategories] = useState<ActivityCategory[]>([]);
   const [selectedDuration, setSelectedDuration] = useState<string | "all">("all");
@@ -67,9 +70,11 @@ export default function AllActivitiesPage() {
             selectedDifficulty={selectedDifficulty}
             onDifficultyChange={setSelectedDifficulty}
             onClear={clearFilters}
+            onClose={scrollToResults}
             hasActiveFilters={hasActiveFilters}
           />
 
+          <div ref={resultsRef} />
           <p className="text-accent text-base capitalize tracking-wider mb-6">
             {filteredPackages.length} {locale === "es" ? "experiencias encontradas" : "experiences found"}
           </p>
