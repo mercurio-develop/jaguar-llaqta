@@ -85,7 +85,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
     );
     Object.values(cardRefs.current).forEach((el) => { if (el) observer.observe(el); });
     return () => observer.disconnect();
-  }, []);
+  }, [filtered]);
 
   const filterContent = (
     <div className="flex flex-wrap gap-6">
