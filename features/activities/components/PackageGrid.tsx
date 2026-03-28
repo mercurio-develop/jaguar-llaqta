@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Clock } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+import ProtectedImage from "@/components/ui/ProtectedImage";
 import { type Package, type ActivityCategory } from "@/config/packages";
 import { categoryLabelsConfig, categoryImages } from "@/features/activities/activities-config";
 
@@ -36,11 +37,10 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
           <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support">
             {/* Image */}
             <div className="aspect-[16/10] bg-support/50 relative overflow-hidden">
-              <img
+              <ProtectedImage
                 src={pkgImage}
                 alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
                 className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/10" />
               <div className="absolute top-3 left-3">

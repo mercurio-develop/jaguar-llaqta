@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Clock, Mountain, MapPin, Calendar, ArrowRight, Check } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+import ProtectedImage from "@/components/ui/ProtectedImage";
 import { categoryConfig } from "./category-config";
 import { getPackagesByCategory, type ActivityCategory } from "@/config/packages";
 
@@ -32,11 +33,10 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
               <div className="grid md:grid-cols-5 gap-0">
                 {/* Image */}
                 <div className="md:col-span-2 aspect-[4/3] md:aspect-auto bg-support/50 relative min-h-[250px] overflow-hidden">
-                  <img
+                  <ProtectedImage
                     src={pkg.heroImage || (pkg.gallery.find((g) => g.type === "image" && g.url)?.url) || config.heroImage}
                     alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
                     className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/10" />
                 </div>
