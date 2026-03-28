@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ImageProtection from "@/components/ImageProtection";
 
 export const metadata: Metadata = {
   title: {
@@ -133,6 +134,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-primary min-h-screen flex flex-col">
+        <ImageProtection />
         {children}
       </body>
     </html>
