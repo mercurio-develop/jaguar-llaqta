@@ -944,6 +944,13 @@ export const packages: Package[] = [
       { id: "mr41", type: "image", url: "/images/manu-rainforest/Rubarbo de Guatemala.jpg" },
       { id: "mr42", type: "image", url: "/images/manu-rainforest/selva-manu.jpg" },
       { id: "mr43", type: "image", url: "/images/manu-rainforest/Shapaja Palm Tree.jpg" },
+      { id: "mr44", type: "image", url: "/images/manu-rainforest/IMG_6598 (1).jpg" },
+      { id: "mr45", type: "image", url: "/images/manu-rainforest/manu.jpg" },
+      { id: "mr46", type: "image", url: "/images/manu-rainforest/manu(1).jpg" },
+      { id: "mr47", type: "image", url: "/images/manu-rainforest/manu(2).jpg" },
+      { id: "mr48", type: "image", url: "/images/manu-rainforest/manu(3).jpg" },
+      { id: "mr49", type: "image", url: "/images/manu-rainforest/manu(4).jpg" },
+      { id: "mr50", type: "image", url: "/images/manu-rainforest/manu(5).jpg" },
     ]
   },
 
@@ -1307,7 +1314,9 @@ export const packages: Package[] = [
       { id: "cc2d8", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8591.jpg" },
       { id: "cc2d9", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8601.jpg" },
       { id: "cc2d10", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8614.jpg" },
-      { id: "cc2d11", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8616.jpg" }
+      { id: "cc2d11", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8616.jpg" },
+      { id: "cc2d12", type: "image", url: "/images/cancha-cancha-2d-1n/canchacancha.jpg" },
+      { id: "cc2d13", type: "image", url: "/images/cancha-cancha-2d-1n/canchacancha-2.jpg" }
     ]
   },
   {
@@ -1383,7 +1392,24 @@ export const packages: Package[] = [
       { id: "fd1", type: "image", url: "/images/coca-offering/ceremonies.jpg" },
       { id: "fd2", type: "image", url: "/images/coca-offering/ceremonies(1).jpg" },
       { id: "fd3", type: "image", url: "/images/coca-offering/ceremonies(2).jpg" },
-      { id: "fd4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" }
+      { id: "fd4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" },
+      { id: "fd5", type: "image", url: "/images/coca-offering/ceremonia.jpg" },
+      { id: "fd6", type: "image", url: "/images/coca-offering/ceremonia(1).jpg" },
+      { id: "fd7", type: "image", url: "/images/coca-offering/ceremonia(2).jpg" },
+      { id: "fd8", type: "image", url: "/images/coca-offering/ceremonia(3).jpg" },
+      { id: "fd9", type: "image", url: "/images/coca-offering/ceremonia(4).jpg" },
+      { id: "fd10", type: "image", url: "/images/coca-offering/ceremonia(5).jpg" },
+      { id: "fd11", type: "image", url: "/images/coca-offering/ceremonia(6).jpg" },
+      { id: "fd12", type: "image", url: "/images/coca-offering/ceremonia(7).jpg" },
+      { id: "fd13", type: "image", url: "/images/coca-offering/ceremonia(8).jpg" },
+      { id: "fd14", type: "image", url: "/images/coca-offering/ceremonia(9).jpg" },
+      { id: "fd15", type: "image", url: "/images/coca-offering/ceremonia(10).jpg" },
+      { id: "fd16", type: "image", url: "/images/coca-offering/ceremonia(11).jpg" },
+      { id: "fd17", type: "image", url: "/images/coca-offering/ceremonia(12).jpg" },
+      { id: "fd18", type: "image", url: "/images/coca-offering/ceremonia(13).jpg" },
+      { id: "fd19", type: "image", url: "/images/coca-offering/ceremonia(14).jpg" },
+      { id: "fd20", type: "image", url: "/images/coca-offering/ceremonia(15).jpg" },
+      { id: "fd21", type: "image", url: "/images/coca-offering/ceremonia(16).jpg" }
     ]
   },
   {
@@ -1452,14 +1478,65 @@ export const packages: Package[] = [
       { id: "co1", type: "image", url: "/images/coca-offering/ceremonies.jpg" },
       { id: "co2", type: "image", url: "/images/coca-offering/ceremonies(1).jpg" },
       { id: "co3", type: "image", url: "/images/coca-offering/ceremonies(2).jpg" },
-      { id: "co4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" }
+      { id: "co4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" },
+      { id: "co5", type: "image", url: "/images/coca-offering/ceremonia.jpg" },
+      { id: "co6", type: "image", url: "/images/coca-offering/ceremonia(1).jpg" },
+      { id: "co7", type: "image", url: "/images/coca-offering/ceremonia(2).jpg" },
+      { id: "co8", type: "image", url: "/images/coca-offering/ceremonia(3).jpg" },
+      { id: "co9", type: "image", url: "/images/coca-offering/ceremonia(4).jpg" },
+      { id: "co10", type: "image", url: "/images/coca-offering/ceremonia(5).jpg" },
+      { id: "co11", type: "image", url: "/images/coca-offering/ceremonia(6).jpg" },
+      { id: "co12", type: "image", url: "/images/coca-offering/ceremonia(7).jpg" },
+      { id: "co13", type: "image", url: "/images/coca-offering/ceremonia(8).jpg" },
+      { id: "co14", type: "image", url: "/images/coca-offering/ceremonia(9).jpg" },
+      { id: "co15", type: "image", url: "/images/coca-offering/ceremonia(10).jpg" },
+      { id: "co16", type: "image", url: "/images/coca-offering/ceremonia(11).jpg" },
+      { id: "co17", type: "image", url: "/images/coca-offering/ceremonia(12).jpg" },
+      { id: "co18", type: "image", url: "/images/coca-offering/ceremonia(13).jpg" },
+      { id: "co19", type: "image", url: "/images/coca-offering/ceremonia(14).jpg" },
+      { id: "co20", type: "image", url: "/images/coca-offering/ceremonia(15).jpg" },
+      { id: "co21", type: "image", url: "/images/coca-offering/ceremonia(16).jpg" }
     ]
   },
 
 ];
 
-export const getPackagesByCategory = (category: ActivityCategory) =>
-  packages.filter((p) => p.categories.includes(category));
+const categoryOrder: Record<ActivityCategory, string[]> = {
+  rutas: [
+    "naupa-waka",
+    "cancha-cancha",
+    "inti-punku",
+    "lares-trek-3d2n",
+    "pumawanka",
+    "ausangate-trek-3d2n",
+    "pumamarca",
+    "quishuarani-2d1n",
+    "cancha-cancha-2d1n",
+    "choquequirao-trek",
+    "manu-rainforest-5d4n",
+  ],
+  comunidad: [
+    "cancha-cancha",
+    "cancha-cancha-2d1n",
+    "lares-trek-3d2n",
+    "quishuarani-2d1n",
+    "ausangate-trek-3d2n",
+  ],
+  ceremonias: [],
+};
+
+export const getPackagesByCategory = (category: ActivityCategory) => {
+  const order = categoryOrder[category];
+  const filtered = packages.filter((p) => p.categories.includes(category));
+  if (!order.length) return filtered;
+  return filtered.sort((a, b) => {
+    const ai = order.indexOf(a.id);
+    const bi = order.indexOf(b.id);
+    const aPos = ai === -1 ? Infinity : ai;
+    const bPos = bi === -1 ? Infinity : bi;
+    return aPos - bPos;
+  });
+};
 
 export const getPackageById = (id: string) =>
   packages.find((p) => p.id === id);
