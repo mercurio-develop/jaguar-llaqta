@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { Mountain, Users, Sparkles, Image as ImageIcon, Play, X, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import { Mountain, Users, Sparkles, Image as ImageIcon, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { packages, type ActivityCategory } from "@/config/packages";
 import { type GalleryItem } from "@/config/packages";
@@ -46,71 +47,6 @@ const defaultGalleryItems: Array<{
   { id: "fallback-18", categories: ["ceremonias"], type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
 ];
 
-// Lazy image component with intersection observer
-function LazyImage({
-  src,
-  alt,
-  className,
-  onLoad
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-  onLoad?: () => void;
-}) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "100px" }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div ref={imgRef} className="w-full h-full">
-      {isInView ? (
-        <>
-          {!isLoaded && (
-            <div className="absolute inset-0 bg-support flex items-center justify-center">
-              <Loader2 className="w-6 h-6 text-accent animate-spin" />
-            </div>
-          )}
-          <img
-            src={src}
-            alt={alt}
-            className={cn(
-              className,
-              "transition-opacity duration-300",
-              isLoaded ? "opacity-100" : "opacity-0"
-            )}
-            onLoad={() => {
-              setIsLoaded(true);
-              onLoad?.();
-            }}
-          />
-        </>
-      ) : (
-        <div className="w-full h-full bg-support flex items-center justify-center">
-          <ImageIcon className="w-8 h-8 text-white/20" />
-        </div>
-      )}
-    </div>
-  );
-}
 
 interface GalleryProps {
   locale: "es" | "en";
@@ -316,12 +252,15 @@ export default function Gallery({
                 </div>
               )}
 
-              {/* Image with lazy loading */}
+              {/* Grid thumbnail */}
               {item.url ? (
-                <LazyImage
+                <Image
                   src={item.url}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  quality={75}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover"
                 />
               ) : (
                 <div className="w-full h-full bg-support flex items-center justify-center">
@@ -374,15 +313,20 @@ export default function Gallery({
           )}
 
           <div className="max-w-6xl w-full">
-            <div className="h-[70vh] bg-support rounded-lg flex items-center justify-center overflow-hidden">
+            {/* Lightbox main — max quality, full viewport */}
+            <div className="h-[70vh] bg-support rounded-lg relative overflow-hidden">
               {filteredItems[currentIndex]?.url ? (
-                <img
-                  src={filteredItems[currentIndex]?.url}
-                  alt={filteredItems[currentIndex]?.title}
-                  className="w-full h-full object-contain"
+                <Image
+                  src={filteredItems[currentIndex].url}
+                  alt={filteredItems[currentIndex].title}
+                  fill
+                  quality={90}
+                  sizes="100vw"
+                  className="object-contain"
+                  priority
                 />
               ) : (
-                <p className="text-muted">{filteredItems[currentIndex]?.title}</p>
+                <p className="text-muted flex items-center justify-center h-full">{filteredItems[currentIndex]?.title}</p>
               )}
             </div>
             <div className="text-center mt-4">
@@ -408,13 +352,16 @@ export default function Gallery({
                       style={{ width: 180, height: 120 }}
                       title={item.title}
                     >
+                      {/* Thumbnail strip — lowest quality, tiny fixed size */}
                       {item.url ? (
-                        <img
+                        <Image
                           src={item.url}
                           alt={item.title}
-                          loading="lazy"
+                          fill
+                          quality={40}
+                          sizes="180px"
                           className={cn(
-                            "w-full h-full object-cover",
+                            "object-cover",
                             isActive ? "opacity-100" : "opacity-90"
                           )}
                         />

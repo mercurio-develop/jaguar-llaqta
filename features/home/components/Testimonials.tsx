@@ -4,7 +4,8 @@ import { useRef, useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Star, Quote } from "lucide-react";
 
-const PAGE_SIZE = 1;
+const PAGE_SIZE = 6;
+const INITIAL_COUNT = 6;
 
 const testimonials = [
   {
@@ -73,17 +74,42 @@ export default function Testimonials() {
   const t = useTranslations("home");
   const locale = useLocale() as "es" | "en";
 
-  const [visibleCount, setVisibleCount] = useState(2);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
   const [expanded, setExpanded] = useState<Record<number, boolean>>({});
   const [needsTruncation, setNeedsTruncation] = useState<Record<number, boolean>>({});
 
-  const sentinelRef = useRef<HTMLDivElement>(null);
-  const visibleCountRef = useRef(visibleCount);
-  visibleCountRef.current = visibleCount;
+  const cardRefs = useRef<Record<number, HTMLDivElement | null>>({});
   const wrapperRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   const visible = testimonials.slice(0, visibleCount);
+  const hasMore = visibleCount < testimonials.length;
 
+  // Per-card scroll-triggered reveal
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    visible.forEach((item) => {
+      const card = cardRefs.current[item.id];
+      if (!card || card.classList.contains("is-visible")) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            card.classList.add("is-visible");
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visibleCount]);
+
+  // Truncation detection
   useEffect(() => {
     document.fonts.ready.then(() => {
       setNeedsTruncation((prev) => {
@@ -98,37 +124,6 @@ export default function Testimonials() {
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visibleCount]);
-
-  // Infinite scroll — keep loading while sentinel stays in view
-  useEffect(() => {
-    const sentinel = sentinelRef.current;
-    if (!sentinel) return;
-
-    let timeoutId: ReturnType<typeof setTimeout>;
-
-    const tryLoadMore = () => {
-      if (visibleCountRef.current >= testimonials.length) return;
-      const rect = sentinel.getBoundingClientRect();
-      if (rect.top < window.innerHeight + 300) {
-        setVisibleCount((c) => Math.min(c + PAGE_SIZE, testimonials.length));
-        timeoutId = setTimeout(tryLoadMore, 300);
-      }
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) tryLoadMore();
-      },
-      { rootMargin: "300px" }
-    );
-
-    observer.observe(sentinel);
-    return () => {
-      observer.disconnect();
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -146,54 +141,63 @@ export default function Testimonials() {
         <div className="container-custom">
           <div className="flex flex-wrap items-start gap-6">
             {visible.map((testimonial) => (
-                <div
-                  key={testimonial.id}
-                  className="w-full sm:w-[calc(50%-12px)] min-h-[340px] bg-support/50 border border-white/10 shadow-md shadow-black/20 rounded-xl px-8 py-6 flex flex-col animate-card-in"
-                >
-                  {/* Name + Quote */}
-                  <div className="flex items-start justify-between mb-1">
-                    <p className="font-display text-xl font-semibold text-white">{testimonial.name}</p>
-                    <Quote className="w-8 h-8 text-accent/20 flex-shrink-0" />
-                  </div>
-
-                  {/* Rating */}
-                  <div className="flex items-center gap-1 mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                    ))}
-                  </div>
-
-                  {/* Review text */}
-                  <div className="flex-1">
-                    <div
-                      ref={(el) => { wrapperRefs.current[testimonial.id] = el; }}
-                      className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                      style={{ maxHeight: expanded[testimonial.id] ? "40rem" : "9.6rem" }}
-                    >
-                      <p className="text-[#d1d5db] text-base font-normal leading-[1.6] italic">
-                        &ldquo;{testimonial.text[locale]}&rdquo;
-                      </p>
-                    </div>
-                    {needsTruncation[testimonial.id] && (
-                      <button
-                        onClick={() => setExpanded((prev) => ({ ...prev, [testimonial.id]: !prev[testimonial.id] }))}
-                        className="mt-2 text-xs text-accent/70 hover:text-accent transition-colors"
-                      >
-                        {expanded[testimonial.id] ? t("showLess") : t("showMore")}
-                      </button>
-                    )}
-                  </div>
-
-                  {/* Country */}
-                  <div className="border-t border-white/10 pt-3 mt-3">
-                    <p className="text-sm text-[#9ca3af]">{testimonial.country}</p>
-                  </div>
+              <div
+                key={testimonial.id}
+                ref={(el) => { cardRefs.current[testimonial.id] = el; }}
+                className="card-scroll-reveal w-full sm:w-[calc(50%-12px)] min-h-[340px] bg-support/50 border border-white/10 shadow-md shadow-black/20 rounded-xl px-8 py-6 flex flex-col"
+              >
+                {/* Name + Quote */}
+                <div className="flex items-start justify-between mb-1">
+                  <p className="font-display text-xl font-semibold text-white">{testimonial.name}</p>
+                  <Quote className="w-8 h-8 text-accent/20 flex-shrink-0" />
                 </div>
+
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
+                </div>
+
+                {/* Review text */}
+                <div className="flex-1">
+                  <div
+                    ref={(el) => { wrapperRefs.current[testimonial.id] = el; }}
+                    className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
+                    style={{ maxHeight: expanded[testimonial.id] ? "40rem" : "9.6rem" }}
+                  >
+                    <p className="text-[#d1d5db] text-base font-normal leading-[1.6] italic">
+                      &ldquo;{testimonial.text[locale]}&rdquo;
+                    </p>
+                  </div>
+                  {needsTruncation[testimonial.id] && (
+                    <button
+                      onClick={() => setExpanded((prev) => ({ ...prev, [testimonial.id]: !prev[testimonial.id] }))}
+                      className="mt-2 text-xs text-accent/70 hover:text-accent transition-colors"
+                    >
+                      {expanded[testimonial.id] ? t("showLess") : t("showMore")}
+                    </button>
+                  )}
+                </div>
+
+                {/* Country */}
+                <div className="border-t border-white/10 pt-3 mt-3">
+                  <p className="text-sm text-[#9ca3af]">{testimonial.country}</p>
+                </div>
+              </div>
             ))}
           </div>
 
-          {/* Sentinel for IntersectionObserver */}
-          <div ref={sentinelRef} className="h-1" />
+          {hasMore && (
+            <div className="mt-10 text-center">
+              <button
+                onClick={() => setVisibleCount((c) => Math.min(c + PAGE_SIZE, testimonials.length))}
+                className="px-6 py-3 border border-accent/40 text-accent hover:bg-accent/10 rounded-lg text-sm font-medium transition-colors"
+              >
+                {t("loadMore")}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

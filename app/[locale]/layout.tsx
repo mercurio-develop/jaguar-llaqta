@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { jsonLd } from '@/app/layout';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -27,10 +28,20 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </NextIntlClientProvider>
+    <html lang={locale} className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="bg-primary min-h-screen flex flex-col">
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

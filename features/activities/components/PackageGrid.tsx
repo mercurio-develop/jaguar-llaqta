@@ -56,6 +56,7 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
               <LazyImage
                 src={pkgImage}
                 alt={(locale === "es" ? pkg.name : pkg.nameEn) || "Experience image"}
+                quality={80}
               />
               <div className="absolute inset-0 bg-black/10" />
               <div className="absolute top-3 left-3">

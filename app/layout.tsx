@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+export const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   name: "Jaguar Llaqta",
@@ -124,17 +124,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="es" className="dark">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="bg-primary min-h-screen flex flex-col">
-        {children}
-      </body>
-    </html>
-  );
+  return children;
 }

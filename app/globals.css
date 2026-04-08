@@ -132,6 +132,18 @@ h1, h2, h3, h4, h5, h6 {
   animation: card-in 0.5s ease both;
 }
 
+/* Scroll-triggered card reveal */
+.card-scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Smooth image loading */
 img {
   opacity: 1;

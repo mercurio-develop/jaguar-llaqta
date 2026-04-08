@@ -163,8 +163,8 @@ export const packages: Package[] = [
     taglineEn: "Hike to the sacred Inca portal",
     duration: "Día completo",
     durationEn: "Full day",
-    difficulty: "Moderado",
-    difficultyEn: "Moderate",
+    difficulty: "Moderado a Desafiante",
+    difficultyEn: "Moderate to Challenging",
     elevation: "3000m - 3900m max.",
     bestSeason: "",
     bestSeasonEn: "",
@@ -1218,7 +1218,7 @@ export const packages: Package[] = [
     categories: ["comunidad", "rutas"],
     name: "Cancha Cancha - 2 dias 1 Noche",
     nameEn: "Cancha Cancha 2D1N",
-    heroImage: "/images/cancha-cancha/IMG_0238.jpg",
+    heroImage: "/images/cancha-cancha-2d-1n/comunidad.jpg",
     tagline: "Se parte de una experiencia autentica con familias de comunidades alto andinas.",
     taglineEn: "Be part of an authentic experience with families from high Andean communities.",
     duration: "2 días / 1 noche",
@@ -1304,10 +1304,14 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
+      { id: "cc2d15", type: "image", url: "/images/cancha-cancha-2d-1n/comunidad(1).jpg" },
+      { id: "cc2d14", type: "image", url: "/images/cancha-cancha-2d-1n/comunidad.jpg" },
       { id: "cc2d1", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0291.jpg" },
       { id: "cc2d2", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0177.jpg" },
       { id: "cc2d3", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0211-2.jpg" },
       { id: "cc2d4", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0302.jpg" },
+      { id: "cc2d16", type: "image", url: "/images/cancha-cancha-2d-1n/comunidad(2).jpg" },
+      { id: "cc2d17", type: "image", url: "/images/cancha-cancha-2d-1n/comunidad(3).jpg" },
       { id: "cc2d5", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_0344.jpg" },
       { id: "cc2d6", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_6001.jpg" },
       { id: "cc2d7", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8566.jpg" },
@@ -1316,7 +1320,8 @@ export const packages: Package[] = [
       { id: "cc2d10", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8614.jpg" },
       { id: "cc2d11", type: "image", url: "/images/cancha-cancha-2d-1n/IMG_8616.jpg" },
       { id: "cc2d12", type: "image", url: "/images/cancha-cancha-2d-1n/canchacancha.jpg" },
-      { id: "cc2d13", type: "image", url: "/images/cancha-cancha-2d-1n/canchacancha-2.jpg" }
+      { id: "cc2d13", type: "image", url: "/images/cancha-cancha-2d-1n/canchacancha-2.jpg" },
+
     ]
   },
   {
@@ -1324,7 +1329,7 @@ export const packages: Package[] = [
     categories: ["ceremonias"],
     name: " Ofrenda Andina y Temazcali",
     nameEn: "Temezcali and Andean Offering",
-    heroImage: "/images/coca-offering/ceremonies.jpg",
+    heroImage: "/images/coca-offering/ceremonia(16).jpg",
     tagline: "Conecta con rituales ancestrales de purificación y conexión con el mundo espiritual de los Andes.",
     taglineEn: "Connect with ancestral purification rituals and the spiritual world of the Andes.",
     duration: "Día completo",
@@ -1389,27 +1394,7 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: "fd1", type: "image", url: "/images/coca-offering/ceremonies.jpg" },
-      { id: "fd2", type: "image", url: "/images/coca-offering/ceremonies(1).jpg" },
-      { id: "fd3", type: "image", url: "/images/coca-offering/ceremonies(2).jpg" },
-      { id: "fd4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" },
-      { id: "fd5", type: "image", url: "/images/coca-offering/ceremonia.jpg" },
-      { id: "fd6", type: "image", url: "/images/coca-offering/ceremonia(1).jpg" },
-      { id: "fd7", type: "image", url: "/images/coca-offering/ceremonia(2).jpg" },
-      { id: "fd8", type: "image", url: "/images/coca-offering/ceremonia(3).jpg" },
-      { id: "fd9", type: "image", url: "/images/coca-offering/ceremonia(4).jpg" },
-      { id: "fd10", type: "image", url: "/images/coca-offering/ceremonia(5).jpg" },
-      { id: "fd11", type: "image", url: "/images/coca-offering/ceremonia(6).jpg" },
-      { id: "fd12", type: "image", url: "/images/coca-offering/ceremonia(7).jpg" },
-      { id: "fd13", type: "image", url: "/images/coca-offering/ceremonia(8).jpg" },
-      { id: "fd14", type: "image", url: "/images/coca-offering/ceremonia(9).jpg" },
-      { id: "fd15", type: "image", url: "/images/coca-offering/ceremonia(10).jpg" },
-      { id: "fd16", type: "image", url: "/images/coca-offering/ceremonia(11).jpg" },
-      { id: "fd17", type: "image", url: "/images/coca-offering/ceremonia(12).jpg" },
-      { id: "fd18", type: "image", url: "/images/coca-offering/ceremonia(13).jpg" },
-      { id: "fd19", type: "image", url: "/images/coca-offering/ceremonia(14).jpg" },
-      { id: "fd20", type: "image", url: "/images/coca-offering/ceremonia(15).jpg" },
-      { id: "fd21", type: "image", url: "/images/coca-offering/ceremonia(16).jpg" }
+
     ]
   },
   {
@@ -1475,9 +1460,7 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-      { id: "co1", type: "image", url: "/images/coca-offering/ceremonies.jpg" },
       { id: "co2", type: "image", url: "/images/coca-offering/ceremonies(1).jpg" },
-      { id: "co3", type: "image", url: "/images/coca-offering/ceremonies(2).jpg" },
       { id: "co4", type: "image", url: "/images/coca-offering/IMG_9939.jpg" },
       { id: "co5", type: "image", url: "/images/coca-offering/ceremonia.jpg" },
       { id: "co6", type: "image", url: "/images/coca-offering/ceremonia(1).jpg" },
@@ -1495,7 +1478,9 @@ export const packages: Package[] = [
       { id: "co18", type: "image", url: "/images/coca-offering/ceremonia(13).jpg" },
       { id: "co19", type: "image", url: "/images/coca-offering/ceremonia(14).jpg" },
       { id: "co20", type: "image", url: "/images/coca-offering/ceremonia(15).jpg" },
-      { id: "co21", type: "image", url: "/images/coca-offering/ceremonia(16).jpg" }
+      { id: "co21", type: "image", url: "/images/coca-offering/ceremonia(16).jpg" },
+      { id: "co1", type: "image", url: "/images/coca-offering/ceremonies.jpg" },
+      { id: "co3", type: "image", url: "/images/coca-offering/ceremonies(2).jpg" },
     ]
   },
 
@@ -1522,8 +1507,29 @@ const categoryOrder: Record<ActivityCategory, string[]> = {
     "quishuarani-2d1n",
     "ausangate-trek-3d2n",
   ],
-  ceremonias: [],
+  ceremonias: [
+    "half-day-spiritual",
+    "full-day-spiritual",
+  ],
 };
+
+// Global order: rutas first (covers shared comunidad packages), then
+// any comunidad-only not already listed, then ceremonias — spirituals always last.
+const allOrder = [
+  "naupa-waka",
+  "cancha-cancha",
+  "inti-punku",
+  "lares-trek-3d2n",
+  "pumawanka",
+  "ausangate-trek-3d2n",
+  "pumamarca",
+  "quishuarani-2d1n",
+  "cancha-cancha-2d1n",
+  "choquequirao-trek",
+  "manu-rainforest-5d4n",
+  "half-day-spiritual",
+  "full-day-spiritual",
+];
 
 export const getPackagesByCategory = (category: ActivityCategory) => {
   const order = categoryOrder[category];
@@ -1537,6 +1543,15 @@ export const getPackagesByCategory = (category: ActivityCategory) => {
     return aPos - bPos;
   });
 };
+
+export const getAllPackagesSorted = () =>
+  [...packages].sort((a, b) => {
+    const ai = allOrder.indexOf(a.id);
+    const bi = allOrder.indexOf(b.id);
+    const aPos = ai === -1 ? Infinity : ai;
+    const bPos = bi === -1 ? Infinity : bi;
+    return aPos - bPos;
+  });
 
 export const getPackageById = (id: string) =>
   packages.find((p) => p.id === id);

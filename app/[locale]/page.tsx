@@ -26,7 +26,11 @@ export async function generateMetadata({
       : ["ancestral tourism cusco", "alternative tourism cusco", "living culture cusco", "cusco trekking", "andean expeditions", "high andean communities", "andean ceremonies", "pachamama", "inca culture", "nature cusco", "discover peru", "travel peru", "andes travel", "jaguar llaqta"],
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
-      languages: { es: `${BASE_URL}/es`, en: `${BASE_URL}/en` },
+      languages: {
+        "x-default": `${BASE_URL}/es`,
+        es: `${BASE_URL}/es`,
+        en: `${BASE_URL}/en`,
+      },
     },
     openGraph: {
       url: `${BASE_URL}/${locale}`,

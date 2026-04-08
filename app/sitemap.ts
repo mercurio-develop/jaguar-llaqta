@@ -15,6 +15,8 @@ const staticRoutes = [
   "/reservas",
 ];
 
+const LAST_MODIFIED = new Date("2025-04-01");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
@@ -22,11 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const route of staticRoutes) {
       entries.push({
         url: `${BASE_URL}/${locale}${route}`,
-        lastModified: new Date(),
+        lastModified: LAST_MODIFIED,
         changeFrequency: route === "" ? "weekly" : "monthly",
         priority: route === "" ? 1 : route === "/actividades" ? 0.9 : 0.8,
         alternates: {
           languages: {
+            "x-default": `${BASE_URL}/es${route}`,
             es: `${BASE_URL}/es${route}`,
             en: `${BASE_URL}/en${route}`,
           },

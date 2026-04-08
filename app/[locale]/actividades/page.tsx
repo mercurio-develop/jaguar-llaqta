@@ -3,11 +3,12 @@
 import { useState, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Gallery from "@/components/Gallery";
-import { packages, type ActivityCategory } from "@/config/packages";
+import { getAllPackagesSorted, type ActivityCategory } from "@/config/packages";
 import { durationFilters, difficultyFilters } from "@/features/activities/activities-config";
 import ActivityCategoryCards from "@/features/activities/components/ActivityCategoryCards";
 import ActivityFilters from "@/features/activities/components/ActivityFilters";
 import PackageGrid from "@/features/activities/components/PackageGrid";
+import SectionNavigation from "@/components/navigation/SectionNavigation";
 
 export default function AllActivitiesPage() {
   const t = useTranslations("activities");
@@ -17,11 +18,17 @@ export default function AllActivitiesPage() {
   const resultsRef = useRef<HTMLDivElement>(null);
   const scrollToResults = () => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
+  const [activeSection, setActiveSection] = useState("experiencias");
   const [selectedCategories, setSelectedCategories] = useState<ActivityCategory[]>([]);
   const [selectedDuration, setSelectedDuration] = useState<string | "all">("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
 
-  const filteredPackages = packages.filter((pkg) => {
+  const sections = [
+    { id: "experiencias", label: locale === "es" ? "Experiencias" : "Experiences" },
+    { id: "galeria",      label: locale === "es" ? "Galería" : "Gallery" },
+  ];
+
+  const filteredPackages = getAllPackagesSorted().filter((pkg) => {
     const matchCategory = selectedCategories.length === 0 || pkg.categories.some((c) => selectedCategories.includes(c));
     const matchDuration = selectedDuration === "all" || durationFilters.find(f => f.id === selectedDuration)?.check(pkg.duration);
     const matchDifficulty = selectedDifficulty === "all" || (pkg.difficulty ? difficultyFilters.find(f => f.id === selectedDifficulty)?.check(pkg.difficulty) : false);
@@ -51,10 +58,17 @@ export default function AllActivitiesPage() {
         </div>
       </section>
 
+      <SectionNavigation
+        sections={sections}
+        activeSection={activeSection}
+        onSectionChange={setActiveSection}
+        enableScrollDetection={true}
+      />
+
       <ActivityCategoryCards locale={locale} />
 
       {/* Filters & Packages */}
-      <section className="py-12 bg-primary">
+      <section id="experiencias" className="py-12 bg-primary">
         <div className="container-custom">
           <ActivityFilters
             locale={locale}
@@ -84,7 +98,7 @@ export default function AllActivitiesPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-16 bg-primary-alt">
+      <section id="galeria" className="py-16 bg-primary-alt">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="section-title mb-4">
