@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { jsonLd } from '@/app/layout';
+import { jsonLd } from '@/lib/jsonLd';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;

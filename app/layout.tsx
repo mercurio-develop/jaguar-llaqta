@@ -71,53 +71,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  name: "Jaguar Llaqta",
-  description: "Agencia de turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas. Ancestral and alternative tourism agency in Cusco, Peru.",
-  url: "https://jaguarllaqta.com",
-  email: "jaguarllaqta@gmail.com",
-  telephone: "+51926935820",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Cusco",
-    addressRegion: "Cusco",
-    addressCountry: "PE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: -13.5226,
-    longitude: -71.9674,
-  },
-  areaServed: ["Cusco", "Perú"],
-  priceRange: "$$",
-  knowsAbout: [
-    "turismo ancestral cusco",
-    "turismo alternativo cusco",
-    "cultura viva",
-    "trekking cusco",
-    "rutas cusco",
-    "expediciones andinas",
-    "ceremonias andinas",
-    "pachamama",
-    "comunidades alto andinas",
-    "naturaleza cusco",
-    "cultura inca",
-    "ancestral tourism cusco",
-    "alternative tourism cusco",
-    "living culture",
-    "andean trekking",
-    "andean ceremonies",
-    "high andean communities",
-    "inca culture",
-    "discover peru",
-    "andes expeditions",
-  ],
-  sameAs: [
-    "https://www.instagram.com/jaguarllaqta",
-  ],
-};
 
 export default function RootLayout({
   children,
