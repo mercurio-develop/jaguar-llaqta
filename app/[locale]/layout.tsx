@@ -5,6 +5,8 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { jsonLd } from '@/lib/jsonLd';
+import ImageProtection from '@/components/ImageProtection';
+import '../globals.css';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -36,6 +38,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="bg-primary min-h-screen flex flex-col">
+        <ImageProtection />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

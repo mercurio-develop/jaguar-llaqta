@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { packages, type ActivityCategory } from "@/config/packages";
@@ -28,10 +29,14 @@ export default function ActivityCategoryCards({ locale }: ActivityCategoryCardsP
                 className="group flex flex-col rounded-lg border border-[#333] bg-white/[0.03] overflow-hidden hover:border-accent/40 transition-colors"
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                    style={{ backgroundImage: `url('${categoryImages[cat]}')` }}
+                <div className="relative aspect-[4/3] overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
+                  <Image
+                    src={categoryImages[cat]}
+                    alt={config.label[locale]}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    quality={80}
+                    draggable={false}
                   />
                 </div>
 

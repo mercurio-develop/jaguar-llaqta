@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Building2, Handshake } from "lucide-react";
 import Card from "@/components/ui/Card";
@@ -10,10 +11,16 @@ export default function PartnersSection() {
 
   return (
     <section id="organizaciones" className="py-20 relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/selva-manu.jpg')" }}
-      />
+      <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
+        <Image
+          src="/images/selva-manu.jpg"
+          alt="Selva del Manu"
+          fill
+          className="object-cover"
+          quality={70}
+          draggable={false}
+        />
+      </div>
       <div className="absolute inset-0 bg-primary/80" />
 
       <div className="container-custom relative z-10">

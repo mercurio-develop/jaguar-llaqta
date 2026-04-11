@@ -254,14 +254,17 @@ export default function Gallery({
 
               {/* Grid thumbnail */}
               {item.url ? (
-                <Image
-                  src={item.url}
-                  alt={item.title}
-                  fill
-                  quality={75}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover"
-                />
+                <div className="w-full h-full" onContextMenu={(e) => e.preventDefault()}>
+                  <Image
+                    src={item.url}
+                    alt={item.title}
+                    fill
+                    quality={75}
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover"
+                    draggable={false}
+                  />
+                </div>
               ) : (
                 <div className="w-full h-full bg-support flex items-center justify-center">
                   <ImageIcon className="w-8 h-8 text-white/20" />
@@ -314,7 +317,7 @@ export default function Gallery({
 
           <div className="max-w-6xl w-full">
             {/* Lightbox main — max quality, full viewport */}
-            <div className="h-[70vh] bg-support rounded-lg relative overflow-hidden">
+            <div className="h-[70vh] bg-support rounded-lg relative overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
               {filteredItems[currentIndex]?.url ? (
                 <Image
                   src={filteredItems[currentIndex].url}
@@ -324,6 +327,7 @@ export default function Gallery({
                   sizes="100vw"
                   className="object-contain"
                   priority
+                  draggable={false}
                 />
               ) : (
                 <p className="text-muted flex items-center justify-center h-full">{filteredItems[currentIndex]?.title}</p>
@@ -344,6 +348,7 @@ export default function Gallery({
                     <button
                       key={item.id}
                       onClick={() => setSelectedItem(item.id)}
+                      onContextMenu={(e) => e.preventDefault()}
                       aria-current={isActive ? "true" : undefined}
                       className={cn(
                         "relative flex-shrink-0 rounded-md overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent",
@@ -364,6 +369,7 @@ export default function Gallery({
                             "object-cover",
                             isActive ? "opacity-100" : "opacity-90"
                           )}
+                          draggable={false}
                         />
                       ) : (
                         <div className="w-full h-full bg-support flex items-center justify-center">

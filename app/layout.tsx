@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -70,7 +69,6 @@ export const metadata: Metadata = {
     google: "4Szsukv9JNxa1h1I5sSNvQiJWtNhNg-uuwm5oMioJ_s",
   },
 };
-
 
 export default function RootLayout({
   children,

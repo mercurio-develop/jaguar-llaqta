@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Clock, Mountain, MapPin, Calendar, ArrowLeft } from "lucide-react";
 import { Package, ActivityCategory } from "@/config/packages";
@@ -32,10 +33,16 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
   return (
     <section className="relative min-h-[60vh] flex items-end">
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${heroImage}')` }}
-      />
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage}
+          alt={isSpanish ? pkg.name : pkg.nameEn}
+          fill
+          priority
+          className="object-cover"
+          quality={85}
+        />
+      </div>
       {/* Readability overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20" />
 

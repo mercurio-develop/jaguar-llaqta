@@ -21,16 +21,19 @@ export default function LazyImage({
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <Image
-      src={src}
-      alt={alt}
-      fill
-      quality={quality}
-      sizes={sizes}
-      onLoad={() => setLoaded(true)}
-      className={`object-cover transition-all duration-700 ease-out ${
-        loaded ? "blur-0 scale-100" : "blur-[2px] scale-[1.02]"
-      } ${className}`}
-    />
+    <div className="relative w-full h-full overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        quality={quality}
+        sizes={sizes}
+        onLoad={() => setLoaded(true)}
+        className={`object-cover transition-all duration-700 ease-out ${
+          loaded ? "blur-0 scale-100" : "blur-[2px] scale-[1.02]"
+        } ${className}`}
+        draggable={false}
+      />
+    </div>
   );
 }

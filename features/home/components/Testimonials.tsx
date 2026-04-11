@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Star, Quote } from "lucide-react";
@@ -127,10 +128,16 @@ export default function Testimonials() {
 
   return (
     <section className="py-24 relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/images/machu-picchu-2.jpg')" }}
-      />
+      <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
+        <Image
+          src="/images/machu-picchu-2.jpg"
+          alt="Testimonials background"
+          fill
+          className="object-cover"
+          quality={70}
+          draggable={false}
+        />
+      </div>
       <div className="absolute inset-0 bg-primary/85" />
 
       <div className="relative z-10">

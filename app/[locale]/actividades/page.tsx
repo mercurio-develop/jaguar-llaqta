@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Gallery from "@/components/Gallery";
@@ -47,10 +48,17 @@ export default function AllActivitiesPage() {
     <div className="pt-20">
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/choquequirao/IMG_6584.jpg')" }}
-        />
+        <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
+          <Image
+            src="/images/choquequirao/IMG_6584.jpg"
+            alt={tNav("allActivities")}
+            fill
+            priority
+            className="object-cover"
+            quality={85}
+            draggable={false}
+          />
+        </div>
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container-custom text-center">
           <h1 className="section-title mb-4">{tNav("allActivities")}</h1>

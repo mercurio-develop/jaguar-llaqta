@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ChevronDown } from "lucide-react";
@@ -13,13 +14,17 @@ export default function Hero() {
       {/* Background with overlay */}
       <div className="absolute inset-0">
         {/* Hero image */}
-        <div
-          className="absolute inset-0 bg-cover blur-sm"
-          style={{ 
-            backgroundImage: "url('/images/history.jpg')",
-            backgroundPosition: "center 20%"
-          }}
-        />
+        <div className="absolute inset-0 blur-sm overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
+          <Image
+            src="/images/history.jpg"
+            alt="Jaguar Llaqta Hero"
+            fill
+            priority
+            className="object-cover object-[center_20%]"
+            quality={90}
+            draggable={false}
+          />
+        </div>
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/75 to-primary" />
       </div>
