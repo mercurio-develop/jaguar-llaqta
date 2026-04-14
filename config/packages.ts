@@ -31,6 +31,11 @@ export interface Package {
    * before falling back to the first gallery image or category defaults.
    */
   heroImage?: string;
+  /**
+   * Optional CSS object-position for the hero image.
+   * e.g., "center 25%" or "top center".
+   */
+  heroImagePosition?: string;
   tagline: string;
   taglineEn: string;
   duration: string;
@@ -780,7 +785,7 @@ export const packages: Package[] = [
     categories: ["rutas"],
     name: "Selva del Manu",
     nameEn: "Manu Rainforest",
-    heroImage: "/images/manu-rainforest/IMG_0104.JPG",
+    heroImage: "/images/manu-rainforest/[000802].jpg",
     tagline: "Aventura en una de las zonas con mayor biodiversidad del planeta",
     taglineEn: "Adventure in one of the most biodiverse areas on Earth",
     duration: "5 días / 4 noches",
@@ -1329,7 +1334,8 @@ export const packages: Package[] = [
     categories: ["ceremonias"],
     name: " Ofrenda Andina y Temazcali",
     nameEn: "Temezcali and Andean Offering",
-    heroImage: "/images/coca-offering/ceremonia(16).jpg",
+    heroImage: "/images/temazcali/IMG_8728.jpg",
+    heroImagePosition: "center 25%",
     tagline: "Conecta con rituales ancestrales de purificación y conexión con el mundo espiritual de los Andes.",
     taglineEn: "Connect with ancestral purification rituals and the spiritual world of the Andes.",
     duration: "Día completo",
@@ -1394,7 +1400,20 @@ export const packages: Package[] = [
       }
     ],
     gallery: [
-
+      { id: "tm01", type: "image", url: "/images/temazcali/IMG_8642.jpg" },
+      { id: "tm02", type: "image", url: "/images/temazcali/IMG_8659.jpg" },
+      { id: "tm03", type: "image", url: "/images/temazcali/IMG_8663.jpg" },
+      { id: "tm04", type: "image", url: "/images/temazcali/IMG_8681.jpg" },
+      { id: "tm05", type: "image", url: "/images/temazcali/IMG_8682.jpg" },
+      { id: "tm06", type: "image", url: "/images/temazcali/IMG_8684.jpg" },
+      { id: "tm07", type: "image", url: "/images/temazcali/IMG_8685-2.jpg" },
+      { id: "tm08", type: "image", url: "/images/temazcali/IMG_8688.jpg" },
+      { id: "tm09", type: "image", url: "/images/temazcali/IMG_8697.jpg" },
+      { id: "tm10", type: "image", url: "/images/temazcali/IMG_8703.jpg" },
+      { id: "tm11", type: "image", url: "/images/temazcali/IMG_8711.jpg" },
+      { id: "tm12", type: "image", url: "/images/temazcali/IMG_8716.jpg" },
+      { id: "tm13", type: "image", url: "/images/temazcali/IMG_8727.jpg" },
+      { id: "tm14", type: "image", url: "/images/temazcali/IMG_8728.jpg" },
     ]
   },
   {

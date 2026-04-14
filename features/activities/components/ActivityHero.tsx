@@ -40,6 +40,7 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
           fill
           priority
           className="object-cover"
+          style={{ objectPosition: pkg.heroImagePosition || "center center" }}
           quality={85}
         />
       </div>
