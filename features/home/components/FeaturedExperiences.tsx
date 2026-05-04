@@ -8,21 +8,21 @@ import { ArrowRight } from "lucide-react";
 const experiences = [
   {
     id: "rutas",
-    image: "/images/IMG_7189-3.jpg",
+    image: "/images/home/home-featured-rutas.jpg",
     titleKey: "expRoutesTitle",
     descKey: "expRoutesDesc",
     href: "/actividades/rutas",
   },
   {
     id: "comunidad",
-    image: "/images/IMG_9939.jpg",
+    image: "/images/home/home-featured-comunidad.jpg",
     titleKey: "expCommunityTitle",
     descKey: "expCommunityDesc",
     href: "/actividades/comunidad",
   },
   {
     id: "ceremonias",
-    image: "/images/machu-picchu.jpg",
+    image: "/images/home/home-featured-ceremonias.jpg",
     titleKey: "expCeremoniesTitle",
     descKey: "expCeremoniesDesc",
     href: "/actividades/ceremonias",

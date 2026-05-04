@@ -8,6 +8,7 @@ import {
   Tailwind,
   Preview,
   Hr,
+  Img,
 } from "@react-email/components";
 import type { TravelerData } from "@/features/reservas/schemas";
 
@@ -103,44 +104,51 @@ export default function EmailReservationNotification({
   notes,
   travelers,
 }: EmailReservationNotificationProps) {
+
+const baseUrl = process.env.NODE_ENV === "production"
+  ? "https://jaguarllaqta.com"
+  : "";
+const logoUrl = process.env.NODE_ENV === "production"
+  ? `${baseUrl}/logo/logo-2.png`
+  : `/static/logo/logo-2.png`;
+
   return (
     <Html>
       <Head />
       <Preview>Nueva Pre reserva de {name} - {packageName}</Preview>
       <Tailwind>
-        <Body className="bg-gray-100 font-sans">
-          <Container className="mx-auto max-w-[560px] rounded-lg bg-white p-8">
+        <Body className="bg-[#0E0E0E] font-sans">
+          <Container className="mx-auto max-w-[560px] rounded-lg bg-[#121212] border border-[#2A2A2A] p-8">
             <Section>
-              <Text className="text-center text-2xl font-bold" style={{ color: "#C9A24D" }}>
-                Jaguar Llaqta — Nueva Pre Reserva
-              </Text>
-              <Text className="text-lg font-semibold text-gray-800">
+              <Img src={logoUrl} alt="Jaguar Llaqta Logo" width="64" height="64" className="mx-auto my-0 object-contain" />
+              <Text className="text-center text-xl font-bold mt-4" style={{ color: "#C9A24D" }}>Nueva Pre Reserva</Text>
+              <Text className="text-lg font-semibold text-white">
                 Se ha recibido una nueva solicitud de reserva
               </Text>
 
               {/* Booking summary */}
               <Section className="rounded-lg p-4 mb-4" style={{ backgroundColor: "#FDF8EE" }}>
-                <Text className="m-0 text-sm text-gray-500">Paquete</Text>
-                <Text className="mt-1 font-semibold text-gray-800">{packageName}</Text>
-                <Text className="m-0 text-sm text-gray-500">Fecha</Text>
-                <Text className="mt-1 font-semibold text-gray-800">{date}</Text>
-                <Text className="m-0 text-sm text-gray-500">Participantes</Text>
-                <Text className="mt-1 font-semibold text-gray-800">{participants}</Text>
+                <Text className="m-0 text-sm text-[#9CA3AF]">Paquete</Text>
+                <Text className="mt-1 font-semibold text-white">{packageName}</Text>
+                <Text className="m-0 text-sm text-[#9CA3AF]">Fecha</Text>
+                <Text className="mt-1 font-semibold text-white">{date}</Text>
+                <Text className="m-0 text-sm text-[#9CA3AF]">Participantes</Text>
+                <Text className="mt-1 font-semibold text-white">{participants}</Text>
               </Section>
 
               {/* Contact data */}
-              <Section className="mt-4 rounded-lg bg-gray-50 p-4 mb-4">
-                <Text className="m-0 text-sm font-semibold text-gray-700">Datos del organizador</Text>
-                <Text className="m-0 mt-2 text-sm text-gray-500">Nombre</Text>
-                <Text className="mt-1 text-gray-800">{name}</Text>
-                <Text className="m-0 text-sm text-gray-500">Email</Text>
-                <Text className="mt-1 text-gray-800">{email}</Text>
-                <Text className="m-0 text-sm text-gray-500">Teléfono</Text>
-                <Text className="mt-1 text-gray-800">{phone}</Text>
+              <Section className="mt-4 rounded-lg bg-[#2A2A2A] p-4 mb-4">
+                <Text className="m-0 text-sm font-semibold text-gray-200">Datos del organizador</Text>
+                <Text className="m-0 mt-2 text-sm text-[#9CA3AF]">Nombre</Text>
+                <Text className="mt-1 text-white">{name}</Text>
+                <Text className="m-0 text-sm text-[#9CA3AF]">Email</Text>
+                <Text className="mt-1 text-white">{email}</Text>
+                <Text className="m-0 text-sm text-[#9CA3AF]">Teléfono</Text>
+                <Text className="mt-1 text-white">{phone}</Text>
                 {notes && (
                   <>
-                    <Text className="m-0 text-sm text-gray-500">Notas / Requerimientos especiales</Text>
-                    <Text className="mt-1 text-gray-800">{notes}</Text>
+                    <Text className="m-0 text-sm text-[#9CA3AF]">Notas / Requerimientos especiales</Text>
+                    <Text className="mt-1 text-white">{notes}</Text>
                   </>
                 )}
               </Section>
@@ -148,7 +156,7 @@ export default function EmailReservationNotification({
               {/* Traveler profiles */}
               {travelers && travelers.length > 0 && (
                 <>
-                  <Text className="text-base font-semibold text-gray-800 mt-6 mb-3">
+                  <Text className="text-base font-semibold text-white mt-6 mb-3">
                     Perfiles de Viajeros ({travelers.length})
                   </Text>
                   {travelers.map((traveler, i) => (
@@ -157,8 +165,11 @@ export default function EmailReservationNotification({
                 </>
               )}
 
-              <Text className="mt-4 text-sm text-gray-400">
-                Por favor, revisa y confirma esta reserva dentro de las próximas 24 horas.
+              <Text className="mt-4 text-sm text-[#9CA3AF] opacity-80">
+                Por favor, revisa y responde a esta solicitud lo antes posible.
+              </Text>
+              <Text className="mt-4 text-sm text-[#9CA3AF] opacity-80">
+                — El equipo de Jaguar Llaqta
               </Text>
             </Section>
           </Container>

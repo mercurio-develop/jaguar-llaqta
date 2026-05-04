@@ -130,7 +130,7 @@ export default function Testimonials() {
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
         <Image
-          src="/images/machu-picchu-2.jpg"
+          src="/images/home/home-testimonials-bg.jpg"
           alt="Testimonials background"
           fill
           className="object-cover"

@@ -17,6 +17,8 @@ interface ActivityFiltersProps {
   onClear: () => void;
   onClose?: () => void;
   hasActiveFilters: boolean;
+  availableDurations: string[];
+  availableDifficulties: string[];
 }
 
 const chipBase = "px-2.5 py-1 text-xs md:text-sm transition-all border rounded whitespace-nowrap";
@@ -35,6 +37,8 @@ export default function ActivityFilters({
   onClear,
   onClose,
   hasActiveFilters,
+  availableDurations,
+  availableDifficulties,
 }: ActivityFiltersProps) {
   const activeCount =
     selectedCategories.length +
@@ -80,7 +84,7 @@ export default function ActivityFilters({
             >
               {locale === "es" ? "Todos" : "All"}
             </button>
-            {durationFilters.map((f) => (
+            {durationFilters.filter(f => availableDurations.includes(f.id)).map((f) => (
               <button
                 key={f.id}
                 onClick={() => onDurationChange(f.id)}
@@ -104,7 +108,7 @@ export default function ActivityFilters({
             >
               {locale === "es" ? "Todos" : "All"}
             </button>
-            {difficultyFilters.map((f) => (
+            {difficultyFilters.filter(f => availableDifficulties.includes(f.id)).map((f) => (
               <button
                 key={f.id}
                 onClick={() => onDifficultyChange(f.id)}

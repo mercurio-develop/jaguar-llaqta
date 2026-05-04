@@ -29,11 +29,22 @@ export default function AllActivitiesPage() {
     { id: "galeria",      label: locale === "es" ? "Galería" : "Gallery" },
   ];
 
-  const filteredPackages = getAllPackagesSorted().filter((pkg) => {
-    const matchCategory = selectedCategories.length === 0 || pkg.categories.some((c) => selectedCategories.includes(c));
+  const baseFilteredPackages = getAllPackagesSorted().filter((pkg) => 
+    selectedCategories.length === 0 || pkg.categories.some((c) => selectedCategories.includes(c))
+  );
+
+  const availableDurations = durationFilters.filter(f => 
+    baseFilteredPackages.some(pkg => f.check(pkg.duration))
+  ).map(f => f.id);
+
+  const availableDifficulties = difficultyFilters.filter(f => 
+    baseFilteredPackages.some(pkg => pkg.difficulty && f.check(pkg.difficulty))
+  ).map(f => f.id);
+
+  const filteredPackages = baseFilteredPackages.filter((pkg) => {
     const matchDuration = selectedDuration === "all" || durationFilters.find(f => f.id === selectedDuration)?.check(pkg.duration);
     const matchDifficulty = selectedDifficulty === "all" || (pkg.difficulty ? difficultyFilters.find(f => f.id === selectedDifficulty)?.check(pkg.difficulty) : false);
-    return matchCategory && matchDuration && matchDifficulty;
+    return matchDuration && matchDifficulty;
   });
 
   const clearFilters = () => {
@@ -50,7 +61,7 @@ export default function AllActivitiesPage() {
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
         <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
           <Image
-            src="/images/choquequirao/IMG_6584.jpg"
+            src="/images/choquequirao-trek/choquequirao-trek-gallery-1.jpg"
             alt={tNav("allActivities")}
             fill
             priority
@@ -94,6 +105,8 @@ export default function AllActivitiesPage() {
             onClear={clearFilters}
             onClose={scrollToResults}
             hasActiveFilters={hasActiveFilters}
+            availableDurations={availableDurations}
+            availableDifficulties={availableDifficulties}
           />
 
           <div ref={resultsRef} />

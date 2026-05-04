@@ -20,9 +20,9 @@ export const categoryLabelsConfig: Record<
 };
 
 export const categoryImages: Record<ActivityCategory, string> = {
-  rutas: "/images/IMG_7189-3.jpg",
-  comunidad: "/images/IMG_9939.jpg",
-  ceremonias: "/images/machu-picchu.jpg",
+  rutas: "/images/activities/activities-category-rutas.jpg",
+  comunidad: "/images/activities/activities-category-comunidad.jpg",
+  ceremonias: "/images/activities/activities-category-ceremonias.jpg",
 };
 
 export const categoryDescriptions: Record<ActivityCategory, { es: string; en: string }> = {

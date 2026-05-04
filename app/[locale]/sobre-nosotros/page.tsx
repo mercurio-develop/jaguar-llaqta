@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
           <Image
-            src="/images/comunidad-3.jpg"
+            src="/images/about/about-community.jpg"
             alt={t("title")}
             fill
             priority

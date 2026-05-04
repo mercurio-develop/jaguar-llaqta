@@ -9,6 +9,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { mainNavigation } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Logo from "@/components/ui/Logo";
 
 export default function Header() {
   const t = useTranslations();
@@ -32,19 +33,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10">
       <div className="container-custom">
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center justify-between h-20 py-5">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-3">
-            <Image
-              src="/logo/logo.jpeg"
-              alt="Jaguar Llaqta"
-              width={48}
-              height={48}
-              className="rounded-full object-cover"
-            />
-            <span className="font-display text-xl text-white hidden sm:block">
-              JAGUAR LLAQTA
-            </span>
+          <Link href={`/${locale}`} className="flex items-center">
+            <Logo layout="horizontal" jaguarSize={64} textWidth={100} textHeight={64} hideTextOnMobile={true} />
           </Link>
 
           {/* Desktop Navigation */}

@@ -35,7 +35,7 @@ export async function generateMetadata({
     openGraph: {
       url: `${BASE_URL}/${locale}`,
       locale: isEs ? "es_PE" : "en_US",
-      images: [{ url: `${BASE_URL}/images/og-home.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/images/seo/og-image.jpg`, width: 1200, height: 630 }],
     },
   };
 }

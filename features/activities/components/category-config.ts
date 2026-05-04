@@ -8,17 +8,17 @@ export const categoryConfig: Record<ActivityCategory, {
 }> = {
   rutas: {
     icon: Mountain,
-    heroImage: "/images/IMG_7189-3.jpg",
+    heroImage: "/images/activities/activities-category-rutas.jpg",
     backgroundPosition: "center 30%",
   },
   comunidad: {
     icon: Users,
-    heroImage: "/images/IMG_9939.jpg",
+    heroImage: "/images/activities/activities-category-comunidad.jpg",
     backgroundPosition: "center 15%",
   },
   ceremonias: {
     icon: Sparkles,
-    heroImage: "/images/machu-picchu.jpg",
+    heroImage: "/images/activities/activities-category-ceremonias.jpg",
     backgroundPosition: "center",
   },
 };

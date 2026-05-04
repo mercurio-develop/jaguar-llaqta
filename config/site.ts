@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Jaguar Llaqta",
   description: "Turismo Ancestral en Cusco - Experiencias que conectan cuerpo, mente y espíritu",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://jaguarllaqta.com",
-  ogImage: "/images/hero-banner-home.jpg",
+  ogImage: "/images/seo/og-image.jpg",
   links: {
     instagram: "https://instagram.com/jaguarllaqta",
     whatsapp: "https://wa.me/51926935820",

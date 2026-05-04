@@ -13,7 +13,7 @@ export default function PartnersSection() {
     <section id="organizaciones" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
         <Image
-          src="/images/selva-manu.jpg"
+          src="/images/about/about-partners-bg.jpg"
           alt="Selva del Manu"
           fill
           className="object-cover"

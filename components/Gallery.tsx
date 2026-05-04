@@ -23,28 +23,28 @@ const defaultGalleryItems: Array<{
   url: string;
 }> = [
   // Rutas - Ausangate
-  { id: "fallback-1", categories: ["rutas"], type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek/IMG_8942.jpg" },
-  { id: "fallback-2", categories: ["rutas"], type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek/IMG_8938.jpg" },
-  { id: "fallback-3", categories: ["rutas"], type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek/IMG_8960.jpg" },
+  { id: "fallback-1", categories: ["rutas"], type: "image", title: "Nevado Ausangate", location: "Ausangate", url: "/images/ausangate-trek-3d2n/ausangate-trek-3d2n-hero.jpg" },
+  { id: "fallback-2", categories: ["rutas"], type: "image", title: "Laguna Glaciar", location: "Ausangate", url: "/images/ausangate-trek-3d2n/ausangate-trek-3d2n-gallery-12.jpg" },
+  { id: "fallback-3", categories: ["rutas"], type: "image", title: "Siete Lagunas", location: "Ausangate", url: "/images/ausangate-trek-3d2n/ausangate-trek-3d2n-gallery-14.jpg" },
   // Rutas - Lares
-  { id: "fallback-4", categories: ["rutas"], type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek/IMG_3461.jpg" },
-  { id: "fallback-5", categories: ["rutas"], type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek/IMG_3450.jpg" },
-  { id: "fallback-6", categories: ["rutas"], type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek/IMG_3482.jpg" },
+  { id: "fallback-4", categories: ["rutas"], type: "image", title: "Lares", location: "Lares", url: "/images/lares-trek-3d2n/lares-trek-3d2n-gallery-24.jpg" },
+  { id: "fallback-5", categories: ["rutas"], type: "image", title: "Paso de Montaña", location: "Lares", url: "/images/lares-trek-3d2n/lares-trek-3d2n-gallery-23.jpg" },
+  { id: "fallback-6", categories: ["rutas"], type: "image", title: "Valle del Lares", location: "Lares", url: "/images/lares-trek-3d2n/lares-trek-3d2n-gallery-27.jpg" },
   // Rutas - Manu
-  { id: "fallback-7", categories: ["rutas"], type: "image", title: "Selva del Manu", location: "Manu", url: "/images/manu.jpg" },
-  { id: "fallback-8", categories: ["rutas"], type: "image", title: "Montañas", location: "Cusco", url: "/images/montanias.jpg" },
+  { id: "fallback-7", categories: ["rutas"], type: "image", title: "Selva del Manu", location: "Manu", url: "/images/gallery/gallery-manu.jpg" },
+  { id: "fallback-8", categories: ["rutas"], type: "image", title: "Montañas", location: "Cusco", url: "/images/gallery/gallery-montanias.jpg" },
   // Comunidad
-  { id: "fallback-9", categories: ["comunidad"], type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/chincheros.jpg" },
-  { id: "fallback-10", categories: ["comunidad"], type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/textiles.jpg" },
-  { id: "fallback-11", categories: ["comunidad"], type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/comunidad.jpg" },
-  { id: "fallback-12", categories: ["comunidad"], type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/cocina-rustica.jpg" },
-  { id: "fallback-13", categories: ["comunidad"], type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek/IMG_3312.jpg" },
-  { id: "fallback-14", categories: ["comunidad"], type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek/IMG_7274.jpg" },
+  { id: "fallback-9", categories: ["comunidad"], type: "image", title: "Tejedoras de Chinchero", location: "Chinchero", url: "/images/gallery/gallery-chincheros.jpg" },
+  { id: "fallback-10", categories: ["comunidad"], type: "image", title: "Textiles Andinos", location: "Valle Sagrado", url: "/images/gallery/gallery-textiles.jpg" },
+  { id: "fallback-11", categories: ["comunidad"], type: "image", title: "Comunidad Andina", location: "Valle Sagrado", url: "/images/gallery/gallery-comunidad.jpg" },
+  { id: "fallback-12", categories: ["comunidad"], type: "image", title: "Cocina Rústica", location: "Cusco", url: "/images/gallery/gallery-cocina-rustica.jpg" },
+  { id: "fallback-13", categories: ["comunidad"], type: "image", title: "Tejedoras Lares", location: "Lares", url: "/images/lares-trek-3d2n/lares-trek-3d2n-gallery-13.jpg" },
+  { id: "fallback-14", categories: ["comunidad"], type: "image", title: "Familia Local", location: "Lares", url: "/images/lares-trek-3d2n/lares-trek-3d2n-gallery-34.jpg" },
   // Ceremonias
-  { id: "fallback-15", categories: ["ceremonias"], type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/coca-leaf.jpg" },
-  { id: "fallback-16", categories: ["ceremonias"], type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/moray.jpg" },
-  { id: "fallback-17", categories: ["ceremonias"], type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/sacsayhuaman.jpg" },
-  { id: "fallback-18", categories: ["ceremonias"], type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/machu-picchu.jpg" },
+  { id: "fallback-15", categories: ["ceremonias"], type: "image", title: "Hojas de Coca", location: "Cusco", url: "/images/gallery/gallery-coca-leaf.jpg" },
+  { id: "fallback-16", categories: ["ceremonias"], type: "image", title: "Moray", location: "Valle Sagrado", url: "/images/gallery/gallery-moray.jpg" },
+  { id: "fallback-17", categories: ["ceremonias"], type: "image", title: "Sacsayhuamán", location: "Cusco", url: "/images/gallery/gallery-sacsayhuaman.jpg" },
+  { id: "fallback-18", categories: ["ceremonias"], type: "image", title: "Machu Picchu", location: "Machu Picchu", url: "/images/gallery/gallery-machu-picchu.jpg" },
 ];
 
 

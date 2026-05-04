@@ -24,7 +24,7 @@ export default function HistorySection() {
           <div className="relative">
             <div className="aspect-[4/3] bg-support rounded overflow-hidden relative">
               <img
-                src="/images/history.jpg"
+                src="/images/about/about-history.jpg"
                 alt={t("historyTitle")}
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

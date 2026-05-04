@@ -7,6 +7,7 @@ import {
   Text,
   Tailwind,
   Preview,
+  Img,
 } from "@react-email/components";
 
 interface EmailContactConfirmationProps {
@@ -16,30 +17,33 @@ interface EmailContactConfirmationProps {
 export default function EmailContactConfirmation({
   toName,
 }: EmailContactConfirmationProps) {
+
+const baseUrl = process.env.NODE_ENV === "production"
+  ? "https://jaguarllaqta.com"
+  : "";
+const logoUrl = process.env.NODE_ENV === "production"
+  ? `${baseUrl}/logo/logo-2.png`
+  : `/static/logo/logo-2.png`;
+
   return (
     <Html>
       <Head />
       <Preview>Recibimos tu mensaje - Jaguar Llaqta</Preview>
       <Tailwind>
-        <Body className="bg-gray-100 font-sans">
-          <Container className="mx-auto max-w-[480px] rounded-lg bg-white p-8">
+        <Body className="bg-[#0E0E0E] font-sans">
+          <Container className="mx-auto max-w-[480px] rounded-lg bg-[#121212] border border-[#2A2A2A] p-8">
             <Section>
-              <Text
-                className="text-center text-2xl font-bold"
-                style={{ color: "#C9A24D" }}
-              >
-                Jaguar Llaqta
-              </Text>
-              <Text className="text-lg text-gray-800">
+              <Img src={logoUrl} alt="Jaguar Llaqta Logo" width="64" height="64" className="mx-auto my-0 object-contain" />
+              <Text className="text-lg text-white">
                 Hola {toName},
               </Text>
-              <Text className="text-gray-600">
+              <Text className="text-[#9CA3AF]">
                 Gracias por contactarnos, hemos recibido tu mensaje.
               </Text>
-              <Text className="text-gray-600">
+              <Text className="text-[#9CA3AF]">
                 Nuestro equipo revisará tu consulta y se pondrá en contacto contigo lo antes posible.
               </Text>
-              <Text className="text-sm text-gray-400">
+              <Text className="text-sm text-[#9CA3AF] opacity-80">
                 — El equipo de Jaguar Llaqta
               </Text>
             </Section>

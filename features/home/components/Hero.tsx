@@ -16,7 +16,7 @@ export default function Hero() {
         {/* Hero image */}
         <div className="absolute inset-0 blur-sm overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
           <Image
-            src="/images/history.jpg"
+            src="/images/home/home-hero-bg.jpg"
             alt="Jaguar Llaqta Hero"
             fill
             priority
@@ -31,24 +31,22 @@ export default function Hero() {
 
 
       {/* Content */}
-      <div className="relative z-10 container-custom text-center">
+      <div className="relative z-10 container-custom text-center mt-5">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          {/* Decorative element */}
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-accent" />
-            <div className="w-3 h-3 rotate-45 border-2 border-accent" />
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent" />
+
+
+                    {/* Main title */}
+          <div className="flex justify-center -my-6 px-4">
+            <h1 className="sr-only">{t("heroTitle")}</h1>
+            <Image
+              src="/logo/only-text.png"
+              alt="Jaguar Llaqta"
+              width={600}
+              height={150}
+              className="object-contain w-[80%] md:w-[600px] h-auto drop-shadow-xl"
+              priority
+            />
           </div>
-
-          {/* Main title */}
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl text-white uppercase tracking-widest">
-            {t("heroTitle")}
-          </h1>
-
-          {/* Subtitle */}
-          <p className="font-display text-2xl md:text-3xl text-accent uppercase tracking-wide">
-            {t("heroSubtitle")}
-          </p>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed to-accent/50 ">
@@ -71,12 +69,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Decorative bottom element */}
-          <div className="flex items-center justify-center gap-4 pt-12">
-            <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent/50" />
-            <div className="w-2 h-2 rotate-45 bg-accent/50" />
-            <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent/50" />
-          </div>
         </div>
       </div>
 

@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { siteConfig } from "@/config/site";
+import { footerNavigation } from "@/config/navigation";
+import Logo from "@/components/ui/Logo";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -15,8 +18,6 @@ function InstagramIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-import { siteConfig } from "@/config/site";
-import { footerNavigation } from "@/config/navigation";
 
 export default function Footer() {
   const t = useTranslations();
@@ -31,16 +32,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/logo/logo.jpeg"
-                alt="Jaguar Llaqta"
-                width={48}
-                height={48}
-                className="rounded-full object-cover"
-              />
-              <span className="font-display text-xl text-white">JAGUAR LLAQTA</span>
-            </div>
+            <Link href={`/${locale}`} className="inline-block">
+              <Logo layout="vertical" jaguarSize={64} textWidth={100} textHeight={64} />
+            </Link>
             <p className="text-muted text-sm">{t("footer.tagline")}</p>
 
             {/* Social Links */}
