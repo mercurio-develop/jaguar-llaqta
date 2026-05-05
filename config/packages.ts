@@ -318,7 +318,6 @@ export const packages: Package[] = [
       { id: "fvz1gf5z", type: "image", url: "/images/naupa-waka/naupa-waka-gallery-4.jpg" },
       { id: "w7myu03d", type: "image", url: "/images/naupa-waka/naupa-waka-gallery-5.jpg" },
       { id: "c1mtrq6i", type: "image", url: "/images/naupa-waka/naupa-waka-gallery-6.jpg" },
-      { id: "ljptqo92", type: "image", url: "/images/naupa-waka/naupa-waka-gallery-7.jpg" },
     ]
   },
 
@@ -410,7 +409,6 @@ export const packages: Package[] = [
       { id: "knxtyco1", type: "image", url: "/images/pumamarca/pumamarca-gallery-9.jpg" },
       { id: "vdqge3pe", type: "image", url: "/images/pumamarca/pumamarca-gallery-10.jpg" },
       { id: "5hcowdba", type: "image", url: "/images/pumamarca/pumamarca-gallery-11.jpg" },
-      { id: "yxy7528i", type: "image", url: "/images/pumamarca/pumamarca-gallery-12.jpg" },
     ]
   },
 
