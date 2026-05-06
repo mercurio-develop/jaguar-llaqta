@@ -32,8 +32,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href={`/${locale}`} className="inline-block">
-              <Logo layout="vertical" jaguarSize={64} textWidth={100} textHeight={64} />
+            <Link href={`/${locale}`} className="inline-block ml-2 mb-6">
+              <Logo layout="vertical" width={100} height={100} />
             </Link>
             <p className="text-muted text-sm">{t("footer.tagline")}</p>
 

@@ -33,10 +33,17 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10">
       <div className="container-custom">
-        <nav className="flex items-center justify-between h-20 py-5">
+        <nav className="flex items-center justify-between h-30 py-4 sm:py-5">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center">
-            <Logo layout="horizontal" jaguarSize={64} textWidth={100} textHeight={64} hideTextOnMobile={true} />
+          <Link href={`/${locale}`} className="flex items-center -ml-2 sm:ml-0">
+            <Logo 
+              layout="horizontal" 
+              width={120}
+              height={120}
+              mobileWidth={64}
+              mobileHeight={64}
+              hideTextOnMobile={true} 
+            />
           </Link>
 
           {/* Desktop Navigation */}

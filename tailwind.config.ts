@@ -14,9 +14,9 @@ const config: Config = {
           alt: "#121212",
         },
         accent: {
-          DEFAULT: "#C9A24D",
-          alt: "#D4AF37",
-          hover: "#B8923D",
+          DEFAULT: "#F7B916",
+          alt: "#F6B817",
+          hover: "#E5A913",
         },
         support: "#2A2A2A",
         muted: "#9CA3AF",
