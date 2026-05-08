@@ -40,9 +40,8 @@ export default function Header() {
               layout="horizontal" 
               width={180}
               height={70}
-              mobileWidth={64}
-              mobileHeight={64}
-              hideTextOnMobile={true} 
+              className="w-[140px] sm:w-[180px]"
+              hideTextOnMobile={false} 
             />
           </Link>
 
