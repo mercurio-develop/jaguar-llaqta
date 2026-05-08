@@ -45,12 +45,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Decorative Divider */}
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-accent"></div>
-            <div className="w-2 h-2 rotate-45 bg-accent"></div>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent"></div>
-          </div>
+
 
           {/* Brand Signature */}
           <div>
