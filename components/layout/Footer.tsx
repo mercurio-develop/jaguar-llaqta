@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href={`/${locale}`} className="inline-block ml-2 mb-6">
-              <Logo layout="vertical" width={100} height={100} />
+              <Logo layout="vertical" width={160} height={160} />
             </Link>
             <p className="text-muted text-sm">{t("footer.tagline")}</p>
 

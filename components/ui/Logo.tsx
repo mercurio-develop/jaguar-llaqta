@@ -31,7 +31,7 @@ export default function Logo({
         height={height}
         priority
         className={cn(
-          "object-contain transform scale-[1.3] origin-center",
+          "object-contain",
           hideTextOnMobile && isHorizontal ? "hidden sm:block" : "block"
         )}
       />
@@ -42,7 +42,7 @@ export default function Logo({
           width={mobileWidth}
           height={mobileHeight}
           priority
-          className="object-contain transform scale-[1.3] origin-center sm:hidden block ml-2"
+          className="object-contain sm:hidden block ml-2"
         />
       )}
     </div>

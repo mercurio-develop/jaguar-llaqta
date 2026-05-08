@@ -38,8 +38,8 @@ export default function Header() {
           <Link href={`/${locale}`} className="flex items-center -ml-2 sm:ml-0">
             <Logo 
               layout="horizontal" 
-              width={120}
-              height={120}
+              width={180}
+              height={70}
               mobileWidth={64}
               mobileHeight={64}
               hideTextOnMobile={true} 
