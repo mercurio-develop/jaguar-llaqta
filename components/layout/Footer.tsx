@@ -27,13 +27,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-alt border-t border-white/10">
+    <footer className="bg-primary border-t border-white/10">
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <Link href={`/${locale}`} className="inline-block ml-2 mb-6">
-              <Logo layout="vertical" width={160} height={160} />
+              <Logo layout="vertical" width={124} height={124} />
             </Link>
             <p className="text-muted text-sm">{t("footer.tagline")}</p>
 
