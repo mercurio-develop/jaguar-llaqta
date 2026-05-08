@@ -48,9 +48,11 @@ export default function Hero() {
 
 
           {/* Brand Signature */}
-          <div>
-            <p className="font-body text-sm md:text-base text-accent uppercase tracking-[0.3em]">
-              {t("heroTitle")} <span className="mx-2 text-white/50">•</span> {t("heroSubtitle")}
+          <div className="w-full px-4">
+            <p className="font-body text-xs sm:text-sm md:text-xl text-accent uppercase tracking-widest md:tracking-[0.3em] flex flex-wrap justify-center items-center gap-x-2 md:gap-x-0">
+              <span className="whitespace-nowrap">{t("heroTitle")}</span> 
+              <span className="text-white/50 md:mx-2">•</span> 
+              <span className="whitespace-nowrap">{t("heroSubtitle")}</span>
             </p>
           </div>
 
