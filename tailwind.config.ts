@@ -22,8 +22,8 @@ const config: Config = {
         muted: "#9CA3AF",
       },
       fontFamily: {
-        display: ["Playfair Display", "serif"],
-        body: ["Inter", "sans-serif"],
+        display: ["var(--font-playfair)", "serif"],
+        body: ["var(--font-inter)", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -54,7 +54,7 @@ export default function Hero() {
 
           {/* Brand Signature */}
           <div>
-            <p className="font-display text-sm md:text-base text-accent uppercase tracking-[0.3em]">
+            <p className="font-body text-sm md:text-base text-accent uppercase tracking-[0.3em]">
               {t("heroTitle")} <span className="mx-2 text-white/50">•</span> {t("heroSubtitle")}
             </p>
           </div>

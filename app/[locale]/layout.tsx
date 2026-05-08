@@ -6,7 +6,11 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { jsonLd } from '@/lib/jsonLd';
 import ImageProtection from '@/components/ImageProtection';
+import { Inter, Playfair_Display } from 'next/font/google';
 import '../globals.css';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -30,14 +34,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className={`dark ${inter.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-primary min-h-screen flex flex-col">
+      <body className="bg-primary font-body text-white min-h-screen flex flex-col">
         <ImageProtection />
         <NextIntlClientProvider messages={messages}>
           <Header />
