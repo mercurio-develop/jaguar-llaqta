@@ -1,60 +1,58 @@
-"use client";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+import AboutClientPage from "./AboutClientPage";
 
-import Image from "next/image";
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import SectionNavigation from "@/components/navigation/SectionNavigation";
-import HistorySection from "@/features/about/components/HistorySection";
-import VisionMissionSection from "@/features/about/components/VisionMissionSection";
-import TeamSection from "@/features/about/components/TeamSection";
-import FAQSection from "@/features/about/components/FAQSection";
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export default function AboutPage() {
-  const t = useTranslations("about");
-  const tFaq = useTranslations("faq");
-  const [activeSection, setActiveSection] = useState("historia");
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+  
+  return {
+    title: t("title"),
+    description: t("historyText").slice(0, 150) + "...",
+    openGraph: {
+      title: `${t("title")} | Jaguar Llaqta`,
+      description: t("historyText").slice(0, 150) + "...",
+      images: [{ url: "/images/about/about-community.jpg" }],
+    },
+  };
+}
 
-  const sections = [
-    { id: "historia", label: t("historyTitle") },
-    { id: "vision-mision", label: t("visionMissionTitle") },
-    { id: "asociados", label: t("teamTitle") },
-    { id: "faq", label: tFaq("title") },
+export default async function AboutPage({ params }: PageProps) {
+  const { locale } = await params;
+  const tFaq = await getTranslations({ locale, namespace: "faq" });
+
+  const faqs = [
+    { q: tFaq("q1"), a: tFaq("a1") },
+    { q: tFaq("q2"), a: tFaq("a2") },
+    { q: tFaq("q3"), a: tFaq("a3") },
+    { q: tFaq("q4"), a: tFaq("a4") },
+    { q: tFaq("q5"), a: tFaq("a5") },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
-    <div className="pt-20">
-      {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
-          <Image
-            src="/images/about/about-community.jpg"
-            alt={t("title")}
-            fill
-            priority
-            className="object-cover"
-            quality={85}
-            draggable={false}
-          />
-        </div>
-        <div className="absolute inset-0 bg-primary/70" />
-        <div className="relative z-10 container-custom text-center">
-          <h1 className="section-title mb-6">{t("title")}</h1>
-          <div className="w-24 h-1 bg-accent mx-auto" />
-        </div>
-      </section>
-
-      {/* Section Navigation */}
-      <SectionNavigation
-        sections={sections}
-        activeSection={activeSection}
-        onSectionChange={setActiveSection}
-        enableScrollDetection={true}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      <HistorySection />
-      <VisionMissionSection />
-      <TeamSection />
-      <FAQSection />
-    </div>
+      <AboutClientPage />
+    </>
   );
 }

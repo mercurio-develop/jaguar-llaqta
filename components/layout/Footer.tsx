@@ -31,9 +31,9 @@ export default function Footer() {
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:col-span-1">
             <Link href={`/${locale}`} className="inline-block ml-2 mb-6">
-              <Logo layout="vertical" width={124} height={124} />
+              <Logo layout="vertical" width={124} height={124} className="w-20 sm:w-24 md:w-[124px]" />
             </Link>
             <p className="text-muted text-sm">{t("footer.tagline")}</p>
 
@@ -58,40 +58,42 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-display text-lg text-white mb-4">{t("footer.quickLinks")}</h4>
-            <ul className="space-y-2">
-              {footerNavigation.main.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={`/${locale}${item.href}`}
-                    className="text-muted hover:text-accent transition-colors text-sm"
-                  >
-                    {t(item.titleKey)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="grid grid-cols-2 gap-4 sm:gap-8 md:col-span-2">
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-display text-lg text-white mb-4">{t("footer.quickLinks")}</h4>
+              <ul className="space-y-2">
+                {footerNavigation.main.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={`/${locale}${item.href}`}
+                      className="text-muted hover:text-accent transition-colors text-sm"
+                    >
+                      {t(item.titleKey)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-display text-lg text-white mb-4">{t("contact.title")}</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-muted text-sm">
-                <MapPin className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>{siteConfig.contact.address}</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted text-sm">
-                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>{siteConfig.contact.phone}</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted text-sm">
-                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>{siteConfig.contact.email}</span>
-              </li>
-            </ul>
+            {/* Contact */}
+            <div>
+              <h4 className="font-display text-lg text-white mb-4">{t("contact.title")}</h4>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-muted text-sm">
+                  <MapPin className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span>{siteConfig.contact.address}</span>
+                </li>
+                <li className="flex items-center gap-3 text-muted text-sm">
+                  <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span>{siteConfig.contact.phone}</span>
+                </li>
+                <li className="flex items-center gap-3 text-muted text-sm">
+                  <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="break-all">{siteConfig.contact.email}</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
         </div>

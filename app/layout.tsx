@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jaguarllaqta.com"),
   title: {
     default: "Jaguar Llaqta | Turismo Ancestral y Alternativo en Cusco, Perú",
     template: "%s | Jaguar Llaqta",

@@ -31,7 +31,7 @@ export default function Logo({
         height={height}
         priority
         className={cn(
-          "object-contain",
+          "object-contain w-full h-auto",
           hideTextOnMobile && isHorizontal ? "hidden sm:block" : "block"
         )}
       />
