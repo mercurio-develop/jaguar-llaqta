@@ -167,7 +167,7 @@
     "send": "Enviar mensaje",
     "successMessage": "¡Mensaje enviado! Te responderemos pronto.",
     "address": "Dirección",
-    "addressValue": "Cusco, Perú",
+    "addressValue": "Valle Sagrado, Cusco, Perú",
     "phone": "Teléfono",
     "phoneValue": "+51 926 935 820",
     "emailLabel": "Email",
@@ -185,9 +185,13 @@
     "q3": "¿Qué debo llevar al tour?",
     "a3": "Todas nuestras rutas y experiencias están detalladas en la página web, aclarando qué elementos se recomienda llevar a cada tour en específico.",
     "q4": "¿Cómo realizo mi pago?",
-    "a4": "Actualmente contamos con opciones de pago vía efectivo, transferencia, billetera digital (Remitly, Global66, Yape, Plin). Cualquier otro medio de pago, por favor consultar a nuestro correo o números de contacto. Tener en cuenta que cualquier cargo bancario o comisión adicional será asumido por el cliente o persona que realice el depósito.",
+    "a4": "El pago del 50% se realiza como adelanto durante el proceso de reserva y el otro 50% un periodo antes del tour, coordinado según el tour elegido durante el proceso de reserva. Actualmente contamos con opciones de pago vía efectivo, transferencia, billetera digital (Remitly, Global66, Yape, Plin). Cualquier otro medio de pago, por favor consultar a nuestro correo o números de contacto. Tener en cuenta que cualquier cargo bancario o comisión adicional será asumido por el cliente o persona que realice el depósito.",
     "q5": "¿El tour incluye sleeping, carpa, bastones, etc?",
-    "a5": "El tour no incluye los equipos de montaña adicionales a los mencionados como parte de cada ruta. En ruta Multi-Day cada excursionista necesita una bolsa de dormir para acampar. Los colchones inflables de aire y los bastones (con puntas de goma) son opcionales, pero se recomiendan. Si no desea traer ninguno de los anteriores, todos están disponibles para alquilar. Avisar con anticipación."
+    "a5": "El tour no incluye los equipos de montaña adicionales a los mencionados como parte de cada ruta. En ruta Multi-Day cada excursionista necesita una bolsa de dormir para acampar. Los colchones inflables de aire y los bastones (con puntas de goma) son opcionales, pero se recomiendan. Si no desea traer ninguno de los anteriores, todos están disponibles para alquilar. Avisar con anticipación.",
+    "q6": "¿Me recogen de mi hospedaje?",
+    "a6": "El punto de encuentro e inicio de todos los tours en Urubamba, Valle Sagrado, Cusco. En caso necesite coordinar el recojo desde su hospedaje, no dude en consultarlo durante su proceso de pre-reserva para poder informarle sobre los posibles costos adicionales.",
+    "q7": "¿Puedo obtener la devolución de mis pagos si cancelo el tour?",
+    "a7": "No. Los pagos realizados no cuentan con devolución."
   },
   "footer": {
     "tagline": "Enlazamos mundos",

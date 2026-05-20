@@ -31,7 +31,7 @@ export default function ActivityItinerary({ pkg, locale }: ActivityItineraryProp
     <section id="itinerary">
       <div className="flex items-center justify-between mb-8">
         <h2 className="font-display text-2xl text-white uppercase tracking-wider">
-          {isSpanish ? "Itinerario Día a Día" : "Day by Day Itinerary"}
+          {isSpanish ? "Itinerario" : "Itinerary"}
         </h2>
         <div className="flex gap-4 text-sm">
           <button
