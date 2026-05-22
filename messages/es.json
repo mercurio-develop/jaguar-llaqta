@@ -143,7 +143,15 @@
     "successTitle": "¡Reserva Confirmada!",
     "successDesc": "Te hemos enviado un correo con los detalles de tu reserva.",
     "errorTitle": "Error en la reserva",
-    "errorDesc": "Hubo un problema procesando tu reserva. Por favor intenta nuevamente."
+    "errorDesc": "Hubo un problema procesando tu reserva. Por favor intenta nuevamente.",
+    "summaryTitle": "Resumen",
+    "summaryPackage": "Paquete:",
+    "summaryUnitPrice": "Precio unitario:",
+    "summarySoles": "soles",
+    "summaryParticipants": "Participantes:",
+    "summaryTotal": "Total estimado:",
+    "summaryIncludes": "Incluye:",
+    "summaryNote": "* Te contactaremos para confirmar disponibilidad y proceder con el pago."
   },
   "gallery": {
     "title": "Galería",

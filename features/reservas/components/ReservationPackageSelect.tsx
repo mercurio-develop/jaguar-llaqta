@@ -77,18 +77,9 @@ export default function ReservationPackageSelect({
 
                   {/* Content */}
                   <div className="p-5 flex-1 flex flex-col">
-                    <h3 className="font-display text-lg text-white uppercase tracking-wider mb-2">
+                    <h3 className="font-display text-lg text-white uppercase tracking-wider mb-4">
                       {locale === "es" ? pkg.name : pkg.nameEn}
                     </h3>
-
-                    <div className="flex items-start gap-2 text-muted text-sm mb-3">
-                      <Clock className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="min-w-0 leading-snug">
-                        {locale === "es"
-                          ? pkg.duration
-                          : pkg.durationEn || pkg.duration}
-                      </span>
-                    </div>
 
                     <p className="text-muted text-sm leading-relaxed mb-4 flex-1 line-clamp-2">
                       {locale === "es" ? pkg.tagline : pkg.taglineEn}
@@ -97,9 +88,9 @@ export default function ReservationPackageSelect({
                     {/* Price and actions */}
                     <div className="flex items-center justify-between pt-4 border-t border-support">
                       <span className="text-accent font-bold tracking-tight">
-                        ${pkg.price}{" "}
+                        S/ {pkg.price}{" "}
                         <span className="text-xs font-normal text-muted">
-                          USD
+                          soles
                         </span>
                       </span>
                       <Link

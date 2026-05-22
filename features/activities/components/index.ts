@@ -6,3 +6,4 @@ export { default as CategoryHero } from "./CategoryHero";
 export { default as CategoryStats } from "./CategoryStats";
 export { default as CategoryPackageList } from "./CategoryPackageList";
 export { default as CategoryCTA } from "./CategoryCTA";
+export { default as RelatedPackages } from "./RelatedPackages";

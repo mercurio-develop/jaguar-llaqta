@@ -196,7 +196,9 @@ export default function ReservationForm({
                   <div className="flex items-center justify-between p-4 bg-accent/10 rounded-lg mb-6">
                     <div className="flex items-center gap-3">
                       <Mountain className="w-5 h-5 text-accent" />
-                      <span className="text-white">{selectedPackage.name}</span>
+                      <span className="text-white">
+                        {locale === "en" && selectedPackage.nameEn ? selectedPackage.nameEn : selectedPackage.name}
+                      </span>
                     </div>
                     <button
                       type="button"

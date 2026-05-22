@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Clock, Mountain } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -15,6 +16,7 @@ interface PackageGridProps {
 }
 
 export default function PackageGrid({ locale, packages }: PackageGridProps) {
+  const router = useRouter();
   const [displayed, setDisplayed] = useState(packages);
   const [fading, setFading] = useState(false);
 
@@ -50,7 +52,13 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
           (pkg.gallery.find(g => g.type === "image" && g.url)?.url) ||
           categoryImages[pkg.categories[0]];
         return (
-          <Card key={pkg.id} variant="hover" className="p-0 overflow-hidden flex flex-col border border-support animate-card-in" style={{ animationDelay: `${idx * 80}ms` }}>
+          <Card 
+            key={pkg.id} 
+            variant="hover" 
+            className="p-0 overflow-hidden flex flex-col border border-support animate-card-in cursor-pointer" 
+            style={{ animationDelay: `${idx * 80}ms` }}
+            onDoubleClick={() => router.push(`/${locale}/actividades/${pkg.id}`)}
+          >
             {/* Image */}
             <div className="aspect-[16/10] bg-support/50 relative overflow-hidden">
               <LazyImage
@@ -94,14 +102,16 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
               </p>
 
               {/* Price and CTA */}
-              <div className="flex items-center justify-between pt-4 border-t border-support">
+              <div className="flex flex-wrap items-end justify-between gap-3 pt-4 border-t border-support mt-auto">
                 <div>
-                  <span className="text-muted text-xs uppercase tracking-wider">
+                  <span className="block text-muted text-[10px] uppercase tracking-wider mb-1">
                     {locale === "es" ? "Desde" : "From"}
                   </span>
-                  <p className="text-xl font-bold text-accent tracking-tight">${pkg.price} <span className="text-xs font-normal text-muted">USD</span></p>
+                  <p className="text-lg font-bold text-accent tracking-tight leading-none">
+                    S/ {pkg.price} <span className="text-xs font-normal text-muted">soles</span>
+                  </p>
                 </div>
-                <Link href={`/${locale}/actividades/${pkg.id}`}>
+                <Link href={`/${locale}/actividades/${pkg.id}`} className="shrink-0">
                   <Button size="sm">
                     {locale === "es" ? "Ver más" : "View more"}
                   </Button>

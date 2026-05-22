@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import { jsonLd } from '@/lib/jsonLd';
 import ImageProtection from '@/components/ImageProtection';
 import { Inter, Playfair_Display } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

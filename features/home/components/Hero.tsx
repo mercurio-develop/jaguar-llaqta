@@ -21,7 +21,8 @@ export default function Hero() {
             fill
             priority
             className="object-cover object-[center_20%]"
-            quality={100}
+            quality={85}
+            sizes="100vw"
             draggable={false}
           />
         </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Clock, Mountain, MapPin, Calendar, ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Card from "@/components/ui/Card";
@@ -22,6 +22,7 @@ const chipActive = "bg-accent/10 text-accent border-accent/30";
 const chipInactive = "border-white/20 text-muted hover:text-white hover:border-white/40";
 
 export default function CategoryPackageList({ category }: CategoryPackageListProps) {
+  const router = useRouter();
   const pathname = usePathname();
   const locale = pathname.split("/")[1] as "es" | "en";
 
@@ -156,7 +157,10 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
                     visibleIds.has(pkg.id) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
                 >
-                  <Card className="p-0 overflow-hidden border border-support">
+                  <Card 
+                    className="p-0 overflow-hidden border border-support cursor-pointer"
+                    onDoubleClick={() => router.push(`/${locale}/actividades/${pkg.id}`)}
+                  >
                     <div className="grid md:grid-cols-5 gap-0">
                       <div className="md:col-span-2 aspect-[4/3] md:aspect-auto bg-support/50 relative min-h-[250px] overflow-hidden">
                         <LazyImage
@@ -188,7 +192,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
                             {pkg.elevation && (
                               <div className="flex items-center gap-2">
                                 <MapPin className="w-4 h-4 text-accent" />
-                                <span>{pkg.elevation}</span>
+                                <span>{locale === "es" ? pkg.elevation : (pkg.elevationEn || pkg.elevation)}</span>
                               </div>
                             )}
                             {pkg.bestSeason && (
@@ -216,7 +220,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
                               {locale === "es" ? "Desde" : "From"}
                             </span>
                             <p className="text-2xl font-bold text-accent tracking-tight">
-                              ${pkg.price} <span className="text-sm font-normal text-muted">USD</span>
+                              S/ {pkg.price} <span className="text-sm font-normal text-muted">soles</span>
                             </p>
                           </div>
                           <Link href={`/${locale}/actividades/${pkg.id}`}>

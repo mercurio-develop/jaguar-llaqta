@@ -16,7 +16,7 @@ export default function TerminosPage() {
             <Section title="1. Identificación">
               <p>
                 JAGUAR LLAQTA es un proyecto de turismo alternativo con sede en
-                Cusco, Perú. Correo de contacto:{" "}
+                Valle Sagrado, Cusco, Perú. Correo de contacto:{" "}
                 <a href="mailto:augarteforno@gmail.com" className="text-accent hover:underline">
                   augarteforno@gmail.com
                 </a>

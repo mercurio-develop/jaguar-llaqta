@@ -13,6 +13,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: t("title"),
     description: t("historyText").slice(0, 150) + "...",
+    alternates: {
+      canonical: `https://jaguarllaqta.com/${locale}/sobre-nosotros`,
+      languages: {
+        "x-default": `https://jaguarllaqta.com/es/sobre-nosotros`,
+        es: `https://jaguarllaqta.com/es/sobre-nosotros`,
+        en: `https://jaguarllaqta.com/en/sobre-nosotros`,
+      },
+    },
     openGraph: {
       title: `${t("title")} | Jaguar Llaqta`,
       description: t("historyText").slice(0, 150) + "...",

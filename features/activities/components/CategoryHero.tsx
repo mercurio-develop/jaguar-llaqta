@@ -38,7 +38,8 @@ export default function CategoryHero({ category }: CategoryHeroProps) {
           priority
           className="object-cover"
           style={{ objectPosition: config.backgroundPosition || "center" }}
-          quality={85}
+          quality={80}
+          sizes="100vw"
           draggable={false}
         />
       </div>

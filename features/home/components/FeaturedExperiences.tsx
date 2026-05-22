@@ -57,7 +57,8 @@ export default function FeaturedExperiences() {
                   alt={t(exp.titleKey)}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  quality={80}
+                  quality={60}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   draggable={false}
                 />
               </div>

@@ -9,6 +9,7 @@ import {
   ActivitySidebar,
   ActivityHero,
   ActivityNav,
+  RelatedPackages,
 } from "@/features/activities/components";
 import ActivityOverview from "@/features/activities/components/ActivityOverview";
 import ActivityItinerary from "@/features/activities/components/ActivityItinerary";
@@ -56,6 +57,12 @@ export default function ActivityClientPage({ params }: { params: { id: string } 
                   columns={3}
                 />
               </section>
+
+              <RelatedPackages 
+                currentPackageId={pkg.id} 
+                categories={pkg.categories} 
+                locale={locale as "es" | "en"} 
+              />
             </div>
 
             <ActivitySidebar pkg={pkg} locale={locale} />

@@ -23,44 +23,25 @@ export default function ActivitySidebar({ pkg, locale }: ActivitySidebarProps) {
               {isSpanish ? "Desde" : "From"}
             </p>
             <p className="text-4xl font-bold text-accent tracking-tight">
-              ${pkg.price}
-              <span className="text-lg font-normal text-muted"> USD</span>
+              S/ {pkg.price}
+              <span className="text-lg font-normal text-muted"> soles</span>
             </p>
             <p className="text-muted text-sm">
-              {isSpanish ? "por persona" : "per person"}
+              {pkg.id === "full-day-spiritual"
+                ? isSpanish ? "por persona (mínimo 10 personas)" : "per person (minimum 10 people)"
+                : isSpanish ? "por persona (mínimo dos personas)" : "per person (minimum two people)"}
             </p>
-            <div className="mt-4 p-2 bg-accent/5 rounded border border-accent/10">
-              <p className="text-[10px] uppercase tracking-widest text-accent font-semibold leading-tight px-1">
-                {pkg.id === "full-day-spiritual"
-                  ? (isSpanish
-                      ? "ESTA EXPERIENCIA ES PARA GRUPOS GRANDES (MIN 10 personas)"
-                      : "THIS EXPERIENCE IS FOR LARGE GROUPS (MIN 10 people)")
-                  : (isSpanish
-                      ? "Descuentos disponibles en grupos grandes"
-                      : "Special rates for larger groups")}
-              </p>
-            </div>
-          </div>
+            {pkg.id !== "full-day-spiritual" ?     <div className="mt-4 p-2 bg-accent/5 rounded border border-accent/10">
 
-          <div className="space-y-4 mb-8">
-            <div className="flex flex-col gap-1 text-sm">
-              <span className="text-muted uppercase tracking-wider">
-                {isSpanish ? "Duración" : "Duration"}
-              </span>
-              <span className="text-white leading-snug">
-                {isSpanish ? pkg.duration : (pkg.durationEn || pkg.duration)}
-              </span>
-            </div>
-            {pkg.difficulty && (
-              <div className="flex flex-col gap-1 text-sm">
-                <span className="text-muted uppercase tracking-wider">
-                  {isSpanish ? "Dificultad" : "Difficulty"}
-                </span>
-                <span className="text-white">
-                  {isSpanish ? pkg.difficulty : (pkg.difficultyEn || pkg.difficulty)}
-                </span>
-              </div>
-            )}
+              <p className="text-[10px] uppercase tracking-widest text-accent font-semibold leading-tight px-1">
+                {
+
+                  isSpanish
+                    ? "Descuentos disponibles a partir de 5 personas"
+                    : "Discounts available from 5 people"}
+              </p>
+            </div> : null}
+
           </div>
 
           <Link href={`/${locale}/reservas?paquete=${pkg.id}`}>

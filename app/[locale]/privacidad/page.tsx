@@ -15,7 +15,7 @@ export default function PrivacidadPage() {
 
             <Section title="1. Responsable del tratamiento">
               <p>
-                JAGUAR LLAQTA, con sede en Cusco, Perú, es responsable del
+                JAGUAR LLAQTA, con sede en Valle Sagrado, Cusco, Perú, es responsable del
                 tratamiento de los datos personales recabados a través de este
                 sitio web y sus formularios de contacto y reserva. Correo de
                 contacto:{" "}

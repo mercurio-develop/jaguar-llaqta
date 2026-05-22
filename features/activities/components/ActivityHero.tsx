@@ -41,7 +41,8 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
           priority
           className="object-cover"
           style={{ objectPosition: pkg.heroImagePosition || "center center" }}
-          quality={85}
+          quality={80}
+          sizes="100vw"
         />
       </div>
       {/* Readability overlay */}
@@ -86,7 +87,7 @@ export default function ActivityHero({ pkg, locale }: ActivityHeroProps) {
           {pkg.elevation && (
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-accent" />
-              <span>{pkg.elevation}</span>
+              <span>{isSpanish ? pkg.elevation : (pkg.elevationEn || pkg.elevation)}</span>
             </div>
           )}
           {pkg.bestSeason && (

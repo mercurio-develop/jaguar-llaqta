@@ -9,13 +9,10 @@ export default function FAQSection() {
   const tFaq = useTranslations("faq");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-  const faqs = [
-    { q: tFaq("q1"), a: tFaq("a1") },
-    { q: tFaq("q2"), a: tFaq("a2") },
-    { q: tFaq("q3"), a: tFaq("a3") },
-    { q: tFaq("q4"), a: tFaq("a4") },
-    { q: tFaq("q5"), a: tFaq("a5") },
-  ];
+  const faqs = Array.from({ length: 7 }, (_, i) => ({
+    q: tFaq(`q${i + 1}` as any),
+    a: tFaq(`a${i + 1}` as any),
+  }));
 
   return (
     <section id="faq" className="py-20 bg-primary-alt">

@@ -11,7 +11,7 @@ export const siteConfig = {
   contact: {
     phone: "+51 926 935 820",
     email: "jaguarllaqta@gmail.com",
-    address: "Cusco, Perú",
+    address: "Valle Sagrado, Cusco, Perú",
   },
 };
 

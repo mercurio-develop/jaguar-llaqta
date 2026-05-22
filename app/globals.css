@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-size: 15px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+}
+
 :root {
   --color-primary: #0E0E0E;
   --color-primary-alt: #121212;

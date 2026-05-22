@@ -259,7 +259,7 @@ export default function Gallery({
                     src={item.url}
                     alt={item.title}
                     fill
-                    quality={75}
+                    quality={60}
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover"
                     draggable={false}
@@ -292,7 +292,7 @@ export default function Gallery({
         <div className="fixed inset-0 z-50 bg-primary/95 flex items-center justify-center p-4">
           <button
             onClick={() => setSelectedItem(null)}
-            className="absolute top-4 right-4 p-2 text-white hover:text-accent transition-colors"
+            className="absolute top-4 right-4 z-50 p-2 text-white hover:text-accent transition-colors"
           >
             <X className="w-8 h-8" />
           </button>
@@ -300,7 +300,7 @@ export default function Gallery({
           {currentIndex > 0 && (
             <button
               onClick={() => navigate("prev")}
-              className="absolute left-4 p-2 text-white hover:text-accent transition-colors"
+              className="absolute left-4 z-50 p-2 text-white hover:text-accent transition-colors"
             >
               <ChevronLeft className="w-10 h-10" />
             </button>
@@ -309,7 +309,7 @@ export default function Gallery({
           {currentIndex < filteredItems.length - 1 && (
             <button
               onClick={() => navigate("next")}
-              className="absolute right-4 p-2 text-white hover:text-accent transition-colors"
+              className="absolute right-4 z-50 p-2 text-white hover:text-accent transition-colors"
             >
               <ChevronRight className="w-10 h-10" />
             </button>
@@ -323,7 +323,7 @@ export default function Gallery({
                   src={filteredItems[currentIndex].url}
                   alt={filteredItems[currentIndex].title}
                   fill
-                  quality={90}
+                  quality={80}
                   sizes="100vw"
                   className="object-contain"
                   priority
