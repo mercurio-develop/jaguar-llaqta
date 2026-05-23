@@ -96,25 +96,25 @@ export const packages: Package[] = [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
       "Snack",
-      "Almuerzo local tradicional",
-      "Experiencia cultural con familia local"
+      "Almuerzo tradicional",
+      "Experiencia cultural con una familia local"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
       "Snack",
-      "Traditional local lunch",
+      "Traditional lunch",
       "Cultural experience with a local family"
     ],
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)."
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Personal mountain equipment (Poles, footwear, rain cover)."
     ],
     requirements: [
       "Sombrero o gorra",
@@ -141,18 +141,19 @@ export const packages: Package[] = [
         day: 1,
         title: "Valle Sagrado – Cancha Cancha – Valle Sagrado",
         titleEn: "Sacred Valley – Cancha Cancha – Sacred Valley",
-        description: "07:15 AM – Partimos de Urubamba en transporte privado en dirección a Huarán (Saywapata) (3,200 m.s.n.m.). 08:30 AM – Inicio de la caminata. Ascenso aproximado de 3 horas. 11:30 AM – Llegada a la comunidad de Cancha Cancha. Recepción y almuerzo tradicional. 02:00 PM – Caminata de retorno a Saywapata (aprox. 2 horas en descenso). 04:30 PM – Traslado de retorno a Urubamba.",
-        descriptionEn: "07:15 AM – We depart from Urubamba by private transport towards Huarán (Saywapata) (3,200 m.a.s.l.). 08:30 AM – Start of the hike. Approx. 3-hour ascent. 11:30 AM – Arrival at Cancha Cancha community. Welcome and traditional lunch. 02:00 PM – Return hike to Saywapata (approx. 2 hours downhill). 04:30 PM – Transfer back to Urubamba.",
+        description: "07:15 AM – Partimos de Urubamba en transporte privado en dirección a Huarán (Saywapata) (3,200 m.s.n.m.).08:30 AM – Inicio de la caminata. Ascenso aproximado de 3 horas.11:30 AM – Llegada a la comunidad de Cancha Cancha. Recepción y almuerzo tradicional.02:00 PM – Caminata de retorno a Saywapata (aprox. 2 horas en descenso).04:30 PM – Traslado de retorno a Urubamba.",
+        descriptionEn: "07:15 AM – We depart from Urubamba by private transport towards Huarán (Saywapata) (3,200 m.a.s.l.).08:30 AM – Start of the hike. Approximate ascent of 3 hours.11:30 AM – Arrival at the community of Cancha Cancha. Reception and traditional lunch.02:00 PM – Return hike to Saywapata (approx. 2 hours descent).04:30 PM – Return transfer to Urubamba.",
         highlights: ["Cancha Cancha", "Almuerzo tradicional"],
         highlightsEn: [
-      "Cancha Cancha",
-      "Traditional lunch"
-    ],
-        meals: "Almuerzo",
-        mealsEn: "Lunch",
+          "Cancha Cancha",
+          "Traditional lunch"
+        ],
+        meals: "Almuerzo tradicional",
+        mealsEn: "Traditional lunch",
         accommodation: "",
         accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "8eeojk39", type: "image", url: "/images/cancha-cancha/cancha-cancha-gallery-1.jpg" },
@@ -201,11 +202,11 @@ export const packages: Package[] = [
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Snack",
+      "Refrigerio",
       "Interpretación cultural e histórica"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
       "Snack",
       "Cultural and historical interpretation"
@@ -213,12 +214,12 @@ export const packages: Package[] = [
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)"
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Personal mountain equipment (Poles, footwear, rain cover)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -245,21 +246,22 @@ export const packages: Package[] = [
     itinerary: [
       {
         day: 1,
-        title: "Ollantaytambo– Cacchicata – Inti Punku",
-        titleEn: "Ollantaytamboy – Cacchicata – Inti Punku",
+        title: "Ollantaytambo – Cacchicata – Inti Punku",
+        titleEn: "Ollantaytambo – Cacchicata – Inti Punku",
         description: "06:30 AM – Partimos de Urubamba en transporte privado y nos trasladamos a la comunidad de Cacchicata (Ollantaytambo). 08:00 AM – Inicio de la caminata. Ascenso de aproximadamente 3 a 4 horas. 12:00 PM – Llegada a Inti Punku. Tiempo de descanso, apreciación del paisaje y refrigerio. 02:00 PM – Inicio del descenso, visitando las antiguas canteras incas de Cacchicata. 04:00 PM – Fin de la caminata y retorno a Urubamba.",
-        descriptionEn: "06:30 AM – We depart from Urubamba by private transport and transfer to the community of Cacchicata (Ollantaytambo). 08:00 AM – Start of the hike. Ascent of approximately 3 to 4 hours. 12:00 PM – Arrival at Inti Punku. Time to rest, enjoy the landscape and have a snack. 02:00 PM – Start of the descent, passing by the ancient Inca quarries of Cacchicata. 04:00 PM – End of the hike and return to Urubamba.",
+        descriptionEn: "06:30 AM – We depart from Urubamba in private transport and transfer to the community of Cacchicata (Ollantaytambo). 08:00 AM – Start of the hike. Ascent of approximately 3 to 4 hours. 12:00 PM – Arrival at Inti Punku. Time for rest, landscape appreciation, and snack. 02:00 PM – Start of the descent, visiting the ancient Inca quarries of Cacchicata. 04:00 PM – End of the hike and return to Urubamba.",
         highlights: ["Inti Punku", "Canteras Incas", "Ofrenda de hojas de coca"],
         highlightsEn: [
-      "Inti Punku",
-      "Inca Quarries",
-      "Coca leaf offering"
-    ],
-        meals: "Almuerzo",
-        mealsEn: "Lunch",
+          "Inti Punku",
+          "Inca Quarries",
+          "Coca leaf offering"
+        ],
+        meals: "Refrigerio",
+        mealsEn: "Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "jxpkz2hk", type: "image", url: "/images/inti-punku/inti-punku-gallery-1.jpg" },
@@ -290,8 +292,13 @@ export const packages: Package[] = [
     bestSeasonEn: "",
     price: 230,
     description: "Esta experiencia de medio día se desarrolla en el Valle Sagrado de los Incas, cerca del pueblo de Pacchar, ubicado antes de Ollantaytambo. El recorrido conduce a un extraordinario sitio ceremonial inca oculto en la montaña. Tras una corta caminata en ascenso se llega a Ñaupa Waka, un oráculo sagrado al exterior de una cueva, utilizado como centro ceremonial y observatorio estelar de piedra, tallado con formas geométricas relacionadas con la Chakana inca, símbolo de gran importancia espiritual. En el interior de la cueva encontraremos un nicho tallado en forma geométrica, en el cual realizaremos una ofrenda. Es un lugar único y especial, ideal para quienes buscan una conexión profunda con la cultura andina.",
-    descriptionEn: "This half-day experience takes place in the Sacred Valley of the Incas, near the town of Pacchar, located before Ollantaytambo. The journey leads to an extraordinary Inca ceremonial site hidden within the mountain. After a short uphill walk, we reach Ñaupa Waka, a sacred oracle outside a cave, used as a ceremonial center and stellar stone observatory, carved with geometric shapes related to the Inca Chakana, a symbol of great spiritual importance. Inside the cave, we will find a geometrically carved niche where we will make an offering. This is a unique and special place, ideal for travelers seeking a deep cultural and spiritual connection.",
-    highlights: ["Nicho de piedra tallado", "Observatorio estelar Inca", "Ofrenda de hojas de coca", "Chichería tradicional"],
+    descriptionEn: "This half-day experience takes place in the Sacred Valley of the Incas, near the town of Pacchar, located before Ollantaytambo. The tour leads to an extraordinary Inca ceremonial site hidden in the mountain. After a short uphill walk, you reach Ñaupa Waka, a sacred oracle outside a cave, used as a ceremonial center and a stone stellar observatory, carved with geometric shapes related to the Inca Chakana, a symbol of great spiritual importance. Inside the cave, we will find a geometrically carved niche, where we will perform an offering. It is a unique and special place, ideal for those seeking a deep connection with Andean culture.",
+    highlights: [
+      "Nicho de piedra tallado",
+      "Observatorio estelar Inca",
+      "Ofrenda de hojas de coca",
+      "Chichería tradicional"
+    ],
     highlightsEn: [
       "Carved stone niche",
       "Inca stellar observatory",
@@ -300,16 +307,16 @@ export const packages: Package[] = [
     ],
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
-      "Guía e interpretación",
+      "Guía",
       "Ofrenda andina tradicional",
       "Bebida tradicional",
       "Snack"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
-      "Guía e interpretación",
-      "Ofrenda andina tradicional",
-      "Traditional beverage",
+      "Round trip transportation from the meeting point",
+      "Guide",
+      "Traditional Andean offering",
+      "Traditional drink",
       "Snack"
     ],
     notIncludes: [
@@ -342,17 +349,18 @@ export const packages: Package[] = [
         title: "Valle Sagrado – Pacchar – Ñaupa Waka",
         titleEn: "Sacred Valley – Pacchar – Ñaupa Waka",
         description: "08:30 AM – Partimos de Urubamba en transporte privado al pueblo de Pacchar. 09:30 AM – Llegada al punto de inicio y caminata corta de 25–30 minutos en ascenso hacia las terrazas incas y el templo. 10:00 AM – Visita al templo sagrado de Ñaupa Waka. Ofrenda andina tradicional con hojas de coca, acompañada de música intuitiva para conectar con el lugar. Tiempo libre para recorrer y disfrutar del sitio. 11:45 AM – Descenso hacia Pacchar y visita a una Chichería Tradicional, donde se puede disfrutar de una bebida de Chicha de Jora tradicional y comida local (opcional). 01:00 PM – Retorno al punto de inicio.",
-        descriptionEn: "08:30 AM – Pick-up from your hotel in the Sacred Valley and transfer to the town of Pacchar (approx. 45 minutes). 09:30 AM – Arrival at the starting point. Short uphill walk of approximately 25–30 minutes towards the Inca terraces and temple. 10:00 AM – Visit to the sacred temple of Ñaupa Waka. Traditional Andean offering using coca leaves, accompanied by intuitive music to connect with the place. Free time to explore and enjoy the site (approx. 2 hours). 12:00 PM – Descent back to Pacchar and visit to the Sacred Valley Brewery, where you can enjoy handmade beer and local food (optional). 01:00 PM – Private transport back to your hotel.",
+        descriptionEn: "08:30 AM – We depart from Urubamba by private transport to the town of Pacchar. 09:30 AM – Arrival at the starting point and a short 25–30 minute uphill walk towards the Inca terraces and the temple. 10:00 AM – Visit to the sacred temple of Ñaupa Waka. Traditional Andean offering with coca leaves, accompanied by intuitive music to connect with the place. Free time to explore and enjoy the site. 11:45 AM – Descent towards Pacchar and visit to a Traditional Chichería, where you can enjoy a traditional Chicha de Jora drink and local food (optional). 01:00 PM – Return to the starting point.",
         highlights: ["Ñaupa Waka", "Ofrenda de hojas de coca"],
         highlightsEn: [
-      "Ñaupa Waka",
-      "Coca leaf offering"
-    ],
-        meals: "Snack",
+          "Ñaupa Waka",
+          "Coca leaf offering"
+        ],
+        meals: "Refrigerio",
         mealsEn: "Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "iwyq5upe", type: "image", url: "/images/naupa-waka/naupa-waka-gallery-1.jpg" },
@@ -382,23 +390,28 @@ export const packages: Package[] = [
     bestSeason: "",
     bestSeasonEn: "",
     price: 400,
-    description: "Esta hermosa caminata de día completo se realiza en los alrededores del histórico pueblo de Ollantaytambo. El recorrido atraviesa un valle con gran diversidad de plantas nativas, riachuelos y antiguos sistemas de terrazas agrícolas. La caminata inicia en Munaypata, una pequeña comunidad andina ubicada a unos 10 minutos de Ollantaytambo. Tras un ascenso gradual de aproximadamente tres horas, se llega al sitio arqueológico preinca de Pumamarca, donde es posible apreciar la magnitud de su construcción, su ubicación estratégica y su notable ingeniería, todo ello acompañado de vistas impresionantes de los valles y montañas circundantes.",
-    descriptionEn: "This beautiful full-day hike takes place on the outskirts of the historic town of Ollantaytambo. The route crosses a scenic valley rich in native plants, streams, and ancient agricultural terrace systems. The hike begins in Munaypata, a small Andean community located approximately 10 minutes from Ollantaytambo. After a gradual ascent of about three hours, we reach the pre-Inca archaeological site of Pumamarca, where visitors can appreciate its impressive architecture, strategic location, and advanced engineering, all surrounded by spectacular views of the surrounding valleys and mountains.",
-    highlights: ["Comunidad de Munaypata", "Sitio arqueológico de Pumamarca", "Sistema de Andenería Incaica y Pre-Incas", "Vistas del Valle Sagrado"],
+    description: "Esta hermosa caminata de día completo se realiza en los alrededores del histórico pueblo de Ollantaytambo. El recorrido atraviesa un valle con gran diversidad de plantas nativas, riachuelos y antiguos sistemas de andenería agrícola. La caminata inicia en Munaypata, una pequeña comunidad андina ubicada a unos 10 minutos de Ollantaytambo. Tras un ascenso gradual de aproximadamente tres horas, se llega al sitio arqueológico preinca de Pumamarca, donde es posible apreciar la magnitud de su construcción, su ubicación estratégica y su notable ingeniería, todo ello acompañado de vistas impresionantes de los valles y montañas circundantes.",
+    descriptionEn: "This beautiful full-day hike takes place in the surroundings of the historic town of Ollantaytambo. The route crosses a valley with a great diversity of native plants, streams, and ancient agricultural terracing systems. The hike begins in Munaypata, a small Andean community located about 10 minutes from Ollantaytambo. After a gradual ascent of approximately three hours, you reach the pre-Inca archaeological site of Pumamarca, where it is possible to appreciate the magnitude of its construction, its strategic location, and its remarkable engineering, all accompanied by impressive views of the surrounding valleys and mountains.",
+    highlights: [
+      "Comunidad de Munaypata",
+      "Sitio arqueológico de Pumamarca",
+      "Sistema de Andenería Incaica y Pre-Incas",
+      "Vistas del Valle Sagrado"
+    ],
     highlightsEn: [
-      "Munaypata community",
-      "Pumamarca archaeological site",
-      "Inca and Pre-Inca terraces system",
-      "Sacred Valley views"
+      "Munaypata Community",
+      "Pumamarca Archaeological Site",
+      "Inca and Pre-Inca Terracing System",
+      "Views of the Sacred Valley"
     ],
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Snack",
+      "Refrigerio",
       "Boleto de ingreso al sitio arqueológico"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
       "Snack",
       "Entrance ticket to the archaeological site"
@@ -406,12 +419,12 @@ export const packages: Package[] = [
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)"
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Personal mountain equipment (Poles, footwear, rain cover)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -432,7 +445,7 @@ export const packages: Package[] = [
       "ID or Passport",
       "Camera",
       "Rain gear",
-      "Small backpack for hikes",
+      "Small hiking backpack",
       "Trekking poles"
     ],
     itinerary: [
@@ -440,18 +453,19 @@ export const packages: Package[] = [
         day: 1,
         title: "Valle Sagrado – Munaypata – Pumamarca",
         titleEn: "Sacred Valley – Munaypata – Pumamarca",
-        description: "07:00 AM – Partimos de Urubamba en transporte privado y nos trasladamos al punto de inicio en Munaypata, Ollantaytambo. 08:30 AM – Inicio de la caminata. Durante el ascenso se observan antiguas andenerías incas y flora y fauna de la región, junto a paisajes impresionantes. 11:30 AM – Llegada al sitio arqueológico de Pumamarca. Tiempo para descansar, recorrer el complejo preinca, disfrutar de las vistas panorámicas, realizar una ofrenda con hojas de coca y disfrutar de un refrigerio. 01:30 PM – Inicio de la caminata de retorno hacia Munaypata (aprox. 2:30 horas). 04:00 PM – Llegada a Ollantaytambo y traslado de retorno a Urubamba.",
-        descriptionEn: "07:00 AM – We depart from Urubamba by private transport and transfer to the starting point in Munaypata, Ollantaytambo. 08:30 AM – Start of the hike. During the ascent, we observe ancient Inca terraces, local flora and fauna, and stunning landscapes. 11:30 AM – Arrival at the archaeological site of Pumamarca. Time to rest, explore the pre-Inca ruins, enjoy panoramic views, make a coca leaf offering, and have a snack. 01:30 PM – Start of the return hike to Munaypata (approx. 2.5 hours). 04:00 PM – Arrival in Ollantaytambo and return transfer to Urubamba.",
+        description: "07:00 AM – Partimos de Urubamba en transporte privado y nos trasladamos al punto de inicio en Munaypata, Ollantaytambo.08:30 AM – Inicio de la caminata. Durante el ascenso se observan antiguas andenerías incas y flora y fauna de la región, junto a paisajes impresionantes.11:30 AM – Llegada al sitio arqueológico de Pumamarca. Tiempo para descansar, recorrer el complejo preinca, disfrutar de las vistas panorámicas, realizar una ofrenda con hojas de coca y disfrutar de un refrigerio.01:30 PM – Inicio de la caminata de retorno hacia Munaypata (aprox. 2:30 horas).04:00 PM – Llegada a Ollantaytambo y traslado de retorno a Urubamba.",
+        descriptionEn: "07:00 AM – We depart from Urubamba by private transport and transfer to the starting point in Munaypata, Ollantaytambo.08:30 AM – Start of the hike. During the ascent, ancient Inca terraces and regional flora and fauna are observed, along with impressive landscapes.11:30 AM – Arrival at the archaeological site of Pumamarca. Time to rest, explore the pre-Inca complex, enjoy panoramic views, make an offering with coca leaves, and enjoy a snack.01:30 PM – Start of the return hike to Munaypata (approx. 2:30 hours).04:00 PM – Arrival in Ollantaytambo and transfer back to Urubamba.",
         highlights: ["Sitio Pumamarca", "Vistas panorámicas"],
         highlightsEn: [
-      "Pumamarca site",
-      "Panoramic views"
-    ],
-        meals: "Snack",
-        mealsEn: "Lunch",
+          "Pumamarca site",
+          "Panoramic views"
+        ],
+        meals: "Refrigerio",
+        mealsEn: "Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "vaijgdc3", type: "image", url: "/images/pumamarca/pumamarca-gallery-1.jpg" },
@@ -481,16 +495,21 @@ export const packages: Package[] = [
     durationEn: "Full day",
     difficulty: "Moderado a Fácil",
     difficultyEn: "Moderate to Easy",
-    elevation: "3150. m.s.n.m. - 3700 m.s.n.m.",
-    elevationEn: "3150. m.a.s.l. - 3700 m.a.s.l.",
+    elevation: "3150 m.s.n.m. - 3700 m.s.n.m.",
+    elevationEn: "3150 m.a.s.l. - 3700 m.a.s.l.",
     bestSeason: "",
     bestSeasonEn: "",
     price: 330,
     description: "Esta hermosa caminata de día completo se realiza en el valle de Pumawanka, ubicado en la cordillera del Urubamba. Es una experiencia ideal para quienes buscan una conexión profunda con la naturaleza. La ruta sigue un antiguo camino inca a través de ecosistemas altoandinos, bosques, plantas nativas y ríos. Durante el recorrido se visita un sitio arqueológico enigmático antes de llegar a la comunidad altoandina de Sutoc Paccha. Históricamente, este camino fue una de las rutas más importantes del Imperio Inca, conectando los Andes con la Selva.",
-    descriptionEn: "This beautiful full-day trek takes place in the Pumawanka Valley, located within the Urubamba mountain range. It is an ideal experience for travelers seeking a deep connection with nature. The hike follows an ancient Inca trail through high-Andean ecosystems, forests, native plants, and rivers. Along the way, we visit an enigmatic archaeological site before reaching the high-Andean community of Sutoc Paccha. Historically, this route was one of the most important Inca paths connecting the Andes with the jungle regions.",
-    highlights: ["Camino inca ancestral", "Sitio arqueológico Inca Raqay", "Comunidad Sutoc Paccha", "Cascadas"],
+    descriptionEn: "This beautiful full-day hike takes place in the Pumawanka Valley, located in the Urubamba mountain range. It is an ideal experience for those seeking a deep connection with nature. The route follows an ancient Inca trail through high Andean ecosystems, forests, native plants, and rivers. During the tour, an enigmatic archaeological site is visited before reaching the high Andean community of Sutoc Paccha. Historically, this path was one of the most important routes of the Inca Empire, connecting the Andes with the Jungle.",
+    highlights: [
+      "Camino inca ancestral",
+      "Sitio arqueológico Inca Raqay",
+      "Comunidad Sutoc Paccha",
+      "Cascadas"
+    ],
     highlightsEn: [
-      "Ancient Inca trail",
+      "Ancestral Inca trail",
       "Inca Raqay archaeological site",
       "Sutoc Paccha community",
       "Waterfalls"
@@ -498,11 +517,11 @@ export const packages: Package[] = [
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Snack",
+      "Refrigerio",
       "Ingreso a Comunidad"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
       "Snack",
       "Community Entrance"
@@ -510,12 +529,12 @@ export const packages: Package[] = [
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)."
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Personal mountain equipment (Poles, footwear, rain cover)."
     ],
     requirements: [
       "Sombrero o gorra",
@@ -524,6 +543,8 @@ export const packages: Package[] = [
       "Dinero en efectivo",
       "DNI o Pasaporte",
       "Cámara fotográfica",
+      "Ropa para lluvia",
+      "Mochila pequeña para caminata",
       "Bastones de Trekking"
     ],
     requirementsEn: [
@@ -533,6 +554,8 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
+      "Rain gear",
+      "Small hiking backpack",
       "Trekking poles"
     ],
     itinerary: [
@@ -540,19 +563,20 @@ export const packages: Package[] = [
         day: 1,
         title: "Chupani – Inca Raqay – Sutoc Paccha – Cascadas – Chupani",
         titleEn: "Chupani – Inca Raqay – Sutoc Paccha – Waterfalls – Chupani",
-        description: "08:00 AM – Partimos de Urubamba en transporte privado  y traslado a Chupani. 09:00 AM – Inicio de la caminata, ascendiendo por la Quebrada de Pumawanka (aprox. 2 horas). 11:00 AM – Llegada al sitio arqueológico Inca Raqay y posterior caminata hacia la comunidad alto andina Sutoc Paccha. Ofrenda tradicional con hojas de coca. 01:00 PM – Continuamos una hora más caminando hasta las cascadas. Snack y tiempo de descanso con vistas espectaculares. 02:30 PM – Inicio del descenso de retorno. 04:00 PM – Llegada a Chupani y traslado de retorno a Urubamba.",
-        descriptionEn: "08:00 AM – We depart from Urubamba by private transport and transfer to Chupani. 09:00 AM – Start of the hike, ascending through the Pumawanka Ravine (approx. 2 hours). 11:00 AM – Arrival at Inca Raqay archaeological site, followed by a walk to the high-Andean community of Sutoc Paccha. Traditional offering with coca leaves. 01:00 PM – Continue walking for one more hour to the waterfalls. Snack and rest time with spectacular views. 02:30 PM – Begin the return descent. 04:00 PM – Arrival in Chupani and transfer back to Urubamba.",
+        description: "08:00 AM – Partimos de Urubamba en transporte privado y traslado a Chupani.09:00 AM – Inicio de la caminata, ascendiendo por la Quebrada de Pumawanka (aprox. 2 horas).11:00 AM – Llegada al sitio arqueológico Inca Raqay y posterior caminata hacia la comunidad alto andina Sutoc Paccha. Ofrenda tradicional con hojas de coca.01:00 PM – Continuamos una hora más caminando hasta las cascadas. Refrigerio y tiempo de descanso con vistas espectaculares.02:30 PM – Inicio del descenso de retorno.04:00 PM – Llegada a Chupani y traslado de retorno a Urubamba.",
+        descriptionEn: "08:00 AM – We depart from Urubamba by private transport and transfer to Chupani.09:00 AM – Start of the hike, ascending through the Pumawanka Gorge (approx. 2 hours).11:00 AM – Arrival at the Inca Raqay archaeological site and subsequent walk to the high Andean community of Sutoc Paccha. Traditional offering with coca leaves.01:00 PM – We continue walking for one more hour to the waterfalls. Snack and rest time with spectacular views.02:30 PM – Start of the return descent.04:00 PM – Arrival in Chupani and transfer back to Urubamba.",
         highlights: ["Inca Raqay", "Sutoc Paccha", "Cascadas"],
         highlightsEn: [
-      "Inca Raqay",
-      "Sutoc Paccha",
-      "Waterfalls"
-    ],
-        meals: "Snack",
-        mealsEn: "Box Lunch",
+          "Inca Raqay",
+          "Sutoc Paccha",
+          "Waterfalls"
+        ],
+        meals: "Refrigerio",
+        mealsEn: "Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "kwcz88qm", type: "image", url: "/images/pumawanka/pumawanka-gallery-1.jpg" },
@@ -560,12 +584,10 @@ export const packages: Package[] = [
       { id: "2ofcdq93", type: "image", url: "/images/pumawanka/pumawanka-gallery-3.jpg" },
       { id: "svovt5ri", type: "image", url: "/images/pumawanka/pumawanka-gallery-4.jpg" },
       { id: "bioeuofr", type: "image", url: "/images/pumawanka/pumawanka-gallery-5.jpg" },
-      { id: "a7g5vpoj", type: "image", url: "/images/pumawanka/pumawanka-gallery-6.jpg" },
       { id: "92v4ai1p", type: "image", url: "/images/pumawanka/pumawanka-gallery-7.jpg" },
       { id: "h6qfrd71", type: "image", url: "/images/pumawanka/pumawanka-gallery-8.jpg" },
       { id: "1wwkmbtk", type: "image", url: "/images/pumawanka/pumawanka-gallery-9.jpg" },
       { id: "8ietzq3h", type: "image", url: "/images/pumawanka/pumawanka-gallery-10.jpg" },
-      { id: "svxie3s0", type: "image", url: "/images/pumawanka/pumawanka-gallery-11.jpg" },
       { id: "ph0ont9b", type: "image", url: "/images/pumawanka/pumawanka-gallery-12.jpg" },
       { id: "csym3wwu", type: "image", url: "/images/pumawanka/pumawanka-gallery-13.jpg" },
       { id: "60ng1b7c", type: "image", url: "/images/pumawanka/pumawanka-gallery-14.jpg" },
@@ -580,9 +602,9 @@ export const packages: Package[] = [
     nameEn: "Ausangate",
     heroImage: "/images/ausangate-trek-3d2n/ausangate-trek-3d2n-hero.jpg",
     tagline: "Descubre al Apu más importante de la región andina, sus hermosas lagunas y paisajes alto andinos.",
-    taglineEn: "Discover the most important Apu of the Andean region, its beautiful lagoons and high Andean landscapes.",
-    duration: "3 días / 2 noches",
-    durationEn: "3 days / 2 nights",
+    taglineEn: "Discover the most important Apu of the Andean region, its beautiful lagoons, and high Andean landscapes.",
+    duration: "3 Días / 2 Noches",
+    durationEn: "3 Days / 2 Nights",
     difficulty: "Moderado a Desafiante",
     difficultyEn: "Moderate to Challenging",
     elevation: "4,800 m.s.n.m.",
@@ -604,7 +626,7 @@ export const packages: Package[] = [
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Refrigerio completa por 3 días / 2 noches",
+      "Alimentación completa por 3 días / 2 noches",
       "Una noche de alojamiento en casa de familia local",
       "Ingreso al Área de Conservación de Ausangate",
       "Ingreso a Aguas Termales",
@@ -613,9 +635,9 @@ export const packages: Package[] = [
     includesEn: [
       "Round-trip transportation from the meeting point",
       "Guide",
-      "Snacks and meals for 3 days / 2 nights",
-      "One night accommodation with a local family",
-      "Entrance to Ausangate Conservation Area",
+      "Full board for 3 days / 2 nights",
+      "One night accommodation in a local family home",
+      "Entrance to the Ausangate Conservation Area",
       "Entrance to Hot Springs",
       "Mountain equipment for one night (tent)"
     ],
@@ -624,14 +646,14 @@ export const packages: Package[] = [
       "Gastos personales",
       "Sleeping",
       "Aislante",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)"
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
       "Sleeping bag",
-      "Sleeping mat",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Sleeping pad",
+      "Personal mountain equipment (Poles, footwear, rain cover)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -656,12 +678,12 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
-      "Warm clothes",
+      "Warm clothing",
       "Rain gear",
       "Swimwear",
       "Towel",
       "Small backpack for hikes",
-      "Sleeping mat",
+      "Sleeping pad",
       "Sleeping bag",
       "Trekking poles"
     ],
@@ -670,50 +692,46 @@ export const packages: Package[] = [
         day: 1,
         title: "Valle Sagrado – Pacchanta",
         titleEn: "Sacred Valley – Pacchanta",
-        description: "11:00 PM – Partimos de Urubamba en transporte privado y traslado al pueblo de Pacchanta (4,200 m.s.n.m.). Tiempo aproximado de viaje: 4 horas en vehículo privado. 3:00 PM – Llegada a Pacchanta. Alojamiento en casa de una familia local y almuerzo. 4:00 PM – La tarde está dedicada a la aclimatación, con una caminata suave por la zona y tiempo para relajarse en las aguas termales naturales. 7:00 PM – Cena y pernocte.",
-        descriptionEn: "11:00 AM – We depart from Urubamba by private transport to the town of Pacchanta (4,200 m.a.s.l.). Approximate travel time: 4 hours by private vehicle. 3:00 PM – Arrival in Pacchanta. Accommodation in a local family home and lunch. 4:00 PM – The afternoon is dedicated to acclimatization, with a gentle walk around the area and time to relax in the natural hot springs. 7:00 PM – Dinner and overnight stay.",
+        description: "11:00 AM – Partimos de Urubamba en transporte privado y traslado al pueblo de Pacchanta (4,200 m.s.n.m.). Tiempo aproximado de viaje: 4 horas en vehículo privado. 3:00 PM – Llegada a Pacchanta. Alojamiento en casa de una familia local y almuerzo. 4:00 PM – La tarde está dedicada a la aclimatación, con una caminata suave por la zona y tiempo para relajarse en las aguas termales naturales. 7:00 PM – Cena y pernocte.",
+        descriptionEn: "11:00 AM – We depart from Urubamba by private transport and transfer to the town of Pacchanta (4,200 m.a.s.l.). Approximate travel time: 4 hours by private vehicle. 3:00 PM – Arrival in Pacchanta. Accommodation in a local family home and lunch. 4:00 PM – The afternoon is dedicated to acclimatization, with a gentle walk around the area and time to relax in the natural hot springs. 7:00 PM – Dinner and overnight.",
         highlights: ["Pacchanta", "Aguas termales","Nevado Ausangate"],
         highlightsEn: [
-      "Pacchanta",
-      "Hot springs",
-      "Ausangate Glacier"
-    ],
+          "Pacchanta",
+          "Hot springs",
+          "Ausangate Glacier"
+        ],
         meals: "Almuerzo, Cena",
         mealsEn: "Lunch, Dinner",
-        accommodation: "Casa de familia local",
-        accommodationEn: "Local family home"
+        accommodation: "Casa de una familia local",
+        accommodationEn: "Local family home",
       },
       {
         day: 2,
         title: "Siete Lagunas del Ausangate",
-        titleEn: "Seven Lakes of Ausangate",
+        titleEn: "Seven Lagoons of Ausangate",
         description: "8:00 AM – Caminata de día completo para visitar las Siete Lagunas del Ausangate y sus hermosos paisajes. Ofrenda Andina con hojas de coca. 1:00 PM – Almuerzo y armado de campamento. Disfrute de la tarde en la montaña y sus paisajes durante el atardecer. 7:00 PM – Cena y descanso.",
-        descriptionEn: "8:00 AM – Full-day hike to visit the Seven Lakes of Ausangate and its beautiful landscapes. Andean Offering with coca leaves. 1:00 PM – Lunch and camp setup. Enjoy the afternoon in the mountain and its landscapes during sunset. 7:00 PM – Dinner and rest.",
-        highlights: ["Siete Lagunas", "Vista del Apu Ausangate"],
-        highlightsEn: [
-      "Seven Lakes",
-      "Apu Ausangate View"
-    ],
-        meals: "Desayuno, Almuerzo, Cena",
-        mealsEn: "Breakfast, Lunch, Dinner",
+        descriptionEn: "8:00 AM – Full-day hike to visit the Seven Lagoons of Ausangate and their beautiful landscapes. Andean offering with coca leaves. 1:00 PM – Lunch and camp setup. Enjoy the afternoon in the mountains and their landscapes during sunset. 7:00 PM – Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Almuerzo, Cena",
+        mealsEn: "Lunch, Dinner",
         accommodation: "Campamento",
-        accommodationEn: "Camping"
+        accommodationEn: "Camping",
       },
       {
         day: 3,
-        title: "Pacchanta – Urubamba",
-        titleEn: "Pacchanta – Urubamba",
-        description: "7:00 AM – Retorno a Pacchanta. 10:00 AM – Tiempo para ir a las Aguas Termales y acomodar equipos. 11:00 AM – Salida de retorno hacia Urubamba. 3:00 PM – Llegada a Urubamba.",
-        descriptionEn: "7:00 AM – Return to Pacchanta. 10:00 AM – Time to visit the Hot Springs and pack equipment. 11:00 AM – Departure back to Urubamba. 3:00 PM – Arrival in Urubamba.",
-        highlights: ["Retorno"],
-        highlightsEn: [
-      "Return"
-    ],
-        meals: "Desayuno",
-        mealsEn: "Breakfast",
+        title: "Pacchanta – Cusco",
+        titleEn: "Pacchanta – Cusco",
+        description: "7:00 AM – Retorno a Pacchanta. 10:00 PM – Tiempo para ir a las Aguas Termales y acomodar equipos. 11:00 PM – Salida de retorno hacia Urubamba. 3:00 PM – Llegada a Urubamba.",
+        descriptionEn: "7:00 AM – Return to Pacchanta. 10:00 PM – Time to go to the Hot Springs and organize equipment. 11:00 PM – Departure back to Urubamba. 3:00 PM – Arrival in Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "",
+        mealsEn: "",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "ans1uhdi", type: "image", url: "/images/ausangate-trek-3d2n/ausangate-trek-3d2n-gallery-1.jpg" },
@@ -755,43 +773,50 @@ export const packages: Package[] = [
     bestSeasonEn: "",
     price: 1700,
     description: "El Lares Trek es una de las rutas de montaña más atractivas de la región Cusco. Atraviesa la cordillera del Urubamba, considerada tropical por su cercanía a la selva amazónica. Durante la caminata se recorren diversos ecosistemas altoandinos como ríos, bosques, lagunas, cascadas y montañas nevadas, además de visitar comunidades nativas donde se mantiene viva la cultura ancestral. El recorrido finaliza en el pueblo de Lares, conocido por sus aguas termales y medicinales.",
-    descriptionEn: "The Lares Trek is one of the most scenic mountain routes in the Cusco region. It crosses the Urubamba mountain range, a tropical range in the Peruvian Andes due to its proximity to the rainforest. Along the trek, travelers experience diverse Andean ecosystems including rivers, high-Andean forests, lagoons, waterfalls, snow-capped peaks, and traditional communities. The route also offers opportunities to observe local wildlife such as condors, deer, eagles, viscachas, and hummingbirds. The journey concludes in the town of Lares, famous for its thermal and medicinal hot springs.",
-    highlights: ["Apu Sawasiray", "Apu Sirihuani", "Comunidades Nativas", "Bosques Alto Andinos", "Aguas termales de Lares", "Paso de montaña 4,700m"],
+    descriptionEn: "The Lares Trek is one of the most attractive mountain routes in the Cusco region. It crosses the Urubamba mountain range, considered tropical due to its proximity to the Amazon jungle. During the trek, various high-Andean ecosystems such as rivers, forests, lagoons, waterfalls, and snow-capped mountains are explored, in addition to visiting native communities where ancestral culture is kept alive. The route ends in the town of Lares, known for its thermal and medicinal waters.",
+    highlights: [
+      "Apu Sawasiray",
+      "Apu Sirihuani",
+      "Comunidades Nativas",
+      "Bosques Alto Andinos",
+      "Aguas termales de Lares",
+      "Paso de montaña 4,700 m.s.n.m."
+    ],
     highlightsEn: [
       "Apu Sawasiray",
       "Apu Sirihuani",
       "Native Communities",
-      "High-Andean forests",
-      "Lares hot springs",
-      "Mountain pass 4,700m"
+      "High Andean Forests",
+      "Lares Hot Springs",
+      "Mountain Pass 4,700 m.a.s.l."
     ],
     includes: [
       "Reunión informativa (presencial/virtual)",
       "Transporte ida y retorno desde el punto de encuentro",
       "Guiado y acompañamiento",
-      "Refrigerio completa (3 días / 2 noches)",
+      "Alimentación completa (3 días / 2 noches)",
       "Campamento",
       "Equipo de montaña (carpas)",
       "Porteador/Arriero",
       "Ingreso a las aguas termales de Lares"
     ],
     includesEn: [
-      "Informative briefing (in-person/virtual)",
+      "Informative meeting (in-person/virtual)",
       "Round-trip transportation from the meeting point",
-      "Guiding and support",
-      "Snacks and meals (3 days / 2 nights)",
+      "Guided tour and accompaniment",
+      "Full board (3 days / 2 nights)",
       "Camping",
       "Mountain equipment (tents)",
-      "Porter/Arriero",
-      "Entrance to Lares Hot Springs"
+      "Porter/Muleteer",
+      "Entrance to Lares hot springs"
     ],
     notIncludes: [
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastón, Sleeping, Aislante)",
+      "Equipo personal de montaña (Bastón, Sleeping, Aislante)",
       "Snacks personales"
     ],
     notIncludesEn: [
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastón, Sleeping, Aislante)",
-      "Snacks personales"
+      "Personal mountain equipment (trekking pole, sleeping bag, insulation pad)",
+      "Personal snacks"
     ],
     requirements: [
       "Ropa abrigadora e impermeable",
@@ -807,66 +832,59 @@ export const packages: Package[] = [
       "Bastones de Trekking"
     ],
     requirementsEn: [
-      "Ropa abrigadora e impermeable",
-      "Botella personal de agua",
-      "Documentos personales",
+      "Warm and waterproof clothing",
+      "Personal water bottle",
+      "Personal documents",
       "Cash",
-      "Artículos de aseo",
-      "Ropa de baño y toalla",
+      "Toiletries",
+      "Swimwear and towel",
       "Hat or cap",
       "Sunscreen",
       "Sleeping bag",
-      "Sleeping mat",
+      "Insulation pad",
       "Trekking poles"
     ],
     itinerary: [
       {
         day: 1,
         title: "Saywapata – Cancha Cancha - Yanacocha",
-        titleEn: "Huaran – Saywapata – Cancha Cancha",
-        description: "07:30 AM – Partimos de Urubamba en transporte privado hacia Huaran y luego a Saywapata (3,200 m.s.n.m.). 08:30 AM – Inicio de la caminata. Ascenso de aproximadamente 3 horas. 11:30 AM – Llegada a la comunidad de Cancha Cancha. Descanso, mate de coca y snacks locales. 12:30 PM – Continuación del ascenso y campamento cerca de la laguna Yanaqocha. 06:00 PM – Cena y pernocte.",
-        descriptionEn: "07:30 AM – We depart from Urubamba by private transport to Huaran, continuing to Saywapata (3,200 m.a.s.l.). 08:30 AM – Start of the hike. Approx. 3-hour ascent. 11:30 AM – Arrival at the community of Cancha Cancha. Rest, coca tea, and local snacks. 12:30 PM – Continued ascent and camp setup near Yanaqocha Lagoon. 06:00 PM – Dinner and overnight stay.",
-        highlights: ["Cancha Cancha", "Laguna Yanaqocha"],
-        highlightsEn: [
-      "Cancha Cancha",
-      "Yanaqocha Lagoon"
-    ],
-        meals: "Almuerzo, Cena",
-        mealsEn: "Lunch, Dinner",
+        titleEn: "Saywapata – Cancha Cancha - Yanacocha",
+        description: "07:30 AM – Partimos de Urubamba en transporte privado hacia Huaran y luego a Saywapata (3,200 m.s.n.m.)08:30 AM – Inicio de la caminata. Ascenso de aproximadamente 3 horas.11:30 AM – Llegada a la comunidad de Cancha Cancha. Descanso, mate de coca y snacks locales.12:30 PM – Continuación del ascenso y campamento cerca de la laguna Yanaqocha.06:00 PM – Cena y pernocte.",
+        descriptionEn: "07:30 AM – We depart from Urubamba by private transport to Huaran and then to Saywapata (3,200 m.a.s.l.)08:30 AM – Start of the trek. Ascent of approximately 3 hours.11:30 AM – Arrival at the community of Cancha Cancha. Rest, coca tea, and local snacks.12:30 PM – Continuation of the ascent and camping near Yanaqocha lagoon.06:00 PM – Dinner and overnight stay.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Cena",
+        mealsEn: "Dinner",
         accommodation: "Campamento",
-        accommodationEn: "Camping"
+        accommodationEn: "Camping",
       },
       {
         day: 2,
         title: "Pachacutec – Abra Candria – Quishuarani",
         titleEn: "Pachacutec – Candria Pass – Quishuarani",
-        description: "07:00 AM – Desayuno y desmontaje del campamento. 08:00 AM – Caminata hacia el abra Pachacutec y Abra Candria. 01:00 PM – Llegada a la comunidad de Quishuarani. 02:30 PM – Almuerzo en casa local y armado de campamento. 04:00 PM – Interacción con una familia local, su textilería, ganadería, agricultura y lenguaje. 07:00 PM – Cena.",
-        descriptionEn: "07:00 AM – Breakfast and camp packing. 08:00 AM – Hike to the Pachacutec and Candria mountain passes. 01:00 PM – Arrival at the community of Quishuarani. 02:30 PM – Lunch with a local family and camp setup. 04:00 PM – Interaction with a local family, learning about their textiles, livestock, agriculture, and language. 07:00 PM – Dinner.",
-        highlights: ["Paso de montaña 4,700m", "Comunidad Quishuarani"],
-        highlightsEn: [
-      "Mountain pass 4,700m",
-      "Quishuarani Community"
-    ],
+        description: "07:00 AM – Desayuno y desmontaje del campamento.08:00 AM – Caminata hacia el abra Pachacutec y Abra Candria.01:00 PM – Llegada a la comunidad de Quishuarani.02:30 PM – Almuerzo en casa local y armado de campamento.04:00 PM – Interacción con una familia local, su textilería, ganadería, agricultura y lenguaje.07:00 PM – Cena.",
+        descriptionEn: "07:00 AM – Breakfast and dismantling of the camp.08:00 AM – Trek to Pachacutec Pass and Candria Pass.01:00 PM – Arrival at the community of Quishuarani.02:30 PM – Lunch at a local house and camp setup.04:00 PM – Interaction with a local family, their textiles, livestock, agriculture, and language.07:00 PM – Dinner.",
+        highlights: [],
+        highlightsEn: [],
         meals: "Desayuno, Almuerzo, Cena",
         mealsEn: "Breakfast, Lunch, Dinner",
         accommodation: "Campamento",
-        accommodationEn: "Camping"
+        accommodationEn: "Camping",
       },
       {
         day: 3,
         title: "Quishuarani – Cuncani – Lares",
         titleEn: "Quishuarani – Cuncani – Lares",
-        description: "06:00 AM – Desayuno. 07:30 AM – Caminata de 4 horas hacia la comunidad de Cuncani. 11:00 AM – Snack. 12:00 PM – Traslado en transporte privado a las aguas termales de Lares (45 minutos). Tiempo libre para relajarse (2 horas). 03:00 PM – Transporte de retorno hacia el Valle Sagrado. 05:30 PM – Llegada a Urubamba.",
-        descriptionEn: "06:00 AM – Breakfast. 07:30 AM – 4-hour hike to the community of Cuncani. 11:00 AM – Snack. 12:00 PM – Transfer by private transport to the Lares Hot Springs (45 minutes). Relaxation time (2 hours). 03:00 PM – Return transport to the Sacred Valley. 05:30 PM – Arrival in Urubamba.",
-        highlights: ["Aguas termales de Lares"],
-        highlightsEn: [
-      "Lares hot springs"
-    ],
-        meals: "Desayuno, Almuerzo",
-        mealsEn: "Breakfast, Lunch",
+        description: "06:00 AM – Desayuno.07:30 AM – Caminata de 4 horas hacia la comunidad de Cuncani.11:00 AM – Refrigerio.12:00 PM – Traslado en transporte privado a las aguas termales de Lares (45 minutos). Tiempo libre para relajarse (2 horas).03:00 PM – Transporte de retorno hacia el Valle Sagrado.05:30 PM – Llegada a Urubamba.",
+        descriptionEn: "06:00 AM – Breakfast.07:30 AM – 4-hour trek to the community of Cuncani.11:00 AM – Snack.12:00 PM – Private transport to Lares hot springs (45 minutes). Free time to relax (2 hours).03:00 PM – Return transport to the Sacred Valley.05:30 PM – Arrival in Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Desayuno, Refrigerio",
+        mealsEn: "Breakfast, Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "xugaqpcb", type: "image", url: "/images/lares-trek-3d2n/lares-trek-3d2n-gallery-1.jpg" },
@@ -936,11 +954,18 @@ export const packages: Package[] = [
     bestSeasonEn: "",
     price: 2000,
     description: "La selva del Manu es un área natural protegida ubicada en el sureste del Perú, entre las regiones de Cusco y Madre de Dios. Con una extensión de más de 1.9 millones de hectáreas, abarca desde los 300 m.s.n.m. en la Amazonía hasta más de 4,000 m.s.n.m. en los Andes. Este territorio alberga una de las mayores biodiversidades del planeta y conserva zonas prácticamente vírgenes. La tradición oral menciona que en sus profundidades podría encontrarse el mítico Paititi, la ciudad perdida de los Incas.",
-    descriptionEn: "The manu jungle is a protected natural area located in southeastern Peru, between the regions of Cusco and Madre de Dios. Covering more than 1.9 million hectares, it extends from 300 m.a.s.l. in the Amazon rainforest to over 4,000 m.a.s.l. in the Andes. This territory shelters one of the highest levels of biodiversity on Earth and preserves vast pristine areas. According to oral tradition, the legendary lost Inca city of Paititi may lie hidden deep within this jungle.",
-    highlights: ["Selva del Manu", "Bosque Nublado", "Comunidad nativa Harakbut", "Aguas termales de Shintuya", "Pantiaqoya","Cataratas y piscinas naturales"],
+    descriptionEn: "The Manu jungle is a protected natural area located in southeastern Peru, between the regions of Cusco and Madre de Dios. With an extension of more than 1.9 million hectares, it ranges from 300 m.a.s.l. in the Amazon to more than 4,000 m.a.s.l. in the Andes. This territory harbors one of the greatest biodiversities on the planet and preserves practically virgin areas. Oral tradition mentions that in its depths the mythical Paititi, the lost city of the Incas, could be found.",
+    highlights: [
+      "Selva del Manu",
+      "Bosque Nublado",
+      "Comunidad nativa Harakbut",
+      "Aguas termales de Shintuya",
+      "Pantiaqoya",
+      "Cataratas y piscinas naturales"
+    ],
     highlightsEn: [
       "Manu Jungle",
-      "Cloud forest",
+      "Cloud Forest",
       "Harakbut native community",
       "Shintuya hot springs",
       "Pantiaqoya",
@@ -955,12 +980,12 @@ export const packages: Package[] = [
       "Logística general del viaje"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
-      "Accommodation and full meals for 3 days / 2 nights",
-      "Land and river transportation",
-      "Ingreso a las termas",
-      "Trip logistics"
+      "Accommodation and full board for 3 days / 2 nights",
+      "Vehicle and river transportation",
+      "Entrance to the hot springs",
+      "General trip logistics"
     ],
     notIncludes: [
       "Transporte al punto de encuentro",
@@ -970,7 +995,7 @@ export const packages: Package[] = [
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal"
+      "Personal equipment"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -991,61 +1016,50 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
-      "Clothing for rain and heat",
+      "Rain and warm clothing",
       "Small backpack for hikes"
     ],
     itinerary: [
       {
         day: 1,
         title: "Valle Sagrado – Salvación – Reserva Qocha Machu Wasi",
-        titleEn: "Sacred Valley – Salvación – Qocha Wasi Reserve",
-        description: "08:00 AM - Partimos desde Urubamba en transporte privado hacia el poblado de Salvación (aprox. 7 horas). Parada técnica en Paucartambo. En el camino se atraviesan paisajes altoandinos y bosques nublados al ingreso a la selva alta. 03:00 PM - Llegada a Salvación, almuerzo y alojamiento en cabañas ubicadas en una colina con vistas panorámicas. 04:00 PM - Visita a la reserva natural Qocha Machu Wasi, paseo en balsa y caminata por senderos de selva. 07:00 PM - Cena y descanso.",
-        descriptionEn: "08:00 AM - Departure from Urubamba by private transport to Salvación (approx. 7 hours). Technical stop in Paucartambo. Along the way, enjoy high-Andean landscapes and cloud forests. 03:00 PM - Arrival in Salvación, lunch and overnight stay in hillside cabins with panoramic views. 04:00 PM - Visit to Qocha Machu Wasi Nature Reserve, including a rafting activity and jungle walk. 07:00 PM - Dinner and rest.",
-        highlights: ["Paucartambo", "Bosque nublado", "Reserva Qocha Machu Wasi"],
-        highlightsEn: [
-      "Paucartambo",
-      "Cloud forest",
-      "Qocha Machu Wasi Reserve"
-    ],
+        titleEn: "Sacred Valley – Salvación – Qocha Machu Wasi Reserve",
+        description: "08:00 AM - Partimos desde Urubamba en transporte privado hacia el poblado de Salvación (aprox. 7 horas). Parada técnica en Paucartambo. En el camino se atraviesan paisajes altoandinos y bosques nublados al ingreso a la selva alta.03:00 PM - Llegada a Salvación, almuerzo y alojamiento en cabañas ubicadas en una colina con vistas panorámicas.04:00 PM - Visita a la reserva natural Qocha Machu Wasi, paseo en balsa y caminata por senderos de selva.07:00 PM - Cena y descanso.",
+        descriptionEn: "08:00 AM - We depart from Urubamba by private transport to the town of Salvación (approx. 7 hours). Technical stop in Paucartambo. On the way, high Andean landscapes and cloud forests are crossed at the entrance to the high jungle.03:00 PM - Arrival in Salvación, lunch and accommodation in cabins located on a hill with panoramic views.04:00 PM - Visit to the Qocha Machu Wasi natural reserve, raft ride and walk along jungle trails.07:00 PM - Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
         meals: "Almuerzo, Cena",
         mealsEn: "Lunch, Dinner",
-        accommodation: "Cabañas en Salvación",
-        accommodationEn: "Cabins in Salvación"
+        accommodation: "Cabañas",
+        accommodationEn: "Cabins",
       },
       {
         day: 2,
         title: "Shintuya – Excursión - Aguas Termales",
-        titleEn: "Shintuya – Harakbut Community Excursion",
-        description: "06:30 AM - Desayuno. 07:30 AM - Traslado al poblado de Shintuya. 08:30 AM - Cruzamos en transporte fluvial hasta el sector de inicio de caminata. 09:00 AM - Excursión en la selva hacia el interior, conociendo ríos, cascadas. 2:00 PM - Snack. 03:00 PM - Retorno hacia el albergue. 4:00 PM - Alojamiento en zona de Aguas Termales y disfrute de sus propiedades medicinales. 07:00 PM - Cena y descanso.",
-        descriptionEn: "06:30 AM - Breakfast. 07:30 AM - Transfer to Shintuya village. 08:30 AM - River transportation to the starting point of the hike. 09:00 AM - Excursion into the rainforest, learning about rivers and waterfalls. 02:00 PM - Box Lunch. 03:00 PM - Return to the lodge. 04:00 PM - Stay at the Hot Springs area to enjoy medicinal properties. 07:00 PM - Dinner and rest.",
-        highlights: ["Comunidad Harakbut", "Selva virgen", "Plantas medicinales", "Aguas termales"],
-        highlightsEn: [
-      "Harakbut community",
-      "Virgin rainforest",
-      "Medicinal plants",
-      "Hot springs"
-    ],
-        meals: "Desayuno, Almuerzo, Cena",
-        mealsEn: "Breakfast, Lunch, Dinner",
-        accommodation: "Albergue en Aguas Termales",
-        accommodationEn: "Hot Springs Lodge"
+        titleEn: "Shintuya – Excursion - Hot Springs",
+        description: "06:30 AM - Desayuno.07:30 AM - Traslado al poblado de Shintuya.08:30 AM - Cruzamos en transporte fluvial hasta el sector de inicio de caminata.09:00 AM - Excursión en la selva hacia el interior, conociendo ríos, cascadas.2:00 PM - Refrigerio.03:00 PM - Retorno hacia el albergue.4:00 PM - Alojamiento en zona de Aguas Termales y disfrute de sus propiedades medicinales.07:00 PM - Cena y descanso.",
+        descriptionEn: "06:30 AM - Breakfast.07:30 AM - Transfer to the town of Shintuya.08:30 AM - We cross by river transport to the starting point of the hike.09:00 AM - Excursion into the jungle, exploring rivers, waterfalls.2:00 PM - Snack.03:00 PM - Return to the lodge.4:00 PM - Accommodation in the Hot Springs area and enjoyment of its medicinal properties.07:00 PM - Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Desayuno, Refrigerio, Cena",
+        mealsEn: "Breakfast, Snack, Dinner",
+        accommodation: "Albergue en zona de Aguas Termales",
+        accommodationEn: "Lodge in Hot Springs area",
       },
       {
         day: 3,
         title: "Retorno a Shintuya – Salvación – Urubamba",
         titleEn: "Return to Shintuya – Salvación – Urubamba",
-        description: "07:00 AM - Desayuno. 08:00 AM - Inicio de retorno vía transporte fluvial hasta Shintuya. 08:30 AM - Continuamos nuestra ruta vía Salvación hasta Paucartambo, donde tendremos un refrigerio y luego continuaremos el retorno hacia Urubamba. 16:30 PM - Llegada a Urubamba.",
-        descriptionEn: "07:00 AM - Breakfast. 08:00 AM - Return via river transport to Shintuya. 08:30 AM - Continue via Salvación to Paucartambo for a snack, then continue back to Urubamba. 04:30 PM - Arrival in Urubamba.",
-        highlights: ["Retorno", "Paisajes altoandinos"],
-        highlightsEn: [
-      "Return",
-      "High-Andean landscapes"
-    ],
-        meals: "Desayuno, Snack",
-        mealsEn: "Breakfast, Lunch",
+        description: "07:00 AM - Desayuno.08:00 AM - Inicio de retorno vía transporte fluvial hasta Shintuya.08:30 AM - Continuamos nuestra ruta vía Salvación hasta Paucartambo, donde tendremos un refrigerio y luego continuaremos el retorno hacia Urubamba.16:30 PM - Llegada a Urubamba.",
+        descriptionEn: "07:00 AM - Breakfast.08:00 AM - Start of return via river transport to Shintuya.08:30 AM - We continue our route via Salvación to Paucartambo, where we will have a snack and then continue the return to Urubamba.16:30 PM - Arrival in Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Desayuno, Refrigerio",
+        mealsEn: "Breakfast, Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [      { id: "xyiav4r2", type: "image", url: "/images/manu-rainforest-3d2n/manu-rainforest-3d2n-gallery-15.jpg" },
       { id: "fk7ifocy", type: "image", url: "/images/manu-rainforest-3d2n/manu-rainforest-3d2n-gallery-34.jpg" },
@@ -1087,35 +1101,38 @@ export const packages: Package[] = [
     bestSeasonEn: "",
     price: 2200,
     description: "Este trekking de 4 días conduce a uno de los complejos arqueológicos más impresionantes y menos visitados del Perú: Choquequirao. La ruta atraviesa profundos cañones, paisajes andinos y ecosistemas diversos, ofreciendo una experiencia auténtica de conexión con la naturaleza y la historia. Choquequirao destaca por su magnitud, misterio y ubicación estratégica. Es una experiencia ideal para viajeros que buscan aventura, reto físico y conexión cultural.",
-    descriptionEn: "This 4-day trek leads to one of the most impressive and least visited archaeological sites in Peru: Choquequirao. The route crosses deep canyons, Andean landscapes, and diverse ecosystems. Known as the sacred sister of Machu Picchu, Choquequirao stands out for its scale, mystery, and strategic location. It is ideal for travelers seeking adventure, physical challenge, and cultural connection.",
-    highlights: ["Complejo arqueológico de Choquequirao", "Cañón del Apurímac" ],
+    descriptionEn: "This 4-day trek leads to one of Peru's most impressive and least visited archaeological complexes: Choquequirao. The route crosses deep canyons, Andean landscapes, and diverse ecosystems, offering an authentic experience of connection with nature and history. Choquequirao stands out for its magnitude, mystery, and strategic location. It is an ideal experience for travelers seeking adventure, physical challenge, and cultural connection.",
+    highlights: [
+      "Complejo arqueológico de Choquequirao",
+      "Cañón del Apurímac"
+    ],
     highlightsEn: [
       "Choquequirao archaeological complex",
-      "Apurimac Canyon"
+      "Apurímac Canyon"
     ],
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Refrigerio",
+      "Alimentación",
       "Hospedaje",
       "Boleto de ingreso a Choquequirao"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
-      "Snack",
+      "Meals",
       "Accommodation",
-      "Choquequirao Entrance Ticket"
+      "Entrance ticket to Choquequirao"
     ],
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)"
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Personal mountain equipment (Poles, footwear, rain cover)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -1138,7 +1155,7 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
-      "Warm clothes",
+      "Warm clothing",
       "Rain gear",
       "Small backpack for hikes",
       "Trekking poles"
@@ -1149,65 +1166,54 @@ export const packages: Package[] = [
         title: "Cusco – Capuliyoc – Chiquiscca",
         titleEn: "Cusco – Capuliyoc – Chiquiscca",
         description: "10:00 AM - Traslado en transporte privado desde Urubamba hacia San Pedro de Cachora (Apurimac). Luego nos dirigiremos a Capuliyoc, donde iniciaremos la caminata (17km). Se dará un refrigerio para el camino. 02:30 PM - Descenderemos durante aproximadamente 3 horas hasta Chiquiscca (1,000mts de desnivel aproximadamente). 05:30 PM - Llegada al Primer Refugio. 07:00 PM - Cena y descanso.",
-        descriptionEn: "10:00 AM - Transfer by private transport from Urubamba towards San Pedro de Cachora (Apurimac). Then we head to Capuliyoc, where we start the hike (17km). Snack provided. 02:30 PM - Descent for approx. 3 hours to Chiquisqa (approx. 1,000m descent). 05:30 PM - Arrival at the first refuge. 07:00 PM - Dinner and rest.",
-        highlights: ["Capuliyoc", "Cañón del Apurímac"],
-        highlightsEn: [
-      "Capuliyoc",
-      "Apurimac Canyon"
-    ],
-        meals: "Cena",
-        mealsEn: "Dinner",
-        accommodation: "Refugio en Chiquiscca",
-        accommodationEn: "Chiquisqa Refuge"
+        descriptionEn: "10:00 AM - Transfer by private transport from Urubamba to San Pedro de Cachora (Apurimac). Then we will head to Capuliyoc, where we will start the trek (17km). A snack will be provided for the journey. 02:30 PM - We will descend for approximately 3 hours to Chiquiscca (approximately 1,000m elevation drop). 05:30 PM - Arrival at the First Refuge. 07:00 PM - Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Refrigerio, Cena",
+        mealsEn: "Snack, Dinner",
+        accommodation: "Primer Refugio",
+        accommodationEn: "First Refuge",
       },
       {
         day: 2,
-        title: "Chiquiscca – Playa Rosalinas – Marampata",
-        titleEn: "Chiquisqa – Playa Rosalinas – Marampata",
-        description: "04:30 AM - Desayuno. 05:00 AM - Empezamos la caminata y descendemos, durante unos 45 minutos, 300 metros aproximadamente hacia el río Apurímac (Playa Rosalinas). Luego ascenderemos 1,400 metos durante 4 a 6 horas hasta Marampata, en una caminata exigente de 14km. Se realizarán paradas estratégicas en el camino. 12:00 AM - Llegamos a Marampata. 01:00 PM - Almuerzo. 03:00 PM - Recorrido de cercanías y charla informativa, previa a la visita a Choquequirao a realizarse el día siguiente. 07:00 PM - Cena y descanso.",
-        descriptionEn: "04:30 AM - Breakfast. 05:00 AM - Descent for 45 mins (approx. 300m) to Apurimac River (Playa Rosalinas). Then ascend 1,400m for 4-6 hours to Marampata (demanding 14km hike). 12:00 PM - Arrival at Marampata. 01:00 PM - Lunch. 03:00 PM - Local tour and briefing. 07:00 PM - Dinner and rest.",
-        highlights: ["Río Apurímac", "Ascenso a Marampata"],
-        highlightsEn: [
-      "Apurimac River",
-      "Ascent to Marampata"
-    ],
+        title: "Chiquisqa – Playa Rosalinas – Marampata",
+        titleEn: "Chiquisqa – Rosalinas Beach – Marampata",
+        description: "04:30 AM - Desayuno. 05:00 AM - Empezamos la caminata y descendemos, durante unos 45 minutos, 300 metros aproximadamente hacia el río Apurímac (Playa Rosalinas). Luego ascenderemos 1,400 metros durante 4 a 6 horas hasta Marampata, en una caminata exigente de 14km. Se realizarán paradas estratégicas en el camino. 12:00 AM - Llegamos a Marampata. 01:00 PM - Almuerzo. 03:00 PM - Recorrido de cercanías y charla informativa, previa a la visita a Choquequirao a realizarse el día siguiente. 07:00 PM - Cena y descanso.",
+        descriptionEn: "04:30 AM - Breakfast. 05:00 AM - We start the trek and descend for about 45 minutes, approximately 300 meters towards the Apurímac River (Rosalinas Beach). Then we will ascend 1,400 meters for 4 to 6 hours to Marampata, on a demanding 14km trek. Strategic stops will be made along the way. 12:00 AM - Arrival at Marampata. 01:00 PM - Lunch. 03:00 PM - Nearby tour and informative talk, prior to the visit to Choquequirao to be held the next day. 07:00 PM - Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
         meals: "Desayuno, Almuerzo, Cena",
         mealsEn: "Breakfast, Lunch, Dinner",
-        accommodation: "Refugio en Marampata",
-        accommodationEn: "Marampata Refuge"
+        accommodation: "Marampata",
+        accommodationEn: "Marampata",
       },
       {
         day: 3,
         title: "Marampata – Choquequirao – Marampata",
         titleEn: "Marampata – Choquequirao – Marampata",
-        description: "06:00 AM - Desayuno. 07:00 AM - Caminata hacia el complejo arqueológico de Choquequirao (1 hora y media). 08:30 AM - Llegada a Choquequirao y exploración completa del lugar. 11:00 AM - Snack. 03:30 PM - Retorno a Marampata. 05:00 PM - Llegada a Marampata. 07:00 PM - Cena y descanso.",
-        descriptionEn: "06:00 AM - Breakfast. 07:00 AM - Hike to Choquequirao (1.5 hours). 08:30 AM - Arrival and full exploration. 11:00 AM - Box Lunch. 03:30 PM - Return to Marampata. 05:00 PM - Arrival. 07:00 PM - Dinner and rest.",
-        highlights: ["Complejo Choquequirao", "Exploración"],
-        highlightsEn: [
-      "Choquequirao Complex",
-      "Exploration"
-    ],
-        meals: "Desayuno, Almuerzo, Cena",
-        mealsEn: "Breakfast, Lunch, Dinner",
-        accommodation: "Refugio en Marampata",
-        accommodationEn: "Marampata Refuge"
+        description: "06:00 AM - Desayuno. 07:00 AM - Caminata hacia el complejo arqueológico de Choquequirao (1 hora y media). 08:30 AM - Llegada a Choquequirao y exploración completa del lugar. 11:00 AM - Refrigerio. 03:30 PM - Retorno a Marampata. 05:00 PM - Llegada a Marampata. 07:00 PM - Cena y descanso.",
+        descriptionEn: "06:00 AM - Breakfast. 07:00 AM - Hike to the archaeological complex of Choquequirao (1 and a half hours). 08:30 AM - Arrival at Choquequirao and full exploration of the site. 11:00 AM - Snack. 03:30 PM - Return to Marampata. 05:00 PM - Arrival at Marampata. 07:00 PM - Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Desayuno, Refrigerio, Cena",
+        mealsEn: "Breakfast, Snack, Dinner",
+        accommodation: "Marampata",
+        accommodationEn: "Marampata",
       },
       {
         day: 4,
-        title: "Marampata – Capuliyoc – Urubamba",
-        titleEn: "Marampata – Capuliyoc – Urubamba",
-        description: "04:30 AM - Desayuno. 05:00 AM - Retorno por la misma ruta de descenso y ascenso hasta Capuliyoc. 12:00 PM - Llegada a Capuliyoc. 01:00 PM - Snack. 02:00 PM - Retorno desde Capuliyoc hacia Urubamba. 06:00 PM - Llegada a Urubamba.",
-        descriptionEn: "04:30 AM - Breakfast. 05:00 AM - Return hike to Capuliyoc. 12:00 PM - Arrival at Capuliyoc. 01:00 PM - Lunch. 02:00 PM - Transfer back to Urubamba. 06:00 PM - Arrival.",
-        highlights: ["Retorno", "Capuliyoc"],
-        highlightsEn: [
-      "Return",
-      "Capuliyoc"
-    ],
-        meals: "Desayuno, Almuerzo",
-        mealsEn: "Breakfast, Lunch",
+        title: "Marampata – Capuliyoc – Cusco",
+        titleEn: "Marampata – Capuliyoc – Cusco",
+        description: "04:30 AM - Desayuno. 05:00 AM - Retorno por la misma ruta de descenso y ascenso hasta Capuliyoc. 12:00 PM - Llegada a Capuliyoc. 01:00 PM - Refrigerio. 02:00 PM - Retorno desde Capuliyoc hacia Urubamba. 06:00 PM - Llegada a Urubamba.",
+        descriptionEn: "04:30 AM - Breakfast. 05:00 AM - Return along the same descent and ascent route to Capuliyoc. 12:00 PM - Arrival at Capuliyoc. 01:00 PM - Snack. 02:00 PM - Return from Capuliyoc to Urubamba. 06:00 PM - Arrival in Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Desayuno, Refrigerio",
+        mealsEn: "Breakfast, Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "p2hlm43s", type: "image", url: "/images/choquequirao-trek/choquequirao-trek-gallery-1.jpg" },
@@ -1257,13 +1263,13 @@ export const packages: Package[] = [
     nameEn: "Quishuarani",
     heroImage: "/images/quishuarani-2d1n/quishuarani-2d1n-hero.jpg",
     tagline: "Sé parte de una experiencia auténtica con familias de comunidades alto andinas.",
-    taglineEn: "Community experience in the Peruvian Andes, connection with the mountain, and living with a high Andean family.",
+    taglineEn: "Be part of an authentic experience with families from high Andean communities.",
     duration: "2 días / 1 noche",
     durationEn: "2 days / 1 night",
     difficulty: "Moderado",
     difficultyEn: "Moderate",
-    elevation: "3900 m.s.n.m. - 4,400  m.s.n.m.",
-    elevationEn: "3900 m.a.s.l. - 4,400  m.a.s.l.",
+    elevation: "3900 m.s.n.m. - 4,400 m.s.n.m.",
+    elevationEn: "3900 m.a.s.l. - 4,400 m.a.s.l.",
     bestSeason: "",
     bestSeasonEn: "",
     price: 1000,
@@ -1279,28 +1285,28 @@ export const packages: Package[] = [
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Refrigerio completa",
-      "Alojamiento y campamento",
+      "Alimentación completa",
+      "Campamento",
       "Ingreso a Termas",
       "Ingreso a Quishuarani"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
-      "Refrigerio completa",
-      "Alojamiento y campamento",
+      "Full board",
+      "Camping",
       "Entrance to Hot Springs",
       "Entrance to Quishuarani"
     ],
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)"
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante) (Bastones, calzado, cobertor de lluvia)"
+      "Personal mountain equipment (Poles, footwear, rain cover)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -1325,12 +1331,12 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
-      "Warm clothes",
+      "Warm clothing",
       "Rain gear",
       "Swimwear",
       "Towel",
       "Small backpack for hikes",
-      "Sleeping mat",
+      "Sleeping pad",
       "Sleeping bag",
       "Trekking poles"
     ],
@@ -1339,33 +1345,29 @@ export const packages: Package[] = [
         day: 1,
         title: "Valle Sagrado – Quishuarani",
         titleEn: "Sacred Valley – Quishuarani",
-        description: "08:00 AM – Partimos de Urubamba en transporte privado hacia la comunidad de Quishuarani. 11:00 AM – Llegada. 11:30 AM – Recepción por una familia local. 12:00 PM – Demostración de textilería tradicional. 01:00 PM – Almuerzo. 02:30 PM – Caminata hacia las cataratas de Quishuarani y la laguna Qoyalay con ofrenda simbólica. 06:00 PM – Retorno al campamento, cena y convivencia.",
-        descriptionEn: "08:00 AM – Pick-up from the Sacred Valley and transfer to Quishuarani. 11:00 AM – Arrival. 11:30 AM – Welcome by a local family. 12:00 PM – Traditional textile demonstration. 01:00 PM – Lunch. 02:30 PM – Hike to waterfalls and Qoyalay lagoon with coca leaf offering. 06:00 PM – Return, dinner and time with family.",
-        highlights: ["Textilería tradicional", "Laguna Qoyalay"],
-        highlightsEn: [
-      "Traditional textiles",
-      "Qoyalay Lagoon"
-    ],
+        description: "08:00 AM – Partimos de Urubamba en transporte privado hacia la comunidad de Quishuarani.11:00 AM – Llegada.11:30 AM – Recepción por una familia local.12:00 PM – Demostración de textilería tradicional.01:00 PM – Almuerzo.02:30 PM – Caminata hacia las cataratas de Quishuarani y la laguna Qoyalay con ofrenda simbólica.06:00 PM – Retorno al campamento, cena y convivencia.",
+        descriptionEn: "08:00 AM – We depart from Urubamba by private transport to the community of Quishuarani.11:00 AM – Arrival.11:30 AM – Reception by a local family.12:00 PM – Traditional textile demonstration.01:00 PM – Lunch.02:30 PM – Hike to the Quishuarani waterfalls and Qoyalay lagoon with a symbolic offering.06:00 PM – Return to camp, dinner, and coexistence.",
+        highlights: [],
+        highlightsEn: [],
         meals: "Almuerzo, Cena",
         mealsEn: "Lunch, Dinner",
-        accommodation: "Campamento o Casa Comunal",
-        accommodationEn: "Camping or family home"
+        accommodation: "Campamento",
+        accommodationEn: "Camping",
       },
       {
         day: 2,
         title: "Quishuarani – Calca – Valle Sagrado",
         titleEn: "Quishuarani – Calca – Sacred Valley",
-        description: "07:00 AM – Desayuno. 08:00 AM – Salida hacia Aguas Termales de Lares. 12:00 PM – Snack. 01:00 PM – Traslado en transporte privado hacia Urubamba. 04:00 PM – Llegada a Urubamba.",
-        descriptionEn: "06:00 AM – Breakfast. 07:00 AM – Hike of approximately 3 hours through valleys, lagoons, and viewpoints. 01:00 PM – Return and lunch. 02:00 PM – Transfer to Calca. 04:30 PM – Arrival at the Sacred Valley.",
-        highlights: ["Aguas termales"],
-        highlightsEn: [
-      "Hot springs"
-    ],
-        meals: "Desayuno, Snack",
-        mealsEn: "Breakfast, Lunch",
+        description: "07:00 AM – Desayuno.08:00 AM – Salida hacia Aguas Termales de Lares.12:00 PM – Refrigerio.01:00 PM – Traslado en transporte privado hacia Urubamba.04:00 PM – Llegada a Urubamba.",
+        descriptionEn: "07:00 AM – Breakfast.08:00 AM – Departure to Lares Hot Springs.12:00 PM – Snack.01:00 PM – Private transport to Urubamba.04:00 PM – Arrival in Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "Desayuno, Refrigerio",
+        mealsEn: "Breakfast, Snack",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "zsgb2zpz", type: "image", url: "/images/quishuarani-2d1n/quishuarani-2d1n-gallery-1.jpg" },
@@ -1391,7 +1393,7 @@ export const packages: Package[] = [
     nameEn: "Cancha Cancha 2D1N",
     heroImage: "/images/cancha-cancha-2d1n/cancha-cancha-2d1n-hero.jpg",
     tagline: "Experiencia comunitaria en los andes del Perú, contacto con la montaña y vivencias junto a una familia altoandina.",
-    taglineEn: "Community experience in the Peruvian Andes, connection with the mountain, and living with a high Andean family.",
+    taglineEn: "Community experience in the Peruvian Andes, contact with the mountains and experiences with a high-Andean family.",
     duration: "2 días / 1 noche",
     durationEn: "2 days / 1 night",
     difficulty: "Moderado",
@@ -1400,37 +1402,48 @@ export const packages: Package[] = [
     elevationEn: "3,200 m.a.s.l. - 4,400 m.a.s.l.",
     bestSeason: "",
     bestSeasonEn: "",
-    price: 290,
+    price: 850,
     description: "Hermosa caminata por el valle de Huarán, en la cordillera de Urubamba. Iniciamos en Saywapata, recorriendo un bello valle con bosques nativos por unas 4 horas de ascenso hasta llegar a la comunidad altoandina de Cancha Cancha. Aquí seremos recibidos por una familia local, con un delicioso almuerzo. Conoceremos su casa, textilería tradicional, agricultura, ganadería y compartiremos una auténtica experiencia con la naturaleza y la cultura andina. El segundo día visitamos la laguna sagrada de Wasan Qocha.",
-    descriptionEn: "Beautiful trekking over the Huaran valley, located in the Urubamba mountain range. We start from Saywapata, going through a beautiful valley with native plants and trees for about 4 hours of ascent until we reach the high Andean community of Cancha Cancha. Here we will be received by one of the local families, with a delicious local lunch, we will get to know the family house, traditional textiles, agriculture, livestock, and we will share an authentic experience with nature and Andean culture. The next day we visit Wasan Qocha sacred lake.",
-    highlights: ["Comunidad Cancha Cancha", "Laguna Wasan Qocha", "Convivencia cultural","Laguna Yanacocha"],
+    descriptionEn: "Beautiful hike through the Huarán valley, in the Urubamba mountain range. We start in Saywapata, traversing a beautiful valley with native forests for about 4 hours of ascent until we reach the high-Andean community of Cancha Cancha. Here we will be welcomed by a local family with a delicious lunch. We will get to know their home, traditional textiles, agriculture, livestock, and share an authentic experience with Andean nature and culture. On the second day, we visit the sacred Wasan Qocha lagoon.",
+    highlights: [
+      "Comunidad Cancha Cancha",
+      "Laguna Wasan Qocha",
+      "Convivencia cultural",
+      "Laguna Yanacocha"
+    ],
     highlightsEn: [
-      "Cancha Cancha community",
+      "Cancha Cancha Community",
       "Wasan Qocha Lagoon",
-      "Cultural coexistence",
+      "Cultural immersion",
       "Yanacocha Lagoon"
     ],
     includes: [
-      "Transporte privado ida y vuelta",
+      "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Refrigerio completa",
+      "Alimentación completa",
       "Campamento",
       "Carga de equipaje"
     ],
     includesEn: [
-      "Transporte privado ida y vuelta",
+      "Round trip transportation from the meeting point",
       "Guide",
-      "Refrigerio completa",
+      "Full board meals",
       "Camping",
-      "Carga de equipaje"
+      "Luggage transport"
     ],
     notIncludes: [
-      "Snacks personales",
-      "Equipo personal de montaña (Bastón, Sleeping, Aislante)"
+      "Transporte al punto de encuentro",
+      "Gastos personales",
+      "Sleeping",
+      "Aislante",
+      "Equipo personal de montaña (Bastones, calzado, cobertor de lluvia)"
     ],
     notIncludesEn: [
-      "Snacks personales",
-      "Personal mountain equipment (Walking sticks, sleeping bag, mat)"
+      "Transportation to the meeting point",
+      "Personal expenses",
+      "Sleeping bag",
+      "Insulating pad",
+      "Personal mountain equipment (Poles, footwear, rain cover)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -1439,7 +1452,13 @@ export const packages: Package[] = [
       "Dinero en efectivo",
       "DNI o Pasaporte",
       "Cámara fotográfica",
+      "Abrigo",
       "Ropa para Lluvia",
+      "Ropa de Baño",
+      "Toalla",
+      "Mochila pequeña para caminatas",
+      "Aislante",
+      "Sleeping",
       "Bastones de Trekking"
     ],
     requirementsEn: [
@@ -1449,7 +1468,13 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
+      "Warm clothing",
       "Rain gear",
+      "Swimwear",
+      "Towel",
+      "Small backpack for hikes",
+      "Insulating pad",
+      "Sleeping bag",
       "Trekking poles"
     ],
     itinerary: [
@@ -1457,34 +1482,29 @@ export const packages: Package[] = [
         day: 1,
         title: "Valle Sagrado – Saywapata – Cancha Cancha",
         titleEn: "Sacred Valley – Saywapata – Cancha Cancha",
-        description: "08:00 AM – Recojo en transporte hacia Saywapata. 08:30 AM – Inicio de la caminata de ascenso (aprox. 4 horas). 12:30 PM – Llegada a Cancha Cancha y recepción en casa de familia local. Almuerzo y descanso. 03:00 PM – Compartir con la familia, aprender de su agricultura, textiles y animales. Posible visita a la laguna Yanaqocha para una ofrenda andina. 06:00 PM – Cena y descanso.",
-        descriptionEn: "08:00 AM – Pick-up and transfer to Saywapata. 08:30 AM – Start of the hike (approx. 4 hours). 12:30 PM – Arrival at Cancha Cancha and reception in a local family house. Lunch and rest. 03:00 PM – Share with the local family, learn about agriculture, textiles and animals. Optional visit to Yanaqocha lagoon for an Andean offering. 06:00 PM – Dinner and rest.",
-        highlights: ["Llegada a comunidad", "Experiencia cultural"],
-        highlightsEn: [
-      "Arrival at the community",
-      "Cultural experience"
-    ],
+        description: "08:00 AM – Partimos de Urubamba en transporte privado hacia Saywapata. 08:30 AM – Inicio de la caminata de ascenso (aprox. 4 horas). 12:30 PM – Llegada a Cancha Cancha y recepción en casa de familia local. Almuerzo y descanso. 03:00 PM – Compartir con la familia, aprender de su agricultura, textiles y animales. Visita a la laguna Yanaqocha para una ofrenda andina. 06:00 PM – Cena y descanso.",
+        descriptionEn: "08:00 AM – We depart from Urubamba by private transport to Saywapata. 08:30 AM – Start of the uphill hike (approx. 4 hours). 12:30 PM – Arrival at Cancha Cancha and reception at a local family's home. Lunch and rest. 03:00 PM – Share with the family, learn about their agriculture, textiles, and animals. Visit to Yanaqocha lagoon for an Andean offering. 06:00 PM – Dinner and rest.",
+        highlights: [],
+        highlightsEn: [],
         meals: "Almuerzo, Cena",
         mealsEn: "Lunch, Dinner",
-        accommodation: "Campamento",
-        accommodationEn: "Camp"
+        accommodation: "Alojamiento en Cancha Cancha con familia local",
+        accommodationEn: "Accommodation in Cancha Cancha with local family",
       },
       {
         day: 2,
         title: "Cancha Cancha – Wasan Qocha – Valle Sagrado",
         titleEn: "Cancha Cancha – Wasan Qocha – Sacred Valley",
         description: "07:00 AM – Desayuno e inicio de caminata hacia la laguna sagrada Wasan Qocha (2 horas). 10:00 AM – Llegada a la laguna, descanso y ofrenda andina. 11:00 AM – Retorno a la casa de familia (1h 20m). 12:30 PM – Almuerzo y descanso. 02:00 PM – Descenso hacia Saywapata. 04:30 PM – Fin de la caminata y retorno hacia Urubamba.",
-        descriptionEn: "07:00 AM – Breakfast and hike to Wasan Qocha sacred lake (2 hours). 10:00 AM – Arrival at the lake, rest and Andean offering. 11:00 AM – Return to family house (1h 20m). 12:30 PM – Lunch and rest. 02:00 PM – Descent to the Sacred Valley. 04:30 PM – End of hike.",
-        highlights: ["Laguna Wasan Qocha", "Ofrenda Andina"],
-        highlightsEn: [
-      "Wasan Qocha Lagoon",
-      "Andean offering"
-    ],
+        descriptionEn: "07:00 AM – Breakfast and start of hike to the sacred Wasan Qocha lagoon (2 hours). 10:00 AM – Arrival at the lagoon, rest and Andean offering. 11:00 AM – Return to the family home (1h 20m). 12:30 PM – Lunch and rest. 02:00 PM – Descent towards Saywapata. 04:30 PM – End of hike and return to Urubamba.",
+        highlights: [],
+        highlightsEn: [],
         meals: "Desayuno, Almuerzo",
         mealsEn: "Breakfast, Lunch",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "5lv20q06", type: "image", url: "/images/cancha-cancha-2d1n/cancha-cancha-2d1n-gallery-1.jpg" },
@@ -1523,26 +1543,30 @@ export const packages: Package[] = [
     bestSeason: "",
     bestSeasonEn: "",
     price: 400,
-    description: "Esta experiencia espiritual de día completo integra dos poderosos rituales: la ofrenda o “Despacho” y la ceremonia de temazcalli. La ofrenda andina es uno de los rituales más importantes de la cosmovisión andina, mediante el cual se pide permiso y bendiciones a la Pachamama, los Apus y las energías del universo. La ceremonia de Temazcalli, de origen mesoamericano, es un baño de vapor tradicional que busca la limpieza y renovación del cuerpo, la mente y el espíritu.",
-    descriptionEn: "This full-day spiritual experience combines two powerful rituals: the Andean offering, known as “Despacho”, and the temazcalli ceremony. The Andean offering is one of the most important rituals in Andean cosmology, performed to ask for permission and blessings from Pachamama, the Apus, and the universe. The temazcalli ceremony, of Mesoamerican origin, is a traditional steam bath aimed at cleansing and renewing the body, mind, and spirit.",
-    highlights: ["Ofrenda (Despacho)", "Ceremonia de temazcalli", "Conexión profunda"],
+    description: "Esta experiencia espiritual de día completo integra dos poderosos rituales: la ofrenda o “Despacho” y la ceremonia de temazcal. La ofrenda andina es uno de los rituales más importantes de la cosmovisión andina, mediante el cual se pide permiso y bendiciones a la Pachamama, los Apus y las energías del universo. La ceremonia de Temazcalli, de origen mesoamericano, es un baño de vapor tradicional que busca la limpieza y renovación del cuerpo, la mente y el espíritu.",
+    descriptionEn: "This full-day spiritual experience integrates two powerful rituals: the offering or “Despacho” and the temazcal ceremony. The Andean offering is one of the most important rituals of the Andean worldview, through which permission and blessings are requested from Pachamama, the Apus, and the energies of the universe. The Temazcalli ceremony, of Mesoamerican origin, is a traditional steam bath that seeks the cleansing and renewal of the body, mind, and spirit.",
+    highlights: [
+      "Ofrenda (Despacho)",
+      "Ceremonia de temazcal",
+      "Conexión profunda"
+    ],
     highlightsEn: [
-      "Andean offering (Despacho)",
-      "Temazcalli ceremony",
+      "Offering (Despacho)",
+      "Temazcal ceremony",
       "Deep connection"
     ],
     includes: [
       "Transporte ida y retorno desde el punto de encuentro",
       "Guía",
-      "Ofrenda (Despacho)",
-      "Ceremonia de temazcalli",
-      "Snack"
+      "Ofrenda andina (Despacho)",
+      "Ceremonia de temazcal",
+      "Refrigerio"
     ],
     includesEn: [
-      "Round-trip transportation from the meeting point",
+      "Round trip transportation from the meeting point",
       "Guide",
       "Andean offering (Despacho)",
-      "Ceremonia de temazcalli",
+      "Temazcal ceremony",
       "Snack"
     ],
     notIncludes: [
@@ -1553,7 +1577,7 @@ export const packages: Package[] = [
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Artículos personales (toalla, traje de baño)"
+      "Personal items (towel, swimsuit)"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -1577,29 +1601,27 @@ export const packages: Package[] = [
       "Cash",
       "ID or Passport",
       "Camera",
-      "Ropa de cambio",
-      "Ropa cómoda",
-      "Traje de baño",
+      "Change of clothes",
+      "Comfortable clothes",
+      "Swimsuit",
       "Towel",
-      "Mochila pequeña"
+      "Small backpack"
     ],
     itinerary: [
       {
         day: 1,
-        title: "Valle Sagrado – Arin – Temazcalli – Valle Sagrado",
-        titleEn: "Sacred Valley – Arin – Temazcalli – Sacred Valley",
-        description: "08:00 AM – Partimos desde Urubamba en transporte privado y nos trasladamos hacia el pueblo de Arin. 09:00 AM – Inicio de la ofrenda. 11:30 AM – Quema de la ofrenda. 12:00 PM – Ingreso al Temazcalli para iniciar la ceremonia. 03:00 PM – Finalización de ceremonia, refrigerio y tiempo de descanso. 05:00 PM – Retorno a Urubamba.",
-        descriptionEn: "08:00 AM – Pick-up from your accommodation and transfer to Arin village. 09:00 AM – Start of the Andean offering (approx. 1.5 hours). 11:30 AM – Burning of the offering in the sacred fire. 12:00 PM – Entry into the temazcalli (sweat lodge) to begin the ceremony (approx. 3 hours). 03:00 PM – End of the ceremony, lunch, and relaxation time. 05:00 PM – Return transfer to your accommodation.",
-        highlights: ["Ofrenda Andina", "Ceremonia Temazcalli"],
-        highlightsEn: [
-      "Andean offering",
-      "Temazcalli Ceremony"
-    ],
-        meals: "Snack",
-        mealsEn: "Snack",
+        title: "Valle Sagrado – Arin – Temazcal – Valle Sagrado",
+        titleEn: "Sacred Valley – Arin – Temazcal – Sacred Valley",
+        description: "08:00 AM – Partimos desde Urubamba en transporte privado y nos trasladamos hacia el pueblo de Arin.09:00 AM – Inicio de la ofrenda.11:30 AM – Quema de la ofrenda.12:00 PM – Ingreso al Temazcalli para iniciar la ceremonia.03:00 PM – Finalización de ceremonia, refrigerio y tiempo de descanso.05:00 PM – Retorno a Urubamba.",
+        descriptionEn: "08:00 AM – We depart from Urubamba by private transport and head towards the town of Arin.09:00 AM – Start of the offering.11:30 AM – Burning of the offering.12:00 PM – Entry to the Temazcalli to begin the ceremony.03:00 PM – End of ceremony, snack, and rest time.05:00 PM – Return to Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "",
+        mealsEn: "",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "edjdao3u", type: "image", url: "/images/full-day-spiritual/full-day-spiritual-gallery-1.jpg" },
@@ -1635,8 +1657,12 @@ export const packages: Package[] = [
     bestSeasonEn: "",
     price: 500,
     description: "Esta experiencia espiritual de medio día se centra en uno de los rituales más importantes de la cosmovisión andina: la ofrenda o “Despacho”. La ceremonia es guiada por un líder espiritual perteneciente a la nación Q’eros, comunidades consideradas descendientes directas de la tradición inca. Durante la experiencia también se realiza la lectura de hojas de coca, un ritual ancestral que permite hacer consultas sobre la vida y el camino personal.",
-    descriptionEn: "This half-day spiritual experience focuses on one of the most important rituals in Andean cosmology: the Andean offering, also known as “Despacho”. The ceremony is guided by a spiritual leader from the Q’eros communities, considered direct descendants of the Inca tradition. The experience also includes a coca leaf reading, an ancient ritual that allows participants to ask questions about life and their personal path.",
-    highlights: ["Ofrenda andina y limpieza energética", "Lectura de hojas de coca", "Guía espiritual Q'ero"],
+    descriptionEn: "This half-day spiritual experience focuses on one of the most important rituals of the Andean worldview: the offering or “Despacho”. The ceremony is guided by a spiritual leader belonging to the Q’eros nation, communities considered direct descendants of the Inca tradition. During the experience, a coca leaf reading is also performed, an ancestral ritual that allows for consultations about life and one's personal path.",
+    highlights: [
+      "Ofrenda andina y limpieza energética",
+      "Lectura de hojas de coca",
+      "Guía espiritual Q'ero"
+    ],
     highlightsEn: [
       "Andean offering and energetic cleansing",
       "Coca leaf reading",
@@ -1652,19 +1678,19 @@ export const packages: Package[] = [
     includesEn: [
       "Round-trip transportation from the meeting point",
       "Guide",
-      "Ofrenda andina y limpieza energética",
+      "Andean offering and energetic cleansing",
       "Coca leaf reading",
       "Snack"
     ],
     notIncludes: [
       "Transporte al punto de encuentro",
       "Gastos personales",
-      "Snack"
+      "Refrigerio"
     ],
     notIncludesEn: [
       "Transportation to the meeting point",
       "Personal expenses",
-      "Snack"
+      "Refreshment"
     ],
     requirements: [
       "Sombrero o gorra",
@@ -1678,7 +1704,7 @@ export const packages: Package[] = [
     ],
     requirementsEn: [
       "Hat or cap",
-      "Ropa cómoda",
+      "Comfortable clothing",
       "Sunscreen",
       "Insect repellent",
       "Water bottle",
@@ -1690,19 +1716,17 @@ export const packages: Package[] = [
       {
         day: 1,
         title: "Valle Sagrado – Templo Ancestral – Valle Sagrado",
-        titleEn: "Sacred Valley – Ancient Temple – Sacred Valley",
-        description: "08:00 AM – Partimos desde Urubamba y nos trasladamos en transporte privado hacia el lugar de la ofrenda. 09:00 AM – Inicio de la experiencia con la lectura de hojas de coca, seguida de la preparación de la ofrenda andina guiada por el líder espiritual. 12:00 PM – Ascenso a la Catarata de Arín. 13:30 PM – Retorno a Urubamba.",
-        descriptionEn: "08:00 AM – Pick-up from your accommodation and transfer to an ancient temple in the Sacred Valley of the Incas. 09:00 AM – Start of the experience with coca leaf reading, followed by the preparation of the Andean offering guided by the spiritual leader. 12:30 PM – End of the experience and return.",
-        highlights: ["Lectura de Coca", "Ofrenda Andina"],
-        highlightsEn: [
-      "Coca reading",
-      "Andean offering"
-    ],
-        meals: "Snack",
-        mealsEn: "Box Lunch",
+        titleEn: "Sacred Valley – Ancestral Temple – Sacred Valley",
+        description: "08:00 AM – Partimos desde Urubamba y nos trasladamos en transporte privado hacia el lugar de la ofrenda.09:00 AM – Inicio de la experiencia con la lectura de hojas de coca, seguida de la preparación de la ofrenda andina guiada por el líder espiritual.12:00 PM – Ascenso a la Catarata de Arín.13:30 PM – Retorno a Urubamba.",
+        descriptionEn: "08:00 AM – We depart from Urubamba and travel by private transport to the offering site.09:00 AM – The experience begins with a coca leaf reading, followed by the preparation of the Andean offering guided by the spiritual leader.12:00 PM – Ascent to Arín Waterfall.13:30 PM – Return to Urubamba.",
+        highlights: [],
+        highlightsEn: [],
+        meals: "",
+        mealsEn: "",
         accommodation: "",
-        accommodationEn: ""
+        accommodationEn: "",
       }
+    
     ],
     gallery: [
       { id: "jf9q7qjh", type: "image", url: "/images/half-day-spiritual/half-day-spiritual-gallery-1.jpg" },
