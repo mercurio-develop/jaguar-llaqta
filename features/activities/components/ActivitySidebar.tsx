@@ -23,8 +23,8 @@ export default function ActivitySidebar({ pkg, locale }: ActivitySidebarProps) {
               {isSpanish ? "Desde" : "From"}
             </p>
             <p className="text-4xl font-bold text-accent tracking-tight">
-              S/ {pkg.price}
-              <span className="text-lg font-normal text-muted"> soles</span>
+              $ {pkg.price}
+              <span className="text-lg font-normal text-muted"> USD</span>
             </p>
             <p className="text-muted text-sm">
               {pkg.id === "full-day-spiritual"

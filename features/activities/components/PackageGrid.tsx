@@ -108,7 +108,7 @@ export default function PackageGrid({ locale, packages }: PackageGridProps) {
                     {locale === "es" ? "Desde" : "From"}
                   </span>
                   <p className="text-lg font-bold text-accent tracking-tight leading-none">
-                    S/ {pkg.price} <span className="text-xs font-normal text-muted">soles</span>
+                    $ {pkg.price} <span className="text-xs font-normal text-muted">USD</span>
                   </p>
                 </div>
                 <Link href={`/${locale}/actividades/${pkg.id}`} className="shrink-0">

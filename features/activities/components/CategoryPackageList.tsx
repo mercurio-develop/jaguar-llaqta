@@ -220,7 +220,7 @@ export default function CategoryPackageList({ category }: CategoryPackageListPro
                               {locale === "es" ? "Desde" : "From"}
                             </span>
                             <p className="text-2xl font-bold text-accent tracking-tight">
-                              S/ {pkg.price} <span className="text-sm font-normal text-muted">soles</span>
+                              $ {pkg.price} <span className="text-sm font-normal text-muted">USD</span>
                             </p>
                           </div>
                           <Link href={`/${locale}/actividades/${pkg.id}`}>

@@ -84,7 +84,7 @@ export default async function ActivityPage({ params }: PageProps) {
     offers: {
       "@type": "Offer",
       price: pkg.price,
-      priceCurrency: "PEN",
+      priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `https://jaguarllaqta.com/${locale}/actividades/${id}`,
     },

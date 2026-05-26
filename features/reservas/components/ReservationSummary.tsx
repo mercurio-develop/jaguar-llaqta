@@ -33,7 +33,7 @@ export default function ReservationSummary({
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-muted">{t("summaryUnitPrice")}</span>
-            <span className="text-white">S/ {selectedPackage.price} {t("summarySoles")}</span>
+            <span className="text-white">$ {selectedPackage.price} {t("summarySoles")}</span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-muted">{t("summaryParticipants")}</span>
@@ -44,7 +44,7 @@ export default function ReservationSummary({
         <div className="border-t border-white/10 pt-4 mb-6">
           <div className="flex justify-between">
             <span className="text-white font-medium">{t("summaryTotal")}</span>
-            <span className="text-2xl font-bold text-accent tracking-tight">S/ {totalPrice} <span className="text-sm font-normal text-muted">{t("summarySoles")}</span></span>
+            <span className="text-2xl font-bold text-accent tracking-tight">$ {totalPrice} <span className="text-sm font-normal text-muted">{t("summarySoles")}</span></span>
           </div>
         </div>
 

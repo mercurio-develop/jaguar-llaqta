@@ -88,9 +88,9 @@ export default function ReservationPackageSelect({
                     {/* Price and actions */}
                     <div className="flex items-center justify-between pt-4 border-t border-support">
                       <span className="text-accent font-bold tracking-tight">
-                        S/ {pkg.price}{" "}
+                        $ {pkg.price}{" "}
                         <span className="text-xs font-normal text-muted">
-                          soles
+                          USD
                         </span>
                       </span>
                       <Link
