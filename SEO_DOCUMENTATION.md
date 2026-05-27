@@ -21,7 +21,8 @@ The `generateMetadata` logic has been substantially enhanced for all activity pa
 ---
 
 ## 🚀 Next Steps: Google Search Console
-The build has been verified and is 100% successful. To trigger a fresh crawl and expedite the indexing of your new structure, log into your **Google Search Console** and submit the two new sitemap endpoints:
+The build has been verified and is 100% successful. To trigger a fresh crawl and expedite the indexing of your new structure, log into your **Google Search Console** and submit the **Sitemap Index** URL:
 
-1. `https://jaguarllaqta.com/sitemap/0.xml`
-2. `https://jaguarllaqta.com/sitemap/1.xml`
+1. `https://jaguarllaqta.com/sitemap.xml`
+
+This index file automatically points Google to the split sitemaps (`0.xml` for static pages and `1.xml` for dynamic routes).
