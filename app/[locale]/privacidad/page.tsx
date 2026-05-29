@@ -1,6 +1,6 @@
 export default function PrivacidadPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       <section className="py-24 bg-primary-alt">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-16">

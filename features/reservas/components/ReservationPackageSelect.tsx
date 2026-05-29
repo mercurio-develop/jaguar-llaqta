@@ -24,7 +24,7 @@ export default function ReservationPackageSelect({
   const locale = useLocale() as "es" | "en";
 
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       <section className="py-16 bg-primary-alt">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">

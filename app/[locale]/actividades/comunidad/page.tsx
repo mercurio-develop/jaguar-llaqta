@@ -30,7 +30,7 @@ export async function generateMetadata({
 
 export default function ComunidadPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       <CategoryHero category="comunidad" />
       <CategoryStats category="comunidad" />
       <CategoryPackageList category="comunidad" />

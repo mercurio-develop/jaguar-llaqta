@@ -14,6 +14,7 @@
 }
 
 :root {
+  --header-height: 84px;
   --color-primary: #0E0E0E;
   --color-primary-alt: #121212;
   --color-accent: #F7B916;
@@ -22,6 +23,12 @@
   --color-support: #2A2A2A;
   --color-text: #FFFFFF;
   --color-text-muted: #9CA3AF;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 110px;
+  }
 }
 
 * {

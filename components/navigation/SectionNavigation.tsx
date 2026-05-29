@@ -60,7 +60,7 @@ export default function SectionNavigation({
   }, [sections, activeSection, onSectionChange, enableScrollDetection, scrollOffset]);
 
   return (
-    <nav className={cn("sticky top-20 z-40 bg-primary/95 backdrop-blur-sm border-b border-white/10", className)}>
+    <nav className={cn("sticky top-[var(--header-height)] z-40 bg-primary/95 backdrop-blur-sm border-b border-white/10", className)}>
       <div className="container-custom">
         <div className="flex justify-start md:justify-center items-center gap-2 md:gap-8 overflow-x-auto scrollbar-hide py-1">
           {sections.map((section) => (
@@ -68,7 +68,7 @@ export default function SectionNavigation({
               key={section.id}
               onClick={() => scrollToSection(section.id)}
               className={cn(
-                "relative px-4 py-4 text-xs md:text-sm font-medium transition-all whitespace-nowrap uppercase tracking-widest",
+                "relative px-4 pt-4 pb-2 text-xs md:text-sm font-medium transition-all whitespace-nowrap uppercase tracking-widest",
                 activeSection === section.id
                   ? "text-accent"
                   : "text-white/50 hover:text-white"

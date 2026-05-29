@@ -30,7 +30,7 @@ export async function generateMetadata({
 
 export default function RutasPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       <CategoryHero category="rutas" />
       <CategoryStats category="rutas" />
       <CategoryPackageList category="rutas" />

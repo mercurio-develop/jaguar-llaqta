@@ -28,7 +28,7 @@ export default function ActivityClientPage({ params }: { params: { id: string } 
   const [activeSection, setActiveSection] = useState("overview");
 
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       <ActivityHero pkg={pkg} locale={locale} />
 
       <ActivityNav

@@ -56,7 +56,7 @@ export default function AllActivitiesPage() {
   const hasActiveFilters = selectedCategories.length > 0 || selectedDuration !== "all" || selectedDifficulty !== "all";
 
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
         <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>

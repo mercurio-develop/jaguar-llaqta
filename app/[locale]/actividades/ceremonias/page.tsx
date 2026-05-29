@@ -30,7 +30,7 @@ export async function generateMetadata({
 
 export default function CeremoniasPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       <CategoryHero category="ceremonias" />
       <CategoryStats category="ceremonias" />
       <CategoryPackageList category="ceremonias" />

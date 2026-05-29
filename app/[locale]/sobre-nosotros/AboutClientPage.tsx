@@ -22,7 +22,7 @@ export default function AboutClientPage() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-[var(--header-height)]">
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0" onContextMenu={(e) => e.preventDefault()}>
