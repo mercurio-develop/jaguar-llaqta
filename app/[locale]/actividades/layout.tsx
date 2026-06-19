@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 
 const BASE_URL = "https://jaguarllaqta.com";
 
@@ -11,22 +11,28 @@ export async function generateMetadata({
   const isEs = locale === "es";
 
   return {
-    title: isEs
-      ? "Actividades de Turismo Ancestral y Alternativo en Cusco | Jaguar Llaqta"
-      : "Ancestral & Alternative Tourism Activities in Cusco | Jaguar Llaqta",
+    title: isEs ? "Actividades y Experiencias en Cusco | Jaguar Llaqta" : "Activities & Experiences in Cusco | Jaguar Llaqta",
     description: isEs
-      ? "Descubre todas nuestras actividades de turismo ancestral y alternativo en Cusco: rutas de trekking, turismo comunitario y ceremonias andinas auténticas."
-      : "Discover all our ancestral and alternative tourism activities in Cusco: trekking routes, community tourism and authentic Andean ceremonies.",
+      ? "Explora nuestro catálogo de experiencias andinas. Rutas de trekking, ceremonias, y turismo vivencial con comunidades nativas en Cusco."
+      : "Explore our catalog of Andean experiences. Trekking routes, ceremonies, and experiential tourism with native communities in Cusco.",
     keywords: isEs
-      ? ["turismo ancestral cusco", "turismo alternativo cusco", "actividades cusco", "trekking cusco", "ceremonias andinas", "turismo comunitario cusco"]
-      : ["ancestral tourism cusco", "alternative tourism cusco", "activities cusco", "trekking cusco", "andean ceremonies", "community tourism cusco"],
+      ? ["actividades cusco", "experiencias andinas", "trekking cusco", "ceremonias cusco", "paquetes turisticos cusco", "turismo vivencial"]
+      : ["cusco activities", "andean experiences", "cusco trekking", "cusco ceremonies", "cusco tour packages", "experiential tourism"],
     alternates: {
       canonical: `${BASE_URL}/${locale}/actividades`,
-      languages: { es: `${BASE_URL}/es/actividades`, en: `${BASE_URL}/en/actividades` },
+      languages: {
+        "x-default": `${BASE_URL}/es/actividades`,
+        es: `${BASE_URL}/es/actividades`,
+        en: `${BASE_URL}/en/actividades`,
+      },
     },
   };
 }
 
-export default function ActividadesLayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default function ActividadesLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
 }

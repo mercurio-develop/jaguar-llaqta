@@ -75,20 +75,65 @@ export default async function ActivityPage({ params }: PageProps) {
   const name = isSpanish ? pkg.name : pkg.nameEn;
   const description = isSpanish ? pkg.description : pkg.descriptionEn;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: name,
-    description: description,
-    image: `https://jaguarllaqta.com${pkg.heroImage || ''}`,
-    offers: {
-      "@type": "Offer",
-      price: pkg.price,
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      url: `https://jaguarllaqta.com/${locale}/actividades/${id}`,
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: name,
+      description: description,
+      image: `https://jaguarllaqta.com${pkg.heroImage || ''}`,
+      offers: {
+        "@type": "Offer",
+        price: pkg.price,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        url: `https://jaguarllaqta.com/${locale}/actividades/${id}`,
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: isSpanish ? "Inicio" : "Home",
+          item: `https://jaguarllaqta.com/${locale}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: isSpanish ? "Actividades" : "Activities",
+          item: `https://jaguarllaqta.com/${locale}/actividades`,
+        },
+        ...(pkg.categories.length > 0
+          ? [
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: isSpanish
+                  ? pkg.categories[0].charAt(0).toUpperCase() + pkg.categories[0].slice(1)
+                  : pkg.categories[0].charAt(0).toUpperCase() + pkg.categories[0].slice(1),
+                item: `https://jaguarllaqta.com/${locale}/actividades/${pkg.categories[0]}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
+                name: name,
+                item: `https://jaguarllaqta.com/${locale}/actividades/${id}`,
+              },
+            ]
+          : [
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: name,
+                item: `https://jaguarllaqta.com/${locale}/actividades/${id}`,
+              },
+            ]),
+      ],
+    },
+  ];
 
   return (
     <>

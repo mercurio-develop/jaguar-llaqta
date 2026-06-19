@@ -56,11 +56,13 @@ export const metadata: Metadata = {
     siteName: "Jaguar Llaqta",
     title: "Jaguar Llaqta | Turismo Ancestral y Alternativo en Cusco",
     description: "Turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas.",
+    images: [{ url: "https://jaguarllaqta.com/images/seo/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jaguar Llaqta | Turismo Ancestral y Alternativo en Cusco",
     description: "Turismo ancestral y alternativo en Cusco, Perú. Trekking, comunidades nativas y ceremonias andinas.",
+    images: ["https://jaguarllaqta.com/images/seo/og-image.jpg"],
   },
   robots: {
     index: true,
